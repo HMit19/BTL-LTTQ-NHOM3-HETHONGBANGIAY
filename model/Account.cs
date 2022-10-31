@@ -26,7 +26,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.Model
             this.username = username;
         }
 
-        // set passoword
         public void setPassword(string password)
         {
             this.password = password;

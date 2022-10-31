@@ -16,7 +16,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new loginForm());
+            Application.Run(new frmLogin());
         }
     }
 }
