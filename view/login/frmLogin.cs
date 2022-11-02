@@ -1,4 +1,5 @@
 ﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.Model;
+using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.Manager;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,8 +33,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY
         {
             if (validate())
             {
-                MessageBox.Show("Login");
-                // check login
+                frmManager f = new frmManager();
+                f.ShowDialog();
 
             }
             else

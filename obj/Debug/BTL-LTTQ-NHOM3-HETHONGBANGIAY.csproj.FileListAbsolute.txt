@@ -20,3 +20,8 @@ C:\Users\pc\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-L
 C:\Users\pc\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.CoreCompileInputs.cache
 C:\Users\pc\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe
 C:\Users\pc\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.pdb
+C:\Users\pc\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.Manager.frmManager.resources
+C:\Users\pc\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\pc\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.CopyComplete
+C:\Users\pc\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.Manager.HomeControl.resources
+C:\Users\pc\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.Manager.SumaryControl.resources
