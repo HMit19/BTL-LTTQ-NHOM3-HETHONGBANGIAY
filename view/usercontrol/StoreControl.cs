@@ -8,21 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.Manager
+namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 {
-    public partial class SumaryControl : UserControl
+    public partial class StoreControl : UserControl
     {
-        public SumaryControl()
+        public StoreControl()
         {
             InitializeComponent();
-        }
-
-        internal void Close()
-        {
-            throw new NotImplementedException();
-        }
-        public void setICon()
-        {
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.Manager;
+﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager;
 using System;
 using System.Collections.Generic;
 using System.Linq;

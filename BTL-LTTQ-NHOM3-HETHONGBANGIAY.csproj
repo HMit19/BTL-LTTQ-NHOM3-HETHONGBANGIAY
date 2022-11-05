@@ -36,6 +36,9 @@
     <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -63,16 +66,40 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="view\usercontrol\SumaryControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\usercontrol\SumaryControl.Designer.cs">
-      <DependentUpon>SumaryControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\Manager\frmManager.cs">
+    <Compile Include="view\sell\payUpForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\Manager\frmManager.Designer.cs">
+    <Compile Include="view\sell\payUpForm.Designer.cs">
+      <DependentUpon>payUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\usercontrol\item\ItemNewCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\item\ItemNewCustomer.Designer.cs">
+      <DependentUpon>ItemNewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\usercontrol\item\ItemProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\item\ItemProduct.Designer.cs">
+      <DependentUpon>ItemProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\usercontrol\item\ItemProductOfCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\item\ItemProductOfCart.Designer.cs">
+      <DependentUpon>ItemProductOfCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\usercontrol\item\ItemTopProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\item\ItemTopProduct.Designer.cs">
+      <DependentUpon>ItemTopProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\manager\frmManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\manager\frmManager.Designer.cs">
       <DependentUpon>frmManager.cs</DependentUpon>
     </Compile>
     <Compile Include="view\usercontrol\HomeControl.cs">
@@ -80,6 +107,18 @@
     </Compile>
     <Compile Include="view\usercontrol\HomeControl.Designer.cs">
       <DependentUpon>HomeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\usercontrol\item\ItemTransactionHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\item\ItemTransactionHistory.Designer.cs">
+      <DependentUpon>ItemTransactionHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\usercontrol\StoreControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\StoreControl.Designer.cs">
+      <DependentUpon>StoreControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,14 +132,32 @@
     <EmbeddedResource Include="view\login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\usercontrol\SumaryControl.resx">
-      <DependentUpon>SumaryControl.cs</DependentUpon>
+    <EmbeddedResource Include="view\sell\payUpForm.resx">
+      <DependentUpon>payUpForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\Manager\frmManager.resx">
+    <EmbeddedResource Include="view\usercontrol\item\ItemNewCustomer.resx">
+      <DependentUpon>ItemNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\item\ItemProduct.resx">
+      <DependentUpon>ItemProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\item\ItemProductOfCart.resx">
+      <DependentUpon>ItemProductOfCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\item\ItemTopProduct.resx">
+      <DependentUpon>ItemTopProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\manager\frmManager.resx">
       <DependentUpon>frmManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\HomeControl.resx">
       <DependentUpon>HomeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\item\ItemTransactionHistory.resx">
+      <DependentUpon>ItemTransactionHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\StoreControl.resx">
+      <DependentUpon>StoreControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.Manager
+namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 {
     public partial class HomeControl : UserControl
     {
