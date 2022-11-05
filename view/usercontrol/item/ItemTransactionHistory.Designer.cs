@@ -1,4 +1,5 @@
-﻿namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
+﻿// item transaction in groupbox near transaction of storecontrol
+namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
 {
     partial class ItemTransactionHistory
     {

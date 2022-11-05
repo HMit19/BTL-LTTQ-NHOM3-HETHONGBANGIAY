@@ -1,4 +1,5 @@
-﻿namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
+﻿// item product in groupbox List Products of storecontrol
+namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
 {
     partial class ItemProduct
     {

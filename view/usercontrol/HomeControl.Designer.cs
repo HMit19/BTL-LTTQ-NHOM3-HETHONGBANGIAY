@@ -1,4 +1,6 @@
-﻿namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
+﻿// authour mai van hieu
+// usercontrol import into form main
+namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 {
     partial class HomeControl
     {

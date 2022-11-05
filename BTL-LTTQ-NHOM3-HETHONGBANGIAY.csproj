@@ -72,6 +72,24 @@
     <Compile Include="view\sell\payUpForm.Designer.cs">
       <DependentUpon>payUpForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\usercontrol\admin\product\create.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\admin\product\create.Designer.cs">
+      <DependentUpon>create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\usercontrol\admin\product\edit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\admin\product\edit.Designer.cs">
+      <DependentUpon>edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\usercontrol\admin\product\list.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\admin\product\list.Designer.cs">
+      <DependentUpon>list.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\usercontrol\item\ItemNewCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>

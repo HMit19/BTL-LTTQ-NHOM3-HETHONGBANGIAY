@@ -1,4 +1,6 @@
-﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item;
+﻿// authour mai van hieu
+// usercontrol import into form main
+using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item;
 
 namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 {

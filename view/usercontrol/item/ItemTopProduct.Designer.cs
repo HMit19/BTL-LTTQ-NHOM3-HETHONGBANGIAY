@@ -1,4 +1,5 @@
-﻿namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
+﻿// item product in groupbox List Products best seller of homecontrol
+namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
 {
     partial class ItemTopProduct
     {

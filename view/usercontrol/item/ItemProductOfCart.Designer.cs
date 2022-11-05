@@ -1,4 +1,5 @@
-﻿namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
+﻿// item procduct in groupbox List Item in cart of storecontrol
+namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
 {
     partial class ItemProductOfCart
     {

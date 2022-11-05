@@ -1,4 +1,5 @@
-﻿namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
+﻿// item new custome in groupbox of homecontrol
+namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
 {
     partial class ItemNewCustomer
     {
