@@ -27,12 +27,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
 
         private void btnLogout_MouseLeave(object sender, EventArgs e)
         {
-            btnLogout.BackColor = Color.FromArgb(231, 233, 237);
+            //btnLogout.BackColor = Color.FromArgb(231, 233, 237);
         }
 
         private void btnLogout_MouseMove(object sender, MouseEventArgs e)
         {
-            btnLogout.BackColor = Color.FromArgb(165, 216, 255);
+            //btnLogout.BackColor = Color.FromArgb(165, 216, 255);
         }
 
         private void btnCart_MouseMove(object sender, MouseEventArgs e)
@@ -58,12 +58,11 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
 
         private void btnSell_Click(object sender, EventArgs e)
         {
-            storeControl.BringToFront();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            homeControl.BringToFront();
         }
+
     }
 }

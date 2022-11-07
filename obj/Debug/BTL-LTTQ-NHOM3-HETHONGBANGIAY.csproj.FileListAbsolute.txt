@@ -55,3 +55,4 @@ C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BT
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.CopyComplete
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.pdb
+C:\Users\pc\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.listProduct.resources

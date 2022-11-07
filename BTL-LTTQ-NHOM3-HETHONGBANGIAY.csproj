@@ -84,11 +84,11 @@
     <Compile Include="view\usercontrol\admin\product\edit.Designer.cs">
       <DependentUpon>edit.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\usercontrol\admin\product\list.cs">
+    <Compile Include="view\usercontrol\admin\product\listProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="view\usercontrol\admin\product\list.Designer.cs">
-      <DependentUpon>list.cs</DependentUpon>
+    <Compile Include="view\usercontrol\admin\product\listProduct.Designer.cs">
+      <DependentUpon>listProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="view\usercontrol\item\ItemNewCustomer.cs">
       <SubType>UserControl</SubType>
@@ -152,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\sell\payUpForm.resx">
       <DependentUpon>payUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\admin\product\listProduct.resx">
+      <DependentUpon>listProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\item\ItemNewCustomer.resx">
       <DependentUpon>ItemNewCustomer.cs</DependentUpon>

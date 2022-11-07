@@ -87,7 +87,7 @@
             this.chkRemember.CheckedState.BorderThickness = 0;
             this.chkRemember.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chkRemember.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkRemember.Location = new System.Drawing.Point(292, 225);
+            this.chkRemember.Location = new System.Drawing.Point(292, 227);
             this.chkRemember.Name = "chkRemember";
             this.chkRemember.Size = new System.Drawing.Size(127, 24);
             this.chkRemember.TabIndex = 2;
@@ -105,19 +105,19 @@
             this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(182, 273);
+            this.btnLogin.Location = new System.Drawing.Point(162, 273);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(317, 40);
+            this.btnLogin.Size = new System.Drawing.Size(362, 40);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng nhập";
             // 
             // lblTitleLogin
             // 
             this.lblTitleLogin.AutoSize = true;
-            this.lblTitleLogin.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleLogin.Location = new System.Drawing.Point(260, 60);
+            this.lblTitleLogin.Font = new System.Drawing.Font("Cooper Black", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleLogin.Location = new System.Drawing.Point(272, 64);
             this.lblTitleLogin.Name = "lblTitleLogin";
-            this.lblTitleLogin.Size = new System.Drawing.Size(159, 31);
+            this.lblTitleLogin.Size = new System.Drawing.Size(169, 34);
             this.lblTitleLogin.TabIndex = 4;
             this.lblTitleLogin.Text = "Đăng nhập";
             // 
@@ -126,7 +126,7 @@
             this.lblCopyright.AutoSize = true;
             this.lblCopyright.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCopyright.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCopyright.Location = new System.Drawing.Point(159, 351);
+            this.lblCopyright.Location = new System.Drawing.Point(159, 361);
             this.lblCopyright.Name = "lblCopyright";
             this.lblCopyright.Size = new System.Drawing.Size(313, 17);
             this.lblCopyright.TabIndex = 5;
@@ -138,7 +138,7 @@
             this.btnInformationGroup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInformationGroup.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInformationGroup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnInformationGroup.Location = new System.Drawing.Point(467, 351);
+            this.btnInformationGroup.Location = new System.Drawing.Point(467, 361);
             this.btnInformationGroup.Name = "btnInformationGroup";
             this.btnInformationGroup.Size = new System.Drawing.Size(57, 17);
             this.btnInformationGroup.TabIndex = 6;
@@ -180,7 +180,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(700, 400);
+            this.ClientSize = new System.Drawing.Size(690, 405);
             this.Controls.Add(this.btnMaximize);
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.btnInformationGroup);
