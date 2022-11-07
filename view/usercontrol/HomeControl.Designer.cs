@@ -38,13 +38,17 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSellSunday = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSellSaturday = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSellFriday = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThursday = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSellWednesday = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSellTuesday = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSellMonday = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -76,10 +80,11 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.label31 = new System.Windows.Forms.Label();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
-            this.label32 = new System.Windows.Forms.Label();
+            this.lblQuantityCustomer = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.fpnlTopProduct = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnListProduct = new System.Windows.Forms.Label();
             this.itemTopProduct1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
             this.itemTopProduct2 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
             this.itemTopProduct3 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
@@ -89,11 +94,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.itemTopProduct7 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
             this.itemTopProduct8 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
             this.itemTopProduct9 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
-            this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2GroupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -182,15 +182,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.BorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 2;
-            this.guna2Panel1.Controls.Add(this.guna2Button8);
-            this.guna2Panel1.Controls.Add(this.guna2Button5);
-            this.guna2Panel1.Controls.Add(this.guna2Button6);
-            this.guna2Panel1.Controls.Add(this.guna2Button3);
-            this.guna2Panel1.Controls.Add(this.guna2Button4);
-            this.guna2Panel1.Controls.Add(this.guna2Button2);
-            this.guna2Panel1.Controls.Add(this.guna2Button1);
+            this.guna2Panel1.Controls.Add(this.btnSellSunday);
+            this.guna2Panel1.Controls.Add(this.btnSellSaturday);
+            this.guna2Panel1.Controls.Add(this.btnSellFriday);
+            this.guna2Panel1.Controls.Add(this.btnThursday);
+            this.guna2Panel1.Controls.Add(this.btnSellWednesday);
+            this.guna2Panel1.Controls.Add(this.btnSellTuesday);
+            this.guna2Panel1.Controls.Add(this.btnSellMonday);
             this.guna2Panel1.Controls.Add(this.guna2Separator3);
             this.guna2Panel1.Controls.Add(this.guna2Separator4);
             this.guna2Panel1.Controls.Add(this.guna2Separator2);
@@ -203,111 +204,139 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.guna2Panel1.Size = new System.Drawing.Size(573, 244);
             this.guna2Panel1.TabIndex = 9;
             // 
-            // guna2Button8
+            // btnSellSunday
             // 
-            this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
-            this.guna2Button8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button8.ForeColor = System.Drawing.Color.White;
-            this.guna2Button8.Location = new System.Drawing.Point(480, 185);
-            this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(25, 57);
-            this.guna2Button8.TabIndex = 6;
-            this.guna2Button8.Text = "guna2Button8";
+            this.btnSellSunday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSellSunday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSellSunday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSellSunday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSellSunday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
+            this.btnSellSunday.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSellSunday.ForeColor = System.Drawing.Color.White;
+            this.btnSellSunday.Location = new System.Drawing.Point(480, 185);
+            this.btnSellSunday.Name = "btnSellSunday";
+            this.btnSellSunday.Size = new System.Drawing.Size(25, 57);
+            this.btnSellSunday.TabIndex = 6;
+            this.btnSellSunday.Text = "guna2Button8";
             // 
-            // guna2Button5
+            // btnSellSaturday
             // 
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.Location = new System.Drawing.Point(411, 185);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(25, 57);
-            this.guna2Button5.TabIndex = 5;
-            this.guna2Button5.Text = "guna2Button5";
+            this.btnSellSaturday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSellSaturday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSellSaturday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSellSaturday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSellSaturday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
+            this.btnSellSaturday.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSellSaturday.ForeColor = System.Drawing.Color.White;
+            this.btnSellSaturday.Location = new System.Drawing.Point(411, 185);
+            this.btnSellSaturday.Name = "btnSellSaturday";
+            this.btnSellSaturday.Size = new System.Drawing.Size(25, 57);
+            this.btnSellSaturday.TabIndex = 5;
+            this.btnSellSaturday.Text = "guna2Button5";
             // 
-            // guna2Button6
+            // btnSellFriday
             // 
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
-            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button6.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.Location = new System.Drawing.Point(339, 185);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(25, 57);
-            this.guna2Button6.TabIndex = 4;
-            this.guna2Button6.Text = "guna2Button6";
+            this.btnSellFriday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSellFriday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSellFriday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSellFriday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSellFriday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
+            this.btnSellFriday.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSellFriday.ForeColor = System.Drawing.Color.White;
+            this.btnSellFriday.Location = new System.Drawing.Point(339, 185);
+            this.btnSellFriday.Name = "btnSellFriday";
+            this.btnSellFriday.Size = new System.Drawing.Size(25, 57);
+            this.btnSellFriday.TabIndex = 4;
+            this.btnSellFriday.Text = "guna2Button6";
             // 
-            // guna2Button3
+            // btnThursday
             // 
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(270, 185);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(25, 57);
-            this.guna2Button3.TabIndex = 3;
-            this.guna2Button3.Text = "guna2Button3";
+            this.btnThursday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThursday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThursday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThursday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThursday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
+            this.btnThursday.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnThursday.ForeColor = System.Drawing.Color.White;
+            this.btnThursday.Location = new System.Drawing.Point(270, 185);
+            this.btnThursday.Name = "btnThursday";
+            this.btnThursday.Size = new System.Drawing.Size(25, 57);
+            this.btnThursday.TabIndex = 3;
+            this.btnThursday.Text = "guna2Button3";
             // 
-            // guna2Button4
+            // btnSellWednesday
             // 
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(201, 185);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(25, 57);
-            this.guna2Button4.TabIndex = 2;
-            this.guna2Button4.Text = "guna2Button4";
+            this.btnSellWednesday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSellWednesday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSellWednesday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSellWednesday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSellWednesday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
+            this.btnSellWednesday.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSellWednesday.ForeColor = System.Drawing.Color.White;
+            this.btnSellWednesday.Location = new System.Drawing.Point(201, 185);
+            this.btnSellWednesday.Name = "btnSellWednesday";
+            this.btnSellWednesday.Size = new System.Drawing.Size(25, 57);
+            this.btnSellWednesday.TabIndex = 2;
+            this.btnSellWednesday.Text = "guna2Button4";
             // 
-            // guna2Button2
+            // btnSellTuesday
             // 
-            this.guna2Button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(129, 165);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(25, 77);
-            this.guna2Button2.TabIndex = 1;
-            this.guna2Button2.Text = "guna2Button2";
+            this.btnSellTuesday.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnSellTuesday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSellTuesday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSellTuesday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSellTuesday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSellTuesday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
+            this.btnSellTuesday.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSellTuesday.ForeColor = System.Drawing.Color.White;
+            this.btnSellTuesday.Location = new System.Drawing.Point(129, 165);
+            this.btnSellTuesday.Name = "btnSellTuesday";
+            this.btnSellTuesday.Size = new System.Drawing.Size(25, 77);
+            this.btnSellTuesday.TabIndex = 1;
+            this.btnSellTuesday.Text = "guna2Button2";
             // 
-            // guna2Button1
+            // btnSellMonday
             // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(60, 185);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(25, 57);
-            this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "guna2Button1";
+            this.btnSellMonday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSellMonday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSellMonday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSellMonday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSellMonday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
+            this.btnSellMonday.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSellMonday.ForeColor = System.Drawing.Color.White;
+            this.btnSellMonday.Location = new System.Drawing.Point(60, 185);
+            this.btnSellMonday.Name = "btnSellMonday";
+            this.btnSellMonday.Size = new System.Drawing.Size(25, 57);
+            this.btnSellMonday.TabIndex = 0;
+            this.btnSellMonday.Text = "guna2Button1";
+            // 
+            // guna2Separator3
+            // 
+            this.guna2Separator3.Location = new System.Drawing.Point(2, 29);
+            this.guna2Separator3.Name = "guna2Separator3";
+            this.guna2Separator3.Size = new System.Drawing.Size(570, 10);
+            this.guna2Separator3.TabIndex = 10;
+            // 
+            // guna2Separator4
+            // 
+            this.guna2Separator4.Location = new System.Drawing.Point(2, 80);
+            this.guna2Separator4.Name = "guna2Separator4";
+            this.guna2Separator4.Size = new System.Drawing.Size(570, 10);
+            this.guna2Separator4.TabIndex = 9;
+            // 
+            // guna2Separator2
+            // 
+            this.guna2Separator2.Location = new System.Drawing.Point(2, 131);
+            this.guna2Separator2.Name = "guna2Separator2";
+            this.guna2Separator2.Size = new System.Drawing.Size(570, 10);
+            this.guna2Separator2.TabIndex = 8;
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.Location = new System.Drawing.Point(2, 187);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(570, 10);
+            this.guna2Separator1.TabIndex = 7;
             // 
             // label11
             // 
@@ -644,7 +673,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.guna2Panel5.BorderRadius = 10;
             this.guna2Panel5.BorderThickness = 1;
             this.guna2Panel5.Controls.Add(this.iconPictureBox4);
-            this.guna2Panel5.Controls.Add(this.label32);
+            this.guna2Panel5.Controls.Add(this.lblQuantityCustomer);
             this.guna2Panel5.Controls.Add(this.label33);
             this.guna2Panel5.Location = new System.Drawing.Point(795, 74);
             this.guna2Panel5.Name = "guna2Panel5";
@@ -665,16 +694,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.iconPictureBox4.TabIndex = 5;
             this.iconPictureBox4.TabStop = false;
             // 
-            // label32
+            // lblQuantityCustomer
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label32.Location = new System.Drawing.Point(90, 65);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(64, 17);
-            this.label32.TabIndex = 2;
-            this.label32.Text = "0 (Khách)";
+            this.lblQuantityCustomer.AutoSize = true;
+            this.lblQuantityCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantityCustomer.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.lblQuantityCustomer.Location = new System.Drawing.Point(90, 65);
+            this.lblQuantityCustomer.Name = "lblQuantityCustomer";
+            this.lblQuantityCustomer.Size = new System.Drawing.Size(64, 17);
+            this.lblQuantityCustomer.TabIndex = 2;
+            this.lblQuantityCustomer.Text = "0 (Khách)";
             // 
             // label33
             // 
@@ -714,6 +743,17 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.fpnlTopProduct.Size = new System.Drawing.Size(407, 418);
             this.fpnlTopProduct.TabIndex = 30;
             this.fpnlTopProduct.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
+            // btnListProduct
+            // 
+            this.btnListProduct.AutoSize = true;
+            this.btnListProduct.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnListProduct.Location = new System.Drawing.Point(1197, 246);
+            this.btnListProduct.Name = "btnListProduct";
+            this.btnListProduct.Size = new System.Drawing.Size(67, 17);
+            this.btnListProduct.TabIndex = 31;
+            this.btnListProduct.Text = "Tất cả >>";
             // 
             // itemTopProduct1
             // 
@@ -814,52 +854,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.itemTopProduct9.Size = new System.Drawing.Size(115, 120);
             this.itemTopProduct9.TabIndex = 8;
             // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.Location = new System.Drawing.Point(2, 187);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(570, 10);
-            this.guna2Separator1.TabIndex = 7;
-            // 
-            // guna2Separator2
-            // 
-            this.guna2Separator2.Location = new System.Drawing.Point(2, 131);
-            this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(570, 10);
-            this.guna2Separator2.TabIndex = 8;
-            // 
-            // guna2Separator3
-            // 
-            this.guna2Separator3.Location = new System.Drawing.Point(2, 29);
-            this.guna2Separator3.Name = "guna2Separator3";
-            this.guna2Separator3.Size = new System.Drawing.Size(570, 10);
-            this.guna2Separator3.TabIndex = 10;
-            // 
-            // guna2Separator4
-            // 
-            this.guna2Separator4.Location = new System.Drawing.Point(2, 80);
-            this.guna2Separator4.Name = "guna2Separator4";
-            this.guna2Separator4.Size = new System.Drawing.Size(570, 10);
-            this.guna2Separator4.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(1197, 246);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 17);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Tất cả >>";
-            // 
             // HomeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnListProduct);
             this.Controls.Add(this.fpnlTopProduct);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.guna2Panel5);
@@ -884,7 +884,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Name = "HomeControl";
-            this.Size = new System.Drawing.Size(1356, 728);
+            this.Size = new System.Drawing.Size(1360, 730);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2GroupBox4.ResumeLayout(false);
             this.guna2GroupBox4.PerformLayout();
@@ -919,7 +919,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         private System.Windows.Forms.Label lblRevenueOfDay;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnSellMonday;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
@@ -931,12 +931,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private Guna.UI2.WinForms.Guna2Button guna2Button8;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnSellSunday;
+        private Guna.UI2.WinForms.Guna2Button btnSellSaturday;
+        private Guna.UI2.WinForms.Guna2Button btnSellFriday;
+        private Guna.UI2.WinForms.Guna2Button btnThursday;
+        private Guna.UI2.WinForms.Guna2Button btnSellWednesday;
+        private Guna.UI2.WinForms.Guna2Button btnSellTuesday;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -953,7 +953,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         private System.Windows.Forms.Label lblSumTotal;
         private System.Windows.Forms.Label label31;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label lblQuantityCustomer;
         private System.Windows.Forms.Label label33;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
@@ -973,6 +973,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         private Guna.UI2.WinForms.Guna2Separator guna2Separator4;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label btnListProduct;
     }
 }

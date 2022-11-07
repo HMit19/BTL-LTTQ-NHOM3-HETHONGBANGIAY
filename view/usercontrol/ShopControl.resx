@@ -117,34 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="cCategory.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cQuantity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cImage.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAe1JREFUSEvN1btqFVEUh/FRSQxikSLx2igWpkkjsRLFxktlJwiCN9RAIna+QQQ7
-        RQvBNxARLU2bKBYqikXKvIGgIF7QRL8vOXtYWTPREQP6hx/nZO291syZM5NT/W/pxzFcwlH0YU2zH/P4
-        Efi39TXJdrxDPEBh3fXO8eMfwD6ss9DLdbQdoJhCiX32O6dxOT2bOZTGJ9gIM404NHOvcb/vS915O1Dn
-        HmKjJmAeIa9Frhv35zXn1plB3nAb5jLyWuTdZtyf15xbp+26n4Tx2j5DXtdTlGvv/rzu3DqbcB8L+IIb
-        iF/+ZnimH2Czr3dgvcT99tnvHOc5txGbBpbftmYDhnqvq8X+ePAV2YPDOIhhCylbcQjHe6+7kWOf/c5x
-        Xh2P+hjxWn7DERjv+VksIu7RK3hA43774rpzlz7V3V4h8tlYjwvIjdl3nIH743NSOL96HwryjEcwht8d
-        oPiKUeyFX3pcc/6Kgp7DPERe+5UHMG23e6NwC96O5Xbt6iO8626GWtEoXIN3Sa53YZ/9ud4oTGJXqnW1
-        DfbneqPwtwe5kmqqPqfCVexMta78ybA/1j6hGsdLvMYbnIZPd9zY1RbY7xznvcB5tMYH6y3aBq3GHyn7
-        /iiDOIWzOAfPyP8AF+FvjFdA1k7A/f8qVfUTy11KpwNGqP8AAAAASUVORK5CYII=
-</value>
-  </data>
 </root>

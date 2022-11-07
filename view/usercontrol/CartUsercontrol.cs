@@ -7,19 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager;
 
-namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
+namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 {
-    public partial class listProduct : UserControl
+    public partial class CartUsercontrol : UserControl
     {
-        public listProduct()
+        public CartUsercontrol()
         {
             InitializeComponent();
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
         }
     }
 }

@@ -30,7 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManager));
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnCart = new System.Windows.Forms.Button();
+            this.createProduct = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.createProduct();
+            this.listProduct = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.listProduct();
+            this.storeControl = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.StoreControl();
+            this.homeControl = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.HomeControl();
+            this.editProduct = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.editProduct();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,9 +56,6 @@
             this.btnCustomer = new System.Windows.Forms.Button();
             this.btnInfomation = new System.Windows.Forms.Button();
             this.pnlSiderBar = new System.Windows.Forms.Panel();
-            this.storeControl1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.StoreControl();
-            this.createProduct1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.createProduct();
-            this.listProduct1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.listProduct();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -67,26 +68,60 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Panel2.Controls.Add(this.createProduct1);
-            this.guna2Panel2.Controls.Add(this.listProduct1);
-            this.guna2Panel2.Controls.Add(this.storeControl1);
+            this.guna2Panel2.Controls.Add(this.storeControl);
+            this.guna2Panel2.Controls.Add(this.homeControl);
+            this.guna2Panel2.Controls.Add(this.editProduct);
+            this.guna2Panel2.Controls.Add(this.createProduct);
+            this.guna2Panel2.Controls.Add(this.listProduct);
             this.guna2Panel2.Location = new System.Drawing.Point(206, 93);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1360, 732);
             this.guna2Panel2.TabIndex = 13;
             // 
-            // btnCart
+            // createProduct
             // 
-            this.btnCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.btnCart.FlatAppearance.BorderSize = 0;
-            this.btnCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCart.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnCart.Image = ((System.Drawing.Image)(resources.GetObject("btnCart.Image")));
-            this.btnCart.Location = new System.Drawing.Point(1141, 21);
-            this.btnCart.Name = "btnCart";
-            this.btnCart.Size = new System.Drawing.Size(35, 35);
-            this.btnCart.TabIndex = 14;
-            this.btnCart.UseVisualStyleBackColor = false;
+            this.createProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.createProduct.Location = new System.Drawing.Point(0, 0);
+            this.createProduct.Name = "createProduct";
+            this.createProduct.Size = new System.Drawing.Size(1360, 732);
+            this.createProduct.TabIndex = 3;
+            // 
+            // listProduct
+            // 
+            this.listProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.listProduct.Location = new System.Drawing.Point(0, 0);
+            this.listProduct.Name = "listProduct";
+            this.listProduct.Size = new System.Drawing.Size(1360, 732);
+            this.listProduct.TabIndex = 2;
+            // 
+            // storeControl
+            // 
+            this.storeControl.BackColor = System.Drawing.SystemColors.Control;
+            this.storeControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.storeControl.Location = new System.Drawing.Point(0, 0);
+            this.storeControl.Margin = new System.Windows.Forms.Padding(2);
+            this.storeControl.Name = "storeControl";
+            this.storeControl.Size = new System.Drawing.Size(1358, 730);
+            this.storeControl.TabIndex = 0;
+            // 
+            // homeControl
+            // 
+            this.homeControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.homeControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.homeControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.homeControl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.homeControl.Location = new System.Drawing.Point(0, 0);
+            this.homeControl.Name = "homeControl";
+            this.homeControl.Size = new System.Drawing.Size(1358, 730);
+            this.homeControl.TabIndex = 1;
+            // 
+            // editProduct
+            // 
+            this.editProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.editProduct.Location = new System.Drawing.Point(0, 2);
+            this.editProduct.Name = "editProduct";
+            this.editProduct.Size = new System.Drawing.Size(1360, 730);
+            this.editProduct.TabIndex = 4;
             // 
             // pictureBox1
             // 
@@ -178,7 +213,6 @@
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.pictureBox1);
-            this.guna2Panel1.Controls.Add(this.btnCart);
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.LightGray;
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(206, 0);
@@ -286,6 +320,7 @@
             this.btnProduct.Text = "      Sản phẩm";
             this.btnProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnProduct.UseVisualStyleBackColor = true;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // btnBill
             // 
@@ -365,32 +400,6 @@
             this.pnlSiderBar.Size = new System.Drawing.Size(206, 825);
             this.pnlSiderBar.TabIndex = 0;
             // 
-            // storeControl1
-            // 
-            this.storeControl1.BackColor = System.Drawing.SystemColors.Control;
-            this.storeControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.storeControl1.Location = new System.Drawing.Point(0, 0);
-            this.storeControl1.Margin = new System.Windows.Forms.Padding(2);
-            this.storeControl1.Name = "storeControl1";
-            this.storeControl1.Size = new System.Drawing.Size(1358, 730);
-            this.storeControl1.TabIndex = 0;
-            // 
-            // createProduct1
-            // 
-            this.createProduct1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.createProduct1.Location = new System.Drawing.Point(0, 0);
-            this.createProduct1.Name = "createProduct1";
-            this.createProduct1.Size = new System.Drawing.Size(1360, 732);
-            this.createProduct1.TabIndex = 2;
-            // 
-            // listProduct1
-            // 
-            this.listProduct1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.listProduct1.Location = new System.Drawing.Point(0, 0);
-            this.listProduct1.Name = "listProduct1";
-            this.listProduct1.Size = new System.Drawing.Size(1360, 732);
-            this.listProduct1.TabIndex = 3;
-            // 
             // frmManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,9 +429,8 @@
 
         #endregion
 
-        private usercontrol.StoreControl storeControl1;
+        private usercontrol.StoreControl storeControl;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.Button btnCart;
         private System.Windows.Forms.PictureBox pictureBox1;
         protected internal System.Windows.Forms.Label label2;
         protected internal System.Windows.Forms.Label label1;
@@ -444,7 +452,9 @@
         private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Button btnInfomation;
         private System.Windows.Forms.Panel pnlSiderBar;
-        private usercontrol.admin.product.createProduct createProduct1;
-        private usercontrol.admin.product.listProduct listProduct1;
+        private usercontrol.HomeControl homeControl;
+        private usercontrol.admin.product.listProduct listProduct;
+        private usercontrol.admin.product.createProduct createProduct;
+        private usercontrol.admin.product.editProduct editProduct;
     }
 }

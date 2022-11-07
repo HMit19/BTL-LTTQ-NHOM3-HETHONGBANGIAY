@@ -24,45 +24,23 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
                 e.Cancel = true;
             }
         }
-
-        private void btnLogout_MouseLeave(object sender, EventArgs e)
-        {
-            //btnLogout.BackColor = Color.FromArgb(231, 233, 237);
-        }
-
-        private void btnLogout_MouseMove(object sender, MouseEventArgs e)
-        {
-            //btnLogout.BackColor = Color.FromArgb(165, 216, 255);
-        }
-
-        private void btnCart_MouseMove(object sender, MouseEventArgs e)
-        {
-            btnCart.BackColor = Color.FromArgb(165, 216, 255);
-        }
-
-        private void btnCart_MouseLeave(object sender, EventArgs e)
-        {
-            btnCart.BackColor = Color.FromArgb(231, 233, 237);
-        }
-
-        private void btnSetting_MouseLeave(object sender, EventArgs e)
-        {
-            btnSetting.BackColor = Color.FromArgb(231, 233, 237);
-            
-        }
-
-        private void btnSetting_MouseMove(object sender, MouseEventArgs e)
-        {
-            btnSetting.BackColor = Color.FromArgb(165, 216, 255);
-        }
-
         private void btnSell_Click(object sender, EventArgs e)
         {
+            bringToFontUsercontrol(storeControl);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            bringToFontUsercontrol(homeControl);
+        }
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            bringToFontUsercontrol(listProduct);
         }
 
+        private void bringToFontUsercontrol(UserControl namePanel)
+        {
+            namePanel.BringToFront();
+        }
     }
 }
