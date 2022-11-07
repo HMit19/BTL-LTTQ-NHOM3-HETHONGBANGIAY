@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
 {
-    public partial class edit : UserControl
+    public partial class editProduct : UserControl
     {
-        public edit()
+        public editProduct()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
 {
-    partial class createProduct
+    partial class editProduct
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,16 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.btnConfirmNewProduct = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnReset = new FontAwesome.Sharp.IconButton();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbColor = new Guna.UI2.WinForms.Guna2ComboBox();
             this.imgProduct = new FontAwesome.Sharp.IconButton();
@@ -47,102 +43,46 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.cbCategory = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnConfirmNewProduct = new Guna.UI2.WinForms.Guna2Button();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.guna2GradientPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.label3 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // guna2GradientPanel1
+            // iconPictureBox1
             // 
-            this.guna2GradientPanel1.Controls.Add(this.iconPictureBox1);
-            this.guna2GradientPanel1.Controls.Add(this.label3);
-            this.guna2GradientPanel1.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientPanel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1360, 68);
-            this.guna2GradientPanel1.TabIndex = 0;
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.ProductHunt;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.MenuHighlight;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 45;
+            this.iconPictureBox1.Location = new System.Drawing.Point(34, 8);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(45, 45);
+            this.iconPictureBox1.TabIndex = 6;
+            this.iconPictureBox1.TabStop = false;
             // 
-            // label3
+            // btnConfirmNewProduct
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.label3.Location = new System.Drawing.Point(85, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 22);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Thêm sản phẩm";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(126, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Mã sản phẩm";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(126, 113);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tên sản phẩm";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(126, 203);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Doanh mục";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(126, 158);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 20);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Ảnh";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.guna2ComboBox1);
-            this.groupBox1.Controls.Add(this.btnReset);
-            this.groupBox1.Controls.Add(this.txtPrice);
-            this.groupBox1.Controls.Add(this.txtQuantity);
-            this.groupBox1.Controls.Add(this.cbColor);
-            this.groupBox1.Controls.Add(this.imgProduct);
-            this.groupBox1.Controls.Add(this.txtIdProduct);
-            this.groupBox1.Controls.Add(this.txtNameProduct);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.cbCategory);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(365, 114);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(630, 445);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin sản phẩm";
+            this.btnConfirmNewProduct.BorderRadius = 20;
+            this.btnConfirmNewProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirmNewProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirmNewProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnConfirmNewProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnConfirmNewProduct.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmNewProduct.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmNewProduct.Location = new System.Drawing.Point(156, 342);
+            this.btnConfirmNewProduct.Name = "btnConfirmNewProduct";
+            this.btnConfirmNewProduct.Size = new System.Drawing.Size(232, 41);
+            this.btnConfirmNewProduct.TabIndex = 9;
+            this.btnConfirmNewProduct.Text = "Thêm ";
             // 
             // guna2ComboBox1
             // 
@@ -192,6 +132,33 @@
             this.txtPrice.SelectedText = "";
             this.txtPrice.Size = new System.Drawing.Size(254, 34);
             this.txtPrice.TabIndex = 18;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.guna2ComboBox1);
+            this.groupBox1.Controls.Add(this.btnReset);
+            this.groupBox1.Controls.Add(this.txtPrice);
+            this.groupBox1.Controls.Add(this.txtQuantity);
+            this.groupBox1.Controls.Add(this.cbColor);
+            this.groupBox1.Controls.Add(this.imgProduct);
+            this.groupBox1.Controls.Add(this.txtIdProduct);
+            this.groupBox1.Controls.Add(this.txtNameProduct);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.cbCategory);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(-57, -118);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(630, 445);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông tin sản phẩm";
             // 
             // txtQuantity
             // 
@@ -319,6 +286,46 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Màu";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(126, 203);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 20);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Doanh mục";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(126, 158);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 20);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Ảnh";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(126, 113);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Tên sản phẩm";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(126, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Mã sản phẩm";
+            // 
             // cbCategory
             // 
             this.cbCategory.BackColor = System.Drawing.Color.Transparent;
@@ -334,63 +341,53 @@
             this.cbCategory.Size = new System.Drawing.Size(254, 36);
             this.cbCategory.TabIndex = 14;
             // 
-            // btnConfirmNewProduct
+            // label3
             // 
-            this.btnConfirmNewProduct.BorderRadius = 20;
-            this.btnConfirmNewProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnConfirmNewProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnConfirmNewProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnConfirmNewProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnConfirmNewProduct.Font = new System.Drawing.Font("Century Schoolbook", 14.25F);
-            this.btnConfirmNewProduct.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmNewProduct.Location = new System.Drawing.Point(592, 578);
-            this.btnConfirmNewProduct.Name = "btnConfirmNewProduct";
-            this.btnConfirmNewProduct.Size = new System.Drawing.Size(232, 41);
-            this.btnConfirmNewProduct.TabIndex = 6;
-            this.btnConfirmNewProduct.Text = "Thêm ";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(85, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(148, 25);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Thêm sản phẩm";
             // 
-            // iconPictureBox1
+            // guna2GradientPanel1
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.ProductHunt;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.MenuHighlight;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 45;
-            this.iconPictureBox1.Location = new System.Drawing.Point(34, 8);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(45, 45);
-            this.iconPictureBox1.TabIndex = 6;
-            this.iconPictureBox1.TabStop = false;
+            this.guna2GradientPanel1.Controls.Add(this.iconPictureBox1);
+            this.guna2GradientPanel1.Controls.Add(this.label3);
+            this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(150, 72);
+            this.guna2GradientPanel1.TabIndex = 7;
             // 
-            // createProduct
+            // editProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.Controls.Add(this.btnConfirmNewProduct);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.guna2GradientPanel1);
-            this.Name = "createProduct";
-            this.Size = new System.Drawing.Size(1360, 732);
-            this.guna2GradientPanel1.ResumeLayout(false);
-            this.guna2GradientPanel1.PerformLayout();
+            this.Name = "editProduct";
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.guna2GradientPanel1.ResumeLayout(false);
+            this.guna2GradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private Guna.UI2.WinForms.Guna2Button btnConfirmNewProduct;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private FontAwesome.Sharp.IconButton btnReset;
+        private Guna.UI2.WinForms.Guna2TextBox txtPrice;
         private System.Windows.Forms.GroupBox groupBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtQuantity;
+        private Guna.UI2.WinForms.Guna2ComboBox cbColor;
         private FontAwesome.Sharp.IconButton imgProduct;
         private Guna.UI2.WinForms.Guna2TextBox txtIdProduct;
         private Guna.UI2.WinForms.Guna2TextBox txtNameProduct;
@@ -398,13 +395,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private FontAwesome.Sharp.IconButton btnReset;
-        private Guna.UI2.WinForms.Guna2TextBox txtPrice;
-        private Guna.UI2.WinForms.Guna2TextBox txtQuantity;
-        private Guna.UI2.WinForms.Guna2ComboBox cbColor;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox cbCategory;
-        private Guna.UI2.WinForms.Guna2Button btnConfirmNewProduct;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
     }
 }

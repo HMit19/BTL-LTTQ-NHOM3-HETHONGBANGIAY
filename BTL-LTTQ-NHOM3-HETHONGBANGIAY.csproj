@@ -78,11 +78,11 @@
     <Compile Include="view\usercontrol\admin\product\createProduct.Designer.cs">
       <DependentUpon>createProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\usercontrol\admin\product\edit.cs">
+    <Compile Include="view\usercontrol\admin\product\editProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="view\usercontrol\admin\product\edit.Designer.cs">
-      <DependentUpon>edit.cs</DependentUpon>
+    <Compile Include="view\usercontrol\admin\product\editProduct.Designer.cs">
+      <DependentUpon>editProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="view\usercontrol\admin\product\listProduct.cs">
       <SubType>UserControl</SubType>
@@ -155,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\admin\product\createProduct.resx">
       <DependentUpon>createProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\admin\product\editProduct.resx">
+      <DependentUpon>editProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\admin\product\listProduct.resx">
       <DependentUpon>listProduct.cs</DependentUpon>
