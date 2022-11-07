@@ -72,11 +72,11 @@
     <Compile Include="view\sell\payUpForm.Designer.cs">
       <DependentUpon>payUpForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\usercontrol\admin\product\create.cs">
+    <Compile Include="view\usercontrol\admin\product\createProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="view\usercontrol\admin\product\create.Designer.cs">
-      <DependentUpon>create.cs</DependentUpon>
+    <Compile Include="view\usercontrol\admin\product\createProduct.Designer.cs">
+      <DependentUpon>createProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="view\usercontrol\admin\product\edit.cs">
       <SubType>UserControl</SubType>
@@ -152,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\sell\payUpForm.resx">
       <DependentUpon>payUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\admin\product\createProduct.resx">
+      <DependentUpon>createProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\admin\product\listProduct.resx">
       <DependentUpon>listProduct.cs</DependentUpon>

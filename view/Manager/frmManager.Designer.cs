@@ -40,10 +40,10 @@
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblSlogan = new System.Windows.Forms.Label();
+            this.pictureStore = new System.Windows.Forms.PictureBox();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureStore = new System.Windows.Forms.PictureBox();
-            this.lblSlogan = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnSell = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
@@ -53,19 +53,21 @@
             this.btnInfomation = new System.Windows.Forms.Button();
             this.pnlSiderBar = new System.Windows.Forms.Panel();
             this.storeControl1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.StoreControl();
+            this.createProduct1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.createProduct();
             this.listProduct1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.listProduct();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.pnlContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureStore)).BeginInit();
+            this.pnlContainer.SuspendLayout();
             this.pnlSiderBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.guna2Panel2.Controls.Add(this.createProduct1);
             this.guna2Panel2.Controls.Add(this.listProduct1);
             this.guna2Panel2.Controls.Add(this.storeControl1);
             this.guna2Panel2.Location = new System.Drawing.Point(206, 93);
@@ -102,7 +104,7 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(73, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 21);
+            this.label2.Size = new System.Drawing.Size(112, 21);
             this.label2.TabIndex = 16;
             this.label2.Text = "Mai Văn Hiếu";
             // 
@@ -193,8 +195,28 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(206, 84);
+            this.panel2.Size = new System.Drawing.Size(206, 120);
             this.panel2.TabIndex = 1;
+            // 
+            // lblSlogan
+            // 
+            this.lblSlogan.AutoSize = true;
+            this.lblSlogan.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSlogan.Location = new System.Drawing.Point(61, 90);
+            this.lblSlogan.Name = "lblSlogan";
+            this.lblSlogan.Size = new System.Drawing.Size(83, 11);
+            this.lblSlogan.TabIndex = 1;
+            this.lblSlogan.Text = "CAO HƠN ĐI XA HƠN";
+            // 
+            // pictureStore
+            // 
+            this.pictureStore.Image = ((System.Drawing.Image)(resources.GetObject("pictureStore.Image")));
+            this.pictureStore.Location = new System.Drawing.Point(14, 7);
+            this.pictureStore.Name = "pictureStore";
+            this.pictureStore.Size = new System.Drawing.Size(178, 94);
+            this.pictureStore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureStore.TabIndex = 1;
+            this.pictureStore.TabStop = false;
             // 
             // pnlContainer
             // 
@@ -215,26 +237,6 @@
             this.panel1.Size = new System.Drawing.Size(1361, 3);
             this.panel1.TabIndex = 2;
             // 
-            // pictureStore
-            // 
-            this.pictureStore.Image = ((System.Drawing.Image)(resources.GetObject("pictureStore.Image")));
-            this.pictureStore.Location = new System.Drawing.Point(14, 7);
-            this.pictureStore.Name = "pictureStore";
-            this.pictureStore.Size = new System.Drawing.Size(178, 63);
-            this.pictureStore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureStore.TabIndex = 1;
-            this.pictureStore.TabStop = false;
-            // 
-            // lblSlogan
-            // 
-            this.lblSlogan.AutoSize = true;
-            this.lblSlogan.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSlogan.Location = new System.Drawing.Point(62, 65);
-            this.lblSlogan.Name = "lblSlogan";
-            this.lblSlogan.Size = new System.Drawing.Size(83, 11);
-            this.lblSlogan.TabIndex = 1;
-            this.lblSlogan.Text = "CAO HƠN ĐI XA HƠN";
-            // 
             // btnHome
             // 
             this.btnHome.FlatAppearance.BorderSize = 0;
@@ -242,7 +244,7 @@
             this.btnHome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(1, 99);
+            this.btnHome.Location = new System.Drawing.Point(1, 126);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnHome.Size = new System.Drawing.Size(204, 54);
@@ -259,7 +261,7 @@
             this.btnSell.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSell.Image = ((System.Drawing.Image)(resources.GetObject("btnSell.Image")));
             this.btnSell.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSell.Location = new System.Drawing.Point(1, 150);
+            this.btnSell.Location = new System.Drawing.Point(1, 177);
             this.btnSell.Name = "btnSell";
             this.btnSell.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnSell.Size = new System.Drawing.Size(204, 54);
@@ -276,7 +278,7 @@
             this.btnProduct.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
             this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduct.Location = new System.Drawing.Point(1, 201);
+            this.btnProduct.Location = new System.Drawing.Point(1, 228);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnProduct.Size = new System.Drawing.Size(204, 54);
@@ -292,7 +294,7 @@
             this.btnBill.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBill.Image = ((System.Drawing.Image)(resources.GetObject("btnBill.Image")));
             this.btnBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBill.Location = new System.Drawing.Point(1, 252);
+            this.btnBill.Location = new System.Drawing.Point(1, 279);
             this.btnBill.Name = "btnBill";
             this.btnBill.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnBill.Size = new System.Drawing.Size(204, 54);
@@ -308,7 +310,7 @@
             this.btnEmployee.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.Image")));
             this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployee.Location = new System.Drawing.Point(1, 302);
+            this.btnEmployee.Location = new System.Drawing.Point(1, 329);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnEmployee.Size = new System.Drawing.Size(204, 54);
@@ -324,7 +326,7 @@
             this.btnCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
             this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(1, 352);
+            this.btnCustomer.Location = new System.Drawing.Point(1, 379);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnCustomer.Size = new System.Drawing.Size(204, 54);
@@ -349,6 +351,7 @@
             // pnlSiderBar
             // 
             this.pnlSiderBar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnlSiderBar.Controls.Add(this.panel2);
             this.pnlSiderBar.Controls.Add(this.btnInfomation);
             this.pnlSiderBar.Controls.Add(this.btnCustomer);
             this.pnlSiderBar.Controls.Add(this.btnEmployee);
@@ -356,7 +359,6 @@
             this.pnlSiderBar.Controls.Add(this.btnProduct);
             this.pnlSiderBar.Controls.Add(this.btnSell);
             this.pnlSiderBar.Controls.Add(this.btnHome);
-            this.pnlSiderBar.Controls.Add(this.panel2);
             this.pnlSiderBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSiderBar.Location = new System.Drawing.Point(0, 0);
             this.pnlSiderBar.Name = "pnlSiderBar";
@@ -373,13 +375,21 @@
             this.storeControl1.Size = new System.Drawing.Size(1358, 730);
             this.storeControl1.TabIndex = 0;
             // 
+            // createProduct1
+            // 
+            this.createProduct1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.createProduct1.Location = new System.Drawing.Point(0, 0);
+            this.createProduct1.Name = "createProduct1";
+            this.createProduct1.Size = new System.Drawing.Size(1360, 732);
+            this.createProduct1.TabIndex = 2;
+            // 
             // listProduct1
             // 
             this.listProduct1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.listProduct1.Location = new System.Drawing.Point(0, 0);
             this.listProduct1.Name = "listProduct1";
             this.listProduct1.Size = new System.Drawing.Size(1360, 732);
-            this.listProduct1.TabIndex = 1;
+            this.listProduct1.TabIndex = 3;
             // 
             // frmManager
             // 
@@ -401,8 +411,8 @@
             this.guna2Panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.pnlContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureStore)).EndInit();
+            this.pnlContainer.ResumeLayout(false);
             this.pnlSiderBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -434,6 +444,7 @@
         private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Button btnInfomation;
         private System.Windows.Forms.Panel pnlSiderBar;
+        private usercontrol.admin.product.createProduct createProduct1;
         private usercontrol.admin.product.listProduct listProduct1;
     }
 }
