@@ -55,3 +55,32 @@ C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BT
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.CopyComplete
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.pdb
+C:\Users\Hsa1pro\Desktop\BTL1\bin\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe.config
+C:\Users\Hsa1pro\Desktop\BTL1\bin\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe
+C:\Users\Hsa1pro\Desktop\BTL1\bin\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.pdb
+C:\Users\Hsa1pro\Desktop\BTL1\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Hsa1pro\Desktop\BTL1\bin\Debug\Guna.UI2.dll
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.AssemblyReference.cache
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.Properties.Resources.resources
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.frmLogin.resources
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.sell.payUpForm.resources
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemNewCustomer.resources
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct.resources
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProductOfCart.resources
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct.resources
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager.frmManager.resources
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.HomeControl.resources
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTransactionHistory.resources
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.StoreControl.resources
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.GenerateResource.cache
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.CoreCompileInputs.cache
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.CopyComplete
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.pdb
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.test.resources
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.BillControl.resources
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.SaleBillControl.resources
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.ImportBillControl.resources
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CustomerControl.resources
+C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CustomerInforControl.resources

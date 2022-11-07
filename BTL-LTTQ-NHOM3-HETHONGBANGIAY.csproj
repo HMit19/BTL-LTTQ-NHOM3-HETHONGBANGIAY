@@ -72,6 +72,12 @@
     <Compile Include="view\sell\payUpForm.Designer.cs">
       <DependentUpon>payUpForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\usercontrol\admin\product\create.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,6 +95,30 @@
     </Compile>
     <Compile Include="view\usercontrol\admin\product\list.Designer.cs">
       <DependentUpon>list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\usercontrol\BillControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\BillControl.Designer.cs">
+      <DependentUpon>BillControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\usercontrol\CustomerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\CustomerControl.Designer.cs">
+      <DependentUpon>CustomerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\usercontrol\CustomerInforControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\CustomerInforControl.Designer.cs">
+      <DependentUpon>CustomerInforControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\usercontrol\ImportBillControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\ImportBillControl.Designer.cs">
+      <DependentUpon>ImportBillControl.cs</DependentUpon>
     </Compile>
     <Compile Include="view\usercontrol\item\ItemNewCustomer.cs">
       <SubType>UserControl</SubType>
@@ -132,6 +162,12 @@
     <Compile Include="view\usercontrol\item\ItemTransactionHistory.Designer.cs">
       <DependentUpon>ItemTransactionHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\usercontrol\SaleBillControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\SaleBillControl.Designer.cs">
+      <DependentUpon>SaleBillControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\usercontrol\StoreControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -153,6 +189,21 @@
     <EmbeddedResource Include="view\sell\payUpForm.resx">
       <DependentUpon>payUpForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\BillControl.resx">
+      <DependentUpon>BillControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\CustomerControl.resx">
+      <DependentUpon>CustomerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\CustomerInforControl.resx">
+      <DependentUpon>CustomerInforControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\ImportBillControl.resx">
+      <DependentUpon>ImportBillControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\item\ItemNewCustomer.resx">
       <DependentUpon>ItemNewCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\item\ItemTransactionHistory.resx">
       <DependentUpon>ItemTransactionHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\SaleBillControl.resx">
+      <DependentUpon>SaleBillControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\StoreControl.resx">
       <DependentUpon>StoreControl.cs</DependentUpon>

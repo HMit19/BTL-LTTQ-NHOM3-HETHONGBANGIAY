@@ -43,6 +43,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnSetting = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,9 +51,8 @@
             this.btnCart = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.homeControl = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.HomeControl();
             this.storeControl = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.StoreControl();
+            this.homeControl = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.HomeControl();
             this.pnlSiderBar.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureStore)).BeginInit();
@@ -76,8 +76,9 @@
             this.pnlSiderBar.Controls.Add(this.panel2);
             this.pnlSiderBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSiderBar.Location = new System.Drawing.Point(0, 0);
+            this.pnlSiderBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlSiderBar.Name = "pnlSiderBar";
-            this.pnlSiderBar.Size = new System.Drawing.Size(206, 853);
+            this.pnlSiderBar.Size = new System.Drawing.Size(275, 1040);
             this.pnlSiderBar.TabIndex = 0;
             // 
             // btnInfomation
@@ -87,9 +88,10 @@
             this.btnInfomation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInfomation.ForeColor = System.Drawing.SystemColors.Info;
             this.btnInfomation.Image = ((System.Drawing.Image)(resources.GetObject("btnInfomation.Image")));
-            this.btnInfomation.Location = new System.Drawing.Point(81, 801);
+            this.btnInfomation.Location = new System.Drawing.Point(108, 986);
+            this.btnInfomation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInfomation.Name = "btnInfomation";
-            this.btnInfomation.Size = new System.Drawing.Size(35, 35);
+            this.btnInfomation.Size = new System.Drawing.Size(47, 43);
             this.btnInfomation.TabIndex = 7;
             this.btnInfomation.UseVisualStyleBackColor = false;
             // 
@@ -100,10 +102,11 @@
             this.btnCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
             this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(1, 403);
+            this.btnCustomer.Location = new System.Drawing.Point(1, 496);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnCustomer.Size = new System.Drawing.Size(204, 54);
+            this.btnCustomer.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
+            this.btnCustomer.Size = new System.Drawing.Size(272, 66);
             this.btnCustomer.TabIndex = 6;
             this.btnCustomer.Text = "      Khách hàng";
             this.btnCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -116,10 +119,11 @@
             this.btnEmployee.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.Image")));
             this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployee.Location = new System.Drawing.Point(1, 353);
+            this.btnEmployee.Location = new System.Drawing.Point(1, 434);
+            this.btnEmployee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnEmployee.Size = new System.Drawing.Size(204, 54);
+            this.btnEmployee.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
+            this.btnEmployee.Size = new System.Drawing.Size(272, 66);
             this.btnEmployee.TabIndex = 5;
             this.btnEmployee.Text = "      Nhân viên";
             this.btnEmployee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -132,10 +136,11 @@
             this.btnBill.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBill.Image = ((System.Drawing.Image)(resources.GetObject("btnBill.Image")));
             this.btnBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBill.Location = new System.Drawing.Point(1, 303);
+            this.btnBill.Location = new System.Drawing.Point(1, 373);
+            this.btnBill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBill.Name = "btnBill";
-            this.btnBill.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnBill.Size = new System.Drawing.Size(204, 54);
+            this.btnBill.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
+            this.btnBill.Size = new System.Drawing.Size(272, 66);
             this.btnBill.TabIndex = 4;
             this.btnBill.Text = "      Hoá đơn";
             this.btnBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -148,10 +153,11 @@
             this.btnProduct.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
             this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduct.Location = new System.Drawing.Point(1, 252);
+            this.btnProduct.Location = new System.Drawing.Point(1, 310);
+            this.btnProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnProduct.Size = new System.Drawing.Size(204, 54);
+            this.btnProduct.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
+            this.btnProduct.Size = new System.Drawing.Size(272, 66);
             this.btnProduct.TabIndex = 3;
             this.btnProduct.Text = "      Sản phẩm";
             this.btnProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -164,10 +170,11 @@
             this.btnSell.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSell.Image = ((System.Drawing.Image)(resources.GetObject("btnSell.Image")));
             this.btnSell.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSell.Location = new System.Drawing.Point(1, 201);
+            this.btnSell.Location = new System.Drawing.Point(1, 247);
+            this.btnSell.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSell.Name = "btnSell";
-            this.btnSell.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnSell.Size = new System.Drawing.Size(204, 54);
+            this.btnSell.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
+            this.btnSell.Size = new System.Drawing.Size(272, 66);
             this.btnSell.TabIndex = 2;
             this.btnSell.Text = "      Bán hàng";
             this.btnSell.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -178,9 +185,10 @@
             // 
             this.lblSlogan.AutoSize = true;
             this.lblSlogan.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSlogan.Location = new System.Drawing.Point(57, 107);
+            this.lblSlogan.Location = new System.Drawing.Point(76, 132);
+            this.lblSlogan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSlogan.Name = "lblSlogan";
-            this.lblSlogan.Size = new System.Drawing.Size(91, 12);
+            this.lblSlogan.Size = new System.Drawing.Size(125, 15);
             this.lblSlogan.TabIndex = 1;
             this.lblSlogan.Text = "CAO HƠN ĐI XA HƠN";
             // 
@@ -191,10 +199,11 @@
             this.btnHome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(1, 150);
+            this.btnHome.Location = new System.Drawing.Point(1, 185);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(204, 54);
+            this.btnHome.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
+            this.btnHome.Size = new System.Drawing.Size(272, 66);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "      Trang chủ";
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -207,16 +216,18 @@
             this.panel2.Controls.Add(this.pictureStore);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(206, 104);
+            this.panel2.Size = new System.Drawing.Size(275, 128);
             this.panel2.TabIndex = 1;
             // 
             // pictureStore
             // 
             this.pictureStore.Image = ((System.Drawing.Image)(resources.GetObject("pictureStore.Image")));
-            this.pictureStore.Location = new System.Drawing.Point(12, 33);
+            this.pictureStore.Location = new System.Drawing.Point(16, 41);
+            this.pictureStore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureStore.Name = "pictureStore";
-            this.pictureStore.Size = new System.Drawing.Size(178, 77);
+            this.pictureStore.Size = new System.Drawing.Size(237, 95);
             this.pictureStore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureStore.TabIndex = 1;
             this.pictureStore.TabStop = false;
@@ -227,8 +238,9 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1360, 3);
+            this.panel1.Size = new System.Drawing.Size(1813, 4);
             this.panel1.TabIndex = 2;
             // 
             // pnlContainer
@@ -237,9 +249,10 @@
             this.pnlContainer.Controls.Add(this.panel1);
             this.pnlContainer.Controls.Add(this.storeControl);
             this.pnlContainer.Controls.Add(this.homeControl);
-            this.pnlContainer.Location = new System.Drawing.Point(215, 114);
+            this.pnlContainer.Location = new System.Drawing.Point(287, 140);
+            this.pnlContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(1360, 732);
+            this.pnlContainer.Size = new System.Drawing.Size(1813, 901);
             this.pnlContainer.TabIndex = 4;
             // 
             // guna2Panel1
@@ -255,10 +268,20 @@
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.LightGray;
             this.guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 7, 0, 0);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(206, 0);
+            this.guna2Panel1.Location = new System.Drawing.Point(275, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1375, 105);
+            this.guna2Panel1.Size = new System.Drawing.Size(1649, 129);
             this.guna2Panel1.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label3.Location = new System.Drawing.Point(0, 9);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(9, 121);
+            this.label3.TabIndex = 19;
             // 
             // btnSetting
             // 
@@ -267,9 +290,10 @@
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetting.ForeColor = System.Drawing.SystemColors.Info;
             this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
-            this.btnSetting.Location = new System.Drawing.Point(1182, 40);
+            this.btnSetting.Location = new System.Drawing.Point(1576, 49);
+            this.btnSetting.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(35, 35);
+            this.btnSetting.Size = new System.Drawing.Size(47, 43);
             this.btnSetting.TabIndex = 18;
             this.btnSetting.UseVisualStyleBackColor = false;
             // 
@@ -277,9 +301,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(115, 76);
+            this.label1.Location = new System.Drawing.Point(153, 94);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.Size = new System.Drawing.Size(63, 21);
             this.label1.TabIndex = 17;
             this.label1.Text = "Admin";
             // 
@@ -287,18 +312,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(113, 31);
+            this.label2.Location = new System.Drawing.Point(151, 38);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 21);
+            this.label2.Size = new System.Drawing.Size(135, 23);
             this.label2.TabIndex = 16;
             this.label2.Text = "Mai Văn Hiếu";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(32, 17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(85, 91);
+            this.pictureBox1.Size = new System.Drawing.Size(113, 112);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -310,9 +337,10 @@
             this.btnCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCart.ForeColor = System.Drawing.SystemColors.Info;
             this.btnCart.Image = ((System.Drawing.Image)(resources.GetObject("btnCart.Image")));
-            this.btnCart.Location = new System.Drawing.Point(1243, 40);
+            this.btnCart.Location = new System.Drawing.Point(1657, 49);
+            this.btnCart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCart.Name = "btnCart";
-            this.btnCart.Size = new System.Drawing.Size(35, 35);
+            this.btnCart.Size = new System.Drawing.Size(47, 43);
             this.btnCart.TabIndex = 14;
             this.btnCart.UseVisualStyleBackColor = false;
             // 
@@ -323,9 +351,10 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.ForeColor = System.Drawing.SystemColors.Info;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(1301, 40);
+            this.btnLogout.Location = new System.Drawing.Point(1735, 49);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(35, 35);
+            this.btnLogout.Size = new System.Drawing.Size(47, 43);
             this.btnLogout.TabIndex = 12;
             this.btnLogout.UseVisualStyleBackColor = false;
             // 
@@ -333,50 +362,45 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(600, 13);
+            this.pictureBox2.Location = new System.Drawing.Point(800, 16);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(179, 97);
+            this.pictureBox2.Size = new System.Drawing.Size(239, 119);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.label3.Location = new System.Drawing.Point(0, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(7, 98);
-            this.label3.TabIndex = 19;
-            // 
-            // homeControl
-            // 
-            this.homeControl.BackColor = System.Drawing.Color.Transparent;
-            this.homeControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.homeControl.Location = new System.Drawing.Point(0, 0);
-            this.homeControl.Name = "homeControl";
-            this.homeControl.Size = new System.Drawing.Size(1358, 730);
-            this.homeControl.TabIndex = 3;
             // 
             // storeControl
             // 
             this.storeControl.BackColor = System.Drawing.SystemColors.Control;
             this.storeControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.storeControl.Location = new System.Drawing.Point(0, 0);
-            this.storeControl.Margin = new System.Windows.Forms.Padding(2);
+            this.storeControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.storeControl.Name = "storeControl";
-            this.storeControl.Size = new System.Drawing.Size(1358, 730);
+            this.storeControl.Size = new System.Drawing.Size(1811, 898);
             this.storeControl.TabIndex = 4;
+            // 
+            // homeControl
+            // 
+            this.homeControl.BackColor = System.Drawing.Color.Transparent;
+            this.homeControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.homeControl.Location = new System.Drawing.Point(0, 0);
+            this.homeControl.Margin = new System.Windows.Forms.Padding(4);
+            this.homeControl.Name = "homeControl";
+            this.homeControl.Size = new System.Drawing.Size(1811, 898);
+            this.homeControl.TabIndex = 3;
             // 
             // frmManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1581, 853);
+            this.ClientSize = new System.Drawing.Size(1924, 1040);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pnlSiderBar);
             this.Controls.Add(this.pnlContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
