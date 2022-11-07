@@ -178,9 +178,9 @@
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.Location = new System.Drawing.Point(1230, 19);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(77, 25);
+            this.guna2Button2.Size = new System.Drawing.Size(85, 25);
             this.guna2Button2.TabIndex = 8;
-            this.guna2Button2.Text = "Delete";
+            this.guna2Button2.Text = "Xoá";
             // 
             // guna2Button1
             // 
@@ -191,11 +191,11 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(1147, 19);
+            this.guna2Button1.Location = new System.Drawing.Point(1139, 19);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(77, 25);
+            this.guna2Button1.Size = new System.Drawing.Size(85, 25);
             this.guna2Button1.TabIndex = 7;
-            this.guna2Button1.Text = "Edit";
+            this.guna2Button1.Text = "Chỉnh sửa";
             // 
             // guna2ComboBox1
             // 
@@ -252,7 +252,7 @@
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(113, 25);
             this.btnFilter.TabIndex = 2;
-            this.btnFilter.Text = "Filter";
+            this.btnFilter.Text = "Bộ lọc";
             this.btnFilter.UseVisualStyleBackColor = true;
             // 
             // label2

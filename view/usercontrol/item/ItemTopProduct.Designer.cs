@@ -29,66 +29,70 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemTopProduct));
+            this.panel = new Guna.UI2.WinForms.Guna2Panel();
+            this.image = new System.Windows.Forms.PictureBox();
             this.name = new System.Windows.Forms.Label();
-            this.quantity = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel
+            // 
+            this.panel.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.panel.BorderThickness = 1;
+            this.panel.Controls.Add(this.name);
+            this.panel.Controls.Add(this.image);
+            this.panel.CustomBorderColor = System.Drawing.Color.Black;
+            this.panel.CustomBorderThickness = new System.Windows.Forms.Padding(1);
+            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel.Location = new System.Drawing.Point(0, 0);
+            this.panel.Margin = new System.Windows.Forms.Padding(10);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(115, 120);
+            this.panel.TabIndex = 0;
+            // 
+            // image
+            // 
+            this.image.Image = ((System.Drawing.Image)(resources.GetObject("image.Image")));
+            this.image.Location = new System.Drawing.Point(21, 9);
+            this.image.Name = "image";
+            this.image.Size = new System.Drawing.Size(74, 63);
+            this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.image.TabIndex = 0;
+            this.image.TabStop = false;
             // 
             // name
             // 
-            this.name.AutoSize = true;
-            this.name.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.name.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.Location = new System.Drawing.Point(20, 12);
-            this.name.Margin = new System.Windows.Forms.Padding(0);
+            this.name.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.Location = new System.Drawing.Point(12, 78);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(213, 17);
-            this.name.TabIndex = 30;
-            this.name.Text = "THE COUNTRYMAN DERBY - DB14";
-            // 
-            // quantity
-            // 
-            this.quantity.AutoSize = true;
-            this.quantity.BackColor = System.Drawing.Color.White;
-            this.quantity.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantity.Location = new System.Drawing.Point(357, 12);
-            this.quantity.Margin = new System.Windows.Forms.Padding(0);
-            this.quantity.Name = "quantity";
-            this.quantity.Size = new System.Drawing.Size(15, 17);
-            this.quantity.TabIndex = 32;
-            this.quantity.Text = "0";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(1, 40);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(623, 2);
-            this.label1.TabIndex = 33;
+            this.name.Size = new System.Drawing.Size(91, 37);
+            this.name.TabIndex = 1;
+            this.name.Text = "Đây là tên sản phẩm";
             // 
             // ItemTopProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.quantity);
-            this.Controls.Add(this.name);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.Controls.Add(this.panel);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.Color.Black;
             this.Location = new System.Drawing.Point(10, 10);
+            this.Margin = new System.Windows.Forms.Padding(10);
             this.Name = "ItemTopProduct";
-            this.Size = new System.Drawing.Size(445, 41);
+            this.Size = new System.Drawing.Size(115, 120);
+            this.panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private Guna.UI2.WinForms.Guna2Panel panel;
         private System.Windows.Forms.Label name;
-        private System.Windows.Forms.Label quantity;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox image;
     }
 }

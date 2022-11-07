@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.btnConfirmNewProduct = new Guna.UI2.WinForms.Guna2Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnReset = new FontAwesome.Sharp.IconButton();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbColor = new Guna.UI2.WinForms.Guna2ComboBox();
             this.imgProduct = new FontAwesome.Sharp.IconButton();
@@ -48,26 +47,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbCategory = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.ProductHunt;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.MenuHighlight;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 45;
-            this.iconPictureBox1.Location = new System.Drawing.Point(34, 8);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(45, 45);
-            this.iconPictureBox1.TabIndex = 6;
-            this.iconPictureBox1.TabStop = false;
             // 
             // btnConfirmNewProduct
             // 
@@ -76,13 +62,40 @@
             this.btnConfirmNewProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnConfirmNewProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnConfirmNewProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnConfirmNewProduct.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmNewProduct.Font = new System.Drawing.Font("Century Schoolbook", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmNewProduct.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmNewProduct.Location = new System.Drawing.Point(156, 342);
+            this.btnConfirmNewProduct.Location = new System.Drawing.Point(592, 578);
             this.btnConfirmNewProduct.Name = "btnConfirmNewProduct";
             this.btnConfirmNewProduct.Size = new System.Drawing.Size(232, 41);
             this.btnConfirmNewProduct.TabIndex = 9;
-            this.btnConfirmNewProduct.Text = "Thêm ";
+            this.btnConfirmNewProduct.Text = "Lưu";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.guna2ComboBox1);
+            this.groupBox1.Controls.Add(this.btnReset);
+            this.groupBox1.Controls.Add(this.txtPrice);
+            this.groupBox1.Controls.Add(this.txtQuantity);
+            this.groupBox1.Controls.Add(this.cbColor);
+            this.groupBox1.Controls.Add(this.imgProduct);
+            this.groupBox1.Controls.Add(this.txtIdProduct);
+            this.groupBox1.Controls.Add(this.txtNameProduct);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.cbCategory);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(365, 114);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(630, 445);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông tin sản phẩm";
             // 
             // guna2ComboBox1
             // 
@@ -132,33 +145,6 @@
             this.txtPrice.SelectedText = "";
             this.txtPrice.Size = new System.Drawing.Size(254, 34);
             this.txtPrice.TabIndex = 18;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.guna2ComboBox1);
-            this.groupBox1.Controls.Add(this.btnReset);
-            this.groupBox1.Controls.Add(this.txtPrice);
-            this.groupBox1.Controls.Add(this.txtQuantity);
-            this.groupBox1.Controls.Add(this.cbColor);
-            this.groupBox1.Controls.Add(this.imgProduct);
-            this.groupBox1.Controls.Add(this.txtIdProduct);
-            this.groupBox1.Controls.Add(this.txtNameProduct);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.cbCategory);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(-57, -118);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(630, 445);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin sản phẩm";
             // 
             // txtQuantity
             // 
@@ -341,51 +327,68 @@
             this.cbCategory.Size = new System.Drawing.Size(254, 36);
             this.cbCategory.TabIndex = 14;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(85, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 25);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Thêm sản phẩm";
-            // 
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.Controls.Add(this.iconPictureBox1);
             this.guna2GradientPanel1.Controls.Add(this.label3);
+            this.guna2GradientPanel1.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientPanel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(150, 72);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1360, 68);
             this.guna2GradientPanel1.TabIndex = 7;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.ProductHunt;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.MenuHighlight;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 45;
+            this.iconPictureBox1.Location = new System.Drawing.Point(34, 8);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(45, 45);
+            this.iconPictureBox1.TabIndex = 6;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(85, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(261, 22);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Thay đổi thông tin sản phẩm";
             // 
             // editProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.Controls.Add(this.btnConfirmNewProduct);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Name = "editProduct";
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(1360, 730);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnConfirmNewProduct;
+        private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private FontAwesome.Sharp.IconButton btnReset;
         private Guna.UI2.WinForms.Guna2TextBox txtPrice;
-        private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtQuantity;
         private Guna.UI2.WinForms.Guna2ComboBox cbColor;
         private FontAwesome.Sharp.IconButton imgProduct;
@@ -400,7 +403,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox cbCategory;
-        private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

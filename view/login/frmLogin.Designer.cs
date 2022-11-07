@@ -164,8 +164,9 @@
             // 
             this.btnMaximize.FlatAppearance.BorderSize = 0;
             this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximize.ForeColor = System.Drawing.Color.Firebrick;
             this.btnMaximize.IconChar = FontAwesome.Sharp.IconChar.XmarkSquare;
-            this.btnMaximize.IconColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMaximize.IconColor = System.Drawing.Color.Coral;
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximize.IconSize = 39;
             this.btnMaximize.ImageAlign = System.Drawing.ContentAlignment.TopRight;
@@ -179,7 +180,7 @@
             // frmLogin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(690, 405);
             this.Controls.Add(this.btnMaximize);
             this.Controls.Add(this.btnMinimize);

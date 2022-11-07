@@ -31,20 +31,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         private void InitializeComponent()
         {
             this.lblNameForm = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblQuantityProduct = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblQuantityOrderOfDay = new System.Windows.Forms.Label();
             this.lblRevenueOfDay = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
@@ -75,81 +67,68 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label28 = new System.Windows.Forms.Label();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.lblQuantityProductSelled = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label30 = new System.Windows.Forms.Label();
+            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            this.lblSumTotal = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.fpnlTopProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.itemTopProduct1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
             this.itemTopProduct2 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
             this.itemTopProduct3 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
             this.itemTopProduct4 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
             this.itemTopProduct5 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
             this.itemTopProduct6 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
-            this.itemNewCustomer1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemNewCustomer();
-            this.itemNewCustomer2 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemNewCustomer();
-            this.itemNewCustomer3 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemNewCustomer();
-            this.itemNewCustomer4 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemNewCustomer();
-            this.itemNewCustomer5 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemNewCustomer();
-            this.itemNewCustomer6 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemNewCustomer();
-            this.itemTransactionHistory1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTransactionHistory();
-            this.itemTransactionHistory2 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTransactionHistory();
-            this.itemTransactionHistory3 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTransactionHistory();
-            this.itemTransactionHistory4 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTransactionHistory();
-            this.itemTransactionHistory5 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTransactionHistory();
-            this.itemTransactionHistory6 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTransactionHistory();
-            this.itemTransactionHistory8 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTransactionHistory();
-            this.itemTransactionHistory7 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTransactionHistory();
-            this.itemTransactionHistory9 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTransactionHistory();
-            this.itemTransactionHistory10 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTransactionHistory();
-            this.itemTransactionHistory11 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTransactionHistory();
-            this.itemTransactionHistory12 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTransactionHistory();
-            this.itemTransactionHistory13 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTransactionHistory();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
-            this.guna2GroupBox1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.guna2GroupBox3.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
-            this.guna2GroupBox2.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.itemTopProduct7 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
+            this.itemTopProduct8 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
+            this.itemTopProduct9 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
+            this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2GroupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.guna2Panel3.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
-            this.guna2Panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            this.guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
+            this.guna2Panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
+            this.fpnlTopProduct.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNameForm
             // 
             this.lblNameForm.AutoSize = true;
             this.lblNameForm.Font = new System.Drawing.Font("Segoe UI Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblNameForm.Location = new System.Drawing.Point(15, 22);
             this.lblNameForm.Name = "lblNameForm";
             this.lblNameForm.Size = new System.Drawing.Size(122, 30);
             this.lblNameForm.TabIndex = 0;
             this.lblNameForm.Text = "Tổng quan";
             // 
-            // label2
+            // lblQuantityProduct
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(90, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "0 (Sản phẩm)";
+            this.lblQuantityProduct.AutoSize = true;
+            this.lblQuantityProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantityProduct.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblQuantityProduct.Location = new System.Drawing.Point(90, 65);
+            this.lblQuantityProduct.Name = "lblQuantityProduct";
+            this.lblQuantityProduct.Size = new System.Drawing.Size(88, 17);
+            this.lblQuantityProduct.TabIndex = 2;
+            this.lblQuantityProduct.Text = "0 (Sản phẩm)";
             // 
             // label1
             // 
@@ -201,129 +180,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.label9.TabIndex = 1;
             this.label9.Text = "Số đơn hàng:  ";
             // 
-            // guna2GroupBox1
-            // 
-            this.guna2GroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GroupBox1.BorderColor = System.Drawing.Color.LightGray;
-            this.guna2GroupBox1.BorderRadius = 3;
-            this.guna2GroupBox1.Controls.Add(this.flowLayoutPanel1);
-            this.guna2GroupBox1.Controls.Add(this.label3);
-            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(1, 40, 1, 1);
-            this.guna2GroupBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(33, 475);
-            this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(475, 232);
-            this.guna2GroupBox1.TabIndex = 1;
-            this.guna2GroupBox1.Text = "Top sản phẩm";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Controls.Add(this.itemTopProduct1);
-            this.flowLayoutPanel1.Controls.Add(this.itemTopProduct2);
-            this.flowLayoutPanel1.Controls.Add(this.itemTopProduct3);
-            this.flowLayoutPanel1.Controls.Add(this.itemTopProduct4);
-            this.flowLayoutPanel1.Controls.Add(this.itemTopProduct5);
-            this.flowLayoutPanel1.Controls.Add(this.itemTopProduct6);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 40);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(471, 190);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(315, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 17);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Số lượng bán ra";
-            // 
-            // guna2GroupBox3
-            // 
-            this.guna2GroupBox3.BorderRadius = 3;
-            this.guna2GroupBox3.Controls.Add(this.flowLayoutPanel3);
-            this.guna2GroupBox3.CustomBorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2GroupBox3.CustomBorderThickness = new System.Windows.Forms.Padding(1, 40, 1, 1);
-            this.guna2GroupBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GroupBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.guna2GroupBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2GroupBox3.Location = new System.Drawing.Point(967, 238);
-            this.guna2GroupBox3.Name = "guna2GroupBox3";
-            this.guna2GroupBox3.Size = new System.Drawing.Size(360, 465);
-            this.guna2GroupBox3.TabIndex = 6;
-            this.guna2GroupBox3.Text = "Lịch sử thanh toán";
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.AutoScroll = true;
-            this.flowLayoutPanel3.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel3.Controls.Add(this.itemTransactionHistory1);
-            this.flowLayoutPanel3.Controls.Add(this.itemTransactionHistory2);
-            this.flowLayoutPanel3.Controls.Add(this.itemTransactionHistory3);
-            this.flowLayoutPanel3.Controls.Add(this.itemTransactionHistory4);
-            this.flowLayoutPanel3.Controls.Add(this.itemTransactionHistory5);
-            this.flowLayoutPanel3.Controls.Add(this.itemTransactionHistory6);
-            this.flowLayoutPanel3.Controls.Add(this.itemTransactionHistory8);
-            this.flowLayoutPanel3.Controls.Add(this.itemTransactionHistory7);
-            this.flowLayoutPanel3.Controls.Add(this.itemTransactionHistory9);
-            this.flowLayoutPanel3.Controls.Add(this.itemTransactionHistory10);
-            this.flowLayoutPanel3.Controls.Add(this.itemTransactionHistory11);
-            this.flowLayoutPanel3.Controls.Add(this.itemTransactionHistory12);
-            this.flowLayoutPanel3.Controls.Add(this.itemTransactionHistory13);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 40);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(355, 423);
-            this.flowLayoutPanel3.TabIndex = 29;
-            // 
-            // guna2GroupBox2
-            // 
-            this.guna2GroupBox2.BackColor = System.Drawing.Color.Black;
-            this.guna2GroupBox2.BorderColor = System.Drawing.Color.LightGray;
-            this.guna2GroupBox2.BorderRadius = 3;
-            this.guna2GroupBox2.Controls.Add(this.label5);
-            this.guna2GroupBox2.Controls.Add(this.flowLayoutPanel2);
-            this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2GroupBox2.CustomBorderThickness = new System.Windows.Forms.Padding(1, 40, 1, 1);
-            this.guna2GroupBox2.FillColor = System.Drawing.Color.LightGray;
-            this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.guna2GroupBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2GroupBox2.Location = new System.Drawing.Point(545, 475);
-            this.guna2GroupBox2.Name = "guna2GroupBox2";
-            this.guna2GroupBox2.Size = new System.Drawing.Size(390, 232);
-            this.guna2GroupBox2.TabIndex = 1;
-            this.guna2GroupBox2.Text = "Khách hàng mới";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(255, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 17);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Doanh thu";
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel2.Controls.Add(this.itemNewCustomer1);
-            this.flowLayoutPanel2.Controls.Add(this.itemNewCustomer2);
-            this.flowLayoutPanel2.Controls.Add(this.itemNewCustomer3);
-            this.flowLayoutPanel2.Controls.Add(this.itemNewCustomer4);
-            this.flowLayoutPanel2.Controls.Add(this.itemNewCustomer5);
-            this.flowLayoutPanel2.Controls.Add(this.itemNewCustomer6);
-            this.flowLayoutPanel2.ForeColor = System.Drawing.Color.Black;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 40);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(387, 190);
-            this.flowLayoutPanel2.TabIndex = 0;
-            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.Transparent;
@@ -335,12 +191,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.guna2Panel1.Controls.Add(this.guna2Button4);
             this.guna2Panel1.Controls.Add(this.guna2Button2);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
+            this.guna2Panel1.Controls.Add(this.guna2Separator3);
+            this.guna2Panel1.Controls.Add(this.guna2Separator4);
+            this.guna2Panel1.Controls.Add(this.guna2Separator2);
+            this.guna2Panel1.Controls.Add(this.guna2Separator1);
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(2, 0, 0, 2);
             this.guna2Panel1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.Location = new System.Drawing.Point(163, 220);
+            this.guna2Panel1.Location = new System.Drawing.Point(197, 394);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(522, 210);
+            this.guna2Panel1.Size = new System.Drawing.Size(573, 244);
             this.guna2Panel1.TabIndex = 9;
             // 
             // guna2Button8
@@ -352,7 +212,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.guna2Button8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
             this.guna2Button8.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button8.ForeColor = System.Drawing.Color.White;
-            this.guna2Button8.Location = new System.Drawing.Point(450, 151);
+            this.guna2Button8.Location = new System.Drawing.Point(480, 185);
             this.guna2Button8.Name = "guna2Button8";
             this.guna2Button8.Size = new System.Drawing.Size(25, 57);
             this.guna2Button8.TabIndex = 6;
@@ -367,7 +227,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
             this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.Location = new System.Drawing.Point(381, 151);
+            this.guna2Button5.Location = new System.Drawing.Point(411, 185);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.Size = new System.Drawing.Size(25, 57);
             this.guna2Button5.TabIndex = 5;
@@ -382,7 +242,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.guna2Button6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
             this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button6.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.Location = new System.Drawing.Point(309, 151);
+            this.guna2Button6.Location = new System.Drawing.Point(339, 185);
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.Size = new System.Drawing.Size(25, 57);
             this.guna2Button6.TabIndex = 4;
@@ -397,7 +257,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(240, 151);
+            this.guna2Button3.Location = new System.Drawing.Point(270, 185);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(25, 57);
             this.guna2Button3.TabIndex = 3;
@@ -412,7 +272,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(171, 151);
+            this.guna2Button4.Location = new System.Drawing.Point(201, 185);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(25, 57);
             this.guna2Button4.TabIndex = 2;
@@ -428,7 +288,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(99, 131);
+            this.guna2Button2.Location = new System.Drawing.Point(129, 165);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(25, 77);
             this.guna2Button2.TabIndex = 1;
@@ -443,7 +303,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(30, 151);
+            this.guna2Button1.Location = new System.Drawing.Point(60, 185);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(25, 57);
             this.guna2Button1.TabIndex = 0;
@@ -453,7 +313,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(83, 220);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label11.Location = new System.Drawing.Point(116, 423);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(75, 15);
             this.label11.TabIndex = 10;
@@ -463,7 +324,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(187, 438);
+            this.label12.Location = new System.Drawing.Point(250, 641);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(39, 15);
             this.label12.TabIndex = 11;
@@ -473,7 +334,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(257, 438);
+            this.label13.Location = new System.Drawing.Point(320, 641);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(39, 15);
             this.label13.TabIndex = 12;
@@ -483,7 +344,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(327, 438);
+            this.label14.Location = new System.Drawing.Point(390, 641);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(39, 15);
             this.label14.TabIndex = 13;
@@ -493,7 +354,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(467, 438);
+            this.label15.Location = new System.Drawing.Point(530, 641);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(39, 15);
             this.label15.TabIndex = 16;
@@ -503,7 +364,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(537, 438);
+            this.label16.Location = new System.Drawing.Point(600, 641);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(39, 15);
             this.label16.TabIndex = 15;
@@ -513,7 +374,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(397, 438);
+            this.label17.Location = new System.Drawing.Point(460, 641);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(39, 15);
             this.label17.TabIndex = 14;
@@ -523,7 +384,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(601, 438);
+            this.label18.Location = new System.Drawing.Point(664, 641);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(58, 15);
             this.label18.TabIndex = 17;
@@ -531,14 +392,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             // 
             // guna2GroupBox4
             // 
-            this.guna2GroupBox4.BorderRadius = 3;
+            this.guna2GroupBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.guna2GroupBox4.Controls.Add(this.lblQuantityOrderOfDay);
             this.guna2GroupBox4.Controls.Add(this.label9);
             this.guna2GroupBox4.Controls.Add(this.lblRevenueOfDay);
             this.guna2GroupBox4.Controls.Add(this.label10);
-            this.guna2GroupBox4.CustomBorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2GroupBox4.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GroupBox4.CustomBorderThickness = new System.Windows.Forms.Padding(1, 40, 1, 1);
+            this.guna2GroupBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.guna2GroupBox4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.guna2GroupBox4.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2GroupBox4.Location = new System.Drawing.Point(1059, 50);
             this.guna2GroupBox4.Name = "guna2GroupBox4";
             this.guna2GroupBox4.Size = new System.Drawing.Size(267, 133);
@@ -549,7 +412,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(87, 271);
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label19.Location = new System.Drawing.Point(120, 474);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(72, 15);
             this.label19.TabIndex = 19;
@@ -559,7 +423,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(87, 373);
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label20.Location = new System.Drawing.Point(120, 576);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(72, 15);
             this.label20.TabIndex = 21;
@@ -569,7 +434,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(87, 322);
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label21.Location = new System.Drawing.Point(120, 525);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(68, 15);
             this.label21.TabIndex = 20;
@@ -602,7 +468,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.label22);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.Location = new System.Drawing.Point(732, 211);
+            this.groupBox1.Location = new System.Drawing.Point(197, 220);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(185, 136);
             this.groupBox1.TabIndex = 25;
@@ -652,7 +518,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.guna2Panel2.BorderRadius = 10;
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.iconPictureBox1);
-            this.guna2Panel2.Controls.Add(this.label2);
+            this.guna2Panel2.Controls.Add(this.lblQuantityProduct);
             this.guna2Panel2.Controls.Add(this.label1);
             this.guna2Panel2.Location = new System.Drawing.Point(33, 74);
             this.guna2Panel2.Name = "guna2Panel2";
@@ -680,23 +546,37 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.guna2Panel3.BorderRadius = 10;
             this.guna2Panel3.BorderThickness = 1;
             this.guna2Panel3.Controls.Add(this.iconPictureBox2);
-            this.guna2Panel3.Controls.Add(this.label28);
+            this.guna2Panel3.Controls.Add(this.lblQuantityProductSelled);
             this.guna2Panel3.Controls.Add(this.label29);
             this.guna2Panel3.Location = new System.Drawing.Point(285, 74);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(219, 111);
             this.guna2Panel3.TabIndex = 27;
             // 
-            // label28
+            // iconPictureBox2
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.Crimson;
-            this.label28.Location = new System.Drawing.Point(90, 65);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(88, 17);
-            this.label28.TabIndex = 2;
-            this.label28.Text = "0 (Sản phẩm)";
+            this.iconPictureBox2.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.Crimson;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.CartArrowDown;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.Crimson;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 50;
+            this.iconPictureBox2.Location = new System.Drawing.Point(21, 30);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(51, 50);
+            this.iconPictureBox2.TabIndex = 3;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // lblQuantityProductSelled
+            // 
+            this.lblQuantityProductSelled.AutoSize = true;
+            this.lblQuantityProductSelled.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantityProductSelled.ForeColor = System.Drawing.Color.Crimson;
+            this.lblQuantityProductSelled.Location = new System.Drawing.Point(90, 65);
+            this.lblQuantityProductSelled.Name = "lblQuantityProductSelled";
+            this.lblQuantityProductSelled.Size = new System.Drawing.Size(88, 17);
+            this.lblQuantityProductSelled.TabIndex = 2;
+            this.lblQuantityProductSelled.Text = "0 (Sản phẩm)";
             // 
             // label29
             // 
@@ -715,23 +595,37 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.guna2Panel4.BorderRadius = 10;
             this.guna2Panel4.BorderThickness = 1;
             this.guna2Panel4.Controls.Add(this.iconPictureBox3);
-            this.guna2Panel4.Controls.Add(this.label30);
+            this.guna2Panel4.Controls.Add(this.lblSumTotal);
             this.guna2Panel4.Controls.Add(this.label31);
             this.guna2Panel4.Location = new System.Drawing.Point(540, 73);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(219, 111);
             this.guna2Panel4.TabIndex = 27;
             // 
-            // label30
+            // iconPictureBox3
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label30.Location = new System.Drawing.Point(90, 65);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(94, 17);
-            this.label30.TabIndex = 2;
-            this.label30.Text = "1000000 (VND)";
+            this.iconPictureBox3.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox3.ForeColor = System.Drawing.Color.SeaGreen;
+            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.MoneyCheck;
+            this.iconPictureBox3.IconColor = System.Drawing.Color.SeaGreen;
+            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox3.IconSize = 50;
+            this.iconPictureBox3.Location = new System.Drawing.Point(21, 30);
+            this.iconPictureBox3.Name = "iconPictureBox3";
+            this.iconPictureBox3.Size = new System.Drawing.Size(51, 50);
+            this.iconPictureBox3.TabIndex = 4;
+            this.iconPictureBox3.TabStop = false;
+            // 
+            // lblSumTotal
+            // 
+            this.lblSumTotal.AutoSize = true;
+            this.lblSumTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSumTotal.ForeColor = System.Drawing.Color.SeaGreen;
+            this.lblSumTotal.Location = new System.Drawing.Point(90, 65);
+            this.lblSumTotal.Name = "lblSumTotal";
+            this.lblSumTotal.Size = new System.Drawing.Size(94, 17);
+            this.lblSumTotal.TabIndex = 2;
+            this.lblSumTotal.Text = "1000000 (VND)";
             // 
             // label31
             // 
@@ -757,6 +651,20 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.guna2Panel5.Size = new System.Drawing.Size(219, 111);
             this.guna2Panel5.TabIndex = 28;
             // 
+            // iconPictureBox4
+            // 
+            this.iconPictureBox4.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox4.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.PeopleLine;
+            this.iconPictureBox4.IconColor = System.Drawing.Color.DarkGoldenrod;
+            this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox4.IconSize = 50;
+            this.iconPictureBox4.Location = new System.Drawing.Point(21, 30);
+            this.iconPictureBox4.Name = "iconPictureBox4";
+            this.iconPictureBox4.Size = new System.Drawing.Size(51, 50);
+            this.iconPictureBox4.TabIndex = 5;
+            this.iconPictureBox4.TabStop = false;
+            // 
             // label32
             // 
             this.label32.AutoSize = true;
@@ -778,278 +686,182 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.label33.TabIndex = 1;
             this.label33.Text = "Khách hàng";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(865, 231);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(173, 20);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Top sản phẩm bán chạy";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // fpnlTopProduct
+            // 
+            this.fpnlTopProduct.Controls.Add(this.itemTopProduct1);
+            this.fpnlTopProduct.Controls.Add(this.itemTopProduct2);
+            this.fpnlTopProduct.Controls.Add(this.itemTopProduct3);
+            this.fpnlTopProduct.Controls.Add(this.itemTopProduct4);
+            this.fpnlTopProduct.Controls.Add(this.itemTopProduct5);
+            this.fpnlTopProduct.Controls.Add(this.itemTopProduct6);
+            this.fpnlTopProduct.Controls.Add(this.itemTopProduct7);
+            this.fpnlTopProduct.Controls.Add(this.itemTopProduct8);
+            this.fpnlTopProduct.Controls.Add(this.itemTopProduct9);
+            this.fpnlTopProduct.Location = new System.Drawing.Point(869, 263);
+            this.fpnlTopProduct.Name = "fpnlTopProduct";
+            this.fpnlTopProduct.Size = new System.Drawing.Size(407, 418);
+            this.fpnlTopProduct.TabIndex = 30;
+            this.fpnlTopProduct.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
             // itemTopProduct1
             // 
-            this.itemTopProduct1.BackColor = System.Drawing.Color.White;
+            this.itemTopProduct1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.itemTopProduct1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.itemTopProduct1.ForeColor = System.Drawing.Color.Black;
-            this.itemTopProduct1.Location = new System.Drawing.Point(3, 3);
+            this.itemTopProduct1.Location = new System.Drawing.Point(10, 10);
+            this.itemTopProduct1.Margin = new System.Windows.Forms.Padding(10);
             this.itemTopProduct1.Name = "itemTopProduct1";
-            this.itemTopProduct1.Size = new System.Drawing.Size(445, 41);
+            this.itemTopProduct1.Size = new System.Drawing.Size(115, 120);
             this.itemTopProduct1.TabIndex = 0;
             // 
             // itemTopProduct2
             // 
-            this.itemTopProduct2.BackColor = System.Drawing.Color.White;
+            this.itemTopProduct2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.itemTopProduct2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.itemTopProduct2.ForeColor = System.Drawing.Color.Black;
-            this.itemTopProduct2.Location = new System.Drawing.Point(3, 50);
+            this.itemTopProduct2.Location = new System.Drawing.Point(145, 10);
+            this.itemTopProduct2.Margin = new System.Windows.Forms.Padding(10);
             this.itemTopProduct2.Name = "itemTopProduct2";
-            this.itemTopProduct2.Size = new System.Drawing.Size(445, 41);
+            this.itemTopProduct2.Size = new System.Drawing.Size(115, 120);
             this.itemTopProduct2.TabIndex = 1;
             // 
             // itemTopProduct3
             // 
-            this.itemTopProduct3.BackColor = System.Drawing.Color.White;
+            this.itemTopProduct3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.itemTopProduct3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.itemTopProduct3.ForeColor = System.Drawing.Color.Black;
-            this.itemTopProduct3.Location = new System.Drawing.Point(3, 97);
+            this.itemTopProduct3.Location = new System.Drawing.Point(280, 10);
+            this.itemTopProduct3.Margin = new System.Windows.Forms.Padding(10);
             this.itemTopProduct3.Name = "itemTopProduct3";
-            this.itemTopProduct3.Size = new System.Drawing.Size(445, 41);
+            this.itemTopProduct3.Size = new System.Drawing.Size(115, 120);
             this.itemTopProduct3.TabIndex = 2;
             // 
             // itemTopProduct4
             // 
-            this.itemTopProduct4.BackColor = System.Drawing.Color.White;
+            this.itemTopProduct4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.itemTopProduct4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.itemTopProduct4.ForeColor = System.Drawing.Color.Black;
-            this.itemTopProduct4.Location = new System.Drawing.Point(3, 144);
+            this.itemTopProduct4.Location = new System.Drawing.Point(10, 150);
+            this.itemTopProduct4.Margin = new System.Windows.Forms.Padding(10);
             this.itemTopProduct4.Name = "itemTopProduct4";
-            this.itemTopProduct4.Size = new System.Drawing.Size(445, 41);
+            this.itemTopProduct4.Size = new System.Drawing.Size(115, 120);
             this.itemTopProduct4.TabIndex = 3;
             // 
             // itemTopProduct5
             // 
-            this.itemTopProduct5.BackColor = System.Drawing.Color.White;
+            this.itemTopProduct5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.itemTopProduct5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.itemTopProduct5.ForeColor = System.Drawing.Color.Black;
-            this.itemTopProduct5.Location = new System.Drawing.Point(3, 191);
+            this.itemTopProduct5.Location = new System.Drawing.Point(145, 150);
+            this.itemTopProduct5.Margin = new System.Windows.Forms.Padding(10);
             this.itemTopProduct5.Name = "itemTopProduct5";
-            this.itemTopProduct5.Size = new System.Drawing.Size(445, 41);
+            this.itemTopProduct5.Size = new System.Drawing.Size(115, 120);
             this.itemTopProduct5.TabIndex = 4;
             // 
             // itemTopProduct6
             // 
-            this.itemTopProduct6.BackColor = System.Drawing.Color.White;
+            this.itemTopProduct6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.itemTopProduct6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.itemTopProduct6.ForeColor = System.Drawing.Color.Black;
-            this.itemTopProduct6.Location = new System.Drawing.Point(3, 238);
+            this.itemTopProduct6.Location = new System.Drawing.Point(280, 150);
+            this.itemTopProduct6.Margin = new System.Windows.Forms.Padding(10);
             this.itemTopProduct6.Name = "itemTopProduct6";
-            this.itemTopProduct6.Size = new System.Drawing.Size(445, 41);
+            this.itemTopProduct6.Size = new System.Drawing.Size(115, 120);
             this.itemTopProduct6.TabIndex = 5;
             // 
-            // itemNewCustomer1
+            // itemTopProduct7
             // 
-            this.itemNewCustomer1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemNewCustomer1.Location = new System.Drawing.Point(3, 3);
-            this.itemNewCustomer1.Name = "itemNewCustomer1";
-            this.itemNewCustomer1.Size = new System.Drawing.Size(360, 41);
-            this.itemNewCustomer1.TabIndex = 0;
+            this.itemTopProduct7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.itemTopProduct7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.itemTopProduct7.ForeColor = System.Drawing.Color.Black;
+            this.itemTopProduct7.Location = new System.Drawing.Point(10, 290);
+            this.itemTopProduct7.Margin = new System.Windows.Forms.Padding(10);
+            this.itemTopProduct7.Name = "itemTopProduct7";
+            this.itemTopProduct7.Size = new System.Drawing.Size(115, 120);
+            this.itemTopProduct7.TabIndex = 6;
             // 
-            // itemNewCustomer2
+            // itemTopProduct8
             // 
-            this.itemNewCustomer2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemNewCustomer2.Location = new System.Drawing.Point(3, 50);
-            this.itemNewCustomer2.Name = "itemNewCustomer2";
-            this.itemNewCustomer2.Size = new System.Drawing.Size(360, 41);
-            this.itemNewCustomer2.TabIndex = 1;
+            this.itemTopProduct8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.itemTopProduct8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.itemTopProduct8.ForeColor = System.Drawing.Color.Black;
+            this.itemTopProduct8.Location = new System.Drawing.Point(145, 290);
+            this.itemTopProduct8.Margin = new System.Windows.Forms.Padding(10);
+            this.itemTopProduct8.Name = "itemTopProduct8";
+            this.itemTopProduct8.Size = new System.Drawing.Size(115, 120);
+            this.itemTopProduct8.TabIndex = 7;
             // 
-            // itemNewCustomer3
+            // itemTopProduct9
             // 
-            this.itemNewCustomer3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemNewCustomer3.Location = new System.Drawing.Point(3, 97);
-            this.itemNewCustomer3.Name = "itemNewCustomer3";
-            this.itemNewCustomer3.Size = new System.Drawing.Size(360, 41);
-            this.itemNewCustomer3.TabIndex = 2;
+            this.itemTopProduct9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.itemTopProduct9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.itemTopProduct9.ForeColor = System.Drawing.Color.Black;
+            this.itemTopProduct9.Location = new System.Drawing.Point(280, 290);
+            this.itemTopProduct9.Margin = new System.Windows.Forms.Padding(10);
+            this.itemTopProduct9.Name = "itemTopProduct9";
+            this.itemTopProduct9.Size = new System.Drawing.Size(115, 120);
+            this.itemTopProduct9.TabIndex = 8;
             // 
-            // itemNewCustomer4
+            // guna2Separator1
             // 
-            this.itemNewCustomer4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemNewCustomer4.Location = new System.Drawing.Point(3, 144);
-            this.itemNewCustomer4.Name = "itemNewCustomer4";
-            this.itemNewCustomer4.Size = new System.Drawing.Size(360, 41);
-            this.itemNewCustomer4.TabIndex = 3;
+            this.guna2Separator1.Location = new System.Drawing.Point(2, 187);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(570, 10);
+            this.guna2Separator1.TabIndex = 7;
             // 
-            // itemNewCustomer5
+            // guna2Separator2
             // 
-            this.itemNewCustomer5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemNewCustomer5.Location = new System.Drawing.Point(3, 191);
-            this.itemNewCustomer5.Name = "itemNewCustomer5";
-            this.itemNewCustomer5.Size = new System.Drawing.Size(360, 41);
-            this.itemNewCustomer5.TabIndex = 4;
+            this.guna2Separator2.Location = new System.Drawing.Point(2, 131);
+            this.guna2Separator2.Name = "guna2Separator2";
+            this.guna2Separator2.Size = new System.Drawing.Size(570, 10);
+            this.guna2Separator2.TabIndex = 8;
             // 
-            // itemNewCustomer6
+            // guna2Separator3
             // 
-            this.itemNewCustomer6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemNewCustomer6.Location = new System.Drawing.Point(3, 238);
-            this.itemNewCustomer6.Name = "itemNewCustomer6";
-            this.itemNewCustomer6.Size = new System.Drawing.Size(360, 41);
-            this.itemNewCustomer6.TabIndex = 5;
+            this.guna2Separator3.Location = new System.Drawing.Point(2, 29);
+            this.guna2Separator3.Name = "guna2Separator3";
+            this.guna2Separator3.Size = new System.Drawing.Size(570, 10);
+            this.guna2Separator3.TabIndex = 10;
             // 
-            // itemTransactionHistory1
+            // guna2Separator4
             // 
-            this.itemTransactionHistory1.BackColor = System.Drawing.Color.White;
-            this.itemTransactionHistory1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTransactionHistory1.Location = new System.Drawing.Point(3, 3);
-            this.itemTransactionHistory1.Name = "itemTransactionHistory1";
-            this.itemTransactionHistory1.Size = new System.Drawing.Size(332, 41);
-            this.itemTransactionHistory1.TabIndex = 0;
+            this.guna2Separator4.Location = new System.Drawing.Point(2, 80);
+            this.guna2Separator4.Name = "guna2Separator4";
+            this.guna2Separator4.Size = new System.Drawing.Size(570, 10);
+            this.guna2Separator4.TabIndex = 9;
             // 
-            // itemTransactionHistory2
+            // label4
             // 
-            this.itemTransactionHistory2.BackColor = System.Drawing.Color.White;
-            this.itemTransactionHistory2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTransactionHistory2.Location = new System.Drawing.Point(3, 50);
-            this.itemTransactionHistory2.Name = "itemTransactionHistory2";
-            this.itemTransactionHistory2.Size = new System.Drawing.Size(332, 41);
-            this.itemTransactionHistory2.TabIndex = 1;
-            // 
-            // itemTransactionHistory3
-            // 
-            this.itemTransactionHistory3.BackColor = System.Drawing.Color.White;
-            this.itemTransactionHistory3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTransactionHistory3.Location = new System.Drawing.Point(3, 97);
-            this.itemTransactionHistory3.Name = "itemTransactionHistory3";
-            this.itemTransactionHistory3.Size = new System.Drawing.Size(332, 41);
-            this.itemTransactionHistory3.TabIndex = 2;
-            // 
-            // itemTransactionHistory4
-            // 
-            this.itemTransactionHistory4.BackColor = System.Drawing.Color.White;
-            this.itemTransactionHistory4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTransactionHistory4.Location = new System.Drawing.Point(3, 144);
-            this.itemTransactionHistory4.Name = "itemTransactionHistory4";
-            this.itemTransactionHistory4.Size = new System.Drawing.Size(332, 41);
-            this.itemTransactionHistory4.TabIndex = 3;
-            // 
-            // itemTransactionHistory5
-            // 
-            this.itemTransactionHistory5.BackColor = System.Drawing.Color.White;
-            this.itemTransactionHistory5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTransactionHistory5.Location = new System.Drawing.Point(3, 191);
-            this.itemTransactionHistory5.Name = "itemTransactionHistory5";
-            this.itemTransactionHistory5.Size = new System.Drawing.Size(332, 41);
-            this.itemTransactionHistory5.TabIndex = 4;
-            // 
-            // itemTransactionHistory6
-            // 
-            this.itemTransactionHistory6.BackColor = System.Drawing.Color.White;
-            this.itemTransactionHistory6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTransactionHistory6.Location = new System.Drawing.Point(3, 238);
-            this.itemTransactionHistory6.Name = "itemTransactionHistory6";
-            this.itemTransactionHistory6.Size = new System.Drawing.Size(332, 41);
-            this.itemTransactionHistory6.TabIndex = 5;
-            // 
-            // itemTransactionHistory8
-            // 
-            this.itemTransactionHistory8.BackColor = System.Drawing.Color.White;
-            this.itemTransactionHistory8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTransactionHistory8.Location = new System.Drawing.Point(3, 285);
-            this.itemTransactionHistory8.Name = "itemTransactionHistory8";
-            this.itemTransactionHistory8.Size = new System.Drawing.Size(332, 41);
-            this.itemTransactionHistory8.TabIndex = 7;
-            // 
-            // itemTransactionHistory7
-            // 
-            this.itemTransactionHistory7.BackColor = System.Drawing.Color.White;
-            this.itemTransactionHistory7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTransactionHistory7.Location = new System.Drawing.Point(3, 332);
-            this.itemTransactionHistory7.Name = "itemTransactionHistory7";
-            this.itemTransactionHistory7.Size = new System.Drawing.Size(332, 41);
-            this.itemTransactionHistory7.TabIndex = 8;
-            // 
-            // itemTransactionHistory9
-            // 
-            this.itemTransactionHistory9.BackColor = System.Drawing.Color.White;
-            this.itemTransactionHistory9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTransactionHistory9.Location = new System.Drawing.Point(3, 379);
-            this.itemTransactionHistory9.Name = "itemTransactionHistory9";
-            this.itemTransactionHistory9.Size = new System.Drawing.Size(332, 41);
-            this.itemTransactionHistory9.TabIndex = 9;
-            // 
-            // itemTransactionHistory10
-            // 
-            this.itemTransactionHistory10.BackColor = System.Drawing.Color.White;
-            this.itemTransactionHistory10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTransactionHistory10.Location = new System.Drawing.Point(3, 426);
-            this.itemTransactionHistory10.Name = "itemTransactionHistory10";
-            this.itemTransactionHistory10.Size = new System.Drawing.Size(332, 41);
-            this.itemTransactionHistory10.TabIndex = 10;
-            // 
-            // itemTransactionHistory11
-            // 
-            this.itemTransactionHistory11.BackColor = System.Drawing.Color.White;
-            this.itemTransactionHistory11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTransactionHistory11.Location = new System.Drawing.Point(3, 473);
-            this.itemTransactionHistory11.Name = "itemTransactionHistory11";
-            this.itemTransactionHistory11.Size = new System.Drawing.Size(332, 41);
-            this.itemTransactionHistory11.TabIndex = 11;
-            // 
-            // itemTransactionHistory12
-            // 
-            this.itemTransactionHistory12.BackColor = System.Drawing.Color.White;
-            this.itemTransactionHistory12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTransactionHistory12.Location = new System.Drawing.Point(3, 520);
-            this.itemTransactionHistory12.Name = "itemTransactionHistory12";
-            this.itemTransactionHistory12.Size = new System.Drawing.Size(332, 41);
-            this.itemTransactionHistory12.TabIndex = 12;
-            // 
-            // itemTransactionHistory13
-            // 
-            this.itemTransactionHistory13.BackColor = System.Drawing.Color.White;
-            this.itemTransactionHistory13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTransactionHistory13.Location = new System.Drawing.Point(3, 567);
-            this.itemTransactionHistory13.Name = "itemTransactionHistory13";
-            this.itemTransactionHistory13.Size = new System.Drawing.Size(332, 41);
-            this.itemTransactionHistory13.TabIndex = 13;
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.White;
-            this.iconPictureBox2.ForeColor = System.Drawing.Color.Crimson;
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.CartArrowDown;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.Crimson;
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 50;
-            this.iconPictureBox2.Location = new System.Drawing.Point(21, 30);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(51, 50);
-            this.iconPictureBox2.TabIndex = 3;
-            this.iconPictureBox2.TabStop = false;
-            // 
-            // iconPictureBox3
-            // 
-            this.iconPictureBox3.BackColor = System.Drawing.Color.White;
-            this.iconPictureBox3.ForeColor = System.Drawing.Color.SeaGreen;
-            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.MoneyCheck;
-            this.iconPictureBox3.IconColor = System.Drawing.Color.SeaGreen;
-            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox3.IconSize = 50;
-            this.iconPictureBox3.Location = new System.Drawing.Point(21, 30);
-            this.iconPictureBox3.Name = "iconPictureBox3";
-            this.iconPictureBox3.Size = new System.Drawing.Size(51, 50);
-            this.iconPictureBox3.TabIndex = 4;
-            this.iconPictureBox3.TabStop = false;
-            // 
-            // iconPictureBox4
-            // 
-            this.iconPictureBox4.BackColor = System.Drawing.Color.White;
-            this.iconPictureBox4.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.PeopleLine;
-            this.iconPictureBox4.IconColor = System.Drawing.Color.DarkGoldenrod;
-            this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox4.IconSize = 50;
-            this.iconPictureBox4.Location = new System.Drawing.Point(21, 30);
-            this.iconPictureBox4.Name = "iconPictureBox4";
-            this.iconPictureBox4.Size = new System.Drawing.Size(51, 50);
-            this.iconPictureBox4.TabIndex = 5;
-            this.iconPictureBox4.TabStop = false;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(1197, 246);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 17);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Tất cả >>";
             // 
             // HomeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.fpnlTopProduct);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.guna2Panel5);
             this.Controls.Add(this.guna2Panel4);
             this.Controls.Add(this.guna2Panel3);
@@ -1068,21 +880,11 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.guna2GroupBox1);
-            this.Controls.Add(this.guna2GroupBox2);
-            this.Controls.Add(this.guna2GroupBox3);
             this.Controls.Add(this.lblNameForm);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Name = "HomeControl";
-            this.Size = new System.Drawing.Size(1358, 730);
-            this.guna2GroupBox1.ResumeLayout(false);
-            this.guna2GroupBox1.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.guna2GroupBox3.ResumeLayout(false);
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.guna2GroupBox2.ResumeLayout(false);
-            this.guna2GroupBox2.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(1356, 728);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2GroupBox4.ResumeLayout(false);
             this.guna2GroupBox4.PerformLayout();
@@ -1093,13 +895,14 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
+            this.fpnlTopProduct.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1108,15 +911,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         #endregion
 
         private System.Windows.Forms.Label lblNameForm;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblQuantityProduct;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblQuantityOrderOfDay;
         private System.Windows.Forms.Label lblRevenueOfDay;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
@@ -1147,46 +947,32 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label lblQuantityProductSelled;
         private System.Windows.Forms.Label label29;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label lblSumTotal;
         private System.Windows.Forms.Label label31;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel fpnlTopProduct;
         private item.ItemTopProduct itemTopProduct1;
         private item.ItemTopProduct itemTopProduct2;
         private item.ItemTopProduct itemTopProduct3;
         private item.ItemTopProduct itemTopProduct4;
         private item.ItemTopProduct itemTopProduct5;
         private item.ItemTopProduct itemTopProduct6;
-        private item.ItemNewCustomer itemNewCustomer1;
-        private item.ItemNewCustomer itemNewCustomer2;
-        private item.ItemNewCustomer itemNewCustomer3;
-        private item.ItemNewCustomer itemNewCustomer4;
-        private item.ItemNewCustomer itemNewCustomer5;
-        private item.ItemNewCustomer itemNewCustomer6;
-        private item.ItemTransactionHistory itemTransactionHistory1;
-        private item.ItemTransactionHistory itemTransactionHistory2;
-        private item.ItemTransactionHistory itemTransactionHistory3;
-        private item.ItemTransactionHistory itemTransactionHistory4;
-        private item.ItemTransactionHistory itemTransactionHistory5;
-        private item.ItemTransactionHistory itemTransactionHistory6;
-        private item.ItemTransactionHistory itemTransactionHistory8;
-        private item.ItemTransactionHistory itemTransactionHistory7;
-        private item.ItemTransactionHistory itemTransactionHistory9;
-        private item.ItemTransactionHistory itemTransactionHistory10;
-        private item.ItemTransactionHistory itemTransactionHistory11;
-        private item.ItemTransactionHistory itemTransactionHistory12;
-        private item.ItemTransactionHistory itemTransactionHistory13;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
+        private item.ItemTopProduct itemTopProduct7;
+        private item.ItemTopProduct itemTopProduct8;
+        private item.ItemTopProduct itemTopProduct9;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator4;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        private System.Windows.Forms.Label label4;
     }
 }
