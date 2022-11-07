@@ -35,14 +35,14 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY
             {
                 frmManager f = new frmManager();
                 f.ShowDialog();
-
+                this.Close();
             }
-            else
-            {
-                txtUsername.Text = "";
-                txtPassword.Text = "";
-                txtUsername.Focus();
-            }
+            //else
+            //{
+            //    txtUsername.Text = "";
+            //    txtPassword.Text = "";
+            //    txtUsername.Focus();
+            //}
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -51,32 +51,42 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY
         }
         private bool validate()
         {
-            if (txtUsername.Text == "")
-            {
-                erLogin.SetError(this.txtUsername, "Please enter your username!");
-            }
-            if (txtPassword.Text == "")
-            {
-                erLogin.SetError(this.txtPassword, "Please enter your Password!");
-            }
-            if (txtUsername.Text != "" && txtPassword.Text != "")
-            {
-                return true;
-            }
+            //if (txtUsername.Text == "")
+            //{
+            //    //erLogin.SetError(this.txtUsername, "Please enter your username!");
+            //}
+            //if (txtPassword.Text == "")
+            //{
+            //    //erLogin.SetError(this.txtPassword, "Please enter your Password!");
+            //}
+            //if (txtUsername.Text != "" && txtPassword.Text != "")
+            //{
+            //    return true;
+            //}
             return false;
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
-            if (txtUsername.Text != "")
-            {
-                erLogin.SetError(this.txtUsername, "");
-            }
+            //if (txtUsername.Text != "")
+            //{
+            //    erLogin.SetError(this.txtUsername, "");
+            //}
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-            erLogin.SetError(this.txtPassword, "");
+            //erLogin.SetError(this.txtPassword, "");
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
