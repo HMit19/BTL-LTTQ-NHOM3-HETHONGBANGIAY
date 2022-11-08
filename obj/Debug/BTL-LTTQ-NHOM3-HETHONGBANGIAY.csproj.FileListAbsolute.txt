@@ -60,3 +60,26 @@ C:\Users\pc\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_L
 C:\Users\pc\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.editProduct.resources
 C:\Users\pc\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.ShopControl.resources
 C:\Users\pc\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CartUsercontrol.resources
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.Properties.Resources.resources
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.frmLogin.resources
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.sell.payUpForm.resources
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.createProduct.resources
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.editProduct.resources
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.listProduct.resources
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CartUsercontrol.resources
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.EmployeeControl.resources
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemNewCustomer.resources
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct.resources
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProductOfCart.resources
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct.resources
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager.frmManager.resources
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.HomeControl.resources
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTransactionHistory.resources
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.ShopControl.resources
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.StoreControl.resources
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe
+C:\Users\Admin\source\repos\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.pdb

@@ -96,6 +96,12 @@
     <Compile Include="view\usercontrol\CartUsercontrol.Designer.cs">
       <DependentUpon>CartUsercontrol.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\usercontrol\EmployeeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\EmployeeControl.Designer.cs">
+      <DependentUpon>EmployeeControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\usercontrol\item\ItemNewCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -176,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\CartUsercontrol.resx">
       <DependentUpon>CartUsercontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\EmployeeControl.resx">
+      <DependentUpon>EmployeeControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\item\ItemNewCustomer.resx">
       <DependentUpon>ItemNewCustomer.cs</DependentUpon>
