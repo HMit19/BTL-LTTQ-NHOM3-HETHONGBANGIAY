@@ -26,7 +26,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
         }
         private void btnSell_Click(object sender, EventArgs e)
         {
-            bringToFontUsercontrol(storeControl);
+            bringToFontUsercontrol(cartControl);
         }
 
         private void btnHome_Click(object sender, EventArgs e)

@@ -16,5 +16,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         {
             InitializeComponent();
         }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
