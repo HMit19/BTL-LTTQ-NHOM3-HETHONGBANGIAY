@@ -102,6 +102,12 @@
     <Compile Include="view\usercontrol\EmployeeControl.Designer.cs">
       <DependentUpon>EmployeeControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\usercontrol\EmployeeInforControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\EmployeeInforControl.Designer.cs">
+      <DependentUpon>EmployeeInforControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\usercontrol\item\ItemNewCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\EmployeeControl.resx">
       <DependentUpon>EmployeeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\EmployeeInforControl.resx">
+      <DependentUpon>EmployeeInforControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\item\ItemNewCustomer.resx">
       <DependentUpon>ItemNewCustomer.cs</DependentUpon>
