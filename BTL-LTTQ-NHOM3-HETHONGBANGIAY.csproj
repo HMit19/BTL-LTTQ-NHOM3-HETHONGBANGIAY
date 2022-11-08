@@ -66,12 +66,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="view\sell\payUpForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\sell\payUpForm.Designer.cs">
-      <DependentUpon>payUpForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="view\usercontrol\admin\product\createProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -90,17 +84,11 @@
     <Compile Include="view\usercontrol\admin\product\listProduct.Designer.cs">
       <DependentUpon>listProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\usercontrol\CartUsercontrol.cs">
+    <Compile Include="view\usercontrol\CartControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="view\usercontrol\CartUsercontrol.Designer.cs">
-      <DependentUpon>CartUsercontrol.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\usercontrol\item\ItemNewCustomer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\usercontrol\item\ItemNewCustomer.Designer.cs">
-      <DependentUpon>ItemNewCustomer.cs</DependentUpon>
+    <Compile Include="view\usercontrol\CartControl.Designer.cs">
+      <DependentUpon>CartControl.cs</DependentUpon>
     </Compile>
     <Compile Include="view\usercontrol\item\ItemProduct.cs">
       <SubType>UserControl</SubType>
@@ -132,18 +120,6 @@
     <Compile Include="view\usercontrol\HomeControl.Designer.cs">
       <DependentUpon>HomeControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\usercontrol\item\ItemTransactionHistory.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\usercontrol\item\ItemTransactionHistory.Designer.cs">
-      <DependentUpon>ItemTransactionHistory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\usercontrol\ShopControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\usercontrol\ShopControl.Designer.cs">
-      <DependentUpon>ShopControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="view\usercontrol\StoreControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -162,9 +138,6 @@
     <EmbeddedResource Include="view\login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\sell\payUpForm.resx">
-      <DependentUpon>payUpForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\admin\product\createProduct.resx">
       <DependentUpon>createProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,11 +147,8 @@
     <EmbeddedResource Include="view\usercontrol\admin\product\listProduct.resx">
       <DependentUpon>listProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\usercontrol\CartUsercontrol.resx">
-      <DependentUpon>CartUsercontrol.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\usercontrol\item\ItemNewCustomer.resx">
-      <DependentUpon>ItemNewCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="view\usercontrol\CartControl.resx">
+      <DependentUpon>CartControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\item\ItemProduct.resx">
       <DependentUpon>ItemProduct.cs</DependentUpon>
@@ -194,12 +164,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\HomeControl.resx">
       <DependentUpon>HomeControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\usercontrol\item\ItemTransactionHistory.resx">
-      <DependentUpon>ItemTransactionHistory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\usercontrol\ShopControl.resx">
-      <DependentUpon>ShopControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\StoreControl.resx">
       <DependentUpon>StoreControl.cs</DependentUpon>
@@ -233,6 +197,7 @@
   <ItemGroup>
     <Folder Include="controller\" />
     <Folder Include="view\images\" />
+    <Folder Include="view\sell\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\all.css" />

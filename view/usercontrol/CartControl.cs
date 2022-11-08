@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,11 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
+namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 {
-    public partial class ItemTransactionHistory : UserControl
+    public partial class CartControl : UserControl
     {
-        public ItemTransactionHistory()
+        frmManager main; 
+        public CartControl()
         {
             InitializeComponent();
         }

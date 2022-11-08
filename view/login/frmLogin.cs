@@ -23,10 +23,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Are you sure to exit?", "Exit login", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) != DialogResult.OK)
-            {
-                e.Cancel = true;
-            }
+            //if (MessageBox.Show("Are you sure to exit?", "Exit login", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) != DialogResult.OK)
+            //{
+            //    e.Cancel = true;
+            //}
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -87,6 +87,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+            if(txtAccount.Text == "123" && txtPassword.Text == "123")
+            {
+                frmManager main = new frmManager();
+                this.Visible = false;
+                main.ShowDialog();
+            }
         }
     }
 }

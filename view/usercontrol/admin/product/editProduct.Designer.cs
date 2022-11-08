@@ -33,12 +33,10 @@
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnReset = new FontAwesome.Sharp.IconButton();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbColor = new Guna.UI2.WinForms.Guna2ComboBox();
             this.imgProduct = new FontAwesome.Sharp.IconButton();
             this.txtIdProduct = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNameProduct = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -64,7 +62,7 @@
             this.btnConfirmNewProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnConfirmNewProduct.Font = new System.Drawing.Font("Century Schoolbook", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmNewProduct.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmNewProduct.Location = new System.Drawing.Point(592, 578);
+            this.btnConfirmNewProduct.Location = new System.Drawing.Point(594, 509);
             this.btnConfirmNewProduct.Name = "btnConfirmNewProduct";
             this.btnConfirmNewProduct.Size = new System.Drawing.Size(232, 41);
             this.btnConfirmNewProduct.TabIndex = 9;
@@ -75,12 +73,10 @@
             this.groupBox1.Controls.Add(this.guna2ComboBox1);
             this.groupBox1.Controls.Add(this.btnReset);
             this.groupBox1.Controls.Add(this.txtPrice);
-            this.groupBox1.Controls.Add(this.txtQuantity);
             this.groupBox1.Controls.Add(this.cbColor);
             this.groupBox1.Controls.Add(this.imgProduct);
             this.groupBox1.Controls.Add(this.txtIdProduct);
             this.groupBox1.Controls.Add(this.txtNameProduct);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -92,7 +88,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(365, 114);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(630, 445);
+            this.groupBox1.Size = new System.Drawing.Size(630, 380);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sản phẩm";
@@ -145,25 +141,6 @@
             this.txtPrice.SelectedText = "";
             this.txtPrice.Size = new System.Drawing.Size(254, 34);
             this.txtPrice.TabIndex = 18;
-            // 
-            // txtQuantity
-            // 
-            this.txtQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtQuantity.DefaultText = "";
-            this.txtQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtQuantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantity.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantity.Location = new System.Drawing.Point(251, 369);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.PasswordChar = '\0';
-            this.txtQuantity.PlaceholderText = "Số lượng";
-            this.txtQuantity.SelectedText = "";
-            this.txtQuantity.Size = new System.Drawing.Size(254, 34);
-            this.txtQuantity.TabIndex = 17;
             // 
             // cbColor
             // 
@@ -231,16 +208,6 @@
             this.txtNameProduct.SelectedText = "";
             this.txtNameProduct.Size = new System.Drawing.Size(254, 34);
             this.txtNameProduct.TabIndex = 9;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(126, 383);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 20);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Số lượng";
             // 
             // label8
             // 
@@ -332,7 +299,7 @@
             this.guna2GradientPanel1.Controls.Add(this.iconPictureBox1);
             this.guna2GradientPanel1.Controls.Add(this.label3);
             this.guna2GradientPanel1.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientPanel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.guna2GradientPanel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
@@ -387,12 +354,10 @@
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private FontAwesome.Sharp.IconButton btnReset;
         private Guna.UI2.WinForms.Guna2TextBox txtPrice;
-        private Guna.UI2.WinForms.Guna2TextBox txtQuantity;
         private Guna.UI2.WinForms.Guna2ComboBox cbColor;
         private FontAwesome.Sharp.IconButton imgProduct;
         private Guna.UI2.WinForms.Guna2TextBox txtIdProduct;
         private Guna.UI2.WinForms.Guna2TextBox txtNameProduct;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
         {
             InitializeComponent();
         }
-
         private void frmManager_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc muốn thoát!", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
@@ -26,7 +26,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
         }
         private void btnSell_Click(object sender, EventArgs e)
         {
-            bringToFontUsercontrol(cartControl);
+            bringToFontUsercontrol(storeControl);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -38,9 +38,18 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             bringToFontUsercontrol(listProduct);
         }
 
-        private void bringToFontUsercontrol(UserControl namePanel)
+        public static void bringToFontUsercontrol(UserControl namePanel)
         {
             namePanel.BringToFront();
+        }
+        public void showCart()
+        {
+            bringToFontUsercontrol(cartControl);
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

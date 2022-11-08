@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,20 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 {
     public partial class StoreControl : UserControl
     {
+        frmManager frmMain;
+
         public StoreControl()
         {
             InitializeComponent();
+        }
+        public StoreControl(frmManager frm)
+        {
+            InitializeComponent();
+            frmMain = frm;
+        }
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            //frmMain.showCart();
         }
     }
 }

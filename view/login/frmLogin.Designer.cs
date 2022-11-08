@@ -110,6 +110,7 @@
             this.btnLogin.Size = new System.Drawing.Size(362, 40);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng nhập";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
             // lblTitleLogin
             // 

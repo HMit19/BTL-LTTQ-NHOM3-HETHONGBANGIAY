@@ -60,3 +60,27 @@ C:\Users\pc\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_L
 C:\Users\pc\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.editProduct.resources
 C:\Users\pc\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.ShopControl.resources
 C:\Users\pc\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CartUsercontrol.resources
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\bin\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe.config
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\bin\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\bin\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.pdb
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\bin\Debug\Guna.UI2.dll
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.AssemblyReference.cache
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.SuggestedBindingRedirects.cache
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.Properties.Resources.resources
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.frmLogin.resources
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.createProduct.resources
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.editProduct.resources
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.listProduct.resources
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct.resources
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProductOfCart.resources
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct.resources
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager.frmManager.resources
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.HomeControl.resources
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.StoreControl.resources
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.GenerateResource.cache
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.CoreCompileInputs.cache
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.CopyComplete
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.pdb
+C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CartControl.resources
