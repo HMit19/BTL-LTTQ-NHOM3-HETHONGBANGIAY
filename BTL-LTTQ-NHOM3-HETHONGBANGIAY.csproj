@@ -144,6 +144,12 @@
     <Compile Include="view\usercontrol\item\ItemTransactionHistory.Designer.cs">
       <DependentUpon>ItemTransactionHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\usercontrol\ProviderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\ProviderControl.Designer.cs">
+      <DependentUpon>ProviderControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\usercontrol\ShopControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\item\ItemTransactionHistory.resx">
       <DependentUpon>ItemTransactionHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\ProviderControl.resx">
+      <DependentUpon>ProviderControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\ShopControl.resx">
       <DependentUpon>ShopControl.cs</DependentUpon>
