@@ -40,16 +40,6 @@ C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\bin\Debug\Gu
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.AssemblyReference.cache
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.SuggestedBindingRedirects.cache
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.Properties.Resources.resources
-C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.frmLogin.resources
-C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.sell.payUpForm.resources
-C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemNewCustomer.resources
-C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct.resources
-C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProductOfCart.resources
-C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct.resources
-C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager.frmManager.resources
-C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.HomeControl.resources
-C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTransactionHistory.resources
-C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.StoreControl.resources
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.GenerateResource.cache
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.CoreCompileInputs.cache
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.CopyComplete
@@ -84,3 +74,9 @@ C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.userc
 C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.ImportBillControl.resources
 C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CustomerControl.resources
 C:\Users\Hsa1pro\Desktop\BTL1\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CustomerInforControl.resources
+C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.Form1.resources
+C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.BillControl.resources
+C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CustomerControl.resources
+C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CustomerInforControl.resources
+C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.ImportBillControl.resources
+C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.SaleBillControl.resources

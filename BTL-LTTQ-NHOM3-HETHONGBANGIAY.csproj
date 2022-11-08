@@ -60,11 +60,11 @@
     <Compile Include="model\Account.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="view\test.cs">
+    <Compile Include="view\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
+    <Compile Include="view\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="view\usercontrol\BillControl.cs">
       <SubType>UserControl</SubType>
@@ -90,23 +90,11 @@
     <Compile Include="view\usercontrol\ImportBillControl.Designer.cs">
       <DependentUpon>ImportBillControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\usercontrol\HomeControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\usercontrol\HomeControl.Designer.cs">
-      <DependentUpon>HomeControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="view\usercontrol\SaleBillControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="view\usercontrol\SaleBillControl.Designer.cs">
       <DependentUpon>SaleBillControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\usercontrol\StoreControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\usercontrol\StoreControl.Designer.cs">
-      <DependentUpon>StoreControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -117,8 +105,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="view\test.resx">
-      <DependentUpon>test.cs</DependentUpon>
+    <EmbeddedResource Include="view\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\BillControl.resx">
       <DependentUpon>BillControl.cs</DependentUpon>
@@ -132,14 +120,8 @@
     <EmbeddedResource Include="view\usercontrol\ImportBillControl.resx">
       <DependentUpon>ImportBillControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\usercontrol\HomeControl.resx">
-      <DependentUpon>HomeControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\SaleBillControl.resx">
       <DependentUpon>SaleBillControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\usercontrol\StoreControl.resx">
-      <DependentUpon>StoreControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

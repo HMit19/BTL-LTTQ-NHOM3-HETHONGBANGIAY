@@ -1,4 +1,4 @@
-﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager;
+﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmManager());
+            Application.Run(new Form1());
         }
     }
 }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
+namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
 {
-    public partial class StoreControl : UserControl
+    public partial class Form1 : Form
     {
-        public StoreControl()
+        public Form1()
         {
             InitializeComponent();
         }
