@@ -26,12 +26,5 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.model
             this.image = image;
             this.idCategory = idCategory;
         }
-
-        public Product(string id, string name, int image)
-        {
-            this.id = id;
-            this.name = name;
-            this.image = image;
-        }
     }
 }
