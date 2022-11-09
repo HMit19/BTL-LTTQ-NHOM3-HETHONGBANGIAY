@@ -10,6 +10,13 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.Model
     {
         private string username;
         private string password;
+        private int role;
+        private int status;
+
+        public string Username { get => username; set => username = value; }
+        public string Password { get => password; set => password = value; }
+        public int Role { get => role; set => role = value; }
+        public int Status { get => status; set => status = value; }
 
         public Account()
         {
@@ -17,27 +24,14 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.Model
 
         public Account(string username, string password)
         {
-            this.username = username;
-            this.password = password;
+            this.Username = username;
+            this.Password = password;
         }
 
-        public void setUsername(string username)
+        public Account(string username, string password, int role, int status) : this(username, password)
         {
-            this.username = username;
-        }
-
-        public void setPassword(string password)
-        {
-            this.password = password;
-        }
-
-        public string getUsername()
-        {
-            return this.username;
-        }
-        public string getPassword()
-        {
-            return this.password;
+            this.Role = role;
+            this.Status = status;
         }
     }
 }
