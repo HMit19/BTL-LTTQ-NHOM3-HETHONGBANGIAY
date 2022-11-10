@@ -8,7 +8,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.model
 {
     class DetailProduct
     {
-        private string idDetail;
+        private string idProductDetail;
         private string idProduct;
         private int size;
         private string color;
@@ -16,7 +16,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.model
         private double priceIn;
         private bool status;
 
-        public string IdDetail { get => idDetail; set => idDetail = value; }
+        public string IdProductDetail { get => idProductDetail; set => idProductDetail = value; }
         public string IdProduct { get => idProduct; set => idProduct = value; }
         public int Size { get => size; set => size = value; }
         public string Color { get => color; set => color = value; }
@@ -26,9 +26,9 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.model
 
         public DetailProduct() { }
 
-        public DetailProduct(string idDetail, string idProduct, int size, string color, double priceOut, double priceIn, bool status)
+        public DetailProduct(string idProductDetail, string idProduct, int size, string color, double priceOut, double priceIn, bool status)
         {
-            this.idDetail = idDetail;
+            this.idProductDetail = idProductDetail;
             this.idProduct = idProduct;
             this.size = size;
             this.color = color;

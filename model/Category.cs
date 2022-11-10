@@ -6,7 +6,27 @@ using System.Threading.Tasks;
 
 namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.model
 {
-    internal class Category
+    class Category
     {
+        private string id;
+        private string name;
+        private string origin;
+
+        public string Id { get => id; set => id = value; }
+        public string Name { get => name; set => name = value; }
+        public string Origin { get => origin; set => origin = value; }
+
+        public Category() { }
+
+        public Category(string id, string name)
+        {
+            this.Id = id;
+            this.Name = name;
+        }
+
+        public Category(string id, string name, string origin) : this(id, name)
+        {
+            this.origin = origin;
+        }
     }
 }

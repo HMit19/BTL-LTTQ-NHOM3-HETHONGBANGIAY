@@ -40,7 +40,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO
             OpenConnect();
             SqlDataAdapter sqlData = new SqlDataAdapter(sql, connect);
             sqlData.Fill(tblData);
-            CloseConnect();
             return tblData;
         }
         public bool dataChange(string sql)

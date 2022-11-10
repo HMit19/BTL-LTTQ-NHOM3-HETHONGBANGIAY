@@ -19,7 +19,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service
             databaseHandle = new DatabaseHandle();
         }
 
-        public Account findAccountByUsername(string username)
+        public Account find(string username)
         {
             Account account = null;
             try
@@ -44,7 +44,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service
             return account;
         }
 
-        public List<Account> getListAccount()
+        public List<Account> findAll()
         {
             List<Account> listAccount = null;
             try

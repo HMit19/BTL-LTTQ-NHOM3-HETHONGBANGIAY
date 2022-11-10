@@ -10,16 +10,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.model
     {
         private string id;
         private string name;
-        private int image;
-        private int idCategory;
+        private string image;
+        private string idCategory;
 
         public string Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
-        public int Image { get => image; set => image = value; }
-        public int IdCategory { get => idCategory; set => idCategory = value; }
+        public string Image { get => image; set => image = value; }
+        public string IdCategory { get => idCategory; set => idCategory = value; }
 
         public Product() { }
-        public Product(string id, string name, int image, int idCategory)
+        public Product(string id, string name, string image, string idCategory)
         {
             this.id = id;
             this.name = name;
