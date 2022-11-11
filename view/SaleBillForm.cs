@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
+namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
 {
-    public partial class ImportBillControl : UserControl
+    public partial class SaleBillForm : Form
     {
-        public ImportBillControl()
+        public SaleBillForm()
         {
             InitializeComponent();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

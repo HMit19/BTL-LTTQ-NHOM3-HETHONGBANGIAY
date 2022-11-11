@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
+namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
 {
-    public partial class SaleBillControl : UserControl
+    public partial class ImportBillForm : Form
     {
-        public SaleBillControl()
+        public ImportBillForm()
         {
             InitializeComponent();
+        }
+
+        private void dtpTime_ValueChanged(object sender, EventArgs e)
+        {
+            dtpTime.CustomFormat = "dd-MM-yyyy";
         }
     }
 }

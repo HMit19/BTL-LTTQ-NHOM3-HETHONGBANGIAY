@@ -66,6 +66,18 @@
     <Compile Include="view\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\ImportBillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\ImportBillForm.Designer.cs">
+      <DependentUpon>ImportBillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\SaleBillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\SaleBillForm.Designer.cs">
+      <DependentUpon>SaleBillForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\usercontrol\BillControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -77,24 +89,6 @@
     </Compile>
     <Compile Include="view\usercontrol\CustomerControl.Designer.cs">
       <DependentUpon>CustomerControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\usercontrol\CustomerInforControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\usercontrol\CustomerInforControl.Designer.cs">
-      <DependentUpon>CustomerInforControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\usercontrol\ImportBillControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\usercontrol\ImportBillControl.Designer.cs">
-      <DependentUpon>ImportBillControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\usercontrol\SaleBillControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\usercontrol\SaleBillControl.Designer.cs">
-      <DependentUpon>SaleBillControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,20 +102,17 @@
     <EmbeddedResource Include="view\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\ImportBillForm.resx">
+      <DependentUpon>ImportBillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\SaleBillForm.resx">
+      <DependentUpon>SaleBillForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\BillControl.resx">
       <DependentUpon>BillControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\CustomerControl.resx">
       <DependentUpon>CustomerControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\usercontrol\CustomerInforControl.resx">
-      <DependentUpon>CustomerInforControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\usercontrol\ImportBillControl.resx">
-      <DependentUpon>ImportBillControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\usercontrol\SaleBillControl.resx">
-      <DependentUpon>SaleBillControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

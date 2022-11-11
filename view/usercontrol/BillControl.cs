@@ -18,6 +18,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             txtSearch.Text = "Tìm kiếm hóa đơn theo...";
             txtSearch.ForeColor = SystemColors.GrayText;
             cbbType.SelectedIndex = 0;
+            cbbFilter.SelectedIndex = 0;
         }
 
         private void txtSearch_Leave(object sender, EventArgs e)
@@ -34,9 +35,30 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             if (txtSearch.Text == "Tìm kiếm hóa đơn theo...")
             {
                 txtSearch.Text = "";
-                txtSearch.ForeColor = SystemColors.WindowText;
+                txtSearch.ForeColor = SystemColors.ControlText;
             }
         }
 
+        private void dtpTime1_ValueChanged(object sender, EventArgs e)
+        {
+            dtpTime1.CustomFormat = "dd-MM-yyyy";
+        }
+
+        private void dtpTime2_ValueChanged(object sender, EventArgs e)
+        {
+            dtpTime2.CustomFormat = "dd-MM-yyyy";
+        }
+
+        private void cbbType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbType.SelectedIndex == 0)
+            {
+                btnCreate.Visible = false;
+            }
+            if (cbbType.SelectedIndex == 1)
+            {
+                btnCreate.Visible = true;
+            }
+        }
     }
 }
