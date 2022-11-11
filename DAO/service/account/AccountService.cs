@@ -25,20 +25,19 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service
             try
             {
                 DataTable dataTable = null;
-                string sql = "select * from tLogin where username = '" + username + "'";
+                string sql = "select * from tLogin where Username = '" + username + "'";
                 dataTable = databaseHandle.dataReader(sql);
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    string usernameColumn = row[0].ToString();
-                    string passwordColumn = row[1].ToString();
+                    string password = row[1].ToString();
                     int role = Convert.ToInt32(row[2]);
                     int status = Convert.ToInt32(row[3]);
-                    account = new Account(usernameColumn, passwordColumn, role, status);
+                    account = new Account(username, password, role, status);
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Error get account by Username");
+                MessageBox.Show("Error get Account by Username");
                 databaseHandle.CloseConnect();
             }
             return account;
@@ -55,16 +54,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service
                 dataTable = databaseHandle.dataReader(sql);
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    string usernameColumn = row[0].ToString();
-                    string passwordColumn = row[1].ToString();
+                    string username = row[0].ToString();
+                    string password = row[1].ToString();
                     int role = Convert.ToInt32(row[2]);
                     int status = Convert.ToInt32(row[3]);
-                    listAccount.Add(new Account(usernameColumn, passwordColumn, role, status));
+                    listAccount.Add(new Account(username, password, role, status));
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Error get list account");
+                MessageBox.Show("Error get list Account");
                 databaseHandle.CloseConnect();
             }
             return listAccount;
@@ -75,12 +74,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service
             bool excute = false;
             try
             {
-                string sql = "delete table form tLogin where username = '" + username + "'";
+                string sql = "delete from tLogin where username = '" + username + "'";
                 excute = databaseHandle.dataChange(sql);
             }
             catch (Exception)
             {
-                MessageBox.Show("Error remove account by Username");
+                MessageBox.Show("Error remove Account by Username");
                 databaseHandle.CloseConnect();
             }
             return excute;
@@ -96,7 +95,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service
             }
             catch (Exception)
             {
-                MessageBox.Show("Error insert account by Username");
+                MessageBox.Show("Error insert Account");
                 databaseHandle.CloseConnect();
             }
             return excute;
@@ -107,12 +106,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service
             bool excute = false;
             try
             {
-                string sql = "update tLogin set username = '" + account.Username + "', password = '" + account.Password + "', role = " + account.Role + ", status = " + account.Status;
+                string sql = "update tLogin set password = '" + account.Password + "', role = " + account.Role + ", status = " + account.Status + " where username = '" + account.Username + "'";
                 excute = databaseHandle.dataChange(sql);
             }
             catch (Exception)
             {
-                MessageBox.Show("Error update account by Username");
+                MessageBox.Show("Error update Account by Username");
                 databaseHandle.CloseConnect();
             }
             return excute;

@@ -18,14 +18,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.model
 
         public Category() { }
 
-        public Category(string id, string name)
+        public Category(string id, string name, string origin)
         {
-            this.Id = id;
-            this.Name = name;
-        }
-
-        public Category(string id, string name, string origin) : this(id, name)
-        {
+            this.id = id;
+            this.name = name;
             this.origin = origin;
         }
     }

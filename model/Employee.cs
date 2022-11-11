@@ -10,36 +10,39 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.model
     {
         private string id;
         private string name;
-        private int gender;
+        private string cIC;
+        private string gender;
+        private DateTime birth;
         private string address;
         private string phone;
         private string username;
-        private int status;
-        private string CCCD;
-        private DateTime birth;
+        private bool status;
 
         public Employee()
         {
         }
 
-        public Employee(string id, string name, string username)
+        public Employee(string id, string name, string cIC, string gender, DateTime birth, string address, string phone, string username, bool status)
         {
-            this.id = id;
-            this.name = name;
-            this.username = username;
+            this.Id = id;
+            this.Name = name;
+            this.cIC = cIC;
+            this.Gender = gender;
+            this.Birth = birth;
+            this.Address = address;
+            this.Phone = phone;
+            this.Username = username;
+            this.Status = status;
         }
 
-        public Employee(string id, string name, int gender, string address, string phone, string username, int status, string CCCD, DateTime birth)
-        {
-            this.id = id;
-            this.name = name;
-            this.gender = gender;
-            this.address = address;
-            this.phone = phone;
-            this.username = username;
-            this.status = status;
-            this.CCCD = CCCD;
-            this.birth = birth;
-        }
+        public string Id { get => id; set => id = value; }
+        public string Name { get => name; set => name = value; }
+        public string CIC { get => cIC; set => CIC = value; }
+        public string Gender { get => gender; set => gender = value; }
+        public DateTime Birth { get => birth; set => birth = value; }
+        public string Address { get => address; set => address = value; }
+        public string Phone { get => phone; set => phone = value; }
+        public string Username { get => username; set => username = value; }
+        public bool Status { get => status; set => status = value; }
     }
 }

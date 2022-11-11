@@ -62,7 +62,21 @@
     <Compile Include="DAO\IDatabaseHandle.cs" />
     <Compile Include="DAO\service\account\AccountService.cs" />
     <Compile Include="DAO\service\account\IAccountService.cs" />
+    <Compile Include="DAO\service\bill\BillSellService.cs" />
+    <Compile Include="DAO\service\bill\IBillSellService.cs" />
+    <Compile Include="DAO\service\category\CategoryService.cs" />
+    <Compile Include="DAO\service\category\ICategoryService.cs" />
+    <Compile Include="DAO\service\customer\CustomerService.cs" />
+    <Compile Include="DAO\service\customer\ICustomerService.cs" />
+    <Compile Include="DAO\service\detailProduct\DetailProducService.cs" />
+    <Compile Include="DAO\service\detailProduct\IDetailProductService.cs" />
+    <Compile Include="DAO\service\employee\EmployeeService.cs" />
+    <Compile Include="DAO\service\employee\IEmployeeService.cs" />
     <Compile Include="DAO\service\IService.cs" />
+    <Compile Include="DAO\service\item\BillDetailService.cs" />
+    <Compile Include="DAO\service\item\IBillDetailService.cs" />
+    <Compile Include="DAO\service\product\IProductService.cs" />
+    <Compile Include="DAO\service\product\ProductService.cs" />
     <Compile Include="model\Account.cs" />
     <Compile Include="model\BillSell.cs" />
     <Compile Include="model\Category.cs" />
@@ -70,7 +84,7 @@
     <Compile Include="model\DetailProduct.cs" />
     <Compile Include="model\Employee.cs" />
     <Compile Include="model\Product.cs" />
-    <Compile Include="model\SellBillDetail.cs" />
+    <Compile Include="model\DetailBillSell.cs" />
     <Compile Include="view\login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,11 +231,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAO\service\bill\" />
-    <Folder Include="DAO\service\category\" />
-    <Folder Include="DAO\service\detailProduct\" />
-    <Folder Include="DAO\service\item\" />
-    <Folder Include="DAO\service\product\" />
     <Folder Include="view\images\" />
     <Folder Include="view\sell\" />
   </ItemGroup>

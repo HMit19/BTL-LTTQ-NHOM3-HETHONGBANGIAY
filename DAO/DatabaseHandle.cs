@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 using BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.connectDB;
 using Microsoft.SqlServer.Server;
 
@@ -37,20 +37,35 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO
         public DataTable dataReader(string sql)
         {
             DataTable tblData = new DataTable();
-            OpenConnect();
-            SqlDataAdapter sqlData = new SqlDataAdapter(sql, connect);
-            sqlData.Fill(tblData);
+            try
+            {
+                OpenConnect();
+                SqlDataAdapter sqlData = new SqlDataAdapter(sql, connect);
+                sqlData.Fill(tblData);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                CloseConnect();
+            }
             return tblData;
         }
         public bool dataChange(string sql)
         {
             int row = 0;
-            OpenConnect();
-            SqlCommand sqlcomma = new SqlCommand();
-            sqlcomma.Connection = connect;
-            sqlcomma.CommandText = sql;
-            row = sqlcomma.ExecuteNonQuery();
-            CloseConnect();
+            try
+            {
+                OpenConnect();
+                SqlCommand sqlcomma = new SqlCommand();
+                sqlcomma.Connection = connect;
+                sqlcomma.CommandText = sql;
+                row = sqlcomma.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                CloseConnect();
+            }
             return row > 0;
         }
     }
