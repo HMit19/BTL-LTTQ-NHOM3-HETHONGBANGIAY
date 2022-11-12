@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlOptionSidebar = new Guna.UI2.WinForms.Guna2Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdoAbove10 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rdo7to10 = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -38,52 +38,33 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbCategory = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.cbSort = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.pnlOptionHeader = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
+            this.cbSortProduct = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblQuantityProduct = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.btnCart = new FontAwesome.Sharp.IconButton();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.itemProduct1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
-            this.itemProduct2 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
-            this.itemProduct3 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
-            this.itemProduct4 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
-            this.itemProduct5 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
-            this.itemProduct6 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
-            this.itemProduct7 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
-            this.itemProduct8 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
-            this.itemProduct9 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
-            this.itemProduct10 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
-            this.itemProduct11 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
-            this.itemProduct12 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
-            this.itemProduct13 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
-            this.itemProduct14 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
-            this.itemProduct15 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
-            this.itemProduct16 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
-            this.itemProduct17 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
-            this.itemProduct18 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlContainProduct = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlOptionDetail = new Guna.UI2.WinForms.Guna2Panel();
             this.btnAddToCart = new Guna.UI2.WinForms.Guna2Button();
             this.txtUnitProduct = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnIncrease = new Guna.UI2.WinForms.Guna2Button();
             this.btnDecrease = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlOptionColor = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlOptionSize = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
@@ -92,27 +73,26 @@
             this.guna2Button12 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button13 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button14 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel3.SuspendLayout();
+            this.pnlOptionSidebar.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
+            this.pnlOptionHeader.SuspendLayout();
+            this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
+            this.pnlOptionDetail.SuspendLayout();
+            this.pnlOptionColor.SuspendLayout();
+            this.pnlOptionSize.SuspendLayout();
             this.SuspendLayout();
             // 
-            // guna2Panel3
+            // pnlOptionSidebar
             // 
-            this.guna2Panel3.Controls.Add(this.groupBox1);
-            this.guna2Panel3.Controls.Add(this.label6);
-            this.guna2Panel3.Controls.Add(this.label5);
-            this.guna2Panel3.Controls.Add(this.cbCategory);
-            this.guna2Panel3.Location = new System.Drawing.Point(983, 154);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(345, 239);
-            this.guna2Panel3.TabIndex = 7;
+            this.pnlOptionSidebar.Controls.Add(this.groupBox1);
+            this.pnlOptionSidebar.Controls.Add(this.label6);
+            this.pnlOptionSidebar.Controls.Add(this.label5);
+            this.pnlOptionSidebar.Controls.Add(this.cbCategory);
+            this.pnlOptionSidebar.Location = new System.Drawing.Point(983, 154);
+            this.pnlOptionSidebar.Name = "pnlOptionSidebar";
+            this.pnlOptionSidebar.Size = new System.Drawing.Size(345, 239);
+            this.pnlOptionSidebar.TabIndex = 7;
             // 
             // groupBox1
             // 
@@ -250,61 +230,65 @@
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(178, 31);
             this.cbCategory.TabIndex = 0;
+            this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
-            // guna2Panel2
+            // pnlOptionHeader
             // 
-            this.guna2Panel2.Controls.Add(this.iconButton1);
-            this.guna2Panel2.Controls.Add(this.cbSort);
-            this.guna2Panel2.Controls.Add(this.txtSearch);
-            this.guna2Panel2.Controls.Add(this.label4);
-            this.guna2Panel2.Controls.Add(this.label3);
-            this.guna2Panel2.Controls.Add(this.lblQuantityProduct);
-            this.guna2Panel2.CustomBorderColor = System.Drawing.Color.Silver;
-            this.guna2Panel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 55);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1360, 60);
-            this.guna2Panel2.TabIndex = 5;
+            this.pnlOptionHeader.Controls.Add(this.btnSearch);
+            this.pnlOptionHeader.Controls.Add(this.cbSortProduct);
+            this.pnlOptionHeader.Controls.Add(this.txtSearch);
+            this.pnlOptionHeader.Controls.Add(this.label4);
+            this.pnlOptionHeader.Controls.Add(this.label3);
+            this.pnlOptionHeader.Controls.Add(this.lblQuantityProduct);
+            this.pnlOptionHeader.CustomBorderColor = System.Drawing.Color.Silver;
+            this.pnlOptionHeader.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.pnlOptionHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlOptionHeader.Location = new System.Drawing.Point(0, 55);
+            this.pnlOptionHeader.Name = "pnlOptionHeader";
+            this.pnlOptionHeader.Size = new System.Drawing.Size(1360, 60);
+            this.pnlOptionHeader.TabIndex = 5;
             // 
-            // iconButton1
+            // btnSearch
             // 
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.iconButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 31;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.iconButton1.Location = new System.Drawing.Point(1213, 13);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(95, 39);
-            this.iconButton1.TabIndex = 23;
-            this.iconButton1.Text = "Tìm Kiếm";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnSearch.IconColor = System.Drawing.Color.Black;
+            this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSearch.IconSize = 31;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnSearch.Location = new System.Drawing.Point(1213, 13);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(95, 39);
+            this.btnSearch.TabIndex = 23;
+            this.btnSearch.Text = "Tìm Kiếm";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // cbSort
+            // cbSortProduct
             // 
-            this.cbSort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.cbSort.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSort.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.cbSort.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbSort.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbSort.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.cbSort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbSort.ItemHeight = 25;
-            this.cbSort.Items.AddRange(new object[] {
-            "Mã sản phẩm",
-            "Tên sản phẩm",
-            "Số lượng"});
-            this.cbSort.Location = new System.Drawing.Point(442, 13);
-            this.cbSort.Name = "cbSort";
-            this.cbSort.Size = new System.Drawing.Size(182, 31);
-            this.cbSort.StartIndex = 0;
-            this.cbSort.TabIndex = 6;
+            this.cbSortProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.cbSortProduct.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbSortProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSortProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.cbSortProduct.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSortProduct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSortProduct.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.cbSortProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbSortProduct.ItemHeight = 25;
+            this.cbSortProduct.Items.AddRange(new object[] {
+            "Giá tăng dần",
+            "Giá giảm dần",
+            "Số lượng",
+            "Sản phẩm bán chạy"});
+            this.cbSortProduct.Location = new System.Drawing.Point(442, 13);
+            this.cbSortProduct.Name = "cbSortProduct";
+            this.cbSortProduct.Size = new System.Drawing.Size(182, 31);
+            this.cbSortProduct.StartIndex = 0;
+            this.cbSortProduct.TabIndex = 6;
+            this.cbSortProduct.SelectedIndexChanged += new System.EventHandler(this.cbSortProduct_SelectedIndexChanged);
             // 
             // txtSearch
             // 
@@ -327,6 +311,7 @@
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(200, 38);
             this.txtSearch.TabIndex = 21;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label4
             // 
@@ -358,18 +343,18 @@
             this.lblQuantityProduct.Text = "40";
             this.lblQuantityProduct.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2Panel1
+            // pnlHeader
             // 
-            this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Controls.Add(this.iconPictureBox1);
-            this.guna2Panel1.Controls.Add(this.btnCart);
-            this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Silver;
-            this.guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1360, 55);
-            this.guna2Panel1.TabIndex = 4;
+            this.pnlHeader.Controls.Add(this.label1);
+            this.pnlHeader.Controls.Add(this.iconPictureBox1);
+            this.pnlHeader.Controls.Add(this.btnCart);
+            this.pnlHeader.CustomBorderColor = System.Drawing.Color.Silver;
+            this.pnlHeader.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1360, 55);
+            this.pnlHeader.TabIndex = 4;
             // 
             // label1
             // 
@@ -408,236 +393,29 @@
             this.btnCart.Size = new System.Drawing.Size(44, 41);
             this.btnCart.TabIndex = 19;
             this.btnCart.UseVisualStyleBackColor = true;
-            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
-            // flowLayoutPanel1
+            // pnlContainProduct
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.itemProduct1);
-            this.flowLayoutPanel1.Controls.Add(this.itemProduct2);
-            this.flowLayoutPanel1.Controls.Add(this.itemProduct3);
-            this.flowLayoutPanel1.Controls.Add(this.itemProduct4);
-            this.flowLayoutPanel1.Controls.Add(this.itemProduct5);
-            this.flowLayoutPanel1.Controls.Add(this.itemProduct6);
-            this.flowLayoutPanel1.Controls.Add(this.itemProduct7);
-            this.flowLayoutPanel1.Controls.Add(this.itemProduct8);
-            this.flowLayoutPanel1.Controls.Add(this.itemProduct9);
-            this.flowLayoutPanel1.Controls.Add(this.itemProduct10);
-            this.flowLayoutPanel1.Controls.Add(this.itemProduct11);
-            this.flowLayoutPanel1.Controls.Add(this.itemProduct12);
-            this.flowLayoutPanel1.Controls.Add(this.itemProduct13);
-            this.flowLayoutPanel1.Controls.Add(this.itemProduct14);
-            this.flowLayoutPanel1.Controls.Add(this.itemProduct15);
-            this.flowLayoutPanel1.Controls.Add(this.itemProduct16);
-            this.flowLayoutPanel1.Controls.Add(this.itemProduct17);
-            this.flowLayoutPanel1.Controls.Add(this.itemProduct18);
-            this.flowLayoutPanel1.Controls.Add(this.guna2CustomGradientPanel1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(68, 154);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(849, 549);
-            this.flowLayoutPanel1.TabIndex = 8;
+            this.pnlContainProduct.AutoScroll = true;
+            this.pnlContainProduct.Location = new System.Drawing.Point(68, 154);
+            this.pnlContainProduct.Name = "pnlContainProduct";
+            this.pnlContainProduct.Size = new System.Drawing.Size(849, 549);
+            this.pnlContainProduct.TabIndex = 8;
             // 
-            // itemProduct1
+            // pnlOptionDetail
             // 
-            this.itemProduct1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct1.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct1.Location = new System.Drawing.Point(6, 6);
-            this.itemProduct1.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct1.Name = "itemProduct1";
-            this.itemProduct1.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct1.TabIndex = 0;
-            // 
-            // itemProduct2
-            // 
-            this.itemProduct2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct2.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct2.Location = new System.Drawing.Point(214, 6);
-            this.itemProduct2.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct2.Name = "itemProduct2";
-            this.itemProduct2.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct2.TabIndex = 1;
-            // 
-            // itemProduct3
-            // 
-            this.itemProduct3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct3.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct3.Location = new System.Drawing.Point(422, 6);
-            this.itemProduct3.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct3.Name = "itemProduct3";
-            this.itemProduct3.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct3.TabIndex = 2;
-            // 
-            // itemProduct4
-            // 
-            this.itemProduct4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct4.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct4.Location = new System.Drawing.Point(630, 6);
-            this.itemProduct4.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct4.Name = "itemProduct4";
-            this.itemProduct4.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct4.TabIndex = 3;
-            // 
-            // itemProduct5
-            // 
-            this.itemProduct5.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct5.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct5.Location = new System.Drawing.Point(6, 187);
-            this.itemProduct5.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct5.Name = "itemProduct5";
-            this.itemProduct5.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct5.TabIndex = 4;
-            // 
-            // itemProduct6
-            // 
-            this.itemProduct6.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct6.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct6.Location = new System.Drawing.Point(214, 187);
-            this.itemProduct6.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct6.Name = "itemProduct6";
-            this.itemProduct6.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct6.TabIndex = 5;
-            // 
-            // itemProduct7
-            // 
-            this.itemProduct7.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct7.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct7.Location = new System.Drawing.Point(422, 187);
-            this.itemProduct7.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct7.Name = "itemProduct7";
-            this.itemProduct7.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct7.TabIndex = 6;
-            // 
-            // itemProduct8
-            // 
-            this.itemProduct8.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct8.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct8.Location = new System.Drawing.Point(630, 187);
-            this.itemProduct8.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct8.Name = "itemProduct8";
-            this.itemProduct8.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct8.TabIndex = 7;
-            // 
-            // itemProduct9
-            // 
-            this.itemProduct9.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct9.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct9.Location = new System.Drawing.Point(6, 368);
-            this.itemProduct9.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct9.Name = "itemProduct9";
-            this.itemProduct9.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct9.TabIndex = 8;
-            // 
-            // itemProduct10
-            // 
-            this.itemProduct10.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct10.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct10.Location = new System.Drawing.Point(214, 368);
-            this.itemProduct10.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct10.Name = "itemProduct10";
-            this.itemProduct10.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct10.TabIndex = 9;
-            // 
-            // itemProduct11
-            // 
-            this.itemProduct11.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct11.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct11.Location = new System.Drawing.Point(422, 368);
-            this.itemProduct11.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct11.Name = "itemProduct11";
-            this.itemProduct11.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct11.TabIndex = 10;
-            // 
-            // itemProduct12
-            // 
-            this.itemProduct12.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct12.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct12.Location = new System.Drawing.Point(630, 368);
-            this.itemProduct12.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct12.Name = "itemProduct12";
-            this.itemProduct12.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct12.TabIndex = 11;
-            // 
-            // itemProduct13
-            // 
-            this.itemProduct13.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct13.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct13.Location = new System.Drawing.Point(6, 549);
-            this.itemProduct13.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct13.Name = "itemProduct13";
-            this.itemProduct13.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct13.TabIndex = 12;
-            // 
-            // itemProduct14
-            // 
-            this.itemProduct14.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct14.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct14.Location = new System.Drawing.Point(214, 549);
-            this.itemProduct14.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct14.Name = "itemProduct14";
-            this.itemProduct14.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct14.TabIndex = 13;
-            // 
-            // itemProduct15
-            // 
-            this.itemProduct15.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct15.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct15.Location = new System.Drawing.Point(422, 549);
-            this.itemProduct15.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct15.Name = "itemProduct15";
-            this.itemProduct15.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct15.TabIndex = 14;
-            // 
-            // itemProduct16
-            // 
-            this.itemProduct16.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct16.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct16.Location = new System.Drawing.Point(630, 549);
-            this.itemProduct16.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct16.Name = "itemProduct16";
-            this.itemProduct16.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct16.TabIndex = 15;
-            // 
-            // itemProduct17
-            // 
-            this.itemProduct17.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct17.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct17.Location = new System.Drawing.Point(6, 730);
-            this.itemProduct17.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct17.Name = "itemProduct17";
-            this.itemProduct17.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct17.TabIndex = 16;
-            // 
-            // itemProduct18
-            // 
-            this.itemProduct18.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct18.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct18.Location = new System.Drawing.Point(214, 730);
-            this.itemProduct18.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct18.Name = "itemProduct18";
-            this.itemProduct18.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct18.TabIndex = 17;
-            // 
-            // guna2CustomGradientPanel1
-            // 
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(419, 727);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(200, 200);
-            this.guna2CustomGradientPanel1.TabIndex = 18;
-            // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.Controls.Add(this.btnAddToCart);
-            this.guna2Panel4.Controls.Add(this.txtUnitProduct);
-            this.guna2Panel4.Controls.Add(this.btnIncrease);
-            this.guna2Panel4.Controls.Add(this.btnDecrease);
-            this.guna2Panel4.Controls.Add(this.label7);
-            this.guna2Panel4.Controls.Add(this.label2);
-            this.guna2Panel4.Controls.Add(this.flowLayoutPanel2);
-            this.guna2Panel4.Controls.Add(this.flowLayoutPanel3);
-            this.guna2Panel4.Location = new System.Drawing.Point(983, 386);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(344, 317);
-            this.guna2Panel4.TabIndex = 9;
+            this.pnlOptionDetail.Controls.Add(this.btnAddToCart);
+            this.pnlOptionDetail.Controls.Add(this.txtUnitProduct);
+            this.pnlOptionDetail.Controls.Add(this.btnIncrease);
+            this.pnlOptionDetail.Controls.Add(this.btnDecrease);
+            this.pnlOptionDetail.Controls.Add(this.label7);
+            this.pnlOptionDetail.Controls.Add(this.label2);
+            this.pnlOptionDetail.Controls.Add(this.pnlOptionColor);
+            this.pnlOptionDetail.Controls.Add(this.pnlOptionSize);
+            this.pnlOptionDetail.Location = new System.Drawing.Point(983, 386);
+            this.pnlOptionDetail.Name = "pnlOptionDetail";
+            this.pnlOptionDetail.Size = new System.Drawing.Size(344, 317);
+            this.pnlOptionDetail.TabIndex = 9;
             // 
             // btnAddToCart
             // 
@@ -727,18 +505,18 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Màu sắc";
             // 
-            // flowLayoutPanel2
+            // pnlOptionColor
             // 
-            this.flowLayoutPanel2.Controls.Add(this.guna2Button1);
-            this.flowLayoutPanel2.Controls.Add(this.guna2Button2);
-            this.flowLayoutPanel2.Controls.Add(this.guna2Button3);
-            this.flowLayoutPanel2.Controls.Add(this.guna2Button4);
-            this.flowLayoutPanel2.Controls.Add(this.guna2Button5);
-            this.flowLayoutPanel2.Controls.Add(this.guna2Button6);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(24, 27);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(297, 97);
-            this.flowLayoutPanel2.TabIndex = 12;
+            this.pnlOptionColor.Controls.Add(this.guna2Button1);
+            this.pnlOptionColor.Controls.Add(this.guna2Button2);
+            this.pnlOptionColor.Controls.Add(this.guna2Button3);
+            this.pnlOptionColor.Controls.Add(this.guna2Button4);
+            this.pnlOptionColor.Controls.Add(this.guna2Button5);
+            this.pnlOptionColor.Controls.Add(this.guna2Button6);
+            this.pnlOptionColor.Location = new System.Drawing.Point(24, 27);
+            this.pnlOptionColor.Name = "pnlOptionColor";
+            this.pnlOptionColor.Size = new System.Drawing.Size(297, 97);
+            this.pnlOptionColor.TabIndex = 12;
             // 
             // guna2Button1
             // 
@@ -848,20 +626,20 @@
             this.guna2Button6.TabIndex = 5;
             this.guna2Button6.Text = "Xanh lá";
             // 
-            // flowLayoutPanel3
+            // pnlOptionSize
             // 
-            this.flowLayoutPanel3.Controls.Add(this.guna2Button7);
-            this.flowLayoutPanel3.Controls.Add(this.guna2Button8);
-            this.flowLayoutPanel3.Controls.Add(this.guna2Button9);
-            this.flowLayoutPanel3.Controls.Add(this.guna2Button10);
-            this.flowLayoutPanel3.Controls.Add(this.guna2Button11);
-            this.flowLayoutPanel3.Controls.Add(this.guna2Button12);
-            this.flowLayoutPanel3.Controls.Add(this.guna2Button13);
-            this.flowLayoutPanel3.Controls.Add(this.guna2Button14);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(24, 154);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(297, 97);
-            this.flowLayoutPanel3.TabIndex = 13;
+            this.pnlOptionSize.Controls.Add(this.guna2Button7);
+            this.pnlOptionSize.Controls.Add(this.guna2Button8);
+            this.pnlOptionSize.Controls.Add(this.guna2Button9);
+            this.pnlOptionSize.Controls.Add(this.guna2Button10);
+            this.pnlOptionSize.Controls.Add(this.guna2Button11);
+            this.pnlOptionSize.Controls.Add(this.guna2Button12);
+            this.pnlOptionSize.Controls.Add(this.guna2Button13);
+            this.pnlOptionSize.Controls.Add(this.guna2Button14);
+            this.pnlOptionSize.Location = new System.Drawing.Point(24, 154);
+            this.pnlOptionSize.Name = "pnlOptionSize";
+            this.pnlOptionSize.Size = new System.Drawing.Size(297, 97);
+            this.pnlOptionSize.TabIndex = 13;
             // 
             // guna2Button7
             // 
@@ -1012,33 +790,32 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.Controls.Add(this.guna2Panel4);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.guna2Panel3);
-            this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.pnlOptionDetail);
+            this.Controls.Add(this.pnlContainProduct);
+            this.Controls.Add(this.pnlOptionSidebar);
+            this.Controls.Add(this.pnlOptionHeader);
+            this.Controls.Add(this.pnlHeader);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "StoreControl";
             this.Size = new System.Drawing.Size(1360, 730);
-            this.guna2Panel3.ResumeLayout(false);
-            this.guna2Panel3.PerformLayout();
+            this.pnlOptionSidebar.ResumeLayout(false);
+            this.pnlOptionSidebar.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
-            this.guna2Panel1.ResumeLayout(false);
+            this.pnlOptionHeader.ResumeLayout(false);
+            this.pnlOptionHeader.PerformLayout();
+            this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.guna2Panel4.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel3.ResumeLayout(false);
+            this.pnlOptionDetail.ResumeLayout(false);
+            this.pnlOptionColor.ResumeLayout(false);
+            this.pnlOptionSize.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2Panel pnlOptionSidebar;
         private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2RadioButton rdoAbove10;
         private Guna.UI2.WinForms.Guna2RadioButton rdo7to10;
@@ -1048,52 +825,33 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2ComboBox cbCategory;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2ComboBox cbSort;
+        private Guna.UI2.WinForms.Guna2Panel pnlOptionHeader;
+        private Guna.UI2.WinForms.Guna2ComboBox cbSortProduct;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblQuantityProduct;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel pnlHeader;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconButton btnCart;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private item.ItemProduct itemProduct1;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private item.ItemProduct itemProduct2;
-        private item.ItemProduct itemProduct3;
-        private item.ItemProduct itemProduct4;
-        private item.ItemProduct itemProduct5;
-        private item.ItemProduct itemProduct6;
-        private item.ItemProduct itemProduct7;
-        private item.ItemProduct itemProduct8;
-        private item.ItemProduct itemProduct9;
-        private item.ItemProduct itemProduct10;
-        private item.ItemProduct itemProduct11;
-        private item.ItemProduct itemProduct12;
-        private item.ItemProduct itemProduct13;
-        private item.ItemProduct itemProduct14;
-        private item.ItemProduct itemProduct15;
-        private item.ItemProduct itemProduct16;
-        private item.ItemProduct itemProduct17;
-        private item.ItemProduct itemProduct18;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private System.Windows.Forms.FlowLayoutPanel pnlContainProduct;
+        private FontAwesome.Sharp.IconButton btnSearch;
+        private Guna.UI2.WinForms.Guna2Panel pnlOptionDetail;
         private Guna.UI2.WinForms.Guna2Button btnAddToCart;
         private Guna.UI2.WinForms.Guna2TextBox txtUnitProduct;
         private Guna.UI2.WinForms.Guna2Button btnIncrease;
         private Guna.UI2.WinForms.Guna2Button btnDecrease;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel pnlOptionColor;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel pnlOptionSize;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button guna2Button9;

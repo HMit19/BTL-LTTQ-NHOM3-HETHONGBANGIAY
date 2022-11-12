@@ -34,8 +34,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblSlogan = new System.Windows.Forms.Label();
             this.pictureStore = new System.Windows.Forms.PictureBox();
-            this.pnlContainer = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnSell = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
@@ -52,18 +50,17 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlContainer = new Guna.UI2.WinForms.Guna2Panel();
+            this.storeControl = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.StoreControl();
             this.homeControl = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.HomeControl();
             this.cartControl = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CartControl();
             this.listProduct = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.listProduct();
-            this.storeControl = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.StoreControl();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureStore)).BeginInit();
-            this.pnlContainer.SuspendLayout();
             this.pnlSiderBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
+            this.pnlContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -71,7 +68,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.lblSlogan);
             this.panel2.Controls.Add(this.pictureStore);
-            this.panel2.Controls.Add(this.pnlContainer);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -97,25 +93,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.pictureStore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureStore.TabIndex = 1;
             this.pictureStore.TabStop = false;
-            // 
-            // pnlContainer
-            // 
-            this.pnlContainer.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.pnlContainer.Controls.Add(this.panel1);
-            this.pnlContainer.Location = new System.Drawing.Point(194, 59);
-            this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(1361, 732);
-            this.pnlContainer.TabIndex = 4;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1361, 3);
-            this.panel1.TabIndex = 2;
             // 
             // btnHome
             // 
@@ -344,17 +321,26 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.guna2Panel1.Size = new System.Drawing.Size(1360, 70);
             this.guna2Panel1.TabIndex = 12;
             // 
-            // guna2Panel2
+            // pnlContainer
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Panel2.Controls.Add(this.homeControl);
-            this.guna2Panel2.Controls.Add(this.cartControl);
-            this.guna2Panel2.Controls.Add(this.listProduct);
-            this.guna2Panel2.Controls.Add(this.storeControl);
-            this.guna2Panel2.Location = new System.Drawing.Point(206, 93);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1360, 732);
-            this.guna2Panel2.TabIndex = 13;
+            this.pnlContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.pnlContainer.Controls.Add(this.homeControl);
+            this.pnlContainer.Controls.Add(this.cartControl);
+            this.pnlContainer.Controls.Add(this.listProduct);
+            this.pnlContainer.Controls.Add(this.storeControl);
+            this.pnlContainer.Location = new System.Drawing.Point(206, 93);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(1360, 732);
+            this.pnlContainer.TabIndex = 13;
+            // 
+            // storeControl
+            // 
+            this.storeControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.storeControl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.storeControl.Location = new System.Drawing.Point(0, 0);
+            this.storeControl.Name = "storeControl";
+            this.storeControl.Size = new System.Drawing.Size(1360, 732);
+            this.storeControl.TabIndex = 5;
             // 
             // homeControl
             // 
@@ -382,15 +368,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.listProduct.Size = new System.Drawing.Size(1360, 732);
             this.listProduct.TabIndex = 4;
             // 
-            // storeControl
-            // 
-            this.storeControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.storeControl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.storeControl.Location = new System.Drawing.Point(0, 0);
-            this.storeControl.Name = "storeControl";
-            this.storeControl.Size = new System.Drawing.Size(1360, 732);
-            this.storeControl.TabIndex = 5;
-            // 
             // frmManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,21 +376,19 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.ClientSize = new System.Drawing.Size(1566, 825);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pnlSiderBar);
-            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.pnlContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmManager_FormClosing);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureStore)).EndInit();
-            this.pnlContainer.ResumeLayout(false);
             this.pnlSiderBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
+            this.pnlContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -422,8 +397,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblSlogan;
         private System.Windows.Forms.PictureBox pictureStore;
-        private System.Windows.Forms.Panel pnlContainer;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnSell;
         private System.Windows.Forms.Button btnProduct;
@@ -440,10 +413,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel pnlContainer;
         private usercontrol.HomeControl homeControl;
         private usercontrol.CartControl cartControl;
-        private usercontrol.admin.product.listProduct listProduct;
-        private usercontrol.StoreControl storeControl;
+        private StoreControl storeControl;
+        private listProduct listProduct;
     }
 }

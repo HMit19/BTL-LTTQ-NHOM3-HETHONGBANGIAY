@@ -25,7 +25,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn đang đóng ứng dụng?", "Thoát", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) != DialogResult.OK)
+            if (MessageBox.Show("Bạn chắc chắn muốn thoát?", "Thoát", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) != DialogResult.OK)
             {
                 e.Cancel = true;
             }

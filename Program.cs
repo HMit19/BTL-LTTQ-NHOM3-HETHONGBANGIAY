@@ -19,9 +19,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            frmLogin loginView = new frmLogin();
-            new LoginController(loginView);
+            //frmLogin loginView = new frmLogin();
+            //new LoginController(loginView);
             //Application.Run(new Form1());
+            Application.Run(new frmManager());
         }
     }
 }

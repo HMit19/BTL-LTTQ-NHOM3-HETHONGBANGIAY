@@ -16,5 +16,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
         {
             InitializeComponent();
         }
+        public ItemProduct(string image, string name, string price, string quantity)
+        {
+            InitializeComponent();
+            this.name.Text = name;
+            this.price.Text = price;
+            this.quantity.Text = quantity;
+        }
     }
 }

@@ -725,7 +725,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.label3.Size = new System.Drawing.Size(173, 20);
             this.label3.TabIndex = 29;
             this.label3.Text = "Top sản phẩm bán chạy";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // fpnlTopProduct
             // 
@@ -742,7 +741,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.fpnlTopProduct.Name = "fpnlTopProduct";
             this.fpnlTopProduct.Size = new System.Drawing.Size(407, 418);
             this.fpnlTopProduct.TabIndex = 30;
-            this.fpnlTopProduct.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // btnListProduct
             // 
