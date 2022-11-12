@@ -27,6 +27,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
         private void btnSell_Click(object sender, EventArgs e)
         {
             bringToFontUsercontrol(storeControl);
+
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -49,7 +50,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

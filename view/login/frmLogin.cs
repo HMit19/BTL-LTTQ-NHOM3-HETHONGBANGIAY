@@ -14,8 +14,10 @@ using System.Windows.Forms;
 
 namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY
 {
+    public delegate void Login();
     public partial class frmLogin : Form
     {
+        public event Login login;
         public frmLogin()
         {
             InitializeComponent();
@@ -23,62 +25,11 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //if (MessageBox.Show("Are you sure to exit?", "Exit login", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) != DialogResult.OK)
-            //{
-            //    e.Cancel = true;
-            //}
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            if (validate())
+            if (MessageBox.Show("Bạn đang đóng ứng dụng?", "Thoát", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) != DialogResult.OK)
             {
-                frmManager f = new frmManager();
-                f.ShowDialog();
-                this.Close();
+                e.Cancel = true;
             }
-            //else
-            //{
-            //    txtUsername.Text = "";
-            //    txtPassword.Text = "";
-            //    txtUsername.Focus();
-            //}
         }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        private bool validate()
-        {
-            //if (txtUsername.Text == "")
-            //{
-            //    //erLogin.SetError(this.txtUsername, "Please enter your username!");
-            //}
-            //if (txtPassword.Text == "")
-            //{
-            //    //erLogin.SetError(this.txtPassword, "Please enter your Password!");
-            //}
-            //if (txtUsername.Text != "" && txtPassword.Text != "")
-            //{
-            //    return true;
-            //}
-            return false;
-        }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-            //if (txtUsername.Text != "")
-            //{
-            //    erLogin.SetError(this.txtUsername, "");
-            //}
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-            //erLogin.SetError(this.txtPassword, "");
-        }
-
         private void btnMaximize_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -88,15 +39,23 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        private void btnLogin_Click_1(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(txtAccount.Text == "123" && txtPassword.Text == "123")
-            {
-                frmManager main = new frmManager();
-                this.Visible = false;
-                main.ShowDialog();
-            }
+            login?.Invoke();
         }
+        internal Object getInfomation()
+        {
+            Account account = new Account(txtAccount.Text, txtPassword.Text);
+            return account;
+        }
+
+        internal void clearInformation()
+        {
+            txtAccount.Focus();
+            txtAccount.Text = "";
+            txtPassword.Text = "";
+
+        }
+
     }
 }

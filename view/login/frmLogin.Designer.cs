@@ -72,7 +72,7 @@
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.Location = new System.Drawing.Point(162, 173);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtPassword.PlaceholderText = "Mật khẩu . . .";
             this.txtPassword.SelectedText = "";
@@ -110,7 +110,7 @@
             this.btnLogin.Size = new System.Drawing.Size(362, 40);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng nhập";
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblTitleLogin
             // 
@@ -142,7 +142,7 @@
             this.btnInformationGroup.Location = new System.Drawing.Point(467, 361);
             this.btnInformationGroup.Name = "btnInformationGroup";
             this.btnInformationGroup.Size = new System.Drawing.Size(57, 17);
-            this.btnInformationGroup.TabIndex = 6;
+            this.btnInformationGroup.TabIndex = 4;
             this.btnInformationGroup.Text = "nhóm 3";
             // 
             // btnMinimize
@@ -157,7 +157,7 @@
             this.btnMinimize.Location = new System.Drawing.Point(584, 25);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(39, 23);
-            this.btnMinimize.TabIndex = 7;
+            this.btnMinimize.TabIndex = 6;
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
@@ -174,12 +174,13 @@
             this.btnMaximize.Location = new System.Drawing.Point(638, 12);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(50, 42);
-            this.btnMaximize.TabIndex = 8;
+            this.btnMaximize.TabIndex = 5;
             this.btnMaximize.UseVisualStyleBackColor = true;
             this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
             // 
             // frmLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(690, 405);
