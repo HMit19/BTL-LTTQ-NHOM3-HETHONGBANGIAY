@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
+using DataTable = System.Data.DataTable;
 
 namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 {
@@ -197,6 +199,60 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 MessageBox.Show("Bạn chỉ nhập số nguyên");
                 e.Handled = true;
             }
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            Excel.Application exApp = new Excel.Application();
+            Excel.Workbook exBook = exApp.Workbooks.Add(Excel.XlWBATemplate.xlWBATWorksheet);
+            Excel.Worksheet exSheet = (Excel.Worksheet)exBook.Worksheets[1];
+
+            Excel.Range shopName = (Excel.Range)exSheet.Cells[1, 1];
+            shopName.Font.Size = 20;
+            shopName.Font.Bold = true;
+            shopName.Value = "CỬA HÀNG GIÀY SMART MEN";
+
+            Excel.Range shopAddress = (Excel.Range)exSheet.Cells[2, 1];
+            shopAddress.Font.Size = 14;
+            shopAddress.Font.Bold = true;
+            shopAddress.Value = "31 P. Quan Hoa, Quan Hoa, Cầu Giấy, Hà Nội, Việt Nam";
+
+            Excel.Range header = (Excel.Range)exSheet.Cells[4, 2];
+            exSheet.get_Range("B4:G4").Merge(true);
+            header.Font.Size = 14;
+            header.Font.Bold = true;
+            header.Value = "DANH SÁCH KHÁCH HÀNG";
+
+            exSheet.get_Range("A6:E6").Font.Bold = true;
+            exSheet.get_Range("A6:E6").HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+            exSheet.get_Range("A6:E6").ColumnWidth = 20;
+            exSheet.get_Range("A6").Value = "Mã khách hàng";
+            exSheet.get_Range("B6").Value = "Tên khách hàng";
+            exSheet.get_Range("C6").Value = "Địa chỉ";
+            exSheet.get_Range("D6").Value = "Điện thoại";
+            exSheet.get_Range("E6").Value = "Điểm";
+
+            DataTable dataEx = dataBase.ReadData("select CustomerCode, Name, Address, PhoneNumber, Point\r\nfrom tCustomer");
+            for(int i = 0; i < dataEx.Rows.Count; i++)
+            {
+                exSheet.get_Range("A" + (i + 7).ToString() + ":G" + (i + 7).ToString()).Font.Bold = false;
+                exSheet.get_Range("A" + (i + 7).ToString()).Value = dataEx.Rows[i][0].ToString();
+                exSheet.get_Range("B" + (i + 7).ToString()).Value = dataEx.Rows[i][1].ToString();
+                exSheet.get_Range("C" + (i + 7).ToString()).Value = dataEx.Rows[i][2].ToString();
+                exSheet.get_Range("D" + (i + 7).ToString()).Value = "'" + dataEx.Rows[i][3].ToString();
+                exSheet.get_Range("E" + (i + 7).ToString()).Value = dataEx.Rows[i][4].ToString();
+            }
+            exSheet.Name = "Danh sách khách hàng";
+            exBook.Activate();
+
+            dlgSave.Filter = "Excel Document(*.xlsx)|*.xlsx |All files(*.*)|*.*";
+            dlgSave.FilterIndex = 1;
+            dlgSave.AddExtension = true;
+            dlgSave.DefaultExt = ".xlsx";
+            if (dlgSave.ShowDialog() == DialogResult.OK)
+                exBook.SaveAs(dlgSave.FileName.ToString());
+            MessageBox.Show("Xuất dữ liệu ra Excel thành công!");
+            exApp.Quit();
         }
     }
 }
