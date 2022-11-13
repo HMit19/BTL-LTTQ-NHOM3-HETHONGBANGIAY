@@ -108,3 +108,11 @@ C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\a
 C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\aaaa\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.CoreCompileInputs.cache
 C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\aaaa\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe
 C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\aaaa\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.pdb
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\aaaa\bin\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe.config
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\aaaa\bin\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\aaaa\bin\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.pdb
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\aaaa\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\aaaa\bin\Debug\Guna.UI2.dll
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\aaaa\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.CopyComplete
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\aaaa\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor.EmployeeInfor.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\aaaa\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor.EmployeeAddNew.resources

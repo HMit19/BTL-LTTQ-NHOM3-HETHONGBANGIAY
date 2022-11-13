@@ -26,7 +26,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
         }
         private void btnSell_Click(object sender, EventArgs e)
         {
-            bringToFontUsercontrol(cartControl);
+           // bringToFontUsercontrol(cartUsercontrol1);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -41,6 +41,11 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
         private void bringToFontUsercontrol(UserControl namePanel)
         {
             namePanel.BringToFront();
+        }
+
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            bringToFontUsercontrol(employeeControl1);
         }
     }
 }

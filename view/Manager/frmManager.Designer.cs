@@ -51,12 +51,12 @@
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.createProduct = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.createProduct();
-            this.editProduct = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.editProduct();
+            this.employeeControl1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.EmployeeControl();
             this.homeControl = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.HomeControl();
-            this.shopControl1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.ShopControl();
+            this.editProduct = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.editProduct();
+            this.createProduct = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.createProduct();
             this.listProduct = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.listProduct();
-            this.cartUsercontrol1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CartUsercontrol();
+            this.shopControl1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.ShopControl();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureStore)).BeginInit();
             this.pnlContainer.SuspendLayout();
@@ -199,6 +199,7 @@
             this.btnEmployee.Text = "      Nhân viên";
             this.btnEmployee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEmployee.UseVisualStyleBackColor = true;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // btnCustomer
             // 
@@ -262,7 +263,7 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(73, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 21);
+            this.label2.Size = new System.Drawing.Size(112, 21);
             this.label2.TabIndex = 16;
             this.label2.Text = "Mai Văn Hiếu";
             // 
@@ -340,13 +341,13 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(206, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1360, 70);
+            this.guna2Panel1.Size = new System.Drawing.Size(1249, 70);
             this.guna2Panel1.TabIndex = 12;
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Panel2.Controls.Add(this.cartUsercontrol1);
+            this.guna2Panel2.Controls.Add(this.employeeControl1);
             this.guna2Panel2.Controls.Add(this.homeControl);
             this.guna2Panel2.Controls.Add(this.editProduct);
             this.guna2Panel2.Controls.Add(this.createProduct);
@@ -357,21 +358,13 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1360, 732);
             this.guna2Panel2.TabIndex = 13;
             // 
-            // createProduct
+            // employeeControl1
             // 
-            this.createProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.createProduct.Location = new System.Drawing.Point(0, 0);
-            this.createProduct.Name = "createProduct";
-            this.createProduct.Size = new System.Drawing.Size(1360, 732);
-            this.createProduct.TabIndex = 3;
-            // 
-            // editProduct
-            // 
-            this.editProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.editProduct.Location = new System.Drawing.Point(0, 2);
-            this.editProduct.Name = "editProduct";
-            this.editProduct.Size = new System.Drawing.Size(1360, 730);
-            this.editProduct.TabIndex = 4;
+            this.employeeControl1.Location = new System.Drawing.Point(0, -26);
+            this.employeeControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.employeeControl1.Name = "employeeControl1";
+            this.employeeControl1.Size = new System.Drawing.Size(1360, 730);
+            this.employeeControl1.TabIndex = 7;
             // 
             // homeControl
             // 
@@ -383,37 +376,48 @@
             this.homeControl.Size = new System.Drawing.Size(1360, 730);
             this.homeControl.TabIndex = 6;
             // 
-            // shopControl1
+            // editProduct
             // 
-            this.shopControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.shopControl1.Location = new System.Drawing.Point(0, 0);
-            this.shopControl1.Name = "shopControl1";
-            this.shopControl1.Size = new System.Drawing.Size(1360, 730);
-            this.shopControl1.TabIndex = 5;
+            this.editProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.editProduct.Location = new System.Drawing.Point(0, 2);
+            this.editProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.editProduct.Name = "editProduct";
+            this.editProduct.Size = new System.Drawing.Size(1360, 730);
+            this.editProduct.TabIndex = 4;
+            // 
+            // createProduct
+            // 
+            this.createProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.createProduct.Location = new System.Drawing.Point(0, 0);
+            this.createProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.createProduct.Name = "createProduct";
+            this.createProduct.Size = new System.Drawing.Size(1360, 732);
+            this.createProduct.TabIndex = 3;
             // 
             // listProduct
             // 
             this.listProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.listProduct.Location = new System.Drawing.Point(0, 0);
+            this.listProduct.Margin = new System.Windows.Forms.Padding(4);
             this.listProduct.Name = "listProduct";
             this.listProduct.Size = new System.Drawing.Size(1360, 732);
             this.listProduct.TabIndex = 2;
             // 
-            // cartUsercontrol1
+            // shopControl1
             // 
-            this.cartUsercontrol1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.cartUsercontrol1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cartUsercontrol1.Location = new System.Drawing.Point(2, 2);
-            this.cartUsercontrol1.Name = "cartUsercontrol1";
-            this.cartUsercontrol1.Size = new System.Drawing.Size(1358, 730);
-            this.cartUsercontrol1.TabIndex = 7;
+            this.shopControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.shopControl1.Location = new System.Drawing.Point(0, 0);
+            this.shopControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.shopControl1.Name = "shopControl1";
+            this.shopControl1.Size = new System.Drawing.Size(1360, 730);
+            this.shopControl1.TabIndex = 5;
             // 
             // frmManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1566, 825);
+            this.ClientSize = new System.Drawing.Size(1455, 825);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pnlSiderBar);
@@ -458,11 +462,11 @@
         private FontAwesome.Sharp.IconButton iconButton2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private usercontrol.CartUsercontrol cartUsercontrol1;
         private usercontrol.HomeControl homeControl;
         private usercontrol.admin.product.editProduct editProduct;
         private usercontrol.admin.product.createProduct createProduct;
         private usercontrol.admin.product.listProduct listProduct;
         private usercontrol.ShopControl shopControl1;
+        private usercontrol.EmployeeControl employeeControl1;
     }
 }
