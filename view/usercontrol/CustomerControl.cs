@@ -39,7 +39,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 txtSearch.ForeColor = SystemColors.GrayText;
             }
         }
-
+        //UserControl Load...
         private void CustomerControl_Load(object sender, EventArgs e)
         {
             //textbox...
@@ -55,7 +55,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             //panel InforCustomer...
             PanelInfor("KH01");
         }
-
+        //Function to display information of customer
         void PanelInfor(string customerCode)
         {
             if (btnCancel.Visible == true)
@@ -78,7 +78,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             lblTotal.Text = total.ToString();
             dgvBill.DataSource = dataBase.ReadData("Select CodeBill as 'Số Hóa Đơn', DateSale as 'Ngày bán', PaymentMethods as 'Thanh toán', Discount as 'Điểm' from tBillOfSale where CustomerCode = N'" + customerCode + "'");
         }
-
+        //DataGridView of customer's list
         private void dgvList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string currentCell = dgvList.CurrentRow.Cells[0].Value.ToString();
@@ -87,7 +87,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             else
             PanelInfor(currentCell);
         }
-
+        //Function to get value of combobox
         string FilterOfCbb()
         {
             string filter ="";
@@ -107,13 +107,14 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             }
             return filter;
         }
+        //Display ascend or descend...
         private void cbbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             string filter = FilterOfCbb();
             dgvList.DataSource = dataBase.ReadData("select CustomerCode, Name from tCustomer " + filter);
             PanelInfor(dgvList.CurrentRow.Cells[0].Value.ToString());
         }
-
+        //Get value in textbox and combobox to find and display into datagridview...
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string search = txtSearch.Text;
@@ -131,6 +132,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             }
             
         }
+        //Hide or display update textbox
         void OnText(bool check = true)
         {
                 lblName.Visible = !check;
@@ -141,6 +143,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 txtAddress.Visible = check;
         }
 
+        //Update information of customer
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (btnCancel.Visible == false)
@@ -180,7 +183,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 btnExcel.Enabled = true;
             }
         }
-
+        // Cancel update...
         private void btnCancel_Click(object sender, EventArgs e)
         {
             txtName.Text = "";
@@ -191,7 +194,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             btnSearch.Enabled = true;
             btnExcel.Enabled = true;
         }
-
+        // Only number for phone textbox...
         private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -200,7 +203,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 e.Handled = true;
             }
         }
-
+        // Export excel  file list of customer
         private void btnExcel_Click(object sender, EventArgs e)
         {
             Excel.Application exApp = new Excel.Application();
