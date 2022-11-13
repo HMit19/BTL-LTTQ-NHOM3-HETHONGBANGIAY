@@ -14,6 +14,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 {
     public partial class CustomerControl : UserControl
     {
+        //Connect database
         DAO.connect.ConnectData dataBase = new DAO.connect.ConnectData();
         //Hàm tạo...
         public CustomerControl()
@@ -253,8 +254,11 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             dlgSave.AddExtension = true;
             dlgSave.DefaultExt = ".xlsx";
             if (dlgSave.ShowDialog() == DialogResult.OK)
+            {
                 exBook.SaveAs(dlgSave.FileName.ToString());
-            MessageBox.Show("Xuất dữ liệu ra Excel thành công!");
+                MessageBox.Show("Xuất dữ liệu ra Excel thành công!");
+            }
+                
             exApp.Quit();
         }
     }
