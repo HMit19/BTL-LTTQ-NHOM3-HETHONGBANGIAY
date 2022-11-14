@@ -56,8 +56,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller\CartController.cs" />
     <Compile Include="controller\LoginController.cs" />
     <Compile Include="controller\StoreController.cs" />
+    <Compile Include="DAO\cart\CartDAO.cs" />
     <Compile Include="DAO\connect\ConnectSQL.cs" />
     <Compile Include="DAO\DatabaseHandle.cs" />
     <Compile Include="DAO\IDatabaseHandle.cs" />
@@ -125,6 +127,12 @@
     <Compile Include="view\usercontrol\CartControl.Designer.cs">
       <DependentUpon>CartControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\usercontrol\item\ItemColor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\item\ItemColor.Designer.cs">
+      <DependentUpon>ItemColor.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\usercontrol\item\ItemProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,6 +144,12 @@
     </Compile>
     <Compile Include="view\usercontrol\item\ItemProductOfCart.Designer.cs">
       <DependentUpon>ItemProductOfCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\usercontrol\item\ItemSize.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\item\ItemSize.Designer.cs">
+      <DependentUpon>ItemSize.cs</DependentUpon>
     </Compile>
     <Compile Include="view\usercontrol\item\ItemTopProduct.cs">
       <SubType>UserControl</SubType>
@@ -188,11 +202,17 @@
     <EmbeddedResource Include="view\usercontrol\CartControl.resx">
       <DependentUpon>CartControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\item\ItemColor.resx">
+      <DependentUpon>ItemColor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\item\ItemProduct.resx">
       <DependentUpon>ItemProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\item\ItemProductOfCart.resx">
       <DependentUpon>ItemProductOfCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\item\ItemSize.resx">
+      <DependentUpon>ItemSize.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\item\ItemTopProduct.resx">
       <DependentUpon>ItemTopProduct.cs</DependentUpon>

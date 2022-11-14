@@ -50,37 +50,30 @@
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.btnCart = new FontAwesome.Sharp.IconButton();
             this.pnlContainProduct = new System.Windows.Forms.FlowLayoutPanel();
+            this.itemProduct1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
             this.pnlOptionDetail = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlConfirm = new Guna.UI2.WinForms.Guna2Panel();
+            this.unit = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblAvaiable = new System.Windows.Forms.Label();
             this.btnAddToCart = new Guna.UI2.WinForms.Guna2Button();
-            this.txtUnitProduct = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnIncrease = new Guna.UI2.WinForms.Guna2Button();
             this.btnDecrease = new Guna.UI2.WinForms.Guna2Button();
+            this.txtUnitProduct = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlOptionColor = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.pnlOptionSize = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button12 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button13 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button14 = new Guna.UI2.WinForms.Guna2Button();
+            this.selectColor = new System.Windows.Forms.Label();
+            this.selectSize = new System.Windows.Forms.Label();
+            this.selectUnit = new System.Windows.Forms.Label();
             this.pnlOptionSidebar.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pnlOptionHeader.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.pnlContainProduct.SuspendLayout();
             this.pnlOptionDetail.SuspendLayout();
-            this.pnlOptionColor.SuspendLayout();
-            this.pnlOptionSize.SuspendLayout();
+            this.pnlConfirm.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlOptionSidebar
@@ -91,7 +84,7 @@
             this.pnlOptionSidebar.Controls.Add(this.cbCategory);
             this.pnlOptionSidebar.Location = new System.Drawing.Point(983, 154);
             this.pnlOptionSidebar.Name = "pnlOptionSidebar";
-            this.pnlOptionSidebar.Size = new System.Drawing.Size(345, 239);
+            this.pnlOptionSidebar.Size = new System.Drawing.Size(345, 217);
             this.pnlOptionSidebar.TabIndex = 7;
             // 
             // groupBox1
@@ -101,7 +94,7 @@
             this.groupBox1.Controls.Add(this.rdo5to7);
             this.groupBox1.Controls.Add(this.rdo3to5);
             this.groupBox1.Controls.Add(this.rdo3);
-            this.groupBox1.Location = new System.Drawing.Point(24, 110);
+            this.groupBox1.Location = new System.Drawing.Point(24, 89);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(297, 116);
             this.groupBox1.TabIndex = 8;
@@ -200,7 +193,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(20, 87);
+            this.label6.Location = new System.Drawing.Point(20, 66);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(110, 20);
             this.label6.TabIndex = 7;
@@ -210,7 +203,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 13);
+            this.label5.Location = new System.Drawing.Point(20, 6);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 20);
             this.label5.TabIndex = 6;
@@ -226,7 +219,7 @@
             this.cbCategory.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbCategory.ItemHeight = 25;
-            this.cbCategory.Location = new System.Drawing.Point(24, 36);
+            this.cbCategory.Location = new System.Drawing.Point(24, 29);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(178, 31);
             this.cbCategory.TabIndex = 0;
@@ -393,29 +386,89 @@
             this.btnCart.Size = new System.Drawing.Size(44, 41);
             this.btnCart.TabIndex = 19;
             this.btnCart.UseVisualStyleBackColor = true;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
             // pnlContainProduct
             // 
             this.pnlContainProduct.AutoScroll = true;
+            this.pnlContainProduct.Controls.Add(this.itemProduct1);
             this.pnlContainProduct.Location = new System.Drawing.Point(68, 154);
             this.pnlContainProduct.Name = "pnlContainProduct";
             this.pnlContainProduct.Size = new System.Drawing.Size(849, 549);
             this.pnlContainProduct.TabIndex = 8;
             // 
+            // itemProduct1
+            // 
+            this.itemProduct1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.itemProduct1.ColorItem = null;
+            this.itemProduct1.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
+            this.itemProduct1.Location = new System.Drawing.Point(6, 6);
+            this.itemProduct1.Margin = new System.Windows.Forms.Padding(6);
+            this.itemProduct1.Name = "itemProduct1";
+            this.itemProduct1.Size = new System.Drawing.Size(196, 169);
+            this.itemProduct1.SizeItem = null;
+            this.itemProduct1.TabIndex = 0;
+            // 
             // pnlOptionDetail
             // 
-            this.pnlOptionDetail.Controls.Add(this.btnAddToCart);
+            this.pnlOptionDetail.Controls.Add(this.pnlConfirm);
             this.pnlOptionDetail.Controls.Add(this.txtUnitProduct);
-            this.pnlOptionDetail.Controls.Add(this.btnIncrease);
-            this.pnlOptionDetail.Controls.Add(this.btnDecrease);
             this.pnlOptionDetail.Controls.Add(this.label7);
             this.pnlOptionDetail.Controls.Add(this.label2);
             this.pnlOptionDetail.Controls.Add(this.pnlOptionColor);
             this.pnlOptionDetail.Controls.Add(this.pnlOptionSize);
-            this.pnlOptionDetail.Location = new System.Drawing.Point(983, 386);
+            this.pnlOptionDetail.Location = new System.Drawing.Point(983, 377);
             this.pnlOptionDetail.Name = "pnlOptionDetail";
-            this.pnlOptionDetail.Size = new System.Drawing.Size(344, 317);
+            this.pnlOptionDetail.Size = new System.Drawing.Size(344, 339);
             this.pnlOptionDetail.TabIndex = 9;
+            this.pnlOptionDetail.Visible = false;
+            // 
+            // pnlConfirm
+            // 
+            this.pnlConfirm.Controls.Add(this.unit);
+            this.pnlConfirm.Controls.Add(this.lblAvaiable);
+            this.pnlConfirm.Controls.Add(this.btnAddToCart);
+            this.pnlConfirm.Controls.Add(this.btnIncrease);
+            this.pnlConfirm.Controls.Add(this.btnDecrease);
+            this.pnlConfirm.Location = new System.Drawing.Point(28, 251);
+            this.pnlConfirm.Name = "pnlConfirm";
+            this.pnlConfirm.Size = new System.Drawing.Size(292, 87);
+            this.pnlConfirm.TabIndex = 22;
+            // 
+            // unit
+            // 
+            this.unit.BackColor = System.Drawing.Color.Black;
+            this.unit.BorderColor = System.Drawing.Color.DarkGray;
+            this.unit.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.unit.DefaultText = "1";
+            this.unit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.unit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.unit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.unit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.unit.FillColor = System.Drawing.SystemColors.Window;
+            this.unit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.unit.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unit.ForeColor = System.Drawing.Color.Black;
+            this.unit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.unit.Location = new System.Drawing.Point(58, 4);
+            this.unit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unit.Name = "unit";
+            this.unit.PasswordChar = '\0';
+            this.unit.PlaceholderText = "";
+            this.unit.SelectedText = "";
+            this.unit.Size = new System.Drawing.Size(44, 29);
+            this.unit.TabIndex = 21;
+            this.unit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblAvaiable
+            // 
+            this.lblAvaiable.AutoSize = true;
+            this.lblAvaiable.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvaiable.Location = new System.Drawing.Point(145, 9);
+            this.lblAvaiable.Name = "lblAvaiable";
+            this.lblAvaiable.Size = new System.Drawing.Size(126, 17);
+            this.lblAvaiable.TabIndex = 20;
+            this.lblAvaiable.Text = "100 sản phẩm có sẵn";
             // 
             // btnAddToCart
             // 
@@ -423,13 +476,50 @@
             this.btnAddToCart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAddToCart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAddToCart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddToCart.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddToCart.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddToCart.ForeColor = System.Drawing.Color.White;
-            this.btnAddToCart.Location = new System.Drawing.Point(163, 268);
+            this.btnAddToCart.Location = new System.Drawing.Point(67, 43);
             this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(147, 37);
+            this.btnAddToCart.Size = new System.Drawing.Size(166, 37);
             this.btnAddToCart.TabIndex = 19;
             this.btnAddToCart.Text = "Thêm vào giỏ hàng";
+            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
+            // 
+            // btnIncrease
+            // 
+            this.btnIncrease.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnIncrease.BorderThickness = 1;
+            this.btnIncrease.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnIncrease.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnIncrease.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnIncrease.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnIncrease.FillColor = System.Drawing.Color.White;
+            this.btnIncrease.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncrease.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnIncrease.Location = new System.Drawing.Point(101, 4);
+            this.btnIncrease.Name = "btnIncrease";
+            this.btnIncrease.Size = new System.Drawing.Size(28, 29);
+            this.btnIncrease.TabIndex = 17;
+            this.btnIncrease.Text = "+";
+            this.btnIncrease.Click += new System.EventHandler(this.btnIncrease_Click);
+            // 
+            // btnDecrease
+            // 
+            this.btnDecrease.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDecrease.BorderThickness = 1;
+            this.btnDecrease.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDecrease.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDecrease.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDecrease.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDecrease.FillColor = System.Drawing.Color.White;
+            this.btnDecrease.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDecrease.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDecrease.Location = new System.Drawing.Point(33, 4);
+            this.btnDecrease.Name = "btnDecrease";
+            this.btnDecrease.Size = new System.Drawing.Size(28, 29);
+            this.btnDecrease.TabIndex = 16;
+            this.btnDecrease.Text = "-";
+            this.btnDecrease.Click += new System.EventHandler(this.btnDecrease_Click);
             // 
             // txtUnitProduct
             // 
@@ -444,53 +534,20 @@
             this.txtUnitProduct.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUnitProduct.ForeColor = System.Drawing.Color.Black;
             this.txtUnitProduct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUnitProduct.Location = new System.Drawing.Point(73, 272);
+            this.txtUnitProduct.Location = new System.Drawing.Point(114, 340);
+            this.txtUnitProduct.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnitProduct.Name = "txtUnitProduct";
             this.txtUnitProduct.PasswordChar = '\0';
             this.txtUnitProduct.PlaceholderText = "";
             this.txtUnitProduct.SelectedText = "";
-            this.txtUnitProduct.Size = new System.Drawing.Size(35, 29);
+            this.txtUnitProduct.Size = new System.Drawing.Size(51, 39);
             this.txtUnitProduct.TabIndex = 18;
             this.txtUnitProduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnIncrease
-            // 
-            this.btnIncrease.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnIncrease.BorderThickness = 1;
-            this.btnIncrease.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnIncrease.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnIncrease.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnIncrease.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnIncrease.FillColor = System.Drawing.Color.White;
-            this.btnIncrease.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncrease.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnIncrease.Location = new System.Drawing.Point(108, 272);
-            this.btnIncrease.Name = "btnIncrease";
-            this.btnIncrease.Size = new System.Drawing.Size(28, 29);
-            this.btnIncrease.TabIndex = 17;
-            this.btnIncrease.Text = "+";
-            // 
-            // btnDecrease
-            // 
-            this.btnDecrease.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDecrease.BorderThickness = 1;
-            this.btnDecrease.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDecrease.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDecrease.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDecrease.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDecrease.FillColor = System.Drawing.Color.White;
-            this.btnDecrease.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDecrease.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnDecrease.Location = new System.Drawing.Point(45, 272);
-            this.btnDecrease.Name = "btnDecrease";
-            this.btnDecrease.Size = new System.Drawing.Size(28, 29);
-            this.btnDecrease.TabIndex = 16;
-            this.btnDecrease.Text = "-";
             // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, 131);
+            this.label7.Location = new System.Drawing.Point(20, 122);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(110, 20);
             this.label7.TabIndex = 15;
@@ -499,7 +556,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 4);
+            this.label2.Location = new System.Drawing.Point(20, 2);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 20);
             this.label2.TabIndex = 14;
@@ -507,290 +564,54 @@
             // 
             // pnlOptionColor
             // 
-            this.pnlOptionColor.Controls.Add(this.guna2Button1);
-            this.pnlOptionColor.Controls.Add(this.guna2Button2);
-            this.pnlOptionColor.Controls.Add(this.guna2Button3);
-            this.pnlOptionColor.Controls.Add(this.guna2Button4);
-            this.pnlOptionColor.Controls.Add(this.guna2Button5);
-            this.pnlOptionColor.Controls.Add(this.guna2Button6);
-            this.pnlOptionColor.Location = new System.Drawing.Point(24, 27);
+            this.pnlOptionColor.Location = new System.Drawing.Point(24, 22);
             this.pnlOptionColor.Name = "pnlOptionColor";
             this.pnlOptionColor.Size = new System.Drawing.Size(297, 97);
             this.pnlOptionColor.TabIndex = 12;
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(8, 8);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(8);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(82, 32);
-            this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "Xanh lá";
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button2.BorderThickness = 1;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(106, 8);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(8);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(82, 32);
-            this.guna2Button2.TabIndex = 1;
-            this.guna2Button2.Text = "Xanh lá";
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button3.BorderThickness = 1;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.Location = new System.Drawing.Point(204, 8);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(8);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(82, 32);
-            this.guna2Button3.TabIndex = 2;
-            this.guna2Button3.Text = "Xanh lá";
-            // 
-            // guna2Button4
-            // 
-            this.guna2Button4.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button4.BorderThickness = 1;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.Location = new System.Drawing.Point(8, 56);
-            this.guna2Button4.Margin = new System.Windows.Forms.Padding(8);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(82, 32);
-            this.guna2Button4.TabIndex = 3;
-            this.guna2Button4.Text = "Xanh lá";
-            // 
-            // guna2Button5
-            // 
-            this.guna2Button5.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button5.BorderThickness = 1;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button5.Location = new System.Drawing.Point(106, 56);
-            this.guna2Button5.Margin = new System.Windows.Forms.Padding(8);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(82, 32);
-            this.guna2Button5.TabIndex = 4;
-            this.guna2Button5.Text = "Xanh lá";
-            // 
-            // guna2Button6
-            // 
-            this.guna2Button6.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button6.BorderThickness = 1;
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button6.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button6.Location = new System.Drawing.Point(204, 56);
-            this.guna2Button6.Margin = new System.Windows.Forms.Padding(8);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(82, 32);
-            this.guna2Button6.TabIndex = 5;
-            this.guna2Button6.Text = "Xanh lá";
-            // 
             // pnlOptionSize
             // 
-            this.pnlOptionSize.Controls.Add(this.guna2Button7);
-            this.pnlOptionSize.Controls.Add(this.guna2Button8);
-            this.pnlOptionSize.Controls.Add(this.guna2Button9);
-            this.pnlOptionSize.Controls.Add(this.guna2Button10);
-            this.pnlOptionSize.Controls.Add(this.guna2Button11);
-            this.pnlOptionSize.Controls.Add(this.guna2Button12);
-            this.pnlOptionSize.Controls.Add(this.guna2Button13);
-            this.pnlOptionSize.Controls.Add(this.guna2Button14);
-            this.pnlOptionSize.Location = new System.Drawing.Point(24, 154);
+            this.pnlOptionSize.Location = new System.Drawing.Point(24, 145);
             this.pnlOptionSize.Name = "pnlOptionSize";
             this.pnlOptionSize.Size = new System.Drawing.Size(297, 97);
             this.pnlOptionSize.TabIndex = 13;
             // 
-            // guna2Button7
+            // selectColor
             // 
-            this.guna2Button7.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button7.BorderThickness = 1;
-            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button7.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button7.Location = new System.Drawing.Point(8, 8);
-            this.guna2Button7.Margin = new System.Windows.Forms.Padding(8);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(57, 32);
-            this.guna2Button7.TabIndex = 1;
-            this.guna2Button7.Text = "40";
+            this.selectColor.AutoSize = true;
+            this.selectColor.Location = new System.Drawing.Point(980, 138);
+            this.selectColor.Name = "selectColor";
+            this.selectColor.Size = new System.Drawing.Size(35, 13);
+            this.selectColor.TabIndex = 1;
+            this.selectColor.Text = "label9";
             // 
-            // guna2Button8
+            // selectSize
             // 
-            this.guna2Button8.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button8.BorderThickness = 1;
-            this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button8.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button8.Location = new System.Drawing.Point(81, 8);
-            this.guna2Button8.Margin = new System.Windows.Forms.Padding(8);
-            this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(57, 32);
-            this.guna2Button8.TabIndex = 2;
-            this.guna2Button8.Text = "40";
+            this.selectSize.AutoSize = true;
+            this.selectSize.Location = new System.Drawing.Point(1066, 138);
+            this.selectSize.Name = "selectSize";
+            this.selectSize.Size = new System.Drawing.Size(35, 13);
+            this.selectSize.TabIndex = 10;
+            this.selectSize.Text = "label9";
             // 
-            // guna2Button9
+            // selectUnit
             // 
-            this.guna2Button9.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button9.BorderThickness = 1;
-            this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button9.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button9.Location = new System.Drawing.Point(154, 8);
-            this.guna2Button9.Margin = new System.Windows.Forms.Padding(8);
-            this.guna2Button9.Name = "guna2Button9";
-            this.guna2Button9.Size = new System.Drawing.Size(57, 32);
-            this.guna2Button9.TabIndex = 3;
-            this.guna2Button9.Text = "40";
-            // 
-            // guna2Button10
-            // 
-            this.guna2Button10.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button10.BorderThickness = 1;
-            this.guna2Button10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button10.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button10.Location = new System.Drawing.Point(227, 8);
-            this.guna2Button10.Margin = new System.Windows.Forms.Padding(8);
-            this.guna2Button10.Name = "guna2Button10";
-            this.guna2Button10.Size = new System.Drawing.Size(57, 32);
-            this.guna2Button10.TabIndex = 4;
-            this.guna2Button10.Text = "40";
-            // 
-            // guna2Button11
-            // 
-            this.guna2Button11.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button11.BorderThickness = 1;
-            this.guna2Button11.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button11.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button11.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button11.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button11.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button11.Location = new System.Drawing.Point(8, 56);
-            this.guna2Button11.Margin = new System.Windows.Forms.Padding(8);
-            this.guna2Button11.Name = "guna2Button11";
-            this.guna2Button11.Size = new System.Drawing.Size(57, 32);
-            this.guna2Button11.TabIndex = 5;
-            this.guna2Button11.Text = "40";
-            // 
-            // guna2Button12
-            // 
-            this.guna2Button12.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button12.BorderThickness = 1;
-            this.guna2Button12.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button12.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button12.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button12.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button12.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button12.Location = new System.Drawing.Point(81, 56);
-            this.guna2Button12.Margin = new System.Windows.Forms.Padding(8);
-            this.guna2Button12.Name = "guna2Button12";
-            this.guna2Button12.Size = new System.Drawing.Size(57, 32);
-            this.guna2Button12.TabIndex = 6;
-            this.guna2Button12.Text = "40";
-            // 
-            // guna2Button13
-            // 
-            this.guna2Button13.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button13.BorderThickness = 1;
-            this.guna2Button13.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button13.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button13.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button13.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button13.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button13.Location = new System.Drawing.Point(154, 56);
-            this.guna2Button13.Margin = new System.Windows.Forms.Padding(8);
-            this.guna2Button13.Name = "guna2Button13";
-            this.guna2Button13.Size = new System.Drawing.Size(57, 32);
-            this.guna2Button13.TabIndex = 7;
-            this.guna2Button13.Text = "40";
-            // 
-            // guna2Button14
-            // 
-            this.guna2Button14.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button14.BorderThickness = 1;
-            this.guna2Button14.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button14.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button14.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button14.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2Button14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button14.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button14.Location = new System.Drawing.Point(227, 56);
-            this.guna2Button14.Margin = new System.Windows.Forms.Padding(8);
-            this.guna2Button14.Name = "guna2Button14";
-            this.guna2Button14.Size = new System.Drawing.Size(57, 32);
-            this.guna2Button14.TabIndex = 8;
-            this.guna2Button14.Text = "40";
+            this.selectUnit.AutoSize = true;
+            this.selectUnit.Location = new System.Drawing.Point(1150, 138);
+            this.selectUnit.Name = "selectUnit";
+            this.selectUnit.Size = new System.Drawing.Size(35, 13);
+            this.selectUnit.TabIndex = 11;
+            this.selectUnit.Text = "label9";
             // 
             // StoreControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.Controls.Add(this.selectUnit);
+            this.Controls.Add(this.selectSize);
             this.Controls.Add(this.pnlOptionDetail);
+            this.Controls.Add(this.selectColor);
             this.Controls.Add(this.pnlContainProduct);
             this.Controls.Add(this.pnlOptionSidebar);
             this.Controls.Add(this.pnlOptionHeader);
@@ -806,10 +627,12 @@
             this.pnlOptionHeader.PerformLayout();
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.pnlContainProduct.ResumeLayout(false);
             this.pnlOptionDetail.ResumeLayout(false);
-            this.pnlOptionColor.ResumeLayout(false);
-            this.pnlOptionSize.ResumeLayout(false);
+            this.pnlConfirm.ResumeLayout(false);
+            this.pnlConfirm.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -845,20 +668,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel pnlOptionColor;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private System.Windows.Forms.FlowLayoutPanel pnlOptionSize;
-        private Guna.UI2.WinForms.Guna2Button guna2Button7;
-        private Guna.UI2.WinForms.Guna2Button guna2Button8;
-        private Guna.UI2.WinForms.Guna2Button guna2Button9;
-        private Guna.UI2.WinForms.Guna2Button guna2Button10;
-        private Guna.UI2.WinForms.Guna2Button guna2Button11;
-        private Guna.UI2.WinForms.Guna2Button guna2Button12;
-        private Guna.UI2.WinForms.Guna2Button guna2Button13;
-        private Guna.UI2.WinForms.Guna2Button guna2Button14;
+        private item.ItemProduct itemProduct1;
+        private System.Windows.Forms.Label lblAvaiable;
+        private Guna.UI2.WinForms.Guna2TextBox unit;
+        private Guna.UI2.WinForms.Guna2Panel pnlConfirm;
+        private System.Windows.Forms.Label selectColor;
+        private System.Windows.Forms.Label selectSize;
+        private System.Windows.Forms.Label selectUnit;
     }
 }

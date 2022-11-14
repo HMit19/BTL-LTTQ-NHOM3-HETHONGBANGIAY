@@ -35,11 +35,104 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.product
         {
             return productsDefault;
         }
+        public List<DetailProduct> getListDetailProductByIdProduct(string idProduct)
+        {
+            foreach (Product product in productsDefault)
+            {
+                if (product.Id.Equals(idProduct))
+                {
+                    return product.DetailProduct;
+                }
+            }
+            return null;
+        }
+
+        public string getIdDetailProduct(string idProduct, string color, string size)
+        {
+            Product product = getProductById(idProduct);
+            foreach (DetailProduct detailProduct in product.DetailProduct)
+            {
+                if (detailProduct.Color.Equals(color) && detailProduct.Size.ToString().Equals(size))
+                {
+                    return detailProduct.IdProductDetail;
+                }
+            }
+            return null;
+        }
+
+        public List<string> getSizeExistInColor(string idProduct, string color)
+        {
+            HashSet<string> sizes = new HashSet<string>();
+            foreach (DetailProduct detailProduct in getListDetailProductByIdProduct(idProduct))
+            {
+                if (detailProduct.Color.Equals(color))
+                    sizes.Add(detailProduct.Size.ToString());
+            }
+            return new List<string>(sizes);
+        }
+        public List<string> getColorExistInSize(string idProduct, string size)
+        {
+            HashSet<string> colors = new HashSet<string>();
+            foreach (DetailProduct detailProduct in getListDetailProductByIdProduct(idProduct))
+            {
+                if (detailProduct.Size.ToString().Equals(size))
+                    colors.Add(detailProduct.Color);
+            }
+            return new List<string>(colors);
+        }
+        public List<string> getListColorOfProduct(string idProduct)
+        {
+            HashSet<string> colors = new HashSet<string>();
+            foreach (DetailProduct detailProduct in getListDetailProductByIdProduct(idProduct))
+            {
+                colors.Add(detailProduct.Color);
+            }
+            return new List<string>(colors);
+        }
+
+
+        public List<string> getListSizeOfProduct(string idProduct)
+        {
+            HashSet<string> sizes = new HashSet<string>();
+            foreach (DetailProduct detailProduct in getListDetailProductByIdProduct(idProduct))
+            {
+                sizes.Add(detailProduct.Size.ToString());
+            }
+            return new List<string>(sizes);
+            return null;
+        }
 
         public List<Product> getListProducts()
         {
             return products;
         }
+        public Product getProductById(string id)
+        {
+            foreach (Product product in productsDefault)
+            {
+                if (product.Id.Equals(id))
+                {
+                    return product;
+                }
+            }
+            return null;
+        }
+
+        public DetailProduct getDetailProductById(string id)
+        {
+            foreach (Product product in productsDefault)
+            {
+                foreach (DetailProduct detailProduct in product.DetailProduct)
+                {
+                    if (detailProduct.IdProductDetail.Equals(id))
+                    {
+                        return detailProduct;
+                    }
+                }
+            }
+            return null;
+        }
+
         public void setListProducts(List<Product> products)
         {
             this.products = products;
@@ -75,7 +168,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.product
                 if (product.Name.ToLower().Contains(nameProduct.ToLower()))
                     listProducts.Add(product);
             }
-            products =  listProducts;
+            products = listProducts;
             return listProducts.Count == 0;
         }
 

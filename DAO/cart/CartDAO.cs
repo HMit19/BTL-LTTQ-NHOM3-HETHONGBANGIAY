@@ -1,0 +1,55 @@
+﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+
+namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.cart
+{
+    class CartDAO
+    {
+        public static List<DetailBillSell> detailBillSells = null;
+        public CartDAO()
+        {
+            detailBillSells = new List<DetailBillSell>();
+        }
+        public void addProductToCart(string idDetailProduct, int quantity)
+        {
+            bool isExist = false;
+            foreach (DetailBillSell detailBillSell in detailBillSells)
+            {
+                if (detailBillSell.IdProductDetail.Equals(idDetailProduct))
+                {
+                    detailBillSell.Quantity += quantity;
+                    isExist = true;
+                    break;
+                }
+            }
+            if (!isExist)
+            {
+                detailBillSells.Add(new DetailBillSell(idDetailProduct, quantity));
+            }
+        }
+        public List<DetailBillSell> getListDetailBillSells()
+        {
+            return detailBillSells;
+        }
+        public void removeItemOfCart(string idDetailBillSell)
+        {
+            foreach (DetailBillSell detailBillSell in detailBillSells)
+            {
+                if (detailBillSell.IdProductDetail.Equals(idDetailBillSell))
+                {
+                    detailBillSells.Remove(detailBillSell);
+                    break;
+                }
+            }
+        }
+        public void removeAllInCart()
+        {
+            detailBillSells.Clear();
+        }
+    }
+}

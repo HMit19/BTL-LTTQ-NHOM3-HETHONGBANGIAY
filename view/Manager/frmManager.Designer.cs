@@ -43,18 +43,18 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.btnInfomation = new System.Windows.Forms.Button();
             this.pnlSiderBar = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.nameEmployee = new System.Windows.Forms.Label();
+            this.nameRole = new System.Windows.Forms.Label();
             this.btnSetting = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlContainer = new Guna.UI2.WinForms.Guna2Panel();
-            this.storeControl = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.StoreControl();
             this.homeControl = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.HomeControl();
             this.cartControl = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CartControl();
             this.listProduct = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.listProduct();
+            this.storeControl = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.StoreControl();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureStore)).BeginInit();
             this.pnlSiderBar.SuspendLayout();
@@ -233,25 +233,25 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // nameEmployee
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(73, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 21);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Mai Văn Hiếu";
+            this.nameEmployee.AutoSize = true;
+            this.nameEmployee.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameEmployee.Location = new System.Drawing.Point(73, 9);
+            this.nameEmployee.Name = "nameEmployee";
+            this.nameEmployee.Size = new System.Drawing.Size(112, 21);
+            this.nameEmployee.TabIndex = 16;
+            this.nameEmployee.Text = "Mai Văn Hiếu";
             // 
-            // label1
+            // nameRole
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(74, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Admin";
+            this.nameRole.AutoSize = true;
+            this.nameRole.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameRole.Location = new System.Drawing.Point(74, 49);
+            this.nameRole.Name = "nameRole";
+            this.nameRole.Size = new System.Drawing.Size(50, 17);
+            this.nameRole.TabIndex = 17;
+            this.nameRole.Text = "Admin";
             // 
             // btnSetting
             // 
@@ -311,8 +311,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.guna2Panel1.Controls.Add(this.iconButton1);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.btnSetting);
-            this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Controls.Add(this.nameRole);
+            this.guna2Panel1.Controls.Add(this.nameEmployee);
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.LightGray;
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -332,15 +332,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.pnlContainer.Name = "pnlContainer";
             this.pnlContainer.Size = new System.Drawing.Size(1360, 732);
             this.pnlContainer.TabIndex = 13;
-            // 
-            // storeControl
-            // 
-            this.storeControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.storeControl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.storeControl.Location = new System.Drawing.Point(0, 0);
-            this.storeControl.Name = "storeControl";
-            this.storeControl.Size = new System.Drawing.Size(1360, 732);
-            this.storeControl.TabIndex = 5;
             // 
             // homeControl
             // 
@@ -367,6 +358,15 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.listProduct.Name = "listProduct";
             this.listProduct.Size = new System.Drawing.Size(1360, 732);
             this.listProduct.TabIndex = 4;
+            // 
+            // storeControl
+            // 
+            this.storeControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.storeControl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.storeControl.Location = new System.Drawing.Point(0, 0);
+            this.storeControl.Name = "storeControl";
+            this.storeControl.Size = new System.Drawing.Size(1360, 732);
+            this.storeControl.TabIndex = 5;
             // 
             // frmManager
             // 
@@ -406,8 +406,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
         private System.Windows.Forms.Button btnInfomation;
         private System.Windows.Forms.Panel pnlSiderBar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        protected internal System.Windows.Forms.Label label2;
-        protected internal System.Windows.Forms.Label label1;
+        protected internal System.Windows.Forms.Label nameEmployee;
+        protected internal System.Windows.Forms.Label nameRole;
         private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton iconButton1;

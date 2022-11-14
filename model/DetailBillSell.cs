@@ -11,12 +11,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.model
         private string idBill;
         private string idProductDetail;
         private int quantity;
-        private long totalPrice;
 
         public string IdBill { get => idBill; set => idBill = value; }
         public string IdProductDetail { get => idProductDetail; set => idProductDetail = value; }
         public int Quantity { get => quantity; set => quantity = value; }
-        public long TotalPrice { get => totalPrice; set => totalPrice = value; }
         public DetailBillSell() { }
 
         public DetailBillSell(string idBill, string idProductDetail, int quantity)

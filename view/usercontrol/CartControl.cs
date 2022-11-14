@@ -13,10 +13,15 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 {
     public partial class CartControl : UserControl
     {
-        frmManager main; 
+        public event UserEvent removeAllinCart;
         public CartControl()
         {
             InitializeComponent();
+        }
+
+        private void btnClearCart_Click(object sender, EventArgs e)
+        {
+            removeAllinCart?.Invoke();
         }
     }
 }

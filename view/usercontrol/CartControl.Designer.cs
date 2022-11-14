@@ -33,7 +33,7 @@
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pnlRegister = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label35 = new System.Windows.Forms.Label();
             this.lblUnitPoint = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -79,14 +79,8 @@
             this.txtNameCustomer = new Guna.UI2.WinForms.Guna2TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.itemProductOfCart1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProductOfCart();
-            this.itemProductOfCart2 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProductOfCart();
-            this.itemProductOfCart3 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProductOfCart();
-            this.itemProductOfCart4 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProductOfCart();
-            this.itemProductOfCart5 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProductOfCart();
-            this.itemProductOfCart6 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProductOfCart();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlFooter = new Guna.UI2.WinForms.Guna2Panel();
             this.btnClearCart = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.lblSumTotal = new System.Windows.Forms.Label();
@@ -94,10 +88,9 @@
             this.btnNoteOrder = new FontAwesome.Sharp.IconButton();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            this.guna2CustomGradientPanel1.SuspendLayout();
+            this.pnlRegister.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
+            this.pnlFooter.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -111,7 +104,7 @@
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1360, 68);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1360, 55);
             this.guna2GradientPanel1.TabIndex = 1;
             // 
             // btnSearch
@@ -123,7 +116,7 @@
             this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnSearch.IconSize = 40;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSearch.Location = new System.Drawing.Point(1105, 13);
+            this.btnSearch.Location = new System.Drawing.Point(1072, 3);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(40, 40);
             this.btnSearch.TabIndex = 5;
@@ -157,7 +150,7 @@
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(904, 17);
+            this.txtSearch.Location = new System.Drawing.Point(866, 8);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Số điện thoại khách hàng . .  .";
@@ -174,54 +167,54 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Giỏ hàng";
             // 
-            // guna2CustomGradientPanel1
+            // pnlRegister
             // 
-            this.guna2CustomGradientPanel1.Controls.Add(this.label35);
-            this.guna2CustomGradientPanel1.Controls.Add(this.lblUnitPoint);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label34);
-            this.guna2CustomGradientPanel1.Controls.Add(this.lblDate);
-            this.guna2CustomGradientPanel1.Controls.Add(this.lblNameEmployee);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label28);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label32);
-            this.guna2CustomGradientPanel1.Controls.Add(this.btnPayUp);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label2);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label24);
-            this.guna2CustomGradientPanel1.Controls.Add(this.txtMoneyReturn);
-            this.guna2CustomGradientPanel1.Controls.Add(this.rdoBanking);
-            this.guna2CustomGradientPanel1.Controls.Add(this.rdoCreditCard);
-            this.guna2CustomGradientPanel1.Controls.Add(this.rdoCash);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2CustomRadioButton3);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2CustomRadioButton2);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2CustomRadioButton1);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label20);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label19);
-            this.guna2CustomGradientPanel1.Controls.Add(this.txtCustomerPayUp);
-            this.guna2CustomGradientPanel1.Controls.Add(this.txtPoint);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label18);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label17);
-            this.guna2CustomGradientPanel1.Controls.Add(this.lblMoneyOrder);
-            this.guna2CustomGradientPanel1.Controls.Add(this.lblSumTotalInOrder);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label15);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label16);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label11);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label12);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label10);
-            this.guna2CustomGradientPanel1.Controls.Add(this.lblNameCustomer);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label7);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label6);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label5);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label4);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label29);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label30);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label31);
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(866, 274);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(437, 427);
-            this.guna2CustomGradientPanel1.TabIndex = 3;
+            this.pnlRegister.Controls.Add(this.label35);
+            this.pnlRegister.Controls.Add(this.lblUnitPoint);
+            this.pnlRegister.Controls.Add(this.label34);
+            this.pnlRegister.Controls.Add(this.lblDate);
+            this.pnlRegister.Controls.Add(this.lblNameEmployee);
+            this.pnlRegister.Controls.Add(this.label28);
+            this.pnlRegister.Controls.Add(this.label32);
+            this.pnlRegister.Controls.Add(this.btnPayUp);
+            this.pnlRegister.Controls.Add(this.label2);
+            this.pnlRegister.Controls.Add(this.label24);
+            this.pnlRegister.Controls.Add(this.txtMoneyReturn);
+            this.pnlRegister.Controls.Add(this.rdoBanking);
+            this.pnlRegister.Controls.Add(this.rdoCreditCard);
+            this.pnlRegister.Controls.Add(this.rdoCash);
+            this.pnlRegister.Controls.Add(this.guna2CustomRadioButton3);
+            this.pnlRegister.Controls.Add(this.guna2CustomRadioButton2);
+            this.pnlRegister.Controls.Add(this.guna2CustomRadioButton1);
+            this.pnlRegister.Controls.Add(this.label20);
+            this.pnlRegister.Controls.Add(this.label19);
+            this.pnlRegister.Controls.Add(this.txtCustomerPayUp);
+            this.pnlRegister.Controls.Add(this.txtPoint);
+            this.pnlRegister.Controls.Add(this.label18);
+            this.pnlRegister.Controls.Add(this.label17);
+            this.pnlRegister.Controls.Add(this.lblMoneyOrder);
+            this.pnlRegister.Controls.Add(this.lblSumTotalInOrder);
+            this.pnlRegister.Controls.Add(this.label15);
+            this.pnlRegister.Controls.Add(this.label16);
+            this.pnlRegister.Controls.Add(this.label11);
+            this.pnlRegister.Controls.Add(this.label12);
+            this.pnlRegister.Controls.Add(this.label10);
+            this.pnlRegister.Controls.Add(this.lblNameCustomer);
+            this.pnlRegister.Controls.Add(this.label7);
+            this.pnlRegister.Controls.Add(this.label6);
+            this.pnlRegister.Controls.Add(this.label5);
+            this.pnlRegister.Controls.Add(this.label4);
+            this.pnlRegister.Controls.Add(this.label29);
+            this.pnlRegister.Controls.Add(this.label30);
+            this.pnlRegister.Controls.Add(this.label31);
+            this.pnlRegister.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.pnlRegister.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.pnlRegister.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.pnlRegister.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.pnlRegister.Location = new System.Drawing.Point(866, 274);
+            this.pnlRegister.Name = "pnlRegister";
+            this.pnlRegister.Size = new System.Drawing.Size(437, 427);
+            this.pnlRegister.TabIndex = 3;
             // 
             // label35
             // 
@@ -768,7 +761,7 @@
             this.guna2Panel2.Controls.Add(this.txtNameCustomer);
             this.guna2Panel2.Controls.Add(this.label25);
             this.guna2Panel2.Controls.Add(this.label26);
-            this.guna2Panel2.Location = new System.Drawing.Point(866, 97);
+            this.guna2Panel2.Location = new System.Drawing.Point(866, 79);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(437, 171);
             this.guna2Panel2.TabIndex = 4;
@@ -878,92 +871,34 @@
             this.label26.TabIndex = 6;
             this.label26.Text = "Số điện thoại";
             // 
-            // flowLayoutPanel1
+            // pnlContainer
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.itemProductOfCart1);
-            this.flowLayoutPanel1.Controls.Add(this.itemProductOfCart2);
-            this.flowLayoutPanel1.Controls.Add(this.itemProductOfCart3);
-            this.flowLayoutPanel1.Controls.Add(this.itemProductOfCart4);
-            this.flowLayoutPanel1.Controls.Add(this.itemProductOfCart5);
-            this.flowLayoutPanel1.Controls.Add(this.itemProductOfCart6);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(61, 97);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(777, 551);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.pnlContainer.AutoScroll = true;
+            this.pnlContainer.Location = new System.Drawing.Point(61, 79);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(777, 551);
+            this.pnlContainer.TabIndex = 0;
             // 
-            // itemProductOfCart1
+            // pnlFooter
             // 
-            this.itemProductOfCart1.BackColor = System.Drawing.Color.White;
-            this.itemProductOfCart1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
-            this.itemProductOfCart1.Location = new System.Drawing.Point(3, 3);
-            this.itemProductOfCart1.Name = "itemProductOfCart1";
-            this.itemProductOfCart1.Size = new System.Drawing.Size(750, 85);
-            this.itemProductOfCart1.TabIndex = 0;
-            // 
-            // itemProductOfCart2
-            // 
-            this.itemProductOfCart2.BackColor = System.Drawing.Color.White;
-            this.itemProductOfCart2.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
-            this.itemProductOfCart2.Location = new System.Drawing.Point(3, 94);
-            this.itemProductOfCart2.Name = "itemProductOfCart2";
-            this.itemProductOfCart2.Size = new System.Drawing.Size(750, 85);
-            this.itemProductOfCart2.TabIndex = 1;
-            // 
-            // itemProductOfCart3
-            // 
-            this.itemProductOfCart3.BackColor = System.Drawing.Color.White;
-            this.itemProductOfCart3.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
-            this.itemProductOfCart3.Location = new System.Drawing.Point(3, 185);
-            this.itemProductOfCart3.Name = "itemProductOfCart3";
-            this.itemProductOfCart3.Size = new System.Drawing.Size(750, 85);
-            this.itemProductOfCart3.TabIndex = 2;
-            // 
-            // itemProductOfCart4
-            // 
-            this.itemProductOfCart4.BackColor = System.Drawing.Color.White;
-            this.itemProductOfCart4.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
-            this.itemProductOfCart4.Location = new System.Drawing.Point(3, 276);
-            this.itemProductOfCart4.Name = "itemProductOfCart4";
-            this.itemProductOfCart4.Size = new System.Drawing.Size(750, 85);
-            this.itemProductOfCart4.TabIndex = 3;
-            // 
-            // itemProductOfCart5
-            // 
-            this.itemProductOfCart5.BackColor = System.Drawing.Color.White;
-            this.itemProductOfCart5.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
-            this.itemProductOfCart5.Location = new System.Drawing.Point(3, 367);
-            this.itemProductOfCart5.Name = "itemProductOfCart5";
-            this.itemProductOfCart5.Size = new System.Drawing.Size(750, 85);
-            this.itemProductOfCart5.TabIndex = 4;
-            // 
-            // itemProductOfCart6
-            // 
-            this.itemProductOfCart6.BackColor = System.Drawing.Color.White;
-            this.itemProductOfCart6.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
-            this.itemProductOfCart6.Location = new System.Drawing.Point(3, 458);
-            this.itemProductOfCart6.Name = "itemProductOfCart6";
-            this.itemProductOfCart6.Size = new System.Drawing.Size(750, 85);
-            this.itemProductOfCart6.TabIndex = 5;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2Panel1.BorderRadius = 20;
-            this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.btnClearCart);
-            this.guna2Panel1.Controls.Add(this.guna2Separator3);
-            this.guna2Panel1.Controls.Add(this.lblSumTotal);
-            this.guna2Panel1.Controls.Add(this.label37);
-            this.guna2Panel1.Controls.Add(this.btnNoteOrder);
-            this.guna2Panel1.Location = new System.Drawing.Point(61, 646);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(753, 55);
-            this.guna2Panel1.TabIndex = 5;
+            this.pnlFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.pnlFooter.BorderColor = System.Drawing.Color.Gainsboro;
+            this.pnlFooter.BorderRadius = 20;
+            this.pnlFooter.BorderThickness = 1;
+            this.pnlFooter.Controls.Add(this.btnClearCart);
+            this.pnlFooter.Controls.Add(this.guna2Separator3);
+            this.pnlFooter.Controls.Add(this.lblSumTotal);
+            this.pnlFooter.Controls.Add(this.label37);
+            this.pnlFooter.Controls.Add(this.btnNoteOrder);
+            this.pnlFooter.FillColor = System.Drawing.Color.White;
+            this.pnlFooter.Location = new System.Drawing.Point(61, 636);
+            this.pnlFooter.Name = "pnlFooter";
+            this.pnlFooter.Size = new System.Drawing.Size(753, 65);
+            this.pnlFooter.TabIndex = 5;
             // 
             // btnClearCart
             // 
+            this.btnClearCart.BackColor = System.Drawing.Color.White;
             this.btnClearCart.BorderRadius = 10;
             this.btnClearCart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnClearCart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -976,10 +911,11 @@
             this.btnClearCart.Size = new System.Drawing.Size(85, 25);
             this.btnClearCart.TabIndex = 61;
             this.btnClearCart.Text = "Xoá tất cả";
+            this.btnClearCart.Click += new System.EventHandler(this.btnClearCart_Click);
             // 
             // guna2Separator3
             // 
-            this.guna2Separator3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Separator3.BackColor = System.Drawing.Color.White;
             this.guna2Separator3.FillColor = System.Drawing.Color.LightSlateGray;
             this.guna2Separator3.Location = new System.Drawing.Point(506, 35);
             this.guna2Separator3.Name = "guna2Separator3";
@@ -988,6 +924,7 @@
             // 
             // lblSumTotal
             // 
+            this.lblSumTotal.BackColor = System.Drawing.Color.White;
             this.lblSumTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSumTotal.ForeColor = System.Drawing.Color.Red;
             this.lblSumTotal.Location = new System.Drawing.Point(547, 16);
@@ -1012,6 +949,7 @@
             // 
             // btnNoteOrder
             // 
+            this.btnNoteOrder.BackColor = System.Drawing.Color.White;
             this.btnNoteOrder.FlatAppearance.BorderSize = 0;
             this.btnNoteOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNoteOrder.IconChar = FontAwesome.Sharp.IconChar.Pen;
@@ -1025,29 +963,28 @@
             this.btnNoteOrder.TabIndex = 0;
             this.btnNoteOrder.Text = "Ghi chú đơn hàng";
             this.btnNoteOrder.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNoteOrder.UseVisualStyleBackColor = true;
+            this.btnNoteOrder.UseVisualStyleBackColor = false;
             // 
             // CartControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.pnlFooter);
+            this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.guna2CustomGradientPanel1);
+            this.Controls.Add(this.pnlRegister);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Name = "CartControl";
             this.Size = new System.Drawing.Size(1360, 730);
             this.guna2GradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            this.guna2CustomGradientPanel1.ResumeLayout(false);
-            this.guna2CustomGradientPanel1.PerformLayout();
+            this.pnlRegister.ResumeLayout(false);
+            this.pnlRegister.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
+            this.pnlFooter.ResumeLayout(false);
+            this.pnlFooter.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1057,17 +994,11 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel pnlRegister;
         private FontAwesome.Sharp.IconButton btnSearch;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private item.ItemProductOfCart itemProductOfCart1;
-        private item.ItemProductOfCart itemProductOfCart2;
-        private item.ItemProductOfCart itemProductOfCart3;
-        private item.ItemProductOfCart itemProductOfCart4;
-        private item.ItemProductOfCart itemProductOfCart5;
-        private item.ItemProductOfCart itemProductOfCart6;
+        private System.Windows.Forms.FlowLayoutPanel pnlContainer;
         private Guna.UI2.WinForms.Guna2TextBox txtAddress;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtPhone;
@@ -1112,7 +1043,7 @@
         private System.Windows.Forms.Label lblUnitPoint;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel pnlFooter;
         private System.Windows.Forms.Label label37;
         private FontAwesome.Sharp.IconButton btnNoteOrder;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator3;

@@ -21,11 +21,11 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
         }
         private void btnSell_Click(object sender, EventArgs e)
         {
-            bringToFontUsercontrol(storeControl);
             if (storeController == null)
             {
-                storeController = new StoreController(storeControl);
+                storeController = new StoreController(this, storeControl, cartControl);
             }
+            bringToFontUsercontrol(storeControl);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -41,7 +41,15 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
         {
             namePanel.BringToFront();
         }
+        public void showCart()
+        {
+            bringToFontUsercontrol(cartControl);
+        }
 
+        public string getNameEmployee()
+        {
+            return nameEmployee.Text;
+        }
         private void iconButton1_Click(object sender, EventArgs e)
         {
             Application.Exit();
