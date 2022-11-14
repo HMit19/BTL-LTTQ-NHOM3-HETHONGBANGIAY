@@ -34,7 +34,7 @@
             // billControl1
             // 
             this.billControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.billControl1.Location = new System.Drawing.Point(3, 2);
+            this.billControl1.Location = new System.Drawing.Point(2, 0);
             this.billControl1.Name = "billControl1";
             this.billControl1.Size = new System.Drawing.Size(1358, 730);
             this.billControl1.TabIndex = 0;

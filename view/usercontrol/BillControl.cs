@@ -219,5 +219,30 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             }
             exApp.Quit();
         }
+        //button infor
+        private void btnInfor_Click(object sender, EventArgs e)
+        {   
+            if (cbbType.SelectedIndex == 1)
+            {
+                ImportBillForm infor = new ImportBillForm(dgvList.CurrentRow.Cells[0].Value.ToString(), "INFOR");
+                infor.Show();
+            }  
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            string newCode = dataBase.AutoCode("tImportBill", "CodeBill", "HDN" + DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Year.ToString());
+            ImportBillForm infor = new ImportBillForm(newCode, "CREATE");
+            infor.Show();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (cbbType.SelectedIndex == 1)
+            {
+                ImportBillForm infor = new ImportBillForm(dgvList.CurrentRow.Cells[0].Value.ToString(), "EDIT");
+                infor.Show();
+            }
+        }
     }
 }

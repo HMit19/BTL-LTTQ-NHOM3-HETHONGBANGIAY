@@ -43,6 +43,7 @@
             this.btnInfor = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.cbbDate = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbbFilter = new System.Windows.Forms.ComboBox();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
@@ -52,7 +53,6 @@
             this.btnCreate = new FontAwesome.Sharp.IconButton();
             this.btnExcel = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbbDate = new System.Windows.Forms.ComboBox();
             this.dlgSave = new System.Windows.Forms.SaveFileDialog();
             this.pnlMain.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -231,6 +231,7 @@
             this.btnEdit.Text = "Chỉnh sửa";
             this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnInfor
             // 
@@ -249,6 +250,7 @@
             this.btnInfor.Text = "Chi tiết";
             this.btnInfor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInfor.UseVisualStyleBackColor = false;
+            this.btnInfor.Click += new System.EventHandler(this.btnInfor_Click);
             // 
             // panel2
             // 
@@ -277,6 +279,19 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(1358, 146);
             this.guna2GroupBox1.TabIndex = 0;
             this.guna2GroupBox1.Text = "Tìm kiếm hóa đơn";
+            // 
+            // cbbDate
+            // 
+            this.cbbDate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbDate.FormattingEnabled = true;
+            this.cbbDate.Items.AddRange(new object[] {
+            "Mới nhất",
+            "Cũ nhất"});
+            this.cbbDate.Location = new System.Drawing.Point(1141, 76);
+            this.cbbDate.Name = "cbbDate";
+            this.cbbDate.Size = new System.Drawing.Size(185, 29);
+            this.cbbDate.TabIndex = 5;
+            this.cbbDate.SelectedIndexChanged += new System.EventHandler(this.cbbDate_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -377,6 +392,7 @@
             this.btnCreate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Visible = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnExcel
             // 
@@ -408,19 +424,6 @@
             this.label1.Size = new System.Drawing.Size(458, 65);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách hóa đơn";
-            // 
-            // cbbDate
-            // 
-            this.cbbDate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbDate.FormattingEnabled = true;
-            this.cbbDate.Items.AddRange(new object[] {
-            "Mới nhất",
-            "Cũ nhất"});
-            this.cbbDate.Location = new System.Drawing.Point(1141, 76);
-            this.cbbDate.Name = "cbbDate";
-            this.cbbDate.Size = new System.Drawing.Size(185, 29);
-            this.cbbDate.TabIndex = 5;
-            this.cbbDate.SelectedIndexChanged += new System.EventHandler(this.cbbDate_SelectedIndexChanged);
             // 
             // BillControl
             // 
@@ -459,7 +462,6 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvList;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
         private FontAwesome.Sharp.IconButton btnHome;
         private FontAwesome.Sharp.IconButton btnDelete;
@@ -471,5 +473,6 @@
         private FontAwesome.Sharp.IconButton btnExcel;
         private System.Windows.Forms.ComboBox cbbDate;
         private System.Windows.Forms.SaveFileDialog dlgSave;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvList;
     }
 }
