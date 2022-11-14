@@ -57,6 +57,8 @@
             this.createProduct = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.createProduct();
             this.listProduct = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.listProduct();
             this.shopControl1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.ShopControl();
+            this.button1 = new System.Windows.Forms.Button();
+            this.providerControl1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.ProviderControl();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureStore)).BeginInit();
             this.pnlContainer.SuspendLayout();
@@ -233,6 +235,7 @@
             // pnlSiderBar
             // 
             this.pnlSiderBar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnlSiderBar.Controls.Add(this.button1);
             this.pnlSiderBar.Controls.Add(this.panel2);
             this.pnlSiderBar.Controls.Add(this.btnInfomation);
             this.pnlSiderBar.Controls.Add(this.btnCustomer);
@@ -347,6 +350,7 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.guna2Panel2.Controls.Add(this.providerControl1);
             this.guna2Panel2.Controls.Add(this.employeeControl1);
             this.guna2Panel2.Controls.Add(this.homeControl);
             this.guna2Panel2.Controls.Add(this.editProduct);
@@ -412,6 +416,32 @@
             this.shopControl1.Size = new System.Drawing.Size(1360, 730);
             this.shopControl1.TabIndex = 5;
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(2, 439);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(204, 54);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Nhà Cung Cấp";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // providerControl1
+            // 
+            this.providerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.providerControl1.Location = new System.Drawing.Point(0, 0);
+            this.providerControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.providerControl1.Name = "providerControl1";
+            this.providerControl1.Size = new System.Drawing.Size(1360, 732);
+            this.providerControl1.TabIndex = 8;
+            // 
             // frmManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -468,5 +498,7 @@
         private usercontrol.admin.product.listProduct listProduct;
         private usercontrol.ShopControl shopControl1;
         private usercontrol.EmployeeControl employeeControl1;
+        private System.Windows.Forms.Button button1;
+        private usercontrol.ProviderControl providerControl1;
     }
 }

@@ -47,5 +47,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
         {
             bringToFontUsercontrol(employeeControl1);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bringToFontUsercontrol(providerControl1);
+        }
     }
 }

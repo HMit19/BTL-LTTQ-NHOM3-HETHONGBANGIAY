@@ -4,11 +4,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Markup;
+using TheArtOfDevHtmlRenderer.Adapters;
 
 namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
 {
@@ -83,30 +85,25 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            
             if (MessageBox.Show("Bạn có thực sự muốn xóa không?", "Có hay không",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                try
-                {
-                    if (this.dgvListImport.SelectedRows.Count > 0)
-                    {
-                        dgvListImport.Rows.RemoveAt(this.dgvListImport.SelectedRows[0].Index);
-                    }
-                    else if (this.dgvListSale.SelectedRows.Count > 0)
-                    {
-                        dgvListSale.Rows.RemoveAt(this.dgvListSale.SelectedRows[0].Index);
-                    }
-                    loadData();
-                }
-                catch
-                {
-
-                }
+            {
+                dgvListImport.Rows.RemoveAt(dgvListImport.CurrentCell.RowIndex);
+                dgvListSale.Rows.RemoveAt(dgvListSale.CurrentCell.RowIndex);
+                loadData();
+            }
+            
+            loadData();
+            MessageBox.Show("da xoa thanh cong");
+            
 
         }
 
         private void btnReload_Click(object sender, EventArgs e)
         {
             loadData();
+            cboEmployeeCode_SelectedIndexChanged(sender, new EventArgs());
 
         }
 
@@ -116,10 +113,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
             if (MessageBox.Show("Bạn có thực sự muốn cập nhập không?", "Có hay không",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                data.UpdateData("update tLogin set UserName=N'" + txtAccount.Text + "',PassWord='" + txtPassWord + "' where tLogin.UserName=tEmployee.UserName ");
+                data.UpdateData("update tLogin set UserName=N'" + txtAccount.Text + "',PassWord='" + txtPassWord + "' where UserName='"+txtAccount.Text+"' ");
                 data.UpdateData("update tEmployee set Name=N'" + txtName.Text + "',ID='" + txtID.Text +
             "',Gender=N'" + cboGender.Text + "',DOB='" + String.Format("{0000:MM/dd/yyyy}", dtdob) + "',Address=N'" +
-            txtAddress.Text + "',PhoneNumber='" + txtPhoneNumber.Text + "',UserName='"+txtAccount.Text+"' where EmployeeCode=N'" + cboEmployeeCode.SelectedValue + "'");
+            txtAddress.Text + "',PhoneNumber='" + txtPhoneNumber.Text + "' where EmployeeCode=N'" + cboEmployeeCode.Text + "'");
                
                 loadData();
                 MessageBox.Show("Da luu thanh cong");

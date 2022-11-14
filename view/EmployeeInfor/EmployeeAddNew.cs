@@ -40,7 +40,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
 
             if (txtName.Text.Trim() == "")
             {
-                errChiTiet.SetError(txtEmployeeCode, "Bạn không được để trống!");
+                errChiTiet.SetError(txtName, "Bạn không được để trống!");
                 txtName.Focus();
                 return;
             }
