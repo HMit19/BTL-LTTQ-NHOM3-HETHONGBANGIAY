@@ -57,7 +57,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         //display sale bill
         void DataSale(string after = "")
         {
-            dgvList.DataSource = dataBase.ReadData("select CodeBill, DateSale, PaymentMethods, Discount from tBillOfSale" + after);
+            dgvList.DataSource = dataBase.ReadData("select CodeBill, DateSale, PaymentMethods, isnull(0,Discount) from tBillOfSale" + after);
             dgvList.Columns[0].HeaderText = "Số hóa đơn";
             dgvList.Columns[1].HeaderText = "Ngày tạo";
             dgvList.Columns[2].HeaderText = "Phương thức thanh toán";
@@ -132,9 +132,15 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         private void cbbDate_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbbType.SelectedIndex == 0)
+            {
                 DataSale(DateSort());
+                btnEdit.Enabled = false;
+            }  
             else
+            {
                 DataImport(DateSort());
+                btnEdit.Enabled = true;
+            }      
         }
         //Export file excel
         private void btnExcel_Click(object sender, EventArgs e)
@@ -205,6 +211,54 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 }
                 exSheet.Name = "Danh sách hóa đơn nhập";
             }
+            if (cbbType.SelectedIndex == 0)
+            {
+                header.Value = "DANH SÁCH HÓA ĐƠN BÁN";
+
+                exSheet.get_Range("A6:D6").Font.Bold = true;
+                exSheet.get_Range("A6:D6").HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+                exSheet.get_Range("A6:D6").ColumnWidth = 25;
+                exSheet.get_Range("A6").Value = "Số hóa đơn";
+                exSheet.get_Range("B6").Value = "Ngày tạo";
+                exSheet.get_Range("C6").Value = "Phương thức thanh toán";
+                exSheet.get_Range("D6").Value = "Giảm giá";
+                exSheet.get_Range("E6").Value = "Người tạo";
+
+                DataTable dataEx = dataBase.ReadData("select CodeBill, DateSale, PaymentMethods, Discount, EmployeeCode from tBillOfSale " + DateSort());
+                for (int i = 0; i < dataEx.Rows.Count; i++)
+                {
+                    exSheet.get_Range("A" + (i + 7).ToString() + ":G" + (i + 7).ToString()).Font.Bold = false;
+                    exSheet.get_Range("A" + (i + 7).ToString()).Value = dataEx.Rows[i][0].ToString();
+                    exSheet.get_Range("B" + (i + 7).ToString()).Value = dataEx.Rows[i][1].ToString();
+                    exSheet.get_Range("C" + (i + 7).ToString()).Value = dataEx.Rows[i][2].ToString();
+                    exSheet.get_Range("D" + (i + 7).ToString()).Value = dataEx.Rows[i][3].ToString();
+                    exSheet.get_Range("E" + (i + 7).ToString()).Value = dataEx.Rows[i][4].ToString();
+                }
+                exSheet.Name = "Danh sách hóa đơn bán";
+            }
+            else
+            {
+                header.Value = "DANH SÁCH HÓA ĐƠN BÁN";
+
+                exSheet.get_Range("A6:D6").Font.Bold = true;
+                exSheet.get_Range("A6:D6").HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+                exSheet.get_Range("A6:D6").ColumnWidth = 25;
+                exSheet.get_Range("A6").Value = "Số hóa đơn";
+                exSheet.get_Range("B6").Value = "Ngày tạo";
+                exSheet.get_Range("C6").Value = "Phương thức thanh toán";
+                exSheet.get_Range("D6").Value = "Giảm giá";
+
+                DataTable dataEx = dataBase.ReadData("select CodeBill, DateSale, PaymentMethods, isnull(0,Discount) from tBillOfSale" + DateSort());
+                for (int i = 0; i < dataEx.Rows.Count; i++)
+                {
+                    exSheet.get_Range("A" + (i + 7).ToString() + ":G" + (i + 7).ToString()).Font.Bold = false;
+                    exSheet.get_Range("A" + (i + 7).ToString()).Value = dataEx.Rows[i][0].ToString();
+                    exSheet.get_Range("B" + (i + 7).ToString()).Value = dataEx.Rows[i][1].ToString();
+                    exSheet.get_Range("C" + (i + 7).ToString()).Value = dataEx.Rows[i][2].ToString();
+                    exSheet.get_Range("D" + (i + 7).ToString()).Value = dataEx.Rows[i][3].ToString();
+                }
+                exSheet.Name = "Danh sách hóa đơn bán";
+            }
             exBook.Activate();
 
             dlgSave.Filter = "Excel Document(*.xlsx)|*.xlsx |All files(*.*)|*.*";
@@ -226,7 +280,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             {
                 ImportBillForm infor = new ImportBillForm(dgvList.CurrentRow.Cells[0].Value.ToString(), "INFOR");
                 infor.Show();
-            }  
+            }
+            if (cbbType.SelectedIndex == 0)
+            {
+                SaleBillForm infor = new SaleBillForm(dgvList.CurrentRow.Cells[0].Value.ToString(), "INFOR");
+                infor.Show();
+            }
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -243,6 +302,58 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 ImportBillForm infor = new ImportBillForm(dgvList.CurrentRow.Cells[0].Value.ToString(), "EDIT");
                 infor.Show();
             }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (cbbType.SelectedIndex == 1)
+            {
+                if (MessageBox.Show("Bạn có muốn xóa hóa đơn này không?", "Messager",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string codeBill = dgvList.CurrentRow.Cells[0].Value.ToString();
+                    DataTable detailBill = dataBase.ReadData("select DetailProductCode from tDetailImportBill where CodeBill = N'"+codeBill+"'");
+                    int n = detailBill.Rows.Count;
+                    for (int i = 0; i < n; i++)
+                    {
+                        string deProductCode = detailBill.Rows[i][0].ToString();
+                        DeleteProductImport(deProductCode, codeBill);
+                    }
+                    dataBase.UpdateData("delete from tImportBill where CodeBill = N'"+codeBill+"'");
+                    DataImport(DateSort());
+                }
+            }
+            if (cbbType.SelectedIndex == 0)
+            {
+                if (MessageBox.Show("Bạn có muốn xóa hóa đơn này không?", "Messager", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string codeBill = dgvList.CurrentRow.Cells[0].Value.ToString();
+                    DataTable detailBill = dataBase.ReadData("select DetailProductCode from tDetailBillOfSale where CodeBill = N'" + codeBill + "'");
+                    int n = detailBill.Rows.Count;
+                    for (int i = 0; i < n; i++)
+                    {
+                        string deProductCode = detailBill.Rows[i][0].ToString();
+                        DeleteProductSale(deProductCode, codeBill);
+                    }
+                    dataBase.UpdateData("delete from tBillOfSale where CodeBill = N'" + codeBill + "'");
+                    DataSale(DateSort());
+                }
+            }
+        }
+        void DeleteProductImport(string deProductCode, string codeBill)
+        {
+            string quantity = "";
+            DataTable billData = dataBase.ReadData("select Quantity from tDetailImportBill where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
+            quantity = billData.Rows[0][0].ToString();
+            dataBase.UpdateData("update tDetailProduct set Quantity = Quantity - " + quantity + " where DetailProductCode = N'" + deProductCode + "'");
+            dataBase.UpdateData("delete from tDetailImportBill where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
+        }
+        void DeleteProductSale(string deProductCode, string codeBill)
+        {
+            string quantity = "";
+            DataTable billData = dataBase.ReadData("select Quantity from tDetailBillOfSale where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
+            quantity = billData.Rows[0][0].ToString();
+            dataBase.UpdateData("update tDetailProduct set Quantity = Quantity + " + quantity + " where DetailProductCode = N'" + deProductCode + "'");
+            dataBase.UpdateData("delete from tDetailBillOfSale where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
         }
     }
 }

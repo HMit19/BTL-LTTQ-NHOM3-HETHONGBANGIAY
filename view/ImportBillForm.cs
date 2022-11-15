@@ -188,16 +188,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
         //cell click dataGridView event...
         private void dgvList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (btnSave.Visible == false)
+            if (btnSave.Visible == false && dgvList.Rows.Count > 0)
                 DisplayProduct(dgvList.CurrentRow.Cells[0].Value.ToString());
         }
 
         //function delete product
         void DeleteProduct(string deProductCode)
         {
-            int quantity = 0;
-            DataTable Bill = dataBase.ReadData("select Quantity from tDetailImportBill where DetailProductCode = N'"+deProductCode+"'");
-            quantity = int.Parse(Bill.Rows[0][0].ToString());
+            string quantity = "";
+            DataTable Bill = dataBase.ReadData("select Quantity from tDetailImportBill where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
+            quantity = Bill.Rows[0][0].ToString();
             dataBase.UpdateData("update tDetailProduct set Quantity = Quantity - " + quantity + " where DetailProductCode = N'"+deProductCode+"'");
             dataBase.UpdateData("delete from tDetailImportBill where DetailProductCode = N'"+deProductCode+"' and CodeBill = N'"+codeBill+"'");
         }
@@ -336,7 +336,15 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
                     string oldPrCode = dataBase.ReadData("select DetailProductCode from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode where sp.ProductCode = N'" + lblProductCode.Text + "' and Color = N'" + lblColor.Text + "' and Size =N'" + lblSize.Text + "'").Rows[0][0].ToString();
                     DataTable code = dataBase.ReadData("select DetailProductCode from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode where sp.ProductCode = N'" + cbbProductCode.Text + "' and Color = N'" + cbbColor.Text + "' and Size =N'" + cbbSize.Text + "'");
                     string deProductCode = code.Rows[0][0].ToString();
-
+                    if (int.Parse(txtQuantity.Text) == 0)
+                    {
+                        if (MessageBox.Show("Bạn có muốn trả lại sản phẩm này không?", "Messager",
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            DeleteProduct(deProductCode);
+                            DisplayList();
+                        }
+                    }
                     DataTable dataBill = dataBase.ReadData("select DetailProductCode from tDetailImportBill where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
                     if (dataBill.Rows.Count > 0)//Kiem tra san pham da co trong list chua
                     {
@@ -353,11 +361,17 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
                             else
                                 return;
                         }
+                        else
+                        {
+                            dataBase.UpdateData("update tDetailProduct set Quantity = Quantity  + " + txtQuantity.Text + " - " + lblQuantity.Text + " where DetailProductCode = N'" + deProductCode + "'");
+                            dataBase.UpdateData("update tDetailImportBill set DetailProductCode = N'" + deProductCode + "', Quantity = N'" + txtQuantity.Text + "' where DetailProductCode = N'" + oldPrCode + "' and CodeBill = N'" + codeBill + "'");
+
+                        }
                     }
                     else
                     {
                         dataBase.UpdateData("update tDetailProduct set Quantity = Quantity  + " + txtQuantity.Text + " where DetailProductCode = N'" + deProductCode + "'");
-                        dataBase.UpdateData("update tDetailProduct set Quantity = Quantity - " + lblQuantity.Text + " where DetailProductCode = N'" + lblProductCode.Text + "'");
+                        dataBase.UpdateData("update tDetailProduct set Quantity = Quantity - " + lblQuantity.Text + " where DetailProductCode = N'" + oldPrCode + "'");
                         dataBase.UpdateData("update tDetailImportBill set DetailProductCode = N'" + deProductCode + "', Quantity = N'" + txtQuantity.Text + "' where DetailProductCode = N'" + oldPrCode + "' and CodeBill = N'" + codeBill + "'");
 
                     }
@@ -435,7 +449,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
 
             exSheet.get_Range("A9:H9").Font.Bold = true;
             exSheet.get_Range("A9:H9").HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
-            exSheet.get_Range("A9:H9").ColumnWidth = 20;
+            exSheet.get_Range("A9:H9").ColumnWidth = 15;
+            exSheet.get_Range("C9").ColumnWidth = 25;
             exSheet.get_Range("A9").Value = "Mã chi tiết";
             exSheet.get_Range("B9").Value = "Mã sản phẩm";
             exSheet.get_Range("C9").Value = "Tên sản phẩm";

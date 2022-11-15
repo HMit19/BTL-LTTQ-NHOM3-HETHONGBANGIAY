@@ -66,6 +66,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             lblName.Text = data.Rows[0][1].ToString();
             lblPhone.Text = data.Rows[0][4].ToString();
             lblAddress.Text = data.Rows[0][3].ToString();
+            lblGender.Text = data.Rows[0][2].ToString();
             if (data.Rows[0][5].ToString() == "")
                 lblPoint.Text = "0";
             else
@@ -136,12 +137,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         //Hide or display update textbox
         void OnText(bool check = true)
         {
-                lblName.Visible = !check;
-                lblPhone.Visible = !check;
-                lblAddress.Visible = !check;
-                txtName.Visible = check;
-                txtPhone.Visible = check;
-                txtAddress.Visible = check;
+            lblName.Visible = !check;
+            lblPhone.Visible = !check;
+            lblAddress.Visible = !check;
+            lblGender.Visible = !check;
+            lblBirth.Visible = !check;
+            txtName.Visible = check;
+            txtPhone.Visible = check;
+            txtAddress.Visible = check;
+            cbbGender.Visible = check;
+            dtpBirth.Visible = check;
         }
 
         //Update information of customer
@@ -153,11 +158,13 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 txtName.Text = lblName.Text;
                 txtPhone.Text = lblPhone.Text;
                 txtAddress.Text = lblAddress.Text;
+                cbbGender.Text = lblGender.Text;
+                dtpBirth.Value = Convert.ToDateTime(lblBirth.Text);
                 btnCancel.Visible = true;
                 btnSearch.Enabled = false;
                 btnExcel.Enabled = false;
             }
-            else
+            else//Need update Gender and BirthDay
             {
                 string name = "", phone = "", address = "", code = lblCode.Text;
                 if (txtName.Text.Trim() != "")
@@ -175,7 +182,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                     address = ", Address = N'" + txtAddress.Text + "' ";
                     lblAddress.Text = txtAddress.Text;
                 }
-                dataBase.UpdateData("update tCustomer set CustomerCode = N'"+ lblCode.Text + "' "+name + phone + address+ " where CustomerCode = N'"+ lblCode.Text +"'");
+                string gender = ", Address = N'" + cbbGender.Text + "' ";
+                dataBase.UpdateData("update tCustomer set CustomerCode = N'"+ lblCode.Text + "' "+name + phone + address + gender + " where CustomerCode = N'"+ lblCode.Text +"'");
                 dgvList.DataSource = dataBase.ReadData("select CustomerCode, Name from tCustomer");
                 OnText(false);
                 PanelInfor(code);

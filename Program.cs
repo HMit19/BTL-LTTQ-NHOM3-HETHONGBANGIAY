@@ -18,7 +18,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            //Application.Run(new SaleBillForm());
+            //Application.Run(new SaleBillForm("HDB01","INFOR"));
             //Application.Run(new ImportBillForm("HDN01","INFOR"));
         }
     }
