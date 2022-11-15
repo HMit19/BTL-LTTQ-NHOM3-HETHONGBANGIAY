@@ -83,12 +83,22 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
                 errChiTiet.Clear();
             }
             dtdob = Convert.ToDateTime(dtpDOB.Value.ToLongDateString());
-            string sql = "INSERT INTO tEmployee (EmployeeCode, Name, ID, Gender, DOB, Address, PhoneNumber, UserName) VALUES (";
-            sql += "N'" + txtEmployeeCode.Text + "' ,N'" + txtName.Text + "',N'" + txtID.Text + "',N'" + cboGender.SelectedValue + "','" + String.Format("{0000:MM/dd/yyyy}", dtdob) + "',N'" + txtAddress.Text + "','" + int.Parse(txtPhoneNumber.Text) + "','"+txtAccount.Text+"')";
+            string sql = "INSERT INTO tEmployee (EmployeeCode, Name, ID, Gender, DOB, Address, PhoneNumber, Status) VALUES (";
+            sql += "N'" + txtEmployeeCode.Text + "' ,N'" + txtName.Text + "',N'" + txtID.Text + "',N'" + cboGender.Text.ToString() + "','" + String.Format("{0000:MM/dd/yyyy}", dtdob) + "',N'" + txtAddress.Text + "','" + int.Parse(txtPhoneNumber.Text) + "','"+Boolean.Parse("true")+"')";
 
             data.UpdateData(sql);
-            string sqlacc = "INSERT INTO tLogin (UserName, PassWord) VALUES ('"+txtAccount.Text + "','" + txtPassWord.Text + "')";
-            data.UpdateData(sqlacc);
+            try
+            {
+               
+                string sqlacc = "INSERT INTO tLogin (UserName, PassWord) VALUES ('" + txtAccount.Text + "','" + txtPassWord.Text + "')";
+                data.UpdateData(sqlacc);
+
+                
+            }
+            catch
+            {
+
+            }
             MessageBox.Show("Thêm mới thành công");
             ResetValue();
 
@@ -102,7 +112,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
             dtpDOB.Value = DateTime.Now;
             txtPhoneNumber.Text = "";
             txtID.Text = "";
-            cboStatus.Text = "";
             txtAddress.Text = "";
             txtAccount.Text = "";
             txtPassWord.Text = "";

@@ -24,7 +24,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
             DataTable dtNV = data.ReadData("Select * from tEmployee");
             DataTable dtHDN = data.ReadData("Select * from tImportBill");
             DataTable dtHDB = data.ReadData("Select * from tBillOfSale");
-            DataTable dtLG = data.ReadData("Select * from tLogin");
+
             // functions.FillComboBox(cboGender, dtNV, "Gender", "Gender");
             //functions.FillComboBox(cboStatus, dtNV, "Status", "Status");
             functions.FillComboBox(cboEmployeeCode, dtNV, "EmployeeCode", "EmployeeCode");
@@ -44,13 +44,13 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
             DataTable dtHDB = data.ReadData("Select CodeBill, DateSale, PaymentMethods, CustomerCode, Discount from tBillOfSale where EmployeeCode='" + cboEmployeeCode.SelectedValue + "'");
             dgvListSale.DataSource = dtHDB;
             DataTable dtNV = data.ReadData("Select Name, ID, Gender, DOB, Address, PhoneNumber, Status,UserName from tEmployee where EmployeeCode='" + cboEmployeeCode.SelectedValue + "'");
-          
+
         }
         private void cboEmployeeCode_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                DataTable dtNV = data.ReadData("Select Name, ID, Gender, DOB, Address, PhoneNumber, Status,UserName from tEmployee where EmployeeCode='" + cboEmployeeCode.SelectedValue + "'");
+                DataTable dtNV = data.ReadData("Select Name, ID, Gender, DOB, Address, PhoneNumber, nv.Status,nv.UserName, PassWord from tEmployee nv join tLogin lg on nv.UserName=lg.UserName  where EmployeeCode='" + cboEmployeeCode.SelectedValue + "'");
                 txtName.Text = dtNV.Rows[0]["Name"].ToString();
                 txtID.Text = dtNV.Rows[0]["ID"].ToString();
                 cboGender.Text = dtNV.Rows[0]["Gender"].ToString();
@@ -64,9 +64,24 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
                 { cboStatus.Text = "Đã Nghỉ"; }
                 dtpDOB.Text = dtNV.Rows[0]["DOB"].ToString();
 
-                DataTable dtLG = data.ReadData("Select PassWord from tLogin join tEmployee on tLogin.UserName=tEmployee.UserName where tLogin.UserName=tEmployee.UserName");
-                txtAccount.Text = dtNV.Rows[0]["UserName"].ToString();
-                txtPassWord.Text = dtLG.Rows[0]["PassWord"].ToString();
+                //DataTable dtLG = data.ReadData("Select PassWord from tLogin join tEmployee on tLogin.UserName=tEmployee.UserName where tLogin.UserName=tEmployee.UserName");
+                if (dtNV.Rows[0]["UserName"].ToString() != "")
+                {
+                    txtAccount.Text = dtNV.Rows[0]["UserName"].ToString();
+                    txtPassWord.Text = dtNV.Rows[0]["PassWord"].ToString();
+                    txtAccount.Enabled = false;
+                    txtPassWord.Enabled = false;
+                }
+                else
+                {
+                    txtAccount.Text = "";
+                    txtPassWord.Text = "";
+                    
+                    txtAccount.Enabled = true;
+                    txtPassWord.Enabled = true;
+
+                }
+                
 
                 loadData();
 
@@ -83,22 +98,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
                 this.Close();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            
-            if (MessageBox.Show("Bạn có thực sự muốn xóa không?", "Có hay không",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                dgvListImport.Rows.RemoveAt(dgvListImport.CurrentCell.RowIndex);
-                dgvListSale.Rows.RemoveAt(dgvListSale.CurrentCell.RowIndex);
-                loadData();
-            }
-            
-            loadData();
-            MessageBox.Show("da xoa thanh cong");
-            
-
-        }
+        
 
         private void btnReload_Click(object sender, EventArgs e)
         {
@@ -110,14 +110,82 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
         private void btnSave_Click(object sender, EventArgs e)
         {
             DateTime dtdob = Convert.ToDateTime(dtpDOB.Value.ToLongDateString());
+            if (txtName.Text.Trim() == "")
+            {
+                errChiTiet.SetError(txtName, "Bạn không được để trống!");
+                txtName.Focus();
+                return;
+            }
+            else errChiTiet.Clear();
+            if (dtpDOB.Value >= DateTime.Now)
+            {
+                errChiTiet.SetError(dtpDOB, "Loi Ngay!");
+
+                return;
+            }
+            else errChiTiet.Clear();
+            if (txtPhoneNumber.Text.Trim() == "")
+            {
+                errChiTiet.SetError(txtPhoneNumber, "Bạn không được để trống!");
+                txtPhoneNumber.Focus();
+                return;
+            }
+            else errChiTiet.Clear();
+            if (txtID.Text.Trim() == "")
+            {
+                errChiTiet.SetError(txtID, "Bạn không được để trống!");
+                txtID.Focus();
+                return;
+            }
+            else errChiTiet.Clear();
+            if (txtAddress.Text.Trim() == "")
+            {
+                errChiTiet.SetError(txtAddress, "Bạn không được để trống!");
+                txtAddress.Focus();
+                return;
+            }
+            else errChiTiet.Clear();
             if (MessageBox.Show("Bạn có thực sự muốn cập nhập không?", "Có hay không",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                data.UpdateData("update tLogin set UserName=N'" + txtAccount.Text + "',PassWord='" + txtPassWord + "' where UserName='"+txtAccount.Text+"' ");
+                if(cboStatus.Text.ToString() == "Đang Làm")
+                {
+                    lblAccount.Text = "True";
+                }
+                else
+                {
+                    lblAccount.Text = "False";
+                }
+                
                 data.UpdateData("update tEmployee set Name=N'" + txtName.Text + "',ID='" + txtID.Text +
             "',Gender=N'" + cboGender.Text + "',DOB='" + String.Format("{0000:MM/dd/yyyy}", dtdob) + "',Address=N'" +
-            txtAddress.Text + "',PhoneNumber='" + txtPhoneNumber.Text + "' where EmployeeCode=N'" + cboEmployeeCode.Text + "'");
-               
+            txtAddress.Text + "',PhoneNumber='" + txtPhoneNumber.Text + "',Status='"+Boolean.Parse(lblAccount.Text)+"' where EmployeeCode=N'" + cboEmployeeCode.Text + "'");
+                try
+                {
+                    if (txtAccount.Text == "" && txtPassWord.Text != "")
+                    {
+                        MessageBox.Show("Bạn không được để trống Account!");
+                        txtAccount.Focus();
+                        return;
+                    }
+                    else if (txtAccount.Text != "" && txtPassWord.Text == "")
+                    {
+                        MessageBox.Show("Bạn không được để trống PassWord!");
+                        txtPassWord.Focus();
+                        return;
+                    }
+                    else 
+                    {
+                        string sqlacc = "INSERT INTO tLogin (UserName, PassWord) VALUES ('" + txtAccount.Text + "','" + txtPassWord.Text + "')";
+                        data.UpdateData(sqlacc);
+                        data.UpdateData("update tEmployee set UserName='" + txtAccount.Text + "'where EmployeeCode='" + cboEmployeeCode.SelectedValue + "'");
+
+                    }
+                }
+                catch
+                {
+
+                }
                 loadData();
                 MessageBox.Show("Da luu thanh cong");
 

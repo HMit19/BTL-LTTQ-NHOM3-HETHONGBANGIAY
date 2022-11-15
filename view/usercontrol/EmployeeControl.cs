@@ -57,6 +57,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             {
 
             }
+            
+            
         }
 
         private void EmployeeControl_Load(object sender, EventArgs e)
@@ -92,6 +94,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         {
             loadData();
             ResetValue();
+            EmployeeControl_Load(sender, e);
             btnAdd.Enabled = true;
             btnDelete.Enabled = false;
         }
