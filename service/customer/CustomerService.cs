@@ -30,13 +30,40 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.customer
                     string gender = row[2].ToString();
                     string address = row[3].ToString();
                     string phone = row[4].ToString();
-                    long point = Convert.ToInt64(row[5]);
-                    customer = new Customer(id, name, gender, address, phone, point);
+                    long point = Convert.ToInt32(row[5]);
+                    DateTime birth = Convert.ToDateTime(row[6]);
+                    customer = new Customer(id, name, gender, birth, address, phone, point);
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("Error get Customer by Id");
+                databaseHandle.CloseConnect();
+            }
+            return customer;
+        }
+        public Customer findByPhone(string phone)
+        {
+            Customer customer = null;
+            try
+            {
+                DataTable dataTable = null;
+                string sql = "select * from tCustomer where PhoneNumber = '" + phone + "'";
+                dataTable = databaseHandle.dataReader(sql);
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    string id = row[0].ToString();
+                    string name = row[1].ToString();
+                    string gender = row[2].ToString();
+                    string address = row[3].ToString();
+                    long point = Convert.ToInt32(row[5]);
+                    DateTime birth = Convert.ToDateTime(row[6]);
+                    customer = new Customer(id, name, gender, birth, address, phone, point);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error get Customer by Phone");
                 databaseHandle.CloseConnect();
             }
             return customer;
@@ -59,7 +86,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.customer
                     string address = row[3].ToString();
                     string phone = row[4].ToString();
                     long point = Convert.ToInt32(row[5]);
-                    listCustomer.Add(new Customer(customerCode, name, gender, address, phone, point));
+                    DateTime birth = Convert.ToDateTime(row[6]);
+                    listCustomer.Add(new Customer(customerCode, name, gender, birth, address, phone, point));
                 }
             }
             catch (Exception)
@@ -91,7 +119,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.customer
             bool excute = false;
             try
             {
-                string sql = "insert into tCustomer values ('" + customer.Id + "', '" + customer.Name + "', '" + customer.Gender + "', '" + customer.Address + "', '" + customer.Phone + "', " + customer.Point + ")";
+                string sql = "insert into tCustomer values ('" + customer.Id + "', '" + customer.Name + "', '" + customer.Gender + "', '" + customer.Address + "', '" + customer.Phone + "', " + customer.Point + ", '" + customer.Birth + "')";
                 excute = databaseHandle.dataChange(sql);
             }
             catch (Exception)

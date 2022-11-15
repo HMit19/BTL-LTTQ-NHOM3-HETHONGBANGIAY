@@ -50,14 +50,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
         {
             deleteItemInCart?.Invoke(this);
         }
-
-        private void quantity_ValueChanged(object sender, EventArgs e)
-        {
-            if (quantity.Value == 0)
-                deleteItemInCart?.Invoke(this);
-            else
-                changeQuantity?.Invoke(this);
-        }
         public string getTotalPrice() { return this.total.Text; }
         public string getIdBillDetailSell()
         {
@@ -74,6 +66,24 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
         public void updatePrice()
         {
             this.total.Text = (Convert.ToDouble(this.price.Text) * Convert.ToDouble(this.quantity.Text)).ToString("#,###");
+        }
+
+        private void decrease_Click(object sender, EventArgs e)
+        {
+            if (this.quantity.Text == "1")
+                deleteItemInCart?.Invoke(this);
+            else {
+                int unit = Convert.ToInt32(this.quantity.Text);
+                this.quantity.Text = (--unit).ToString();
+                changeQuantity?.Invoke(this); 
+            }
+        }
+
+        private void increase_Click(object sender, EventArgs e)
+        {
+            int unit = Convert.ToInt32(this.quantity.Text);
+            this.quantity.Text = (++unit).ToString();
+            changeQuantity?.Invoke(this);
         }
     }
 }

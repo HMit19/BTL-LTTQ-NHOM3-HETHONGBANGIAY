@@ -10,10 +10,11 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.model
     {
         private string id;
         private string name;
-        private string phone;
         private string gender;
-        private long point;
+        private DateTime birth;
         private string address;
+        private string phone;
+        private long point;
 
         public string Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
@@ -21,6 +22,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.model
         public string Gender { get => gender; set => gender = value; }
         public long Point { get => point; set => point = value; }
         public string Address { get => address; set => address = value; }
+        public DateTime Birth { get => birth; set => birth = value; }
 
         public Customer() { }
 
@@ -34,12 +36,15 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.model
             this.Address = address;
         }
 
-        public Customer(string id, string name, string phone, string address)
+        public Customer(string id, string name, string gender, DateTime birth, string address, string phone, long point)
         {
-            this.Id = id;
-            this.Name = name;
-            this.Phone = phone;
-            this.Address = address;
+            this.id = id;
+            this.name = name;
+            this.gender = gender;
+            this.Birth = birth;
+            this.address = address;
+            this.phone = phone;
+            this.point = point;
         }
     }
 }

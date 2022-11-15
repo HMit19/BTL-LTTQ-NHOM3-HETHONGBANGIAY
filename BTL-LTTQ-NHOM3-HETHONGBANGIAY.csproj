@@ -61,6 +61,7 @@
     <Compile Include="controller\StoreController.cs" />
     <Compile Include="DAO\cart\CartDAO.cs" />
     <Compile Include="DAO\connect\ConnectSQL.cs" />
+    <Compile Include="DAO\customer\CustomerDAO.cs" />
     <Compile Include="DAO\DatabaseHandle.cs" />
     <Compile Include="DAO\IDatabaseHandle.cs" />
     <Compile Include="DAO\product\ProductDAO.cs" />

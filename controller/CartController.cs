@@ -1,4 +1,5 @@
 ﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.cart;
+using BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.customer;
 using BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.product;
 using BTL_LTTQ_NHOM3_HETHONGBANGIAY.model;
 using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager;
@@ -22,6 +23,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
         string nameEmployee = null;
         string date = null;
         ProductDAO productDAO = null;
+        CustomerDAO customerDAO = null;
 
         public CartController(frmManager main, CartDAO cartDAO, CartControl cartControl)
         {
@@ -29,12 +31,28 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
             this.cartDAO = cartDAO;
             this.cartControl = cartControl;
             productDAO = new ProductDAO();
+            customerDAO = new CustomerDAO();
             loadCart();
             loadEvent();
         }
         public void loadEvent()
         {
             cartControl.removeAllinCart += removeAllProductOfCart;
+            cartControl.findCustomer += findAndLoadCustomer;
+        }
+        private void findAndLoadCustomer(object o)
+        {
+            string phone = o.ToString();
+            Customer customer = customerDAO.getCustomerByPhone(phone);
+            if (customer == null)
+            {
+                MessageBox.Show("Không tìm thấy khách hàng!");
+            }
+            else
+            {
+                cartControl.setInformation(customer.Name, customer.Phone, customer.Gender.Equals("Nam"),
+                    customer.Birth, customer.Address, customer.Point.ToString());
+            }
         }
         private void loadCart()
         {
@@ -63,7 +81,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
         public void changeQuantity(object o)
         {
             ItemProductOfCart item = (ItemProductOfCart)o;
-            // update lai gia tien khi tang so luong
             string idItem = item.getIdItem();
             int quantity = Convert.ToInt32(item.getQuantity());
             foreach (ItemProductOfCart itemProduct in cartControl.Controls["pnlContainer"].Controls)
@@ -84,8 +101,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
                 price += Convert.ToDouble(item.getTotalPrice());
             }
             cartControl.Controls["pnlFooter"].Controls["lblSumTotal"].Text = price.ToString("#,###");
-            cartControl.Controls["pnlRegister"].Controls["lblSumTotalInOrder"].Text = price.ToString("#,###");
-            cartControl.Controls["pnlRegister"].Controls["lblMoneyOrder"].Text = price.ToString("#,###");
+            cartControl.Controls["pnlInformationPay"].Controls["pnlPay"].Controls["lblSumTotalInOrder"].Text = price.ToString("#,###");
+            cartControl.Controls["pnlInformationPay"].Controls["pnlPay"].Controls["lblMoneyOrder"].Text = price.ToString("#,###");
         }
 
         private void removeProductOfCart(object o)

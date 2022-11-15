@@ -43,6 +43,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
             this.idCategory.Text = idCategory;
             this.colors = colors;
             this.sizes = sizes;
+            this.imageCurrent.Text = image;
         }
 
         public List<string> ColorItem { get => colors; set => colors = value; }
@@ -67,7 +68,13 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
         public string getPriceProduct() { return price.Text; }
         public string getQuantityProduct() { return quantity.Text; }
         public string getIdCategory() { return idCategory.Text; }
-        public void setImage(string image)  
+        
+        public string getImageProduct()
+        {
+            return this.imageCurrent.Text;
+        }
+        
+        public void setImage(string image)
         {
             string path = Application.StartupPath + "\\image\\";
             string imageDefault = "default.jpg";

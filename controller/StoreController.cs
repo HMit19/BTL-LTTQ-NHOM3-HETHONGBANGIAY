@@ -89,17 +89,28 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
             storeControl.Controls["pnlOptionDetail"].Controls["pnlOptionColor"].Controls.Clear();
             storeControl.Controls["pnlOptionDetail"].Controls["pnlOptionSize"].Controls.Clear();
             storeControl.Controls["pnlOptionDetail"].Visible = false;
+            storeControl.Controls["pnlCurrent"].Visible = false;
         }
 
         private void selectItemProduct(object item)
         {
             setOption("", "", 1);
             itemProduct = (ItemProduct)item;
+            setProductCurrent();
             storeControl.Controls["pnlOptionDetail"].Visible = true;
             loadDetailOption(itemProduct.ColorItem, itemProduct.SizeItem);
             storeControl.Controls["pnlOptionDetail"].Controls["pnlConfirm"].Controls["lblAvaiable"].Text =
                productDAO.getQuantityProduct(productDAO.getProductById(itemProduct.getIdProduct()).DetailProduct) + " sản phẩm có sẵn";
         }
+
+        public void setProductCurrent()
+        {
+            storeControl.Controls["pnlCurrent"].Controls["nameCurrent"].Text = itemProduct.getNameProduct();
+            storeControl.Controls["pnlCurrent"].Controls["priceCurrent"].Text = itemProduct.getPriceProduct();
+            storeControl.setImageCurrent(itemProduct.getImageProduct());
+            storeControl.Controls["pnlCurrent"].Visible = true;
+        }
+
 
         private void setOption(string color, string size, int unit)
         {
@@ -113,6 +124,22 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
         {
             storeControl.Controls["pnlOptionDetail"].Controls["pnlOptionColor"].Controls.Clear();
             storeControl.Controls["pnlOptionDetail"].Controls["pnlOptionSize"].Controls.Clear();
+            if (colors.Count <= 3)
+            {
+                storeControl.Controls["pnlOptionDetail"].Controls["pnlOptionColor"].Size = new System.Drawing.Size(297, 48);
+            }
+            else
+            {
+                storeControl.Controls["pnlOptionDetail"].Controls["pnlOptionColor"].Size = new System.Drawing.Size(297, 97);
+            }
+            if (sizes.Count <= 3)
+            {
+                storeControl.Controls["pnlOptionDetail"].Controls["pnlOptionSize"].Size = new System.Drawing.Size(297, 48);
+            }
+            else
+            {
+                storeControl.Controls["pnlOptionDetail"].Controls["pnlOptionSize"].Size = new System.Drawing.Size(297, 97);
+            }
             foreach (string color in colors)
             {
                 ItemColor item = new ItemColor(color);
@@ -129,17 +156,81 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
 
         private void chooseColor(object color)
         {
-            ItemColor item = (ItemColor)color;
-            storeControl.Controls["selectColor"].Text = item.getColor();
-            setBorder();
-            loadSize();
+            string colorCurrent = storeControl.Controls["selectColor"].Text;
+            string colorChoose = ((ItemColor)color).getColor();
+            string sizeCurrent = storeControl.Controls["selectSize"].Text;
+            if (colorCurrent == colorChoose)
+            {
+                storeControl.Controls["selectColor"].Text = "";
+                foreach (ItemColor item in storeControl.Controls["pnlOptionDetail"].Controls["pnlOptionColor"].Controls)
+                {
+                    item.setBorder();
+                    item.setEnable(true);
+                }
+                if (sizeCurrent == "")
+                {
+                    foreach (ItemSize item in storeControl.Controls["pnlOptionDetail"].Controls["pnlOptionSize"].Controls)
+                    {
+                        item.setBorder();
+                        item.setEnable(true);
+                    }
+                    return;
+                }
+                foreach (ItemSize item in storeControl.Controls["pnlOptionDetail"].Controls["pnlOptionSize"].Controls)
+                {
+                    if (!item.getSize().Equals(sizeCurrent))
+                        item.setBorder();
+                    item.setEnable(true);
+                }
+                loadColor();
+            }
+            else
+            {
+                storeControl.Controls["selectColor"].Text = colorChoose;
+                ItemColor item = (ItemColor)color;
+                storeControl.Controls["selectColor"].Text = item.getColor();
+                setBorder();
+                loadSize();
+            }
         }
         private void chooseSize(object size)
         {
-            ItemSize item = (ItemSize)size;
-            storeControl.Controls["selectSize"].Text = item.getSize();
-            setBorder();
-            loadColor();
+            string sizeCurrent = storeControl.Controls["selectSize"].Text;
+            string sizeChoose = ((ItemSize)size).getSize();
+            string colorCurrent = storeControl.Controls["selectColor"].Text;
+            if (sizeCurrent.Equals(sizeChoose))
+            {
+                storeControl.Controls["selectSize"].Text = "";
+                foreach (ItemSize item in storeControl.Controls["pnlOptionDetail"].Controls["pnlOptionSize"].Controls)
+                {
+                    item.setBorder();
+                    item.setEnable(true);
+                }
+                if (colorCurrent == "")
+                { 
+                    foreach (ItemColor item in storeControl.Controls["pnlOptionDetail"].Controls["pnlOptionColor"].Controls)
+                    {
+                        item.setBorder();
+                        item.setEnable(true);
+                    }
+                    return;
+                }
+                foreach (ItemColor item in storeControl.Controls["pnlOptionDetail"].Controls["pnlOptionColor"].Controls)
+                {
+                    if (!item.getColor().Equals(colorCurrent))
+                        item.setBorder();
+                    item.setEnable(true);
+                }
+                loadSize();
+            }
+            else
+            {
+                storeControl.Controls["selectSize"].Text = sizeChoose;
+                ItemSize item = (ItemSize)size;
+                storeControl.Controls["selectSize"].Text = item.getSize();
+                setBorder();
+                loadColor();
+            }
         }
 
         private void setBorder()
@@ -227,7 +318,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
 
         private void showProductOfCategory()
         {
-            string name = storeControl.Controls["pnlOptionSidebar"].Controls["cbCategory"].Text;
+            string name = storeControl.Controls["pnlOptionHeader"].Controls["cbCategory"].Text;
             if (name.Equals("Tất cả"))
             {
                 productDAO.setListProducts(productDAO.getListProductsDefault());

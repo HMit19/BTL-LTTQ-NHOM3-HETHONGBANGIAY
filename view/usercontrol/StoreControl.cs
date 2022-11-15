@@ -87,5 +87,18 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         {
             showCart?.Invoke();
         }
+        public void setImageCurrent(string image)
+        {
+            string path = Application.StartupPath + "\\image\\";
+            string imageDefault = "default.jpg";
+            try
+            {
+                this.imageCurrent.Image = Image.FromFile(path + image);
+            }
+            catch (Exception e)
+            {
+                this.imageCurrent.Image = Image.FromFile(path + imageDefault);
+            }
+        }
     }
 }
