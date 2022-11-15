@@ -305,9 +305,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
                     MessageBox.Show("Bạn phải nhập số lượng");
                     return;
                 }
-                if (btnCreate.Enabled == true)
+                if (btnCreate.Enabled == true)//Add new items
                 {
-                    MessageBox.Show("Them");
                     DataTable code = dataBase.ReadData("select DetailProductCode from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode where sp.ProductCode = N'" + cbbProductCode.Text + "' and Color = N'" + cbbColor.Text + "' and Size =N'" + cbbSize.Text + "'");
                     string deProductCode = code.Rows[0][0].ToString();
                     DataTable dataBill = dataBase.ReadData("select DetailProductCode from tDetailImportBill where DetailProductCode = N'"+deProductCode+"' and CodeBill = N'"+codeBill+"'");
@@ -329,15 +328,36 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
                         DisplayList();
                     }
                 }
-                else
+                else//edit item
                 {
                     string oldPrCode = dataBase.ReadData("select DetailProductCode from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode where sp.ProductCode = N'" + lblProductCode.Text + "' and Color = N'" + lblColor.Text + "' and Size =N'" + lblSize.Text + "'").Rows[0][0].ToString();
                     DataTable code = dataBase.ReadData("select DetailProductCode from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode where sp.ProductCode = N'" + cbbProductCode.Text + "' and Color = N'" + cbbColor.Text + "' and Size =N'" + cbbSize.Text + "'");
                     string deProductCode = code.Rows[0][0].ToString();
-                    dataBase.UpdateData("update tDetailProduct set Quantity = Quantity  + " + txtQuantity.Text + " where DetailProductCode = N'" + deProductCode + "'");
-                    dataBase.UpdateData("update tDetailProduct set Quantity = Quantity - " + lblQuantity.Text + " where DetailProductCode = N'" + lblProductCode.Text + "'");
-                    dataBase.UpdateData("update tDetailImportBill set DetailProductCode = N'" + deProductCode + "', Quantity = N'" + txtQuantity.Text + "' where DetailProductCode = N'" + oldPrCode + "' and CodeBill = N'" + codeBill + "'");
 
+                    DataTable dataBill = dataBase.ReadData("select DetailProductCode from tDetailImportBill where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
+                    if (dataBill.Rows.Count > 0)//Kiem tra san pham da co trong list chua
+                    {
+                        if (oldPrCode != deProductCode)//Neui san pham moi khac san pham cu
+                        {
+                            if (MessageBox.Show("Sản phẩm bạn chọn đã tồn tại, bạn có muốn cập nhật số lượng cho sản phẩm đó?", "Messager",
+                                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                dataBase.UpdateData("update tDetailProduct set Quantity = Quantity - " + lblQuantity.Text + " where DetailProductCode = N'" + oldPrCode + "'");
+                                dataBase.UpdateData("update tDetailProduct set Quantity = Quantity  + " + txtQuantity.Text + " where DetailProductCode = N'" + deProductCode + "'");
+                                dataBase.UpdateData("update tDetailImportBill set Quantity = Quantity + " + txtQuantity.Text + " where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
+                                dataBase.UpdateData("delete from tDetailImportBill where DetailProductCode = N'" + oldPrCode + "' and CodeBill = N'" + codeBill + "'");
+                            }
+                            else
+                                return;
+                        }
+                    }
+                    else
+                    {
+                        dataBase.UpdateData("update tDetailProduct set Quantity = Quantity  + " + txtQuantity.Text + " where DetailProductCode = N'" + deProductCode + "'");
+                        dataBase.UpdateData("update tDetailProduct set Quantity = Quantity - " + lblQuantity.Text + " where DetailProductCode = N'" + lblProductCode.Text + "'");
+                        dataBase.UpdateData("update tDetailImportBill set DetailProductCode = N'" + deProductCode + "', Quantity = N'" + txtQuantity.Text + "' where DetailProductCode = N'" + oldPrCode + "' and CodeBill = N'" + codeBill + "'");
+
+                    }
                     btnDelete.Text = "  Xóa";
                     btnCreate.Enabled = true;
                     btnEdit.Enabled = true;
