@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Dynamic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -29,9 +30,17 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
             //functions.FillComboBox(cboStatus, dtNV, "Status", "Status");
             functions.FillComboBox(cboEmployeeCode, dtNV, "EmployeeCode", "EmployeeCode");
         }
-        public void funData(TextBox txtForm1)
+        public static string GetHash(string str)
         {
-
+            MD5 md5 = new MD5CryptoServiceProvider();
+            byte[] datapass = Encoding.UTF8.GetBytes(str);
+            byte[] pass = md5.ComputeHash(datapass);
+            string BytePass = null;
+            for (int i = 0; i < pass.Length; i++)
+            {
+                BytePass += pass[i].ToString("x2");
+            }
+            return BytePass;
         }
         private void EmployeeInfor_Load(object sender, EventArgs e)
         {
@@ -50,7 +59,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
         {
             try
             {
-                DataTable dtNV = data.ReadData("Select Name, ID, Gender, DOB, Address, PhoneNumber, nv.Status,nv.UserName, PassWord from tEmployee nv join tLogin lg on nv.UserName=lg.UserName  where EmployeeCode='" + cboEmployeeCode.SelectedValue + "'");
+                DataTable dtNV = data.ReadData("Select Name, ID, Gender, DOB, Address, PhoneNumber, Status, UserName from tEmployee where EmployeeCode='" + cboEmployeeCode.SelectedValue + "'");
                 txtName.Text = dtNV.Rows[0]["Name"].ToString();
                 txtID.Text = dtNV.Rows[0]["ID"].ToString();
                 cboGender.Text = dtNV.Rows[0]["Gender"].ToString();
@@ -64,22 +73,20 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
                 { cboStatus.Text = "Đã Nghỉ"; }
                 dtpDOB.Text = dtNV.Rows[0]["DOB"].ToString();
 
-                //DataTable dtLG = data.ReadData("Select PassWord from tLogin join tEmployee on tLogin.UserName=tEmployee.UserName where tLogin.UserName=tEmployee.UserName");
+                
                 if (dtNV.Rows[0]["UserName"].ToString() != "")
                 {
-                    txtAccount.Text = dtNV.Rows[0]["UserName"].ToString();
-                    txtPassWord.Text = dtNV.Rows[0]["PassWord"].ToString();
-                    txtAccount.Enabled = false;
-                    txtPassWord.Enabled = false;
+                    txtUserName.Text = dtNV.Rows[0]["UserName"].ToString();
+                    lblUserName.Visible = true;
+                    txtUserName.Visible = true;
+                    
+                    txtUserName.Enabled = false;
+                    
                 }
                 else
                 {
-                    txtAccount.Text = "";
-                    txtPassWord.Text = "";
-                    
-                    txtAccount.Enabled = true;
-                    txtPassWord.Enabled = true;
-
+                    lblUserName.Visible = false;
+                    txtUserName.Visible = false;
                 }
                 
 
@@ -102,95 +109,156 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
 
         private void btnReload_Click(object sender, EventArgs e)
         {
+            
             loadData();
             cboEmployeeCode_SelectedIndexChanged(sender, new EventArgs());
+            cboEmployeeCode.Enabled = true;
+            txtName.Enabled = true;
+            txtID.Enabled = true;
+            txtAddress.Enabled = true;
+            txtPhoneNumber.Enabled = true;
+            cboGender.Enabled = true;
+            cboStatus.Enabled = true;
+            dtpDOB.Enabled = true;
+            lblPassWord.Visible = false;
+            txtPassWord.Visible = false;
 
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            DateTime dtdob = Convert.ToDateTime(dtpDOB.Value.ToLongDateString());
-            if (txtName.Text.Trim() == "")
+            if (lblPassWord.Visible == false)
             {
-                errChiTiet.SetError(txtName, "Bạn không được để trống!");
-                txtName.Focus();
-                return;
-            }
-            else errChiTiet.Clear();
-            if (dtpDOB.Value >= DateTime.Now)
-            {
-                errChiTiet.SetError(dtpDOB, "Loi Ngay!");
+                DateTime dtdob = Convert.ToDateTime(dtpDOB.Value.ToLongDateString());
+                if (txtName.Text.Trim() == "")
+                {
+                    errChiTiet.SetError(txtName, "Bạn không được để trống!");
+                    txtName.Focus();
+                    return;
+                }
+                else errChiTiet.Clear();
+                if (dtpDOB.Value >= DateTime.Now)
+                {
+                    errChiTiet.SetError(dtpDOB, "Loi Ngay!");
 
-                return;
-            }
-            else errChiTiet.Clear();
-            if (txtPhoneNumber.Text.Trim() == "")
-            {
-                errChiTiet.SetError(txtPhoneNumber, "Bạn không được để trống!");
-                txtPhoneNumber.Focus();
-                return;
-            }
-            else errChiTiet.Clear();
-            if (txtID.Text.Trim() == "")
-            {
-                errChiTiet.SetError(txtID, "Bạn không được để trống!");
-                txtID.Focus();
-                return;
-            }
-            else errChiTiet.Clear();
-            if (txtAddress.Text.Trim() == "")
-            {
-                errChiTiet.SetError(txtAddress, "Bạn không được để trống!");
-                txtAddress.Focus();
-                return;
-            }
-            else errChiTiet.Clear();
-            if (MessageBox.Show("Bạn có thực sự muốn cập nhập không?", "Có hay không",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                if(cboStatus.Text.ToString() == "Đang Làm")
-                {
-                    lblAccount.Text = "True";
+                    return;
                 }
-                else
+                else errChiTiet.Clear();
+                if (txtPhoneNumber.Text.Trim() == "")
                 {
-                    lblAccount.Text = "False";
+                    errChiTiet.SetError(txtPhoneNumber, "Bạn không được để trống!");
+                    txtPhoneNumber.Focus();
+                    return;
                 }
-                
-                data.UpdateData("update tEmployee set Name=N'" + txtName.Text + "',ID='" + txtID.Text +
-            "',Gender=N'" + cboGender.Text + "',DOB='" + String.Format("{0000:MM/dd/yyyy}", dtdob) + "',Address=N'" +
-            txtAddress.Text + "',PhoneNumber='" + txtPhoneNumber.Text + "',Status='"+Boolean.Parse(lblAccount.Text)+"' where EmployeeCode=N'" + cboEmployeeCode.Text + "'");
+                else errChiTiet.Clear();
+                if (txtID.Text.Trim() == "")
+                {
+                    errChiTiet.SetError(txtID, "Bạn không được để trống!");
+                    txtID.Focus();
+                    return;
+                }
+                else errChiTiet.Clear();
+                if (txtAddress.Text.Trim() == "")
+                {
+                    errChiTiet.SetError(txtAddress, "Bạn không được để trống!");
+                    txtAddress.Focus();
+                    return;
+                }
+                else errChiTiet.Clear();
+                if (MessageBox.Show("Bạn có thực sự muốn cập nhập không?", "Có hay không",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (cboStatus.Text.ToString() == "Đang Làm")
+                    {
+                        lblAccount.Text = "True";
+                    }
+                    else
+                    {
+                        lblAccount.Text = "False";
+                    }
+
+                    data.UpdateData("update tEmployee set Name=N'" + txtName.Text + "',ID='" + txtID.Text +
+                "',Gender=N'" + cboGender.Text + "',DOB='" + String.Format("{0000:MM/dd/yyyy}", dtdob) + "',Address=N'" +
+                txtAddress.Text + "',PhoneNumber='" + txtPhoneNumber.Text + "',Status='" + Boolean.Parse(lblAccount.Text) + "' where EmployeeCode=N'" + cboEmployeeCode.Text + "'");
+                    MessageBox.Show("Da luu thanh cong");
+                }
+            }
+            else
+            {
+
                 try
                 {
-                    if (txtAccount.Text == "" && txtPassWord.Text != "")
+                    if (txtUserName.Text == "" && txtPassWord.Text != "")
                     {
                         MessageBox.Show("Bạn không được để trống Account!");
-                        txtAccount.Focus();
+                        txtUserName.Focus();
                         return;
                     }
-                    else if (txtAccount.Text != "" && txtPassWord.Text == "")
+                    else if (txtUserName.Text != "" && txtPassWord.Text == "")
                     {
                         MessageBox.Show("Bạn không được để trống PassWord!");
                         txtPassWord.Focus();
                         return;
                     }
-                    else 
+                    else if(txtUserName.Enabled == true)
                     {
-                        string sqlacc = "INSERT INTO tLogin (UserName, PassWord) VALUES ('" + txtAccount.Text + "','" + txtPassWord.Text + "')";
+                        string passHash = GetHash(txtPassWord.Text.ToString());
+                        passHash = passHash.Substring(0, 15);
+                        string sqlacc = "INSERT INTO tLogin (UserName, PassWord) VALUES ('" + txtUserName.Text + "','" + passHash + "')";
                         data.UpdateData(sqlacc);
-                        data.UpdateData("update tEmployee set UserName='" + txtAccount.Text + "'where EmployeeCode='" + cboEmployeeCode.SelectedValue + "'");
+                        data.UpdateData("update tEmployee set UserName='" + txtUserName.Text + "'where EmployeeCode='" + cboEmployeeCode.SelectedValue + "'");
 
                     }
+                    else
+                    {
+                        string passHash = GetHash(txtPassWord.Text.ToString());
+                        passHash = passHash.Substring(0, 15);
+                        data.UpdateData("update tLogin set PassWord='" + passHash + "' where UserName='"+txtUserName.Text+"'");
+                        
+                    }
+                    MessageBox.Show("Da luu thanh cong");
                 }
                 catch
                 {
 
                 }
+            }
+                
                 loadData();
-                MessageBox.Show("Da luu thanh cong");
+            cboEmployeeCode_SelectedIndexChanged(sender, new EventArgs());
 
 
+
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            cboEmployeeCode.Enabled = false;
+            txtName.Enabled = false;
+            txtID.Enabled = false;
+            txtAddress.Enabled = false;
+            txtPhoneNumber.Enabled = false;
+            cboGender.Enabled = false;
+            cboStatus.Enabled = false;
+            dtpDOB.Enabled = false;
+            txtPassWord.Text = "";
+            if(txtUserName.Visible == true)
+            {
+                
+                lblPassWord.Visible = true;
+                txtPassWord.Visible = true;
+
+            }
+            else 
+            {
+                txtUserName.Text = "";
+                txtUserName.Enabled = true;
+                lblUserName.Visible = true;
+                txtUserName.Visible = true;
+                lblPassWord.Visible = true;
+                txtPassWord.Visible = true;
             }
         }
     }
-}
+    }
+

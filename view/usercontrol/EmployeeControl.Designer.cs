@@ -50,6 +50,7 @@
             this.cboStatus = new System.Windows.Forms.ComboBox();
             this.cbEmployeeCode = new System.Windows.Forms.ComboBox();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.pnlTitle.SuspendLayout();
             this.grpSearch.SuspendLayout();
             this.grpList.SuspendLayout();
@@ -60,6 +61,7 @@
             // pnlTitle
             // 
             this.pnlTitle.BackColor = System.Drawing.Color.White;
+            this.pnlTitle.Controls.Add(this.lblUserName);
             this.pnlTitle.Controls.Add(this.iconButton2);
             this.pnlTitle.Controls.Add(this.label1);
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
@@ -82,7 +84,7 @@
             this.iconButton2.IconSize = 30;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton2.Location = new System.Drawing.Point(1652, 22);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(144, 47);
             this.iconButton2.TabIndex = 3;
@@ -196,7 +198,7 @@
             this.dgvListEmployee.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvListEmployee.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvListEmployee.Location = new System.Drawing.Point(0, 39);
-            this.dgvListEmployee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvListEmployee.Margin = new System.Windows.Forms.Padding(4);
             this.dgvListEmployee.Name = "dgvListEmployee";
             this.dgvListEmployee.ReadOnly = true;
             this.dgvListEmployee.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -262,7 +264,7 @@
             this.btnAdd.IconSize = 30;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.Location = new System.Drawing.Point(560, 26);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(144, 44);
             this.btnAdd.TabIndex = 8;
@@ -284,7 +286,7 @@
             this.btnReload.IconSize = 30;
             this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReload.Location = new System.Drawing.Point(1596, 26);
-            this.btnReload.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReload.Margin = new System.Windows.Forms.Padding(4);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(144, 44);
             this.btnReload.TabIndex = 7;
@@ -306,7 +308,7 @@
             this.btnDelete.IconSize = 30;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.Location = new System.Drawing.Point(1087, 26);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(144, 44);
             this.btnDelete.TabIndex = 6;
@@ -328,7 +330,7 @@
             this.btnInfor.IconSize = 30;
             this.btnInfor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInfor.Location = new System.Drawing.Point(75, 26);
-            this.btnInfor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInfor.Margin = new System.Windows.Forms.Padding(4);
             this.btnInfor.Name = "btnInfor";
             this.btnInfor.Size = new System.Drawing.Size(144, 44);
             this.btnInfor.TabIndex = 4;
@@ -364,7 +366,7 @@
             this.btnSearch.IconSize = 25;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnSearch.Location = new System.Drawing.Point(579, 103);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(125, 36);
             this.btnSearch.TabIndex = 4;
@@ -402,6 +404,16 @@
             this.txtName.Size = new System.Drawing.Size(299, 34);
             this.txtName.TabIndex = 0;
             this.txtName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.ForeColor = System.Drawing.Color.White;
+            this.lblUserName.Location = new System.Drawing.Point(673, 31);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(44, 16);
+            this.lblUserName.TabIndex = 4;
+            this.lblUserName.Text = "label4";
             // 
             // EmployeeControl
             // 
@@ -444,5 +456,6 @@
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton btnAdd;
         private Guna.UI2.WinForms.Guna2DataGridView dgvListEmployee;
+        private System.Windows.Forms.Label lblUserName;
     }
 }

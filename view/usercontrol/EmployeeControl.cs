@@ -42,9 +42,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 
         private void cbEmployeeCode_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lblUserName.Text = "";
             try
             {
-                DataTable dtNV = data.ReadData("Select Name, Status from tEmployee where EmployeeCode='" + cbEmployeeCode.SelectedValue + "'");
+                DataTable dtNV = data.ReadData("Select Name, Status, UserName from tEmployee where EmployeeCode='" + cbEmployeeCode.SelectedValue + "'");
                 txtName.Text = dtNV.Rows[0]["Name"].ToString();
                 if (dtNV.Rows[0]["Status"].ToString() == "True")
                 {
@@ -52,6 +53,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 }
                 else
                 { cboStatus.Text = "Đã Nghỉ"; }
+                lblUserName.Text = dtNV.Rows[0]["UserName"].ToString();
             }
             catch
             {
@@ -105,7 +107,9 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 try
                 {
-                    data.UpdateData("delete tEmployee where EmployeeCode='" +cbEmployeeCode.Text+ "'") ;
+                    data.UpdateData("delete tEmployee where EmployeeCode='" +cbEmployeeCode.Text+ "'");
+                    data.UpdateData("delete tLogin where UserName='"+lblUserName.Text+"'");
+
                     loadData();
                     ResetValue();
                 }

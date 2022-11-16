@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Markup;
-
+using System.Security.Cryptography;
 namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
 {
     
@@ -16,6 +16,18 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
     {
         Classes.CommonFunctions functions = new Classes.CommonFunctions();
         Classes.ConnectData data = new Classes.ConnectData();
+        public static string GetHash(string str)
+        {
+            MD5 md5 = new MD5CryptoServiceProvider();
+            byte[] datapass = Encoding.UTF8.GetBytes(str);
+            byte[] pass = md5.ComputeHash(datapass);
+            string BytePass = null;
+            for (int i = 0; i < pass.Length; i++)
+            {
+                BytePass +=pass[i].ToString("x2");
+            }
+            return BytePass;
+        }
         public EmployeeAddNew()
         {
             InitializeComponent();
@@ -36,6 +48,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
         
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            
+
             DateTime dtdob;
 
             if (txtName.Text.Trim() == "")
@@ -83,22 +97,27 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
                 errChiTiet.Clear();
             }
             dtdob = Convert.ToDateTime(dtpDOB.Value.ToLongDateString());
-            string sql = "INSERT INTO tEmployee (EmployeeCode, Name, ID, Gender, DOB, Address, PhoneNumber, Status) VALUES (";
-            sql += "N'" + txtEmployeeCode.Text + "' ,N'" + txtName.Text + "',N'" + txtID.Text + "',N'" + cboGender.Text.ToString() + "','" + String.Format("{0000:MM/dd/yyyy}", dtdob) + "',N'" + txtAddress.Text + "','" + int.Parse(txtPhoneNumber.Text) + "','"+Boolean.Parse("true")+"')";
-
-            data.UpdateData(sql);
             try
             {
-               
-                string sqlacc = "INSERT INTO tLogin (UserName, PassWord) VALUES ('" + txtAccount.Text + "','" + txtPassWord.Text + "')";
+
+                string passHash = GetHash(txtPassWord.Text.ToString());
+                passHash = passHash.Substring(0, 15);
+                string sqlacc = "INSERT INTO tLogin (UserName, PassWord) VALUES ('" + txtAccount.Text + "','" + passHash + "')";
                 data.UpdateData(sqlacc);
 
-                
+
             }
             catch
             {
 
             }
+
+            string sql = "INSERT INTO tEmployee (EmployeeCode, Name, ID, Gender, DOB, Address, PhoneNumber, UserName, Status) VALUES (";
+            sql += "N'" + txtEmployeeCode.Text + "' ,N'" + txtName.Text + "',N'" + txtID.Text + "',N'" + cboGender.Text.ToString() + "','" + String.Format("{0000:MM/dd/yyyy}", dtdob) + "',N'" + txtAddress.Text + "','" + int.Parse(txtPhoneNumber.Text) + "','" + txtAccount.Text + "','" + Boolean.Parse("true") + "')";
+
+            data.UpdateData(sql);
+
+            
             MessageBox.Show("Thêm mới thành công");
             ResetValue();
 
