@@ -71,13 +71,14 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 lblPoint.Text = "0";
             else
                 lblPoint.Text = data.Rows[0][5].ToString();
+            lblBirth.Text = Convert.ToDateTime(data.Rows[0][6].ToString()).ToString("dd/MM/yyyy");
             DataTable totalBill = dataBase.ReadData("select ctb.Quantity, sp.Price, isnull(0,hdb.Discount) from tBillOfSale hdb join tDetailBillOfSale ctb on hdb.CodeBill = ctb.CodeBill join tDetailProduct sp on ctb.DetailProductCode = sp.DetailProductCode where hdb.CustomerCode = N'" + customerCode + "'");
             double total = 0;
             for (int i = 0; i < totalBill.Rows.Count; i++)
             {
                 total += Convert.ToDouble(totalBill.Rows[i][0].ToString()) * Convert.ToDouble(totalBill.Rows[i][1].ToString()) - Convert.ToDouble(totalBill.Rows[0][2].ToString());
             }
-            lblTotal.Text = total.ToString();
+            lblTotal.Text = total.ToString("#,###");
             dgvBill.DataSource = dataBase.ReadData("Select CodeBill as 'Số Hóa Đơn', DateSale as 'Ngày bán', PaymentMethods as 'Thanh toán', Discount as 'Điểm' from tBillOfSale where CustomerCode = N'" + customerCode + "'");
         }
         //DataGridView of customer's list
@@ -182,8 +183,11 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                     address = ", Address = N'" + txtAddress.Text + "' ";
                     lblAddress.Text = txtAddress.Text;
                 }
-                string gender = ", Address = N'" + cbbGender.Text + "' ";
-                dataBase.UpdateData("update tCustomer set CustomerCode = N'"+ lblCode.Text + "' "+name + phone + address + gender + " where CustomerCode = N'"+ lblCode.Text +"'");
+                string gender = ", Gender = N'" + cbbGender.Text + "' ";
+                lblGender.Text = cbbGender.Text;
+                string birthday = ", BirthDay = N'"+ dtpBirth.Value.ToString()+"' ";
+                lblBirth.Text = dtpBirth.Value.ToString("dd/MM/yyyy");
+                dataBase.UpdateData("update tCustomer set CustomerCode = N'"+ lblCode.Text + "' "+name + phone + address + gender + birthday +" where CustomerCode = N'"+ lblCode.Text +"'");
                 dgvList.DataSource = dataBase.ReadData("select CustomerCode, Name from tCustomer");
                 OnText(false);
                 PanelInfor(code);

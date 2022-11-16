@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Markup;
+using System.Security.Cryptography;
 
 namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.connect
 {
@@ -59,24 +60,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.connect
             comboName.DataSource = data;
             comboName.DisplayMember = displayMember;
             comboName.ValueMember = valueMember;
-        }
-        public string AutoCode(string tableName, string columnName, string startvalue)
-        {
-
-            string code;
-            bool check = false;
-            int id = 0;
-
-            do
-            {
-                code = startvalue + id.ToString();
-                DataTable dtData = ReadData("Select * from " + tableName + " where " + columnName + "='" + code + "'");
-                if (dtData.Rows.Count == 0)
-                    check = true;
-                else
-                    id++;
-            } while (check == false);
-            return code;
         }
     }
 }

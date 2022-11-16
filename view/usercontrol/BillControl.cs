@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
 using Microsoft.Office.Interop.Excel;
+using System.Security.Cryptography;
 
 namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 {
@@ -81,6 +82,35 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 filter = " where EmployeeCode ";
             return filter;
         }
+        public string GetMD5(string str)
+        {
+            MD5 md5 = new MD5CryptoServiceProvider();
+            byte[] fromData = Encoding.UTF8.GetBytes(str);
+            byte[] targetData = md5.ComputeHash(fromData);
+            string byte2String = null;
+            for (int i = 0; i < targetData.Length; i++)
+            {
+                byte2String += targetData[i].ToString("x2");
+            }
+            return byte2String;
+        }
+
+        void DeleteProductImport(string deProductCode, string codeBill)
+        {
+            string quantity = "";
+            DataTable billData = dataBase.ReadData("select Quantity from tDetailImportBill where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
+            quantity = billData.Rows[0][0].ToString();
+            dataBase.UpdateData("update tDetailProduct set Quantity = Quantity - " + quantity + " where DetailProductCode = N'" + deProductCode + "'");
+            dataBase.UpdateData("delete from tDetailImportBill where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
+        }
+        void DeleteProductSale(string deProductCode, string codeBill)
+        {
+            string quantity = "";
+            DataTable billData = dataBase.ReadData("select Quantity from tDetailBillOfSale where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
+            quantity = billData.Rows[0][0].ToString();
+            dataBase.UpdateData("update tDetailProduct set Quantity = Quantity + " + quantity + " where DetailProductCode = N'" + deProductCode + "'");
+            dataBase.UpdateData("delete from tDetailBillOfSale where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
+        }
         // Search textbox watermark
         private void txtSearch_Leave(object sender, EventArgs e)
         {
@@ -104,18 +134,33 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         {
             if (cbbType.SelectedIndex == 0)
             {
+                btnEdit.Enabled = false;
                 btnCreate.Visible = false;
                 DataSale(DateSort());
             }
             if (cbbType.SelectedIndex == 1)
             {
+                btnEdit.Enabled = true;
                 btnCreate.Visible = true;
                 DataImport(DateSort());
             }
             txtSearch.Text = "Tìm kiếm hóa đơn theo...";
             txtSearch.ForeColor = SystemColors.GrayText;
         }
-
+        //Display by date
+        private void cbbDate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbType.SelectedIndex == 0)
+            {
+                DataSale(DateSort());
+                btnEdit.Enabled = false;
+            }
+            else
+            {
+                DataImport(DateSort());
+                btnEdit.Enabled = true;
+            }
+        }
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string search = txtSearch.Text;
@@ -128,20 +173,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             else
                 DataImport(Filter() + "like N'%" + search + "%' " + DateSort());
         }
-        //Display by date
-        private void cbbDate_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbbType.SelectedIndex == 0)
-            {
-                DataSale(DateSort());
-                btnEdit.Enabled = false;
-            }  
-            else
-            {
-                DataImport(DateSort());
-                btnEdit.Enabled = true;
-            }      
-        }
+
         //Export file excel
         private void btnExcel_Click(object sender, EventArgs e)
         {
@@ -211,54 +243,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 }
                 exSheet.Name = "Danh sách hóa đơn nhập";
             }
-            if (cbbType.SelectedIndex == 0)
-            {
-                header.Value = "DANH SÁCH HÓA ĐƠN BÁN";
-
-                exSheet.get_Range("A6:D6").Font.Bold = true;
-                exSheet.get_Range("A6:D6").HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
-                exSheet.get_Range("A6:D6").ColumnWidth = 25;
-                exSheet.get_Range("A6").Value = "Số hóa đơn";
-                exSheet.get_Range("B6").Value = "Ngày tạo";
-                exSheet.get_Range("C6").Value = "Phương thức thanh toán";
-                exSheet.get_Range("D6").Value = "Giảm giá";
-                exSheet.get_Range("E6").Value = "Người tạo";
-
-                DataTable dataEx = dataBase.ReadData("select CodeBill, DateSale, PaymentMethods, Discount, EmployeeCode from tBillOfSale " + DateSort());
-                for (int i = 0; i < dataEx.Rows.Count; i++)
-                {
-                    exSheet.get_Range("A" + (i + 7).ToString() + ":G" + (i + 7).ToString()).Font.Bold = false;
-                    exSheet.get_Range("A" + (i + 7).ToString()).Value = dataEx.Rows[i][0].ToString();
-                    exSheet.get_Range("B" + (i + 7).ToString()).Value = dataEx.Rows[i][1].ToString();
-                    exSheet.get_Range("C" + (i + 7).ToString()).Value = dataEx.Rows[i][2].ToString();
-                    exSheet.get_Range("D" + (i + 7).ToString()).Value = dataEx.Rows[i][3].ToString();
-                    exSheet.get_Range("E" + (i + 7).ToString()).Value = dataEx.Rows[i][4].ToString();
-                }
-                exSheet.Name = "Danh sách hóa đơn bán";
-            }
-            else
-            {
-                header.Value = "DANH SÁCH HÓA ĐƠN BÁN";
-
-                exSheet.get_Range("A6:D6").Font.Bold = true;
-                exSheet.get_Range("A6:D6").HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
-                exSheet.get_Range("A6:D6").ColumnWidth = 25;
-                exSheet.get_Range("A6").Value = "Số hóa đơn";
-                exSheet.get_Range("B6").Value = "Ngày tạo";
-                exSheet.get_Range("C6").Value = "Phương thức thanh toán";
-                exSheet.get_Range("D6").Value = "Giảm giá";
-
-                DataTable dataEx = dataBase.ReadData("select CodeBill, DateSale, PaymentMethods, isnull(0,Discount) from tBillOfSale" + DateSort());
-                for (int i = 0; i < dataEx.Rows.Count; i++)
-                {
-                    exSheet.get_Range("A" + (i + 7).ToString() + ":G" + (i + 7).ToString()).Font.Bold = false;
-                    exSheet.get_Range("A" + (i + 7).ToString()).Value = dataEx.Rows[i][0].ToString();
-                    exSheet.get_Range("B" + (i + 7).ToString()).Value = dataEx.Rows[i][1].ToString();
-                    exSheet.get_Range("C" + (i + 7).ToString()).Value = dataEx.Rows[i][2].ToString();
-                    exSheet.get_Range("D" + (i + 7).ToString()).Value = dataEx.Rows[i][3].ToString();
-                }
-                exSheet.Name = "Danh sách hóa đơn bán";
-            }
             exBook.Activate();
 
             dlgSave.Filter = "Excel Document(*.xlsx)|*.xlsx |All files(*.*)|*.*";
@@ -290,8 +274,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            string newCode = dataBase.AutoCode("tImportBill", "CodeBill", "HDN" + DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Year.ToString());
-            ImportBillForm infor = new ImportBillForm(newCode, "CREATE");
+            string newCode = GetMD5(DateTime.Now.ToString());
+            ImportBillForm infor = new ImportBillForm(newCode.Substring(0, 15), "CREATE");
             infor.Show();
         }
 
@@ -339,21 +323,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 }
             }
         }
-        void DeleteProductImport(string deProductCode, string codeBill)
-        {
-            string quantity = "";
-            DataTable billData = dataBase.ReadData("select Quantity from tDetailImportBill where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
-            quantity = billData.Rows[0][0].ToString();
-            dataBase.UpdateData("update tDetailProduct set Quantity = Quantity - " + quantity + " where DetailProductCode = N'" + deProductCode + "'");
-            dataBase.UpdateData("delete from tDetailImportBill where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
-        }
-        void DeleteProductSale(string deProductCode, string codeBill)
-        {
-            string quantity = "";
-            DataTable billData = dataBase.ReadData("select Quantity from tDetailBillOfSale where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
-            quantity = billData.Rows[0][0].ToString();
-            dataBase.UpdateData("update tDetailProduct set Quantity = Quantity + " + quantity + " where DetailProductCode = N'" + deProductCode + "'");
-            dataBase.UpdateData("delete from tDetailBillOfSale where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
-        }
+
     }
 }

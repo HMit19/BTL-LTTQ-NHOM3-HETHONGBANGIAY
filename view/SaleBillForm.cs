@@ -62,7 +62,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
             lblColor.Text = product.Rows[0][2].ToString();
             lblSize.Text = product.Rows[0][3].ToString();
             lblQuantity.Text = product.Rows[0][4].ToString();
-            lblPrice.Text = (Convert.ToDouble(product.Rows[0][5].ToString()) * int.Parse(lblQuantity.Text)).ToString();
+            lblPrice.Text = (Convert.ToDouble(product.Rows[0][5].ToString()) * int.Parse(lblQuantity.Text)).ToString("#,###");
         }
         //Display product infor when delete all
         void DisplayProduct()
@@ -99,14 +99,11 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
                 totalPrice += int.Parse(total.Rows[i][0].ToString()) * Convert.ToDouble(total.Rows[i][1].ToString());
             }
             totalPrice -= int.Parse(lblPoint.Text);
-            lblTotal.Text = totalPrice.ToString();
+            lblTotal.Text = totalPrice.ToString("#,###");
 
         }
         //FormLoad
-        private void SaleBillForm_Load(object sender, EventArgs e)
-        {
-            statusForm(status);
-        }
+
         void statusForm(string status = "INFOR")
         {
             if (status == "INFOR")
@@ -124,12 +121,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
                 dgvList.Columns[3].HeaderText = "Đơn giá";
             }
         }
-        //cell click dataGridView
-        private void dgvList_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (btnSave.Enabled == false && dgvList.Rows.Count > 0)
-                DisplayProduct(dgvList.CurrentRow.Cells[0].Value.ToString());
-        }
         void DeleteProduct(string deProductCode)
         {
             string quantity = "";
@@ -138,29 +129,13 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
             dataBase.UpdateData("update tDetailProduct set Quantity = Quantity + " + quantity + " where DetailProductCode = N'" + deProductCode + "'");
             dataBase.UpdateData("delete from tDetailBillOfSale where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
         }
-        private void btnDelete_Click(object sender, EventArgs e)
+        //cell click dataGridView
+        private void dgvList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (status == "INFOR")
-            {
-                if (btnSave.Enabled == false)
-                {
-                    if (MessageBox.Show("Bạn có muốn trả lại sản phẩm này không?", "Messager",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        DeleteProduct(dgvList.CurrentRow.Cells[0].Value.ToString());
-                        DisplayList();
-                    }
-                }
-                else
-                {
-                    btnDelete.Text = "Trả hàng";
-                    btnUpdate.Enabled = true;
-                    btnPrint.Enabled = true;
-                    btnSave.Enabled = false;
-                    HideProductText();
-                }
-            }
+            if (btnSave.Enabled == false && dgvList.Rows.Count > 0)
+                DisplayProduct(dgvList.CurrentRow.Cells[0].Value.ToString());
         }
+
         private void dgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (btnSave.Visible == false && dgvList.Rows.Count > 0)
@@ -176,7 +151,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
         void Price()
         {
             DataTable price = dataBase.ReadData("select Price from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode where sp.ProductCode = N'" + cbbProductCode.Text + "' and Color = N'" + cbbColor.Text + "' and Size =N'" + cbbSize.Text + "'");
-            lblPrice.Text = (Convert.ToDouble(price.Rows[0][0].ToString()) * int.Parse(txtQuantity.Text)).ToString();
+            lblPrice.Text = (Convert.ToDouble(price.Rows[0][0].ToString()) * int.Parse(txtQuantity.Text)).ToString("#,###");
         }
         private void cbbProductCode_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -217,8 +192,33 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
                 e.Handled = true;
             }
         }
-
-
+        private void SaleBillForm_Load(object sender, EventArgs e)
+        {
+            statusForm(status);
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (status == "INFOR")
+            {
+                if (btnSave.Enabled == false)
+                {
+                    if (MessageBox.Show("Bạn có muốn trả lại sản phẩm này không?", "Messager",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        DeleteProduct(dgvList.CurrentRow.Cells[0].Value.ToString());
+                        DisplayList();
+                    }
+                }
+                else
+                {
+                    btnDelete.Text = "Trả hàng";
+                    btnUpdate.Enabled = true;
+                    btnPrint.Enabled = true;
+                    btnSave.Enabled = false;
+                    HideProductText();
+                }
+            }
+        }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {

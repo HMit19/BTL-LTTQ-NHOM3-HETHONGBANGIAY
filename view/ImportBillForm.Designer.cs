@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -129,26 +129,26 @@
             // 
             // dgvList
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvList.ColumnHeadersHeight = 25;
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvList.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvList.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvList.GridColor = System.Drawing.Color.White;
             this.dgvList.Location = new System.Drawing.Point(0, 43);
@@ -371,7 +371,7 @@
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(387, 66);
+            this.txtQuantity.Location = new System.Drawing.Point(387, 63);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(121, 20);
             this.txtQuantity.TabIndex = 32;
@@ -382,7 +382,7 @@
             // 
             this.cbbSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSize.FormattingEnabled = true;
-            this.cbbSize.Location = new System.Drawing.Point(387, 35);
+            this.cbbSize.Location = new System.Drawing.Point(387, 6);
             this.cbbSize.Name = "cbbSize";
             this.cbbSize.Size = new System.Drawing.Size(121, 21);
             this.cbbSize.TabIndex = 31;
@@ -392,7 +392,7 @@
             // 
             this.cbbColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbColor.FormattingEnabled = true;
-            this.cbbColor.Location = new System.Drawing.Point(387, 6);
+            this.cbbColor.Location = new System.Drawing.Point(387, 35);
             this.cbbColor.Name = "cbbColor";
             this.cbbColor.Size = new System.Drawing.Size(121, 21);
             this.cbbColor.TabIndex = 30;
@@ -403,7 +403,7 @@
             this.cbbProductName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbbProductName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbbProductName.FormattingEnabled = true;
-            this.cbbProductName.Location = new System.Drawing.Point(138, 66);
+            this.cbbProductName.Location = new System.Drawing.Point(140, 59);
             this.cbbProductName.Name = "cbbProductName";
             this.cbbProductName.Size = new System.Drawing.Size(126, 21);
             this.cbbProductName.TabIndex = 29;
@@ -423,119 +423,119 @@
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.Location = new System.Drawing.Point(387, 64);
+            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity.Location = new System.Drawing.Point(390, 64);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(91, 20);
+            this.lblQuantity.Size = new System.Drawing.Size(81, 16);
             this.lblQuantity.TabIndex = 27;
             this.lblQuantity.Text = "dd-MM-yyyy";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(296, 64);
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(312, 64);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(85, 20);
+            this.label19.Size = new System.Drawing.Size(72, 16);
             this.label19.TabIndex = 26;
             this.label19.Text = "Số lượng:";
             // 
             // lblColor
             // 
             this.lblColor.AutoSize = true;
-            this.lblColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblColor.Location = new System.Drawing.Point(383, 3);
+            this.lblColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColor.Location = new System.Drawing.Point(384, 7);
             this.lblColor.Name = "lblColor";
-            this.lblColor.Size = new System.Drawing.Size(91, 20);
+            this.lblColor.Size = new System.Drawing.Size(81, 16);
             this.lblColor.TabIndex = 25;
             this.lblColor.Text = "dd-MM-yyyy";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(296, 3);
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(312, 6);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(81, 20);
+            this.label17.Size = new System.Drawing.Size(69, 16);
             this.label17.TabIndex = 24;
             this.label17.Text = "Màu sắc:";
             // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(401, 97);
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(401, 94);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(91, 20);
+            this.lblPrice.Size = new System.Drawing.Size(81, 16);
             this.lblPrice.TabIndex = 23;
             this.lblPrice.Text = "dd-MM-yyyy";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(296, 97);
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(312, 94);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(99, 20);
+            this.label15.Size = new System.Drawing.Size(83, 16);
             this.label15.TabIndex = 22;
             this.label15.Text = "Thành tiền:";
             // 
             // lblSize
             // 
             this.lblSize.AutoSize = true;
-            this.lblSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSize.Location = new System.Drawing.Point(374, 33);
+            this.lblSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSize.Location = new System.Drawing.Point(379, 35);
             this.lblSize.Name = "lblSize";
-            this.lblSize.Size = new System.Drawing.Size(91, 20);
+            this.lblSize.Size = new System.Drawing.Size(81, 16);
             this.lblSize.TabIndex = 21;
             this.lblSize.Text = "dd-MM-yyyy";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(296, 33);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(312, 35);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(72, 20);
+            this.label13.Size = new System.Drawing.Size(61, 16);
             this.label13.TabIndex = 20;
             this.label13.Text = "Kích cỡ:";
             // 
             // lblProductName
             // 
-            this.lblProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductName.Location = new System.Drawing.Point(142, 64);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(122, 53);
+            this.lblProductName.Size = new System.Drawing.Size(149, 53);
             this.lblProductName.TabIndex = 19;
             this.lblProductName.Text = "adhslashdlkahsdlhasjkldhas";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(9, 64);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(25, 64);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(127, 20);
+            this.label11.Size = new System.Drawing.Size(109, 16);
             this.label11.TabIndex = 18;
             this.label11.Text = "Tên sản phẩm:";
             // 
             // lblProductCode
             // 
             this.lblProductCode.AutoSize = true;
-            this.lblProductCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductCode.Location = new System.Drawing.Point(134, 3);
             this.lblProductCode.Name = "lblProductCode";
-            this.lblProductCode.Size = new System.Drawing.Size(91, 20);
+            this.lblProductCode.Size = new System.Drawing.Size(81, 16);
             this.lblProductCode.TabIndex = 17;
             this.lblProductCode.Text = "dd-MM-yyyy";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(9, 3);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(25, 3);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 20);
+            this.label8.Size = new System.Drawing.Size(103, 16);
             this.label8.TabIndex = 16;
             this.label8.Text = "Mã sản phẩm:";
             // 
@@ -573,7 +573,7 @@
             // 
             this.cbbProviderName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbProviderName.FormattingEnabled = true;
-            this.cbbProviderName.Location = new System.Drawing.Point(231, 96);
+            this.cbbProviderName.Location = new System.Drawing.Point(188, 92);
             this.cbbProviderName.Name = "cbbProviderName";
             this.cbbProviderName.Size = new System.Drawing.Size(197, 21);
             this.cbbProviderName.TabIndex = 15;
@@ -582,7 +582,7 @@
             // 
             this.cbbProviderCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbProviderCode.FormattingEnabled = true;
-            this.cbbProviderCode.Location = new System.Drawing.Point(231, 69);
+            this.cbbProviderCode.Location = new System.Drawing.Point(188, 65);
             this.cbbProviderCode.Name = "cbbProviderCode";
             this.cbbProviderCode.Size = new System.Drawing.Size(197, 21);
             this.cbbProviderCode.TabIndex = 14;
@@ -590,7 +590,7 @@
             // dtpTime
             // 
             this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTime.Location = new System.Drawing.Point(231, 41);
+            this.dtpTime.Location = new System.Drawing.Point(188, 37);
             this.dtpTime.Name = "dtpTime";
             this.dtpTime.Size = new System.Drawing.Size(197, 20);
             this.dtpTime.TabIndex = 13;
@@ -599,7 +599,7 @@
             // 
             this.cbbEmployeeCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbEmployeeCode.FormattingEnabled = true;
-            this.cbbEmployeeCode.Location = new System.Drawing.Point(231, 14);
+            this.cbbEmployeeCode.Location = new System.Drawing.Point(188, 10);
             this.cbbEmployeeCode.Name = "cbbEmployeeCode";
             this.cbbEmployeeCode.Size = new System.Drawing.Size(197, 21);
             this.cbbEmployeeCode.TabIndex = 12;
@@ -607,80 +607,80 @@
             // lblEmployeeCode
             // 
             this.lblEmployeeCode.AutoSize = true;
-            this.lblEmployeeCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmployeeCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmployeeCode.Location = new System.Drawing.Point(134, 12);
             this.lblEmployeeCode.Name = "lblEmployeeCode";
-            this.lblEmployeeCode.Size = new System.Drawing.Size(91, 20);
+            this.lblEmployeeCode.Size = new System.Drawing.Size(81, 16);
             this.lblEmployeeCode.TabIndex = 11;
             this.lblEmployeeCode.Text = "dd-MM-yyyy";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(43, 12);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(48, 12);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 20);
+            this.label9.Size = new System.Drawing.Size(80, 16);
             this.label9.TabIndex = 10;
             this.label9.Text = "Nhân viên:";
             // 
             // lblProviderCode
             // 
             this.lblProviderCode.AutoSize = true;
-            this.lblProviderCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProviderCode.Location = new System.Drawing.Point(200, 70);
+            this.lblProviderCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProviderCode.Location = new System.Drawing.Point(185, 70);
             this.lblProviderCode.Name = "lblProviderCode";
-            this.lblProviderCode.Size = new System.Drawing.Size(91, 20);
+            this.lblProviderCode.Size = new System.Drawing.Size(81, 16);
             this.lblProviderCode.TabIndex = 9;
             this.lblProviderCode.Text = "dd-MM-yyyy";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(43, 70);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(48, 70);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(151, 20);
+            this.label7.Size = new System.Drawing.Size(128, 16);
             this.label7.TabIndex = 8;
             this.label7.Text = "Mã nhà cung cấp:";
             // 
             // lblProviderName
             // 
             this.lblProviderName.AutoSize = true;
-            this.lblProviderName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProviderName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProviderName.Location = new System.Drawing.Point(173, 97);
             this.lblProviderName.Name = "lblProviderName";
-            this.lblProviderName.Size = new System.Drawing.Size(91, 20);
+            this.lblProviderName.Size = new System.Drawing.Size(81, 16);
             this.lblProviderName.TabIndex = 7;
             this.lblProviderName.Text = "dd-MM-yyyy";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(43, 97);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(48, 97);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 20);
+            this.label5.Size = new System.Drawing.Size(106, 16);
             this.label5.TabIndex = 6;
             this.label5.Text = "Nhà cung cấp:";
             // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.Location = new System.Drawing.Point(134, 41);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(91, 20);
+            this.lblDate.Size = new System.Drawing.Size(81, 16);
             this.lblDate.TabIndex = 5;
             this.lblDate.Text = "dd-MM-yyyy";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 41);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(48, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 20);
+            this.label2.Size = new System.Drawing.Size(74, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Ngày tạo:";
             // 

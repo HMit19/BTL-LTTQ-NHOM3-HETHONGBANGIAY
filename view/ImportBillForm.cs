@@ -70,7 +70,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
             lblColor.Text = product.Rows[0][2].ToString();
             lblSize.Text = product.Rows[0][3].ToString();
             lblQuantity.Text = product.Rows[0][4].ToString();
-            lblPrice.Text = (Convert.ToDouble(product.Rows[0][5].ToString()) * int.Parse(lblQuantity.Text)).ToString() ;
+            lblPrice.Text = (Convert.ToDouble(product.Rows[0][5].ToString()) * int.Parse(lblQuantity.Text)).ToString("#,###") ;
 
         }
         //Display panel product when delete all
@@ -107,7 +107,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
             {
                 totalPrice += int.Parse(total.Rows[i][0].ToString()) * Convert.ToDouble(total.Rows[i][1].ToString()) ;
             }
-            lblTotal.Text = totalPrice.ToString(); 
+            lblTotal.Text = totalPrice.ToString("#,###"); 
         }
         //Form load....
         private void ImportBillForm_Load(object sender, EventArgs e)
@@ -185,52 +185,26 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
             dataBase.FillComboBox(cbbProviderCode, provider, "ProviderCode", "ProviderCode");
             dataBase.FillComboBox(cbbProviderName, provider, "Name", "Name");
         }
-        //cell click dataGridView event...
-        private void dgvList_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (btnSave.Visible == false && dgvList.Rows.Count > 0)
-                DisplayProduct(dgvList.CurrentRow.Cells[0].Value.ToString());
-        }
-
         //function delete product
         void DeleteProduct(string deProductCode)
         {
             string quantity = "";
             DataTable Bill = dataBase.ReadData("select Quantity from tDetailImportBill where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
             quantity = Bill.Rows[0][0].ToString();
-            dataBase.UpdateData("update tDetailProduct set Quantity = Quantity - " + quantity + " where DetailProductCode = N'"+deProductCode+"'");
-            dataBase.UpdateData("delete from tDetailImportBill where DetailProductCode = N'"+deProductCode+"' and CodeBill = N'"+codeBill+"'");
+            dataBase.UpdateData("update tDetailProduct set Quantity = Quantity - " + quantity + " where DetailProductCode = N'" + deProductCode + "'");
+            dataBase.UpdateData("delete from tDetailImportBill where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
         }
-        //Delete...
-        private void btnDelete_Click(object sender, EventArgs e)
+        //Hien thi gia san pham...
+        void ImpPrice()
         {
-            if (status == "INFOR")
-            {
-                if (btnSave.Visible == false)
-                {
-                    if (MessageBox.Show("Bạn có muốn trả lại sản phẩm này không?", "Messager",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        DeleteProduct(dgvList.CurrentRow.Cells[0].Value.ToString());
-                        DisplayList();
-                    }
-                }
-                else
-                {
-                    btnDelete.Text = "  Xóa";
-                    btnEdit.Enabled = true;
-                    btnPrint.Enabled = true;
-                    btnCreate.Visible = true;
-                    btnCreate.Enabled = true;
-                    btnSave.Visible = false;
-                    HideProductText();
-                }
-            }
-            if (status == "EDIT")
-            {
-                this.Close();
-            }
-            
+            DataTable price = dataBase.ReadData("select ImportPrice from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode where sp.ProductCode = N'" + cbbProductCode.Text + "' and Color = N'" + cbbColor.Text + "' and Size =N'" + cbbSize.Text + "'");
+            lblPrice.Text = (Convert.ToDouble(price.Rows[0][0].ToString()) * int.Parse(txtQuantity.Text)).ToString("#,###");
+        }
+        //cell click dataGridView event...
+        private void dgvList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (btnSave.Visible == false && dgvList.Rows.Count > 0)
+                DisplayProduct(dgvList.CurrentRow.Cells[0].Value.ToString());
         }
         //cell double click...
         private void dgvList_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -244,26 +218,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
                     DisplayList();
                 }
             }    
-        }
-        //BtnCreate...
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-            btnCreate.Visible = false;
-            btnSave.Visible = true;
-            btnEdit.Enabled = false;
-            btnPrint.Enabled = false;
-            btnDelete.Text = "Hủy bỏ";
-            HideProductText(false);
-            DataTable Product = dataBase.ReadData("select ProductCode, NameProduct from tProduct");
-            dataBase.FillComboBox(cbbProductCode,Product,"ProductCode", "ProductCode");
-            dataBase.FillComboBox(cbbProductName, Product, "NameProduct", "NameProduct");
-            txtQuantity.Text = "";
-        }
-        //Hien thi gia san pham...
-        void ImpPrice()
-        {
-            DataTable price = dataBase.ReadData("select ImportPrice from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode where sp.ProductCode = N'"+cbbProductCode.Text+"' and Color = N'"+cbbColor.Text+"' and Size =N'"+cbbSize.Text+"'");
-            lblPrice.Text = (Convert.ToDouble(price.Rows[0][0].ToString()) * int.Parse(txtQuantity.Text)).ToString();
         }
         //Chon san pham
         private void cbbProductCode_SelectedIndexChanged(object sender, EventArgs e)
@@ -297,6 +251,51 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
                 MessageBox.Show("Bạn phải nhập số lượng");
             else
                 ImpPrice();
+        }
+        //Delete...
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (status == "INFOR")
+            {
+                if (btnSave.Visible == false)
+                {
+                    if (MessageBox.Show("Bạn có muốn trả lại sản phẩm này không?", "Messager",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        DeleteProduct(dgvList.CurrentRow.Cells[0].Value.ToString());
+                        DisplayList();
+                    }
+                }
+                else
+                {
+                    btnDelete.Text = "  Xóa";
+                    btnEdit.Enabled = true;
+                    btnPrint.Enabled = true;
+                    btnCreate.Visible = true;
+                    btnCreate.Enabled = true;
+                    btnSave.Visible = false;
+                    HideProductText();
+                }
+            }
+            if (status == "EDIT")
+            {
+                this.Close();
+            }
+
+        }
+        //BtnCreate...
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            btnCreate.Visible = false;
+            btnSave.Visible = true;
+            btnEdit.Enabled = false;
+            btnPrint.Enabled = false;
+            btnDelete.Text = "Hủy bỏ";
+            HideProductText(false);
+            DataTable Product = dataBase.ReadData("select ProductCode, NameProduct from tProduct");
+            dataBase.FillComboBox(cbbProductCode, Product, "ProductCode", "ProductCode");
+            dataBase.FillComboBox(cbbProductName, Product, "NameProduct", "NameProduct");
+            txtQuantity.Text = "";
         }
         //Chuc nang luu cho nut edit va create
         private void btnSave_Click(object sender, EventArgs e)
