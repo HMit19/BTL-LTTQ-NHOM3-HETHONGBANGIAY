@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlTitle = new System.Windows.Forms.Panel();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.grpSearch = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -50,7 +51,6 @@
             this.cboStatus = new System.Windows.Forms.ComboBox();
             this.cbEmployeeCode = new System.Windows.Forms.ComboBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.lblUserName = new System.Windows.Forms.Label();
             this.pnlTitle.SuspendLayout();
             this.grpSearch.SuspendLayout();
             this.grpList.SuspendLayout();
@@ -70,6 +70,16 @@
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(1813, 100);
             this.pnlTitle.TabIndex = 1;
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.ForeColor = System.Drawing.Color.White;
+            this.lblUserName.Location = new System.Drawing.Point(673, 31);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(44, 16);
+            this.lblUserName.TabIndex = 4;
+            this.lblUserName.Text = "label4";
             // 
             // iconButton2
             // 
@@ -127,11 +137,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(267, 71);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 28);
+            this.label3.Size = new System.Drawing.Size(65, 23);
             this.label3.TabIndex = 7;
             this.label3.Text = "Tên NV";
             // 
@@ -139,11 +149,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(77, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 28);
+            this.label2.Size = new System.Drawing.Size(63, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "Mã NV";
             // 
@@ -404,16 +414,6 @@
             this.txtName.Size = new System.Drawing.Size(299, 34);
             this.txtName.TabIndex = 0;
             this.txtName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.ForeColor = System.Drawing.Color.White;
-            this.lblUserName.Location = new System.Drawing.Point(673, 31);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(44, 16);
-            this.lblUserName.TabIndex = 4;
-            this.lblUserName.Text = "label4";
             // 
             // EmployeeControl
             // 

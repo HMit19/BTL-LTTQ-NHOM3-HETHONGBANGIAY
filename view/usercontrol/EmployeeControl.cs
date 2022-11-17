@@ -65,6 +65,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 
         private void EmployeeControl_Load(object sender, EventArgs e)
         {
+            
             loadData();
             dgvListEmployee.Columns[0].HeaderText = "Mã NV";
             dgvListEmployee.Columns[1].HeaderText = "Tên NV";
@@ -94,6 +95,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 
         private void btnReload_Click(object sender, EventArgs e)
         {
+            DataTable dtNV = data.ReadData("Select EmployeeCode, Name, ID, Gender, DOB, Address, PhoneNumber, Status from tEmployee where EmployeeCode='" + cbEmployeeCode.SelectedValue + "'");
             loadData();
             ResetValue();
             EmployeeControl_Load(sender, e);

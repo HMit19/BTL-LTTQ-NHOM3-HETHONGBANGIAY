@@ -44,7 +44,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
         }
         private void EmployeeInfor_Load(object sender, EventArgs e)
         {
-
+            loadData();
         }
         void loadData()
         {

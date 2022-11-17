@@ -111,7 +111,7 @@
             this.btnExcel.IconSize = 30;
             this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcel.Location = new System.Drawing.Point(1633, 55);
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(165, 44);
             this.btnExcel.TabIndex = 16;
@@ -284,11 +284,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(656, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 28);
+            this.label2.Size = new System.Drawing.Size(76, 23);
             this.label2.TabIndex = 3;
             this.label2.Text = "Tên NCC";
             // 
@@ -296,11 +296,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(59, 142);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 28);
+            this.label1.Size = new System.Drawing.Size(65, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Địa Chỉ";
             // 
@@ -308,11 +308,11 @@
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
             this.label17.Location = new System.Drawing.Point(59, 74);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(83, 28);
+            this.label17.Size = new System.Drawing.Size(74, 23);
             this.label17.TabIndex = 1;
             this.label17.Text = "Mã NCC";
             // 
@@ -365,7 +365,7 @@
             this.dgvListProvider.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvListProvider.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvListProvider.Location = new System.Drawing.Point(-3, 39);
-            this.dgvListProvider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvListProvider.Margin = new System.Windows.Forms.Padding(4);
             this.dgvListProvider.Name = "dgvListProvider";
             this.dgvListProvider.ReadOnly = true;
             this.dgvListProvider.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;

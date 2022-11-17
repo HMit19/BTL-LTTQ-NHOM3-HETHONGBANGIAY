@@ -28,6 +28,18 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
             }
             return BytePass;
         }
+        public static string RandomCode(string rd)
+        {
+            int a = 13, b = 10;
+            Random random = new Random();
+            for(int i=1; i <= a; i++)
+            {
+                 rd+=Convert.ToString(random.Next(b));
+            }
+            
+            
+                return rd;
+        }
         public EmployeeAddNew()
         {
             InitializeComponent();
@@ -48,8 +60,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
         
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
 
+            
             DateTime dtdob;
 
             if (txtName.Text.Trim() == "")
@@ -80,7 +92,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
                 return;
             }
             else errChiTiet.Clear();
-            if (txtEmployeeCode.Text.Trim() == "")
+            /*if (txtEmployeeCode.Text.Trim() == "")
             {
                 errChiTiet.SetError(txtEmployeeCode, "Bạn không được để trống Ma NV!");
                 return;
@@ -95,11 +107,19 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
                     return;
                 }
                 errChiTiet.Clear();
-            }
+            }*/
             dtdob = Convert.ToDateTime(dtpDOB.Value.ToLongDateString());
             try
             {
-
+                string sqlusn = "select * from tLogin where UserName ='" + txtAccount.Text + "'";
+                DataTable dtLG = data.ReadData(sqlusn);
+                if (dtLG.Rows.Count > 0)
+                {
+                    errChiTiet.SetError(txtAccount, "UserName trùng trong cơ sở dữ liệu");
+                    txtAccount.Focus();
+                    return;
+                }
+                else errChiTiet.Clear();
                 string passHash = GetHash(txtPassWord.Text.ToString());
                 passHash = passHash.Substring(0, 15);
                 string sqlacc = "INSERT INTO tLogin (UserName, PassWord) VALUES ('" + txtAccount.Text + "','" + passHash + "')";
@@ -141,6 +161,18 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
         private void btnReload_Click(object sender, EventArgs e)
         {
             ResetValue();
+        }
+
+        private void EmployeeAddNew_Load(object sender, EventArgs e)
+        {
+            
+            txtEmployeeCode.Text ="NV"+ RandomCode(txtEmployeeCode.Text.ToString());
+            string sqlselect = "Select * from tEmployee where EmployeeCode = '" + txtEmployeeCode.Text + "'";
+            DataTable dtNV = data.ReadData(sqlselect);
+            if (dtNV.Rows.Count > 0)
+            {
+                RandomCode(txtEmployeeCode.Text.ToString());
+            }
         }
     }
 }
