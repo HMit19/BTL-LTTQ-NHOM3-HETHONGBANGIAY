@@ -8,6 +8,7 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 {
@@ -161,6 +162,67 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             MessageBox.Show("Thêm mới thành công");
             loadData();
             ResetValue();
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            Excel.Application exApp = new Excel.Application();
+            Excel.Workbook exBook = exApp.Workbooks.Add(Excel.XlWBATemplate.xlWBATWorksheet);
+            Excel.Worksheet exSheet = (Excel.Worksheet)exBook.Worksheets[1];
+
+            Excel.Range shopName = (Excel.Range)exSheet.Cells[1, 1];
+            shopName.Font.Size = 20;
+            shopName.Font.Bold = true;
+            shopName.Value = "CỬA HÀNG GIÀY SMART MEN";
+
+            Excel.Range shopAddress = (Excel.Range)exSheet.Cells[2, 1];
+            shopAddress.Font.Size = 14;
+            shopAddress.Font.Bold = true;
+            shopAddress.Value = "31 P. Quan Hoa, Quan Hoa, Cầu Giấy, Hà Nội, Việt Nam";
+
+            Excel.Range header = (Excel.Range)exSheet.Cells[4, 2];
+            exSheet.get_Range("B4:D4").Merge(true);
+            header.Font.Size = 14;
+            header.Font.Bold = true;
+            header.Font.Color = System.Drawing.Color.Red;
+            header.Value = "DANH SÁCH NHÀ CUNG CẤP";
+            exSheet.get_Range("B4:D4").HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+
+            exSheet.get_Range("B6:D6").Font.Bold = true;
+            exSheet.get_Range("B6:D6").HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+            exSheet.get_Range("B6").ColumnWidth = 17;
+            exSheet.get_Range("C6").ColumnWidth = 30;
+            exSheet.get_Range("D6").ColumnWidth = 15;
+            
+            exSheet.get_Range("B6").Value = "Mã Nhà Cung Cấp";
+            exSheet.get_Range("C6").Value = "Tên Nhà Cung Cấp";
+            exSheet.get_Range("D6").Value = "Địa Chỉ ";
+            
+
+            DataTable dataEx = data.ReadData("select * from  tProvider ");
+            for (int i = 0; i < dataEx.Rows.Count; i++)
+            {
+                exSheet.get_Range("B" + (i + 7).ToString() + ":D" + (i + 7).ToString()).Font.Bold = false;
+                exSheet.get_Range("B" + (i + 7).ToString()).Value = dataEx.Rows[i][0].ToString();
+                exSheet.get_Range("C" + (i + 7).ToString()).Value = dataEx.Rows[i][1].ToString();
+                exSheet.get_Range("D" + (i + 7).ToString()).Value = dataEx.Rows[i][2].ToString();
+                
+            }
+            exSheet.Name = "Danh Sách Nhà Cung Cấp";
+            exBook.Activate();
+
+            dlgSave.Filter = "Excel Document(*.xlsx)|*.xlsx |All files(*.*)|*.*";
+            dlgSave.FilterIndex = 1;
+            dlgSave.AddExtension = true;
+            dlgSave.DefaultExt = ".xlsx";
+            if (dlgSave.ShowDialog() == DialogResult.OK)
+            {
+                exBook.SaveAs(dlgSave.FileName.ToString());
+                dlgSave.Reset();
+                MessageBox.Show("Xuất dữ liệu ra Excel thành công!");
+            }
+            exApp.Quit();
         }
     }
 }

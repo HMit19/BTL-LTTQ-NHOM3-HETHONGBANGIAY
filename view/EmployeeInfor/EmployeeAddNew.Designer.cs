@@ -223,7 +223,7 @@
             this.cboGender.Location = new System.Drawing.Point(161, 83);
             this.cboGender.Margin = new System.Windows.Forms.Padding(4);
             this.cboGender.Name = "cboGender";
-            this.cboGender.Size = new System.Drawing.Size(305, 28);
+            this.cboGender.Size = new System.Drawing.Size(374, 28);
             this.cboGender.TabIndex = 84;
             // 
             // txtPassWord
@@ -232,7 +232,7 @@
             this.txtPassWord.Location = new System.Drawing.Point(160, 492);
             this.txtPassWord.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassWord.Name = "txtPassWord";
-            this.txtPassWord.Size = new System.Drawing.Size(307, 26);
+            this.txtPassWord.Size = new System.Drawing.Size(375, 26);
             this.txtPassWord.TabIndex = 83;
             // 
             // txtAccount
@@ -241,7 +241,7 @@
             this.txtAccount.Location = new System.Drawing.Point(160, 421);
             this.txtAccount.Margin = new System.Windows.Forms.Padding(4);
             this.txtAccount.Name = "txtAccount";
-            this.txtAccount.Size = new System.Drawing.Size(307, 26);
+            this.txtAccount.Size = new System.Drawing.Size(375, 26);
             this.txtAccount.TabIndex = 82;
             // 
             // txtID
@@ -250,7 +250,7 @@
             this.txtID.Location = new System.Drawing.Point(160, 354);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(307, 26);
+            this.txtID.Size = new System.Drawing.Size(375, 26);
             this.txtID.TabIndex = 79;
             // 
             // txtAddress
@@ -259,7 +259,7 @@
             this.txtAddress.Location = new System.Drawing.Point(160, 291);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(307, 26);
+            this.txtAddress.Size = new System.Drawing.Size(375, 26);
             this.txtAddress.TabIndex = 78;
             // 
             // txtName
@@ -268,7 +268,7 @@
             this.txtName.Location = new System.Drawing.Point(163, 12);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(307, 26);
+            this.txtName.Size = new System.Drawing.Size(372, 26);
             this.txtName.TabIndex = 77;
             // 
             // txtPhoneNumber
@@ -277,7 +277,7 @@
             this.txtPhoneNumber.Location = new System.Drawing.Point(161, 220);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(307, 26);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(374, 26);
             this.txtPhoneNumber.TabIndex = 75;
             // 
             // label11
@@ -321,7 +321,7 @@
             this.dtpDOB.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpDOB.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(305, 30);
+            this.dtpDOB.Size = new System.Drawing.Size(374, 30);
             this.dtpDOB.TabIndex = 66;
             this.dtpDOB.Value = new System.DateTime(2022, 11, 8, 17, 17, 28, 113);
             // 
@@ -390,7 +390,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "EmployeeAddNew";
-            this.Text = "EmployeeAddNew";
+            this.Text = "Thêm Mới Nhân Viên";
             this.Load += new System.EventHandler(this.EmployeeAddNew_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
