@@ -200,7 +200,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnSellSunday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSellSunday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSellSunday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSellSunday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
+            this.btnSellSunday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
             this.btnSellSunday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSellSunday.ForeColor = System.Drawing.Color.White;
             this.btnSellSunday.Location = new System.Drawing.Point(480, 232);
@@ -224,6 +224,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnSellSaturday.Size = new System.Drawing.Size(25, 10);
             this.btnSellSaturday.TabIndex = 5;
             this.btnSellSaturday.Text = "guna2Button5";
+            this.btnSellSaturday.Visible = false;
             // 
             // btnSellFriday
             // 
@@ -280,7 +281,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnSellTuesday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSellTuesday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSellTuesday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSellTuesday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
+            this.btnSellTuesday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
             this.btnSellTuesday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSellTuesday.ForeColor = System.Drawing.Color.White;
             this.btnSellTuesday.Location = new System.Drawing.Point(129, 232);

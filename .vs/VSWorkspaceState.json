@@ -3,11 +3,13 @@
     "",
     "\\Content",
     "\\controller",
+    "\\DAO",
+    "\\DAO\\connect",
     "\\view",
     "\\view\\Manager",
     "\\view\\usercontrol",
     "\\view\\usercontrol\\item"
   ],
-  "SelectedNode": "\\view\\usercontrol\\HomeControl.cs",
+  "SelectedNode": "\\DAO\\connect\\AcessData.cs",
   "PreviewInSolutionExplorer": false
 }
