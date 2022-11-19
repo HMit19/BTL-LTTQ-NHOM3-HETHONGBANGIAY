@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.Content
 {
-    public class Home
+    public class HomeController
     {
         string strConnect =
           "Data Source=DESKTOP-89QSK5E;" +
           "Initial Catalog=QLCHBanGiay;" +
           "Integrated Security=SSPI;";
         SqlConnection sqlConnect = null;
-        public void OpenConnect()
+        public void openConnect()
         {
             sqlConnect = new SqlConnection(strConnect);
             if (sqlConnect.State != ConnectionState.Open)
@@ -23,7 +23,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.Content
                 sqlConnect.Open();
             }
         }
-        public void CloseConnect()
+        public void closeConnect()
         {
             if (sqlConnect.State != ConnectionState.Closed)
             {
@@ -32,80 +32,80 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.Content
             }
         }
 
-        public string TotalQuantity()
+        public string totalQuantity()
         {
             string sql = " Select Sum ( Quantity ) from dbo.tDetailProduct ";
-            OpenConnect();
+            openConnect();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sqlConnect;
             cmd.CommandText = sql;
             object result = cmd.ExecuteScalar();
-            CloseConnect();
+            closeConnect();
             string res = Convert.ToString(result) + " (Sản phẩm) ";
             return res;
         }
-       public string SellQuantity()
+       public string sellQuantity()
         {
             string sql = " select sum(Quantity) from dbo.tDetailBillOfSale ";
-            OpenConnect();
+            openConnect();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sqlConnect;
             cmd.CommandText = sql;
             object result = cmd.ExecuteScalar();
-            CloseConnect();
+            closeConnect();
             string res = Convert.ToString(result) + " (Sản phẩm) ";
             return res;
 
         }
-        public string TotaSum()
+        public string totaSum()
         {
             string sql = " select sum(a.Quantity* b.Price) from dbo.tDetailBillOfSale a join dbo.tDetailProduct b on a.DetailProductCode= b.DetailProductCode ";
-            OpenConnect();
+            openConnect();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sqlConnect;
             cmd.CommandText = sql;
             object result = cmd.ExecuteScalar();
-            CloseConnect();
+            closeConnect();
             string res = Convert.ToString(result) + " (VND) ";
             return res;
         }
-        public string TotalCustomer()
+        public string totalCustomer()
         {
             string sql = " select count(CustomerCode) from dbo.tCustomer ";
-            OpenConnect();
+            openConnect();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sqlConnect;
             cmd.CommandText = sql;
             object result = cmd.ExecuteScalar();
-            CloseConnect();
+            closeConnect();
             string res = Convert.ToString(result) + " (Khách) ";
             return res;
         }
-        public string DailyTotalCustomer()
+        public string dailyTotalCustomer()
         {
             DateTime d= DateTime.Now;
             string day = d.ToString("yyyy-MM-dd");
             string sql = " select count(CodeBill) from dbo.tBillOfSale where DateSale = '"+day+"' ";
-            OpenConnect();
+            openConnect();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sqlConnect;
             cmd.CommandText = sql;
             object result = cmd.ExecuteScalar();
-            CloseConnect();
+            closeConnect();
             string res = Convert.ToString(result) + " (Đơn) ";
             return res;
         }
-        public string DailyTotalIncome()
+        public string dailyTotalIncome()
         {
             DateTime d = DateTime.Now;
             string day = d.ToString("yyyy-MM-dd");
             string sql = " select sum(a.Quantity* b.Price) from dbo.tDetailBillOfSale a join dbo.tDetailProduct b on a.DetailProductCode= b.DetailProductCode\r\njoin dbo.tBillOfSale c on a.CodeBill=c.CodeBill\r\nwhere c.DateSale= '"+day+"' ";
-            OpenConnect();
+            openConnect();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sqlConnect;
             cmd.CommandText = sql;
             object result = cmd.ExecuteScalar();
-            CloseConnect();
+            closeConnect();
             string sum = Convert.ToString(result);
             string res;
             if (sum == "")

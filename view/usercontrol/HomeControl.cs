@@ -17,13 +17,13 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 {
     public partial class HomeControl : UserControl
     {
-        Content.Home control = new Content.Home();
+        Content.HomeController control = new Content.HomeController();
         string strConnect =
           "Data Source=DESKTOP-89QSK5E;" +
           "Initial Catalog=QLCHBanGiay;" +
           "Integrated Security=SSPI;";
         SqlConnection sqlConnect = null;
-        public void OpenConnect()
+        public void openConnect()
         {
             sqlConnect = new SqlConnection(strConnect);
             if (sqlConnect.State != ConnectionState.Open)
@@ -31,7 +31,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 sqlConnect.Open();
             }
         }
-        public void CloseConnect()
+        public void closeConnect()
         {
             if (sqlConnect.State != ConnectionState.Closed)
             {
@@ -44,15 +44,15 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         {
             InitializeComponent();
         }
-        private void AddUserControl()
+        private void addUserControl()
         {
             
             string sql = " select distinct top 5 a.Quantity* b.Price as DoanhThu, c.NameProduct,b.Size,b.Color,c.Image from dbo.tDetailBillOfSale a join dbo.tDetailProduct b on a.DetailProductCode= b.DetailProductCode\r\njoin dbo.tProduct c on b.ProductCode =c.ProductCode ";
             DataTable dt = new DataTable("BestSelled");
-            OpenConnect();
+            openConnect();
             SqlDataAdapter sqlData = new SqlDataAdapter(sql, sqlConnect);
             sqlData.Fill(dt);
-            CloseConnect();
+            closeConnect();
             string[] name = new string[10];
             string[] pic = new string[10];
             for (int i = 0; i < dt.Rows.Count; i++)
@@ -67,31 +67,31 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 fpnlTopProduct.Controls.Add(it);
             }
         }
-        private int Today()
+        private int getRevenueToday()
         {
             DateTime d = DateTime.Now;
             string d1 = Convert.ToString(d.DayOfWeek);
             string day = d.ToString("yyyy-MM-dd");
             string sql = " select sum(a.Quantity* b.Price) from dbo.tDetailBillOfSale a join dbo.tDetailProduct b on a.DetailProductCode= b.DetailProductCode\r\njoin dbo.tBillOfSale c on a.CodeBill=c.CodeBill\r\nwhere c.DateSale= '" + day + "' ";
-            OpenConnect();
+            openConnect();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sqlConnect;
             cmd.CommandText = sql;
             object result = cmd.ExecuteScalar();
-            CloseConnect();
+            closeConnect();
             int sum = int.Parse(result.ToString());
             return sum;
         }
-        private void Monday()
+        private void getRevenueMonday()
         {
-            int sum = Today();
+            int sum =  getRevenueToday();
             int a = sum / 500000;
             string sun;
             int total;
             DateTime d = DateTime.Now;
             sun = d.AddDays(-1).ToString("yyyy-MM-dd");
             string sql1 = " select sum(a.Quantity* b.Price) from dbo.tDetailBillOfSale a join dbo.tDetailProduct b on a.DetailProductCode= b.DetailProductCode\r\njoin dbo.tBillOfSale c on a.CodeBill=c.CodeBill\r\nwhere c.DateSale= '" + sun + "' ";
-            OpenConnect();
+            openConnect();
             SqlCommand cmd1 = new SqlCommand();
             cmd1.Connection = sqlConnect;
             cmd1.CommandText = sql1;
@@ -105,21 +105,21 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             {
                 btnSellMonday.BackColor = Color.FromArgb(232, 81, 16);
             }
-            CloseConnect();
+            closeConnect();
             btnSellMonday.Visible = true;
             btnSellMonday.Size = new Size(btnSellMonday.Width, btnSellMonday.Height + a);
             btnSellMonday.Location = new Point(btnSellMonday.Location.X, btnSellMonday.Location.Y - a);
         }
-        private void Tuesday()
+        private void getRevenueTuesday()
         {
-            int sum = Today();
+            int sum =  getRevenueToday();
             int a = sum / 500000;
             string mon;
             int total;
             DateTime d = DateTime.Now;
             mon = d.AddDays(-1).ToString("yyyy-MM-dd");
             string sql = " select sum(a.Quantity* b.Price) from dbo.tDetailBillOfSale a join dbo.tDetailProduct b on a.DetailProductCode= b.DetailProductCode\r\njoin dbo.tBillOfSale c on a.CodeBill=c.CodeBill\r\nwhere c.DateSale= '" + mon + "' ";
-            OpenConnect();
+            openConnect();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sqlConnect;
             cmd.CommandText = sql;
@@ -138,16 +138,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             btnSellTuesday.Size = new Size(btnSellTuesday.Width, btnSellTuesday.Height + a);
             btnSellTuesday.Location = new Point(btnSellTuesday.Location.X, btnSellTuesday.Location.Y - a);
         }
-        private void Wedneday()
+        private void getRevenueWedneday()
         {
-            int sum = Today();
+            int sum =  getRevenueToday();
             int a = sum / 500000;
             string tue;
             int total;
             DateTime d = DateTime.Now;
             tue = d.AddDays(-1).ToString("yyyy-MM-dd");
             string sql = " select sum(a.Quantity* b.Price) from dbo.tDetailBillOfSale a join dbo.tDetailProduct b on a.DetailProductCode= b.DetailProductCode\r\njoin dbo.tBillOfSale c on a.CodeBill=c.CodeBill\r\nwhere c.DateSale= '" + tue + "' ";
-            OpenConnect();
+            openConnect();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sqlConnect;
             cmd.CommandText = sql;
@@ -167,16 +167,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             btnSellWednesday.Location = new Point(btnSellWednesday.Location.X, btnSellWednesday.Location.Y - a);
             btnSellWednesday.Size = new Size(btnSellWednesday.Width, btnSellWednesday.Height + a);
         }
-        private void Thursday()
+        private void getRevenueThursday()
         {
-            int sum = Today();
+            int sum =  getRevenueToday();
             int a = sum / 500000;
             string wed;
             int total;
             DateTime d = DateTime.Now;
             wed = d.AddDays(-1).ToString("yyyy-MM-dd");
             string sql = " select sum(a.Quantity* b.Price) from dbo.tDetailBillOfSale a join dbo.tDetailProduct b on a.DetailProductCode= b.DetailProductCode\r\njoin dbo.tBillOfSale c on a.CodeBill=c.CodeBill\r\nwhere c.DateSale= '" + wed + "' ";
-            OpenConnect();
+            openConnect();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sqlConnect;
             cmd.CommandText = sql;
@@ -197,17 +197,17 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             btnThursday.Size = new Size(btnThursday.Width, btnThursday.Height + a);
             btnThursday.Location = new Point(btnThursday.Location.X, btnThursday.Location.Y - a);
         }
-        private void Friday()
+        private void getRevenueFriday()
         {
 
-            int sum = Today();
+            int sum =  getRevenueToday();
             int a = sum / 500000;
             string thu;
             int total;
             DateTime d = DateTime.Now;
             thu = d.AddDays(-1).ToString("yyyy-MM-dd");
             string sql = " select sum(a.Quantity* b.Price) from dbo.tDetailBillOfSale a join dbo.tDetailProduct b on a.DetailProductCode= b.DetailProductCode\r\njoin dbo.tBillOfSale c on a.CodeBill=c.CodeBill\r\nwhere c.DateSale= '" + thu + "' ";
-            OpenConnect();
+            openConnect();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sqlConnect;
             cmd.CommandText = sql;
@@ -229,16 +229,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             btnSellFriday.Size = new Size(btnSellFriday.Width, btnSellFriday.Height + a);
             btnSellFriday.Location = new Point(btnSellFriday.Location.X, btnSellFriday.Location.Y - a);
         }
-        private void Saturday()
+        private void getRevenueSaturday()
         {
-            int sum = Today();
+            int sum =  getRevenueToday();
             int a = sum / 500000;
             string fri;
             int total;
             DateTime d = DateTime.Now;
             fri = d.AddDays(-1).ToString("yyyy-MM-dd");
             string sql = " select sum(a.Quantity* b.Price) from dbo.tDetailBillOfSale a join dbo.tDetailProduct b on a.DetailProductCode= b.DetailProductCode\r\njoin dbo.tBillOfSale c on a.CodeBill=c.CodeBill\r\nwhere c.DateSale= '" + fri + "' ";
-            OpenConnect();
+            openConnect();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sqlConnect;
             cmd.CommandText = sql;
@@ -261,16 +261,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             btnSellSaturday.Size = new Size(btnSellSaturday.Width, btnSellSaturday.Height + a);
             btnSellSaturday.Location = new Point(btnSellSaturday.Location.X, btnSellSaturday.Location.Y - a);
         }
-        private void Sunday()
+        private void getRevenueSunday()
         {
-            int sum = Today();
+            int sum =  getRevenueToday();
             int a = sum / 500000;
             string sat;
             int total;
             DateTime d = DateTime.Now;
             sat = d.AddDays(-1).ToString("yyyy-MM-dd");
             string sql = " select sum(a.Quantity* b.Price) from dbo.tDetailBillOfSale a join dbo.tDetailProduct b on a.DetailProductCode= b.DetailProductCode\r\njoin dbo.tBillOfSale c on a.CodeBill=c.CodeBill\r\nwhere c.DateSale= '" + sat + "' ";
-            OpenConnect();
+            openConnect();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sqlConnect;
             cmd.CommandText = sql;
@@ -294,7 +294,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             btnSellSunday.Size = new Size(btnSellSunday.Width, btnSellSunday.Height + a);
             btnSellSunday.Location = new Point(btnSellSunday.Location.X, btnSellSunday.Location.Y - a);
         }
-        public void Day()
+        public void getRevenueAllDay()
         {
             DateTime d = DateTime.Now;
             string d1 = Convert.ToString(d.DayOfWeek);
@@ -304,68 +304,66 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 
             if (d1 == "Monday")
             {
-                Monday();
+                getRevenueMonday();
             }
             else if (d1 == "Tuesday")
             {
-                Monday();
-                Tuesday();
+                getRevenueMonday();
+                getRevenueTuesday();
             }
             else if (d1 == "Wednesday")
             {
-                Monday();
-                Tuesday();
-                Wedneday();
+                getRevenueMonday();
+                getRevenueTuesday();
+                getRevenueWedneday();
             }
             else if (d1 == "Thursday")
             {
-                Monday();
-                Tuesday();
-                Wedneday();
-                Thursday();
+                getRevenueMonday();
+                getRevenueTuesday();
+                getRevenueWedneday();
+                getRevenueThursday();
             }
             else if (d1 == "Friday")
             {
-                Monday();
-                Tuesday();
-                Wedneday();
-                Thursday();
-                Friday();
+                getRevenueMonday();
+                getRevenueTuesday();
+                getRevenueWedneday();
+                getRevenueThursday();
+                getRevenueFriday();
             }
             else if (d1 == "Saturday")
             {
-                Monday();
-                Tuesday();
-                Wedneday();
-                Thursday();
-                Friday();
-                Saturday();
+                getRevenueMonday();
+                getRevenueTuesday();
+                getRevenueWedneday();
+                getRevenueThursday();
+                getRevenueFriday();
+                getRevenueSaturday();
             }
             else if(d1 == "Sunday")
             {
-                Monday();
-                Tuesday();
-                Wedneday();
-                Thursday();
-                Friday();
-                Saturday();
-                Sunday();
+                getRevenueMonday();
+                getRevenueTuesday();
+                getRevenueWedneday();
+                getRevenueThursday();
+                getRevenueFriday();
+                getRevenueSaturday();
+                getRevenueSunday();
             }
 
         }
 
         private void HomeControl_Load(object sender, EventArgs e)
         {
-            lblQuantityProduct.Text = control.TotalQuantity();
-            lblQuantityProductSelled.Text = control.SellQuantity();
-            lblSumTotal.Text = control.TotaSum();
-            lblQuantityCustomer.Text = control.TotalCustomer();
-            lblQuantityOrderOfDay.Text=control.DailyTotalCustomer();
-            lblRevenueOfDay.Text = control.DailyTotalIncome();
-            AddUserControl();
-            //btnSellSunday.Size = new Size(btnSellSunday.Width, btnSellSunday.Height + 10);
-            //btnSellSunday.Location = new Point(btnSellSunday.Location.X, btnSellSunday.Location.Y - 10);
-            Day();
+            lblQuantityProduct.Text = control.totalQuantity();
+            lblQuantityProductSelled.Text = control.sellQuantity();
+            lblSumTotal.Text = control.totaSum();
+            lblQuantityCustomer.Text = control.totalCustomer();
+            lblQuantityOrderOfDay.Text=control.dailyTotalCustomer();
+            lblRevenueOfDay.Text = control.dailyTotalIncome();
+            addUserControl();
+            getRevenueAllDay();
         }
 
  
