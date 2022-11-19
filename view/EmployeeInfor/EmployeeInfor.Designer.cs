@@ -692,7 +692,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "EmployeeInfor";
-            this.Text = "EmployeeInfor";
+            this.Text = "Chi Tiết Nhân Viên";
             this.Load += new System.EventHandler(this.EmployeeInfor_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
