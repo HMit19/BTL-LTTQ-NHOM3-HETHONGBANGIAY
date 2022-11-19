@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
@@ -25,7 +19,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         //Watermark for text box
         private void txtSearch_Enter(object sender, EventArgs e)
         {
-            if (txtSearch.Text == "Tìm kiếm hóa đơn theo...")
+            if (txtSearch.Text == "Tìm kiếm khách hàng theo...")
             {
                 txtSearch.Text = "";
                 txtSearch.ForeColor = SystemColors.ControlText;
@@ -36,7 +30,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         {
             if (txtSearch.Text.Length == 0)
             {
-                txtSearch.Text = "Tìm kiếm hóa đơn theo...";
+                txtSearch.Text = "Tìm kiếm khách hàng theo...";
                 txtSearch.ForeColor = SystemColors.GrayText;
             }
         }
@@ -44,24 +38,24 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         private void CustomerControl_Load(object sender, EventArgs e)
         {
             //textbox...
-            txtSearch.Text = "Tìm kiếm hóa đơn theo...";
+            txtSearch.Text = "Tìm kiếm khách hàng theo...";
             txtSearch.ForeColor = SystemColors.GrayText;
             //combobox..
             cbbType.SelectedIndex = 0;
             cbbFilter.SelectedIndex = 0;
             //data grid view...
-            dgvList.DataSource = dataBase.ReadData("select CustomerCode, Name from tCustomer");
+            dgvList.DataSource = dataBase.readData("select CustomerCode, Name from tCustomer");
             dgvList.Columns[0].HeaderText = "Mã khách hàng";
             dgvList.Columns[1].HeaderText = "Tên khách hàng";
             //panel InforCustomer...
-            PanelInfor("KH01");
+            panelInfor("KH01");
         }
         //Function to display information of customer
-        void PanelInfor(string customerCode)
+        void panelInfor(string customerCode)
         {
             if (btnCancel.Visible == true)
                 return;
-            DataTable data = dataBase.ReadData("select * from tCustomer where CustomerCode = N'"+ customerCode + "'");
+            DataTable data = dataBase.readData("select * from tCustomer where CustomerCode = N'"+ customerCode + "'");
             lblCode.Text = data.Rows[0][0].ToString();
             lblName.Text = data.Rows[0][1].ToString();
             lblPhone.Text = data.Rows[0][4].ToString();
@@ -72,18 +66,18 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             else
                 lblPoint.Text = data.Rows[0][5].ToString();
             lblBirth.Text = Convert.ToDateTime(data.Rows[0][6].ToString()).ToString("dd/MM/yyyy");
-            DataTable totalBill = dataBase.ReadData("select ctb.Quantity, sp.Price, isnull(0,hdb.Discount) from tBillOfSale hdb join tDetailBillOfSale ctb on hdb.CodeBill = ctb.CodeBill join tDetailProduct sp on ctb.DetailProductCode = sp.DetailProductCode where hdb.CustomerCode = N'" + customerCode + "'");
+            DataTable totalBill = dataBase.readData("select ctb.Quantity, sp.Price, isnull(0,hdb.Discount) from tBillOfSale hdb join tDetailBillOfSale ctb on hdb.CodeBill = ctb.CodeBill join tDetailProduct sp on ctb.DetailProductCode = sp.DetailProductCode where hdb.CustomerCode = N'" + customerCode + "'");
             double total = 0;
             for (int i = 0; i < totalBill.Rows.Count; i++)
             {
                 total += Convert.ToDouble(totalBill.Rows[i][0].ToString()) * Convert.ToDouble(totalBill.Rows[i][1].ToString()) - Convert.ToDouble(totalBill.Rows[0][2].ToString());
             }
             lblTotal.Text = total.ToString("#,###");
-            dgvBill.DataSource = dataBase.ReadData("Select CodeBill as 'Số Hóa Đơn', DateSale as 'Ngày bán', PaymentMethods as 'Thanh toán', Discount as 'Điểm' from tBillOfSale where CustomerCode = N'" + customerCode + "'");
+            dgvBill.DataSource = dataBase.readData("Select CodeBill as 'Số Hóa Đơn', DateSale as 'Ngày bán', PaymentMethods as 'Thanh toán', Discount as 'Điểm' from tBillOfSale where CustomerCode = N'" + customerCode + "'");
         }
 
         //Function to get value of combobox
-        string FilterOfCbb()
+        string filterOfCbb()
         {
             string filter ="";
             if (cbbType.SelectedIndex == 0)
@@ -102,8 +96,9 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             }
             return filter;
         }
+
         //Hide or display update textbox
-        void OnText(bool check = true)
+        void onText(bool check = true)
         {
             lblName.Visible = !check;
             lblPhone.Visible = !check;
@@ -116,22 +111,25 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             cbbGender.Visible = check;
             dtpBirth.Visible = check;
         }
+
         //DataGridView of customer's list
         private void dgvList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string currentCell = dgvList.CurrentRow.Cells[0].Value.ToString();
             if (currentCell == "")
-                PanelInfor("KH01");
+                panelInfor("KH01");
             else
-                PanelInfor(currentCell);
+                panelInfor(currentCell);
         }
+
         //Display ascend or descend...
         private void cbbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string filter = FilterOfCbb();
-            dgvList.DataSource = dataBase.ReadData("select CustomerCode, Name from tCustomer " + filter);
-            PanelInfor(dgvList.CurrentRow.Cells[0].Value.ToString());
+            string filter = filterOfCbb();
+            dgvList.DataSource = dataBase.readData("select CustomerCode, Name from tCustomer " + filter);
+            panelInfor(dgvList.CurrentRow.Cells[0].Value.ToString());
         }
+
         //Get value in textbox and combobox to find and display into datagridview...
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -142,11 +140,11 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             }
             if (cbbType.SelectedIndex == 0)
             {
-                dgvList.DataSource = dataBase.ReadData("select CustomerCode, Name from tCustomer where CustomerCode like N'%" + search+"%' " + FilterOfCbb());
+                dgvList.DataSource = dataBase.readData("select CustomerCode, Name from tCustomer where CustomerCode like N'%" + search+"%' " + filterOfCbb());
             }
             else
             {
-                dgvList.DataSource = dataBase.ReadData("select CustomerCode, Name from tCustomer where Name like N'%" + search + "%' " + FilterOfCbb());
+                dgvList.DataSource = dataBase.readData("select CustomerCode, Name from tCustomer where Name like N'%" + search + "%' " + filterOfCbb());
             }
             
         }
@@ -156,7 +154,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         {
             if (btnCancel.Visible == false)
             {
-                OnText();
+                onText();
                 txtName.Text = lblName.Text;
                 txtPhone.Text = lblPhone.Text;
                 txtAddress.Text = lblAddress.Text;
@@ -188,26 +186,28 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 lblGender.Text = cbbGender.Text;
                 string birthday = ", BirthDay = N'"+ dtpBirth.Value.ToString()+"' ";
                 lblBirth.Text = dtpBirth.Value.ToString("dd/MM/yyyy");
-                dataBase.UpdateData("update tCustomer set CustomerCode = N'"+ lblCode.Text + "' "+name + phone + address + gender + birthday +" where CustomerCode = N'"+ lblCode.Text +"'");
-                dgvList.DataSource = dataBase.ReadData("select CustomerCode, Name from tCustomer");
-                OnText(false);
-                PanelInfor(code);
+                dataBase.updateData("update tCustomer set CustomerCode = N'"+ lblCode.Text + "' "+name + phone + address + gender + birthday +" where CustomerCode = N'"+ lblCode.Text +"'");
+                dgvList.DataSource = dataBase.readData("select CustomerCode, Name from tCustomer");
+                onText(false);
+                panelInfor(code);
                 btnCancel.Visible = false;
                 btnSearch.Enabled = true;
                 btnExcel.Enabled = true;
             }
         }
+
         // Cancel update...
         private void btnCancel_Click(object sender, EventArgs e)
         {
             txtName.Text = "";
             txtPhone.Text = "";
             txtAddress.Text = "";
-            OnText(false);
+            onText(false);
             btnCancel.Visible = false;
             btnSearch.Enabled = true;
             btnExcel.Enabled = true;
         }
+
         // Only number for phone textbox...
         private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -217,6 +217,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 e.Handled = true;
             }
         }
+
         // Export excel  file list of customer
         private void btnExcel_Click(object sender, EventArgs e)
         {
@@ -249,7 +250,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             exSheet.get_Range("D6").Value = "Điện thoại";
             exSheet.get_Range("E6").Value = "Điểm";
 
-            DataTable dataEx = dataBase.ReadData("select CustomerCode, Name, Address, PhoneNumber, Point\r\nfrom tCustomer");
+            DataTable dataEx = dataBase.readData("select CustomerCode, Name, Address, PhoneNumber, Point\r\nfrom tCustomer");
             for(int i = 0; i < dataEx.Rows.Count; i++)
             {
                 exSheet.get_Range("A" + (i + 7) + ":H" + (i + 7)).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;

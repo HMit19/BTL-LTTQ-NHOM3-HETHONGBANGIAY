@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
@@ -25,7 +18,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
             this.codeBill = codeBill;
         }
         //Hide EmployeeText
-        void HideEmployeeText(bool check = true)
+        void hideEmployeeText(bool check = true)
         {
             cbbEmployeeCode.Visible = !check;
             cbbProviderCode.Visible = !check;
@@ -37,7 +30,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
             lblDate.Visible = check;
         }
         //Hide Product Text
-        void HideProductText(bool check = true)
+        void hideProductText(bool check = true)
         {
             cbbProductCode.Visible = !check;
             cbbProductName.Visible = !check;
@@ -52,19 +45,19 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
             lblTotal.Visible = check;
         }
         //Display panel infor bill
-        void DisplayBill()
+        void displayBill()
         {
             lblBillCode.Text = codeBill;
-            DataTable inforBill = dataBase.ReadData("select EmployeeCode, DateImport, hdn.ProviderCode, Name from tImportBill hdn join tProvider ncc on hdn.ProviderCode = ncc.ProviderCode where CodeBill = N'" + codeBill + "'");
+            DataTable inforBill = dataBase.readData("select EmployeeCode, DateImport, hdn.ProviderCode, Name from tImportBill hdn join tProvider ncc on hdn.ProviderCode = ncc.ProviderCode where CodeBill = N'" + codeBill + "'");
             lblEmployeeCode.Text = inforBill.Rows[0][0].ToString();
             lblDate.Text = (Convert.ToDateTime(inforBill.Rows[0][1].ToString())).ToString("dd/MM/yyyy");
             lblProviderCode.Text = inforBill.Rows[0][2].ToString();
             lblProviderName.Text = inforBill.Rows[0][3].ToString();
         }
         //Display panel product
-        void DisplayProduct(string deProductCode)
+        void displayProduct(string detailProductCode)
         {
-            DataTable product = dataBase.ReadData("select sp.ProductCode, NameProduct, Color, Size, ctn.Quantity,ImportPrice  from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode join tDetailImportBill ctn on ctn.DetailProductCode = ctsp.DetailProductCode where ctsp.DetailProductCode = N'" + deProductCode +"'");
+            DataTable product = dataBase.readData("select sp.ProductCode, NameProduct, Color, Size, ctn.Quantity,ImportPrice  from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode join tDetailImportBill ctn on ctn.DetailProductCode = ctsp.DetailProductCode where ctsp.DetailProductCode = N'" + detailProductCode +"'");
             lblProductCode.Text = product.Rows[0][0].ToString();
             lblProductName.Text = product.Rows[0][1].ToString();
             lblColor.Text = product.Rows[0][2].ToString();
@@ -74,7 +67,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
 
         }
         //Display panel product when delete all
-        void DisplayProduct()
+        void displayProduct()
         {
             lblProductCode.Text = "";
             lblProductName.Text = "";
@@ -85,24 +78,24 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
             lblTotal.Text = "";
         }
         //Display list product
-        void DisplayList()
+        void displayList()
         {
-            DataTable list = dataBase.ReadData("select ctsp.DetailProductCode, ctsp.ProductCode, NameProduct, ImportPrice  from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode join tDetailImportBill ctn on ctn.DetailProductCode = ctsp.DetailProductCode where CodeBill = N'" + codeBill + "'");
+            DataTable list = dataBase.readData("select ctsp.DetailProductCode, ctsp.ProductCode, NameProduct, ImportPrice  from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode join tDetailImportBill ctn on ctn.DetailProductCode = ctsp.DetailProductCode where CodeBill = N'" + codeBill + "'");
             dgvList.DataSource = list;
             if (list.Rows.Count == 0)
             {
-                DisplayProduct();
+                displayProduct();
                 return;
             }
 
-            DisplayProduct(dgvList.Rows[0].Cells[0].Value.ToString());
-            DisplayTotal();
+            displayProduct(dgvList.Rows[0].Cells[0].Value.ToString());
+            displayTotal();
         }
         //Display TotalPrice
-        void DisplayTotal()
+        void displayTotal()
         {
             double totalPrice = 0;
-            DataTable total = dataBase.ReadData("select ctn.Quantity,ImportPrice  from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode join tDetailImportBill ctn on ctn.DetailProductCode = ctsp.DetailProductCode where ctn.CodeBill = N'" + codeBill + "'");
+            DataTable total = dataBase.readData("select ctn.Quantity,ImportPrice  from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode join tDetailImportBill ctn on ctn.DetailProductCode = ctsp.DetailProductCode where ctn.CodeBill = N'" + codeBill + "'");
             for (int i = 0; i < total.Rows.Count; i++)
             {
                 totalPrice += int.Parse(total.Rows[i][0].ToString()) * Convert.ToDouble(total.Rows[i][1].ToString()) ;
@@ -114,14 +107,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
         {
             statusForm(status);
         }
+
+        //set status form for create function
         void statusForm(string status = "INFOR")
         {
             if (status == "INFOR")
             {
-                HideEmployeeText();
-                HideProductText();
-                DisplayBill();
-                DisplayList();
+                hideEmployeeText();
+                hideProductText();
+                displayBill();
+                displayList();
                 btnSave.Visible = false;
                 btnCreate.Enabled = true;
                 btnEdit.Enabled = true;
@@ -136,11 +131,11 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
             }
             if (status == "EDIT")
             {
-                HideEmployeeText(false);
-                HideProductText();
-                DisplayBill();
-                DisplayList();
-                EditData();
+                hideEmployeeText(false);
+                hideProductText();
+                displayBill();
+                displayList();
+                editData();
                 btnSave.Visible = true;
                 btnCreate.Enabled = false;
                 btnEdit.Enabled = false;
@@ -154,10 +149,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
             }
             if (status == "CREATE")
             {
-                HideEmployeeText(false);
-                HideProductText();
-                FillBillCbb();
-                DisplayProduct();
+                hideEmployeeText(false);
+                hideProductText();
+                fillBillCbb();
+                displayProduct();
                 lblBillCode.Text = codeBill;
                 btnSave.Visible = true;
                 btnCreate.Enabled = false;
@@ -167,46 +162,53 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
                 btnPrint.Enabled = false;
             }
         }
+
         //Display EDIT Employee
-        void EditData()
+        void editData()
         {
-            FillBillCbb();
+            fillBillCbb();
             cbbEmployeeCode.Text = lblEmployeeCode.Text;
             cbbProviderCode.Text = lblProviderCode.Text;
             cbbProviderName.Text = lblProviderName.Text;
             dtpTime.Value = Convert.ToDateTime(lblDate.Text);
 
         }
-        void FillBillCbb()
+
+        //fill cbb for employee and provider
+        void fillBillCbb()
         {
-            DataTable employee = dataBase.ReadData("select EmployeeCode from tEmployee");
-            dataBase.FillComboBox(cbbEmployeeCode, employee, "EmployeeCode", "EmployeeCode");
-            DataTable provider = dataBase.ReadData("select ProviderCode, Name from tProvider");
-            dataBase.FillComboBox(cbbProviderCode, provider, "ProviderCode", "ProviderCode");
-            dataBase.FillComboBox(cbbProviderName, provider, "Name", "Name");
+            DataTable employee = dataBase.readData("select EmployeeCode from tEmployee");
+            dataBase.fillComboBox(cbbEmployeeCode, employee, "EmployeeCode", "EmployeeCode");
+            DataTable provider = dataBase.readData("select ProviderCode, Name from tProvider");
+            dataBase.fillComboBox(cbbProviderCode, provider, "ProviderCode", "ProviderCode");
+            dataBase.fillComboBox(cbbProviderName, provider, "Name", "Name");
         }
+
         //function delete product
-        void DeleteProduct(string deProductCode)
+        void deleteProduct(string detailProductCode)
         {
             string quantity = "";
-            DataTable Bill = dataBase.ReadData("select Quantity from tDetailImportBill where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
+            DataTable Bill = dataBase.readData("select Quantity from tDetailImportBill where DetailProductCode = N'" + detailProductCode + "' and CodeBill = N'" + codeBill + "'");
             quantity = Bill.Rows[0][0].ToString();
-            dataBase.UpdateData("update tDetailProduct set Quantity = Quantity - " + quantity + " where DetailProductCode = N'" + deProductCode + "'");
-            dataBase.UpdateData("delete from tDetailImportBill where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
+            dataBase.updateData("update tDetailProduct set Quantity = Quantity - " + quantity + " where DetailProductCode = N'" + detailProductCode + "'");
+            dataBase.updateData("delete from tDetailImportBill where DetailProductCode = N'" + detailProductCode + "' and CodeBill = N'" + codeBill + "'");
         }
+
         //Hien thi gia san pham...
-        void ImpPrice()
+        void importPrice()
         {
-            DataTable price = dataBase.ReadData("select ImportPrice from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode where sp.ProductCode = N'" + cbbProductCode.Text + "' and Color = N'" + cbbColor.Text + "' and Size =N'" + cbbSize.Text + "'");
+            DataTable price = dataBase.readData("select ImportPrice from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode where sp.ProductCode = N'" + cbbProductCode.Text + "' and Color = N'" + cbbColor.Text + "' and Size =N'" + cbbSize.Text + "'");
             lblPrice.Text = (Convert.ToDouble(price.Rows[0][0].ToString()) * int.Parse(txtQuantity.Text)).ToString("#,###");
         }
-        //cell click dataGridView event...
+
+        //cell click dataGridView event fo choose product 
         private void dgvList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (btnSave.Visible == false && dgvList.Rows.Count > 0)
-                DisplayProduct(dgvList.CurrentRow.Cells[0].Value.ToString());
+                displayProduct(dgvList.CurrentRow.Cells[0].Value.ToString());
         }
-        //cell double click...
+
+        //cell double click for delete product
         private void dgvList_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (btnSave.Visible == false && dgvList.Rows.Count > 0)
@@ -214,27 +216,29 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
                 if (MessageBox.Show("Bạn có muốn trả lại sản phẩm này không?", "Messager",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    DeleteProduct(dgvList.CurrentRow.Cells[0].Value.ToString());
-                    DisplayList();
+                    deleteProduct(dgvList.CurrentRow.Cells[0].Value.ToString());
+                    displayList();
                 }
             }    
         }
-        //Chon san pham
+
+        //edit infor bill
         private void cbbProductCode_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable color = dataBase.ReadData("select distinct Color from tDetailProduct where ProductCode = N'" + cbbProductCode.Text+"'");
-            dataBase.FillComboBox(cbbColor, color, "Color", "Color");
+            DataTable color = dataBase.readData("select distinct Color from tDetailProduct where ProductCode = N'" + cbbProductCode.Text+"'");
+            dataBase.fillComboBox(cbbColor, color, "Color", "Color");
         }
 
         private void cbbColor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable size = dataBase.ReadData("select Size from tDetailProduct where ProductCode = N'" + cbbProductCode.Text + "' and Color = N'" + cbbColor.Text + "'");
-            dataBase.FillComboBox(cbbSize, size, "Size", "Size");
+            DataTable size = dataBase.readData("select Size from tDetailProduct where ProductCode = N'" + cbbProductCode.Text + "' and Color = N'" + cbbColor.Text + "'");
+            dataBase.fillComboBox(cbbSize, size, "Size", "Size");
         }
 
         private void cbbSize_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
+
         //Kiem soat dau vao so luong
         private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -244,14 +248,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
                 e.Handled = true;
             }
         }
+
         //Kiem soat rong va cap nhat gia
         private void txtQuantity_Leave(object sender, EventArgs e)
         {
             if (txtQuantity.Text == "")
                 MessageBox.Show("Bạn phải nhập số lượng");
             else
-                ImpPrice();
+                importPrice();
         }
+
         //Delete...
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -262,8 +268,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
                     if (MessageBox.Show("Bạn có muốn trả lại sản phẩm này không?", "Messager",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        DeleteProduct(dgvList.CurrentRow.Cells[0].Value.ToString());
-                        DisplayList();
+                        deleteProduct(dgvList.CurrentRow.Cells[0].Value.ToString());
+                        displayList();
                     }
                 }
                 else
@@ -274,7 +280,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
                     btnCreate.Visible = true;
                     btnCreate.Enabled = true;
                     btnSave.Visible = false;
-                    HideProductText();
+                    hideProductText();
                 }
             }
             if (status == "EDIT")
@@ -283,6 +289,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
             }
 
         }
+
         //BtnCreate...
         private void btnCreate_Click(object sender, EventArgs e)
         {
@@ -291,10 +298,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
             btnEdit.Enabled = false;
             btnPrint.Enabled = false;
             btnDelete.Text = "Hủy bỏ";
-            HideProductText(false);
-            DataTable Product = dataBase.ReadData("select ProductCode, NameProduct from tProduct");
-            dataBase.FillComboBox(cbbProductCode, Product, "ProductCode", "ProductCode");
-            dataBase.FillComboBox(cbbProductName, Product, "NameProduct", "NameProduct");
+            hideProductText(false);
+            DataTable Product = dataBase.readData("select ProductCode, NameProduct from tProduct");
+            dataBase.fillComboBox(cbbProductCode, Product, "ProductCode", "ProductCode");
+            dataBase.fillComboBox(cbbProductName, Product, "NameProduct", "NameProduct");
             txtQuantity.Text = "";
         }
         //Chuc nang luu cho nut edit va create
@@ -309,9 +316,9 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
                 }
                 if (btnCreate.Enabled == true)//Add new items
                 {
-                    DataTable code = dataBase.ReadData("select DetailProductCode from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode where sp.ProductCode = N'" + cbbProductCode.Text + "' and Color = N'" + cbbColor.Text + "' and Size =N'" + cbbSize.Text + "'");
-                    string deProductCode = code.Rows[0][0].ToString();
-                    DataTable dataBill = dataBase.ReadData("select DetailProductCode from tDetailImportBill where DetailProductCode = N'"+deProductCode+"' and CodeBill = N'"+codeBill+"'");
+                    DataTable code = dataBase.readData("select DetailProductCode from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode where sp.ProductCode = N'" + cbbProductCode.Text + "' and Color = N'" + cbbColor.Text + "' and Size =N'" + cbbSize.Text + "'");
+                    string detailProductCode = code.Rows[0][0].ToString();
+                    DataTable dataBill = dataBase.readData("select DetailProductCode from tDetailImportBill where DetailProductCode = N'"+detailProductCode+"' and CodeBill = N'"+codeBill+"'");
                     if (dataBill.Rows.Count > 0)
                     {
                             MessageBox.Show("Sản phẩm đã tồn tại");
@@ -319,59 +326,59 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
                     }
                     else
                     {
-                        dataBase.UpdateData("update tDetailProduct set Quantity = Quantity + " + txtQuantity.Text + " where DetailProductCode = N'" + code.Rows[0][0].ToString() + "'");
-                        dataBase.UpdateData("insert into tDetailImportBill values (N'" + code.Rows[0][0].ToString() + "', N'" + codeBill + "', N'" + txtQuantity.Text + "');");
+                        dataBase.updateData("update tDetailProduct set Quantity = Quantity + " + txtQuantity.Text + " where DetailProductCode = N'" + code.Rows[0][0].ToString() + "'");
+                        dataBase.updateData("insert into tDetailImportBill values (N'" + code.Rows[0][0].ToString() + "', N'" + codeBill + "', N'" + txtQuantity.Text + "');");
                         btnDelete.Text = "  Xóa";
                         btnEdit.Enabled = true;
                         btnPrint.Enabled = true;
                         btnCreate.Visible = true;
                         btnSave.Visible = false;
-                        HideProductText();
-                        DisplayList();
+                        hideProductText();
+                        displayList();
                     }
                 }
                 else//edit item
                 {
-                    string oldPrCode = dataBase.ReadData("select DetailProductCode from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode where sp.ProductCode = N'" + lblProductCode.Text + "' and Color = N'" + lblColor.Text + "' and Size =N'" + lblSize.Text + "'").Rows[0][0].ToString();
-                    DataTable code = dataBase.ReadData("select DetailProductCode from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode where sp.ProductCode = N'" + cbbProductCode.Text + "' and Color = N'" + cbbColor.Text + "' and Size =N'" + cbbSize.Text + "'");
-                    string deProductCode = code.Rows[0][0].ToString();
+                    string oldPrCode = dataBase.readData("select DetailProductCode from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode where sp.ProductCode = N'" + lblProductCode.Text + "' and Color = N'" + lblColor.Text + "' and Size =N'" + lblSize.Text + "'").Rows[0][0].ToString();
+                    DataTable code = dataBase.readData("select DetailProductCode from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode where sp.ProductCode = N'" + cbbProductCode.Text + "' and Color = N'" + cbbColor.Text + "' and Size =N'" + cbbSize.Text + "'");
+                    string detailProductCode = code.Rows[0][0].ToString();
                     if (int.Parse(txtQuantity.Text) == 0)
                     {
                         if (MessageBox.Show("Bạn có muốn trả lại sản phẩm này không?", "Messager",
                             MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
-                            DeleteProduct(deProductCode);
-                            DisplayList();
+                            deleteProduct(detailProductCode);
+                            displayList();
                         }
                     }
-                    DataTable dataBill = dataBase.ReadData("select DetailProductCode from tDetailImportBill where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
+                    DataTable dataBill = dataBase.readData("select DetailProductCode from tDetailImportBill where DetailProductCode = N'" + detailProductCode + "' and CodeBill = N'" + codeBill + "'");
                     if (dataBill.Rows.Count > 0)//Kiem tra san pham da co trong list chua
                     {
-                        if (oldPrCode != deProductCode)//Neui san pham moi khac san pham cu
+                        if (oldPrCode != detailProductCode)//Neui san pham moi khac san pham cu
                         {
                             if (MessageBox.Show("Sản phẩm bạn chọn đã tồn tại, bạn có muốn cập nhật số lượng cho sản phẩm đó?", "Messager",
                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                             {
-                                dataBase.UpdateData("update tDetailProduct set Quantity = Quantity - " + lblQuantity.Text + " where DetailProductCode = N'" + oldPrCode + "'");
-                                dataBase.UpdateData("update tDetailProduct set Quantity = Quantity  + " + txtQuantity.Text + " where DetailProductCode = N'" + deProductCode + "'");
-                                dataBase.UpdateData("update tDetailImportBill set Quantity = Quantity + " + txtQuantity.Text + " where DetailProductCode = N'" + deProductCode + "' and CodeBill = N'" + codeBill + "'");
-                                dataBase.UpdateData("delete from tDetailImportBill where DetailProductCode = N'" + oldPrCode + "' and CodeBill = N'" + codeBill + "'");
+                                dataBase.updateData("update tDetailProduct set Quantity = Quantity - " + lblQuantity.Text + " where DetailProductCode = N'" + oldPrCode + "'");
+                                dataBase.updateData("update tDetailProduct set Quantity = Quantity  + " + txtQuantity.Text + " where DetailProductCode = N'" + detailProductCode + "'");
+                                dataBase.updateData("update tDetailImportBill set Quantity = Quantity + " + txtQuantity.Text + " where DetailProductCode = N'" + detailProductCode + "' and CodeBill = N'" + codeBill + "'");
+                                dataBase.updateData("delete from tDetailImportBill where DetailProductCode = N'" + oldPrCode + "' and CodeBill = N'" + codeBill + "'");
                             }
                             else
                                 return;
                         }
                         else
                         {
-                            dataBase.UpdateData("update tDetailProduct set Quantity = Quantity  + " + txtQuantity.Text + " - " + lblQuantity.Text + " where DetailProductCode = N'" + deProductCode + "'");
-                            dataBase.UpdateData("update tDetailImportBill set DetailProductCode = N'" + deProductCode + "', Quantity = N'" + txtQuantity.Text + "' where DetailProductCode = N'" + oldPrCode + "' and CodeBill = N'" + codeBill + "'");
+                            dataBase.updateData("update tDetailProduct set Quantity = Quantity  + " + txtQuantity.Text + " - " + lblQuantity.Text + " where DetailProductCode = N'" + detailProductCode + "'");
+                            dataBase.updateData("update tDetailImportBill set DetailProductCode = N'" + detailProductCode + "', Quantity = N'" + txtQuantity.Text + "' where DetailProductCode = N'" + oldPrCode + "' and CodeBill = N'" + codeBill + "'");
 
                         }
                     }
                     else
                     {
-                        dataBase.UpdateData("update tDetailProduct set Quantity = Quantity  + " + txtQuantity.Text + " where DetailProductCode = N'" + deProductCode + "'");
-                        dataBase.UpdateData("update tDetailProduct set Quantity = Quantity - " + lblQuantity.Text + " where DetailProductCode = N'" + oldPrCode + "'");
-                        dataBase.UpdateData("update tDetailImportBill set DetailProductCode = N'" + deProductCode + "', Quantity = N'" + txtQuantity.Text + "' where DetailProductCode = N'" + oldPrCode + "' and CodeBill = N'" + codeBill + "'");
+                        dataBase.updateData("update tDetailProduct set Quantity = Quantity  + " + txtQuantity.Text + " where DetailProductCode = N'" + detailProductCode + "'");
+                        dataBase.updateData("update tDetailProduct set Quantity = Quantity - " + lblQuantity.Text + " where DetailProductCode = N'" + oldPrCode + "'");
+                        dataBase.updateData("update tDetailImportBill set DetailProductCode = N'" + detailProductCode + "', Quantity = N'" + txtQuantity.Text + "' where DetailProductCode = N'" + oldPrCode + "' and CodeBill = N'" + codeBill + "'");
 
                     }
                     btnDelete.Text = "  Xóa";
@@ -380,19 +387,19 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
                     btnPrint.Enabled = true;
                     btnCreate.Visible = true;
                     btnSave.Visible = false;
-                    HideProductText();
-                    DisplayList();
+                    hideProductText();
+                    displayList();
                 }
             }
             if (status == "EDIT")
             {
-                dataBase.UpdateData("update tImportBill set EmployeeCode = N'" + cbbEmployeeCode.Text + "', ProviderCode = N'" + cbbProviderCode.Text + "', DateImport = N'"+dtpTime.Value.ToString()+"' where CodeBill = N'" + codeBill + "'");
+                dataBase.updateData("update tImportBill set EmployeeCode = N'" + cbbEmployeeCode.Text + "', ProviderCode = N'" + cbbProviderCode.Text + "', DateImport = N'"+dtpTime.Value.ToString()+"' where CodeBill = N'" + codeBill + "'");
                 status = "INFOR";
                 statusForm();
             }
             if (status == "CREATE")
             {
-                dataBase.UpdateData("insert into tImportBill values (N'" + codeBill + "', N'" + dtpTime.Value.ToString() + "',N'" + cbbEmployeeCode.Text + "', N'" + cbbProviderCode.Text + "');");
+                dataBase.updateData("insert into tImportBill values (N'" + codeBill + "', N'" + dtpTime.Value.ToString() + "',N'" + cbbEmployeeCode.Text + "', N'" + cbbProviderCode.Text + "');");
                 status = "INFOR";
                 statusForm();
             }
@@ -406,15 +413,15 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
             btnPrint.Enabled = false;
             btnEdit.Enabled = false;
             btnDelete.Text = "Hủy bỏ";
-            DataTable Product = dataBase.ReadData("select ProductCode, NameProduct from tProduct");
-            dataBase.FillComboBox(cbbProductCode, Product, "ProductCode", "ProductCode");
-            dataBase.FillComboBox(cbbProductName, Product, "NameProduct", "NameProduct");
+            DataTable Product = dataBase.readData("select ProductCode, NameProduct from tProduct");
+            dataBase.fillComboBox(cbbProductCode, Product, "ProductCode", "ProductCode");
+            dataBase.fillComboBox(cbbProductName, Product, "NameProduct", "NameProduct");
             cbbProductCode.Text = lblProductCode.Text;
             cbbProductName.Text = lblProductName.Text;
             txtQuantity.Text = lblQuantity.Text;
-            HideProductText(false);
+            hideProductText(false);
         }
-
+        //print excel
         private void btnPrint_Click(object sender, EventArgs e)
         {
             Excel.Application exApp = new Excel.Application();
@@ -459,7 +466,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
             exSheet.get_Range("G9").Value = "Đơn giá";
             exSheet.get_Range("H9").Value = "Thành tiền";
 
-            DataTable dataEx = dataBase.ReadData("select ctsp.DetailProductCode, ctsp.ProductCode, NameProduct, Color, Size, ctn.Quantity, ImportPrice, ctn.Quantity * ImportPrice  from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode join tDetailImportBill ctn on ctn.DetailProductCode = ctsp.DetailProductCode where CodeBill = N'" + codeBill + "'");
+            DataTable dataEx = dataBase.readData("select ctsp.DetailProductCode, ctsp.ProductCode, NameProduct, Color, Size, ctn.Quantity, ImportPrice, ctn.Quantity * ImportPrice  from tDetailProduct ctsp join tProduct sp on ctsp.ProductCode = sp.ProductCode join tDetailImportBill ctn on ctn.DetailProductCode = ctsp.DetailProductCode where CodeBill = N'" + codeBill + "'");
             int i = 0;
             double total = 0;
             for (i = 0; i < dataEx.Rows.Count; i++)
