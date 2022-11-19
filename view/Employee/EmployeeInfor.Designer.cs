@@ -189,11 +189,12 @@
             this.dgvListSale.AllowUserToDeleteRows = false;
             this.dgvListSale.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(138)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvListSale.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvListSale.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
@@ -202,7 +203,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvListSale.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvListSale.ColumnHeadersHeight = 20;
+            this.dgvListSale.ColumnHeadersHeight = 24;
             this.dgvListSale.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(138)))), ((int)(((byte)(228)))));
@@ -229,7 +230,7 @@
             this.dgvListSale.RowHeadersVisible = false;
             this.dgvListSale.RowHeadersWidth = 51;
             this.dgvListSale.RowTemplate.Height = 24;
-            this.dgvListSale.Size = new System.Drawing.Size(432, 320);
+            this.dgvListSale.Size = new System.Drawing.Size(435, 320);
             this.dgvListSale.TabIndex = 0;
             this.dgvListSale.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvListSale.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -243,7 +244,7 @@
             this.dgvListSale.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.dgvListSale.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvListSale.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvListSale.ThemeStyle.HeaderStyle.Height = 20;
+            this.dgvListSale.ThemeStyle.HeaderStyle.Height = 24;
             this.dgvListSale.ThemeStyle.ReadOnly = true;
             this.dgvListSale.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvListSale.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -317,11 +318,12 @@
             this.dgvListImport.AllowUserToDeleteRows = false;
             this.dgvListImport.AllowUserToResizeRows = false;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(138)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvListImport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvListImport.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
@@ -330,7 +332,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvListImport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvListImport.ColumnHeadersHeight = 20;
+            this.dgvListImport.ColumnHeadersHeight = 24;
             this.dgvListImport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(138)))), ((int)(((byte)(228)))));
@@ -357,7 +359,7 @@
             this.dgvListImport.RowHeadersVisible = false;
             this.dgvListImport.RowHeadersWidth = 51;
             this.dgvListImport.RowTemplate.Height = 24;
-            this.dgvListImport.Size = new System.Drawing.Size(432, 323);
+            this.dgvListImport.Size = new System.Drawing.Size(435, 323);
             this.dgvListImport.TabIndex = 0;
             this.dgvListImport.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvListImport.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -371,7 +373,7 @@
             this.dgvListImport.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.dgvListImport.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvListImport.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvListImport.ThemeStyle.HeaderStyle.Height = 20;
+            this.dgvListImport.ThemeStyle.HeaderStyle.Height = 24;
             this.dgvListImport.ThemeStyle.ReadOnly = true;
             this.dgvListImport.ThemeStyle.RowsStyle.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvListImport.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;

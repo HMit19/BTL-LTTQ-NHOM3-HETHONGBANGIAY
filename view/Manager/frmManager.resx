@@ -723,6 +723,16 @@
   <metadata name="pnlSiderBar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAP9JREFUSEvt
+        kj1OAlEURkcSbUgotaZwAcQVSKVbwEWY0NC6BffAGqxkA8QNWFBLCYHGAuR8ybvJ+OY9575AJyc5yfv5
+        vrnJzFT/jnHw5FzgC/4EX7GDJ+EKp6gHfwe11pnuhA0upotvqPIGH/AeV+Fshr2wLh5wgx+o4hcO0NBa
+        Z7qzTNGAPn6iSgu8xZh6pmjAHS5RhTleYw7dKWMD1P2TIa5R4XfU+22j/p22+IhJRmh/iLxEL8paT894
+        wl884w4tJEupd/c4wSTHDmglDto+pxHvs+SKOY14n8Vb9OYaeIveXANv0Ztr4C16cw0sGBuTyshWUiUZ
+        k8rIMyVU1QHBq5Eyocf9+AAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="pictureBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -788,16 +798,6 @@
   <metadata name="guna2Panel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAP9JREFUSEvt
-        kj1OAlEURkcSbUgotaZwAcQVSKVbwEWY0NC6BffAGqxkA8QNWFBLCYHGAuR8ybvJ+OY9575AJyc5yfv5
-        vrnJzFT/jnHw5FzgC/4EX7GDJ+EKp6gHfwe11pnuhA0upotvqPIGH/AeV+Fshr2wLh5wgx+o4hcO0NBa
-        Z7qzTNGAPn6iSgu8xZh6pmjAHS5RhTleYw7dKWMD1P2TIa5R4XfU+22j/p22+IhJRmh/iLxEL8paT894
-        wl884w4tJEupd/c4wSTHDmglDto+pxHvs+SKOY14n8Vb9OYaeIveXANv0Ztr4C16cw0sGBuTyshWUiUZ
-        k8rIMyVU1QHBq5Eyocf9+AAAAABJRU5ErkJggg==
-</value>
-  </data>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

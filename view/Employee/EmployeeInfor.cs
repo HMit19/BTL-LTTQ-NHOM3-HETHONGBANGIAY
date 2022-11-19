@@ -53,7 +53,14 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
             DataTable dtHDB = data.ReadData("Select CodeBill, DateSale, PaymentMethods, CustomerCode, Discount from tBillOfSale where EmployeeCode='" + cboEmployeeCode.SelectedValue + "'");
             dgvListSale.DataSource = dtHDB;
             DataTable dtNV = data.ReadData("Select Name, ID, Gender, DOB, Address, PhoneNumber, Status,UserName from tEmployee where EmployeeCode='" + cboEmployeeCode.SelectedValue + "'");
-
+            dgvListImport.Columns[0].HeaderText = "Mã HĐN";
+            dgvListImport.Columns[1].HeaderText = "Ngày Nhập";
+            dgvListImport.Columns[2].HeaderText = "Mã NCC";
+            dgvListSale.Columns[0].HeaderText = "Mã HĐB";
+            dgvListSale.Columns[1].HeaderText = "Ngày Bán";
+            dgvListSale.Columns[2].HeaderText = "PTTT";
+            dgvListSale.Columns[3].HeaderText = "Mã KH";
+            dgvListSale.Columns[4].HeaderText = "Giảm Giá";
         }
         private void cboEmployeeCode_SelectedIndexChanged(object sender, EventArgs e)
         {

@@ -93,7 +93,6 @@ C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\a
 C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\aaaa\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.listProduct.resources
 C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\aaaa\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CartUsercontrol.resources
 C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\aaaa\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.EmployeeControl.resources
-C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\aaaa\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.EmployeeInforControl.resources
 C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\aaaa\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemNewCustomer.resources
 C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\aaaa\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct.resources
 C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\aaaa\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProductOfCart.resources

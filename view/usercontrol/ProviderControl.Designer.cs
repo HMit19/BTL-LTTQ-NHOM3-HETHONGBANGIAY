@@ -84,7 +84,7 @@
             this.guna2GroupBox1.Location = new System.Drawing.Point(3, 0);
             this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(1811, 286);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(1358, 286);
             this.guna2GroupBox1.TabIndex = 0;
             this.guna2GroupBox1.Text = "Thông Tin Nhà Cung Cấp";
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -112,7 +112,7 @@
             this.btnExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExcel.IconSize = 30;
             this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcel.Location = new System.Drawing.Point(1633, 48);
+            this.btnExcel.Location = new System.Drawing.Point(1188, 65);
             this.btnExcel.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(165, 44);
@@ -127,13 +127,13 @@
             this.btnReload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnReload.FlatAppearance.BorderSize = 0;
             this.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReload.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReload.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnReload.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateBack;
             this.btnReload.IconColor = System.Drawing.Color.Black;
             this.btnReload.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReload.IconSize = 30;
             this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReload.Location = new System.Drawing.Point(1633, 111);
+            this.btnReload.Location = new System.Drawing.Point(1188, 128);
             this.btnReload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(165, 37);
@@ -147,13 +147,13 @@
             this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnRemove.FlatAppearance.BorderSize = 0;
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnRemove.IconChar = FontAwesome.Sharp.IconChar.X;
             this.btnRemove.IconColor = System.Drawing.Color.Black;
             this.btnRemove.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRemove.IconSize = 30;
             this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemove.Location = new System.Drawing.Point(1343, 220);
+            this.btnRemove.Location = new System.Drawing.Point(965, 237);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(165, 37);
@@ -167,13 +167,13 @@
             this.btnRepair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnRepair.FlatAppearance.BorderSize = 0;
             this.btnRepair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRepair.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRepair.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnRepair.IconChar = FontAwesome.Sharp.IconChar.Pen;
             this.btnRepair.IconColor = System.Drawing.Color.Black;
             this.btnRepair.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRepair.IconSize = 30;
             this.btnRepair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRepair.Location = new System.Drawing.Point(1343, 164);
+            this.btnRepair.Location = new System.Drawing.Point(965, 181);
             this.btnRepair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRepair.Name = "btnRepair";
             this.btnRepair.Size = new System.Drawing.Size(165, 37);
@@ -187,13 +187,13 @@
             this.btnAddNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnAddNew.FlatAppearance.BorderSize = 0;
             this.btnAddNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNew.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNew.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnAddNew.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnAddNew.IconColor = System.Drawing.Color.Black;
             this.btnAddNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddNew.IconSize = 30;
             this.btnAddNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddNew.Location = new System.Drawing.Point(1343, 111);
+            this.btnAddNew.Location = new System.Drawing.Point(965, 128);
             this.btnAddNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(165, 37);
@@ -207,13 +207,13 @@
             this.btnFind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnFind.FlatAppearance.BorderSize = 0;
             this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFind.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFind.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnFind.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btnFind.IconColor = System.Drawing.Color.Black;
             this.btnFind.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFind.IconSize = 30;
             this.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFind.Location = new System.Drawing.Point(1343, 55);
+            this.btnFind.Location = new System.Drawing.Point(965, 72);
             this.btnFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(165, 37);
@@ -239,7 +239,7 @@
             this.txtAddress.PasswordChar = '\0';
             this.txtAddress.PlaceholderText = "";
             this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(961, 91);
+            this.txtAddress.Size = new System.Drawing.Size(854, 91);
             this.txtAddress.TabIndex = 6;
             // 
             // txtName
@@ -251,9 +251,10 @@
             this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.txtName.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Location = new System.Drawing.Point(661, 102);
+            this.txtName.Location = new System.Drawing.Point(554, 102);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
@@ -271,7 +272,8 @@
             this.txtProviderCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtProviderCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtProviderCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProviderCode.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtProviderCode.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.txtProviderCode.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtProviderCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProviderCode.Location = new System.Drawing.Point(64, 102);
             this.txtProviderCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -289,11 +291,11 @@
             this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(656, 74);
+            this.label2.Location = new System.Drawing.Point(549, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 23);
+            this.label2.Size = new System.Drawing.Size(154, 23);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Tên NCC";
+            this.label2.Text = "Tên Nhà Cung Cấp";
             // 
             // label1
             // 
@@ -301,7 +303,7 @@
             this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(59, 142);
+            this.label1.Location = new System.Drawing.Point(63, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 23);
             this.label1.TabIndex = 2;
@@ -315,9 +317,9 @@
             this.label17.ForeColor = System.Drawing.Color.Black;
             this.label17.Location = new System.Drawing.Point(59, 74);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(74, 23);
+            this.label17.Size = new System.Drawing.Size(152, 23);
             this.label17.TabIndex = 1;
-            this.label17.Text = "Mã NCC";
+            this.label17.Text = "Mã Nhà Cung Cấp";
             // 
             // grbList
             // 
@@ -331,7 +333,7 @@
             this.grbList.Location = new System.Drawing.Point(3, 284);
             this.grbList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbList.Name = "grbList";
-            this.grbList.Size = new System.Drawing.Size(1811, 614);
+            this.grbList.Size = new System.Drawing.Size(1358, 444);
             this.grbList.TabIndex = 1;
             this.grbList.Text = "Danh Sách Nhà Cung Cấp";
             this.grbList.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -348,6 +350,7 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvListProvider.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvListProvider.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
@@ -360,14 +363,14 @@
             this.dgvListProvider.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(188)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvListProvider.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvListProvider.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvListProvider.Location = new System.Drawing.Point(-3, 39);
+            this.dgvListProvider.Location = new System.Drawing.Point(-3, 40);
             this.dgvListProvider.Margin = new System.Windows.Forms.Padding(4);
             this.dgvListProvider.Name = "dgvListProvider";
             this.dgvListProvider.ReadOnly = true;
@@ -383,7 +386,7 @@
             this.dgvListProvider.RowHeadersVisible = false;
             this.dgvListProvider.RowHeadersWidth = 51;
             this.dgvListProvider.RowTemplate.Height = 30;
-            this.dgvListProvider.Size = new System.Drawing.Size(1809, 571);
+            this.dgvListProvider.Size = new System.Drawing.Size(1360, 427);
             this.dgvListProvider.TabIndex = 0;
             this.dgvListProvider.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(188)))), ((int)(((byte)(239)))));
             this.dgvListProvider.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -420,7 +423,7 @@
             this.Controls.Add(this.guna2GroupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ProviderControl";
-            this.Size = new System.Drawing.Size(1813, 898);
+            this.Size = new System.Drawing.Size(1360, 730);
             this.Load += new System.EventHandler(this.ProviderControl_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();

@@ -63,16 +63,16 @@
     <Compile Include="Class\ConnectData.cs" />
     <Compile Include="DAO\connect\ConnectSQL.cs" />
     <Compile Include="model\Account.cs" />
-    <Compile Include="view\EmployeeInfor\EmployeeAddNew.cs">
+    <Compile Include="view\Employee\EmployeeAddNew.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\EmployeeInfor\EmployeeAddNew.Designer.cs">
+    <Compile Include="view\Employee\EmployeeAddNew.Designer.cs">
       <DependentUpon>EmployeeAddNew.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\EmployeeInfor\EmployeeInfor.cs">
+    <Compile Include="view\Employee\EmployeeInfor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\EmployeeInfor\EmployeeInfor.Designer.cs">
+    <Compile Include="view\Employee\EmployeeInfor.Designer.cs">
       <DependentUpon>EmployeeInfor.cs</DependentUpon>
     </Compile>
     <Compile Include="view\login\frmLogin.cs">
@@ -118,12 +118,6 @@
     </Compile>
     <Compile Include="view\usercontrol\EmployeeControl.Designer.cs">
       <DependentUpon>EmployeeControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\usercontrol\EmployeeInforControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\usercontrol\EmployeeInforControl.Designer.cs">
-      <DependentUpon>EmployeeInforControl.cs</DependentUpon>
     </Compile>
     <Compile Include="view\usercontrol\item\ItemNewCustomer.cs">
       <SubType>UserControl</SubType>
@@ -194,10 +188,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="view\EmployeeInfor\EmployeeAddNew.resx">
+    <EmbeddedResource Include="view\Employee\EmployeeAddNew.resx">
       <DependentUpon>EmployeeAddNew.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\EmployeeInfor\EmployeeInfor.resx">
+    <EmbeddedResource Include="view\Employee\EmployeeInfor.resx">
       <DependentUpon>EmployeeInfor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\login\frmLogin.resx">
@@ -220,9 +214,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\EmployeeControl.resx">
       <DependentUpon>EmployeeControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\usercontrol\EmployeeInforControl.resx">
-      <DependentUpon>EmployeeInforControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\item\ItemNewCustomer.resx">
       <DependentUpon>ItemNewCustomer.cs</DependentUpon>

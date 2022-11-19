@@ -19,57 +19,60 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         public EmployeeControl()
         {
             InitializeComponent();
-            DataTable dtNV = data.ReadData("Select * from tEmployee");
-            functions.FillComboBox(cbEmployeeCode, dtNV, "EmployeeCode", "EmployeeCode");
+              
         }
 
       
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            DataTable dtNV = data.ReadData("Select tEmployee.EmployeeCode, Name, ID, Gender, DOB, Address, PhoneNumber, Status from tEmployee where EmployeeCode=N'" + cbEmployeeCode.SelectedValue +"'");
-            dgvListEmployee.DataSource = dtNV;
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grpList_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbEmployeeCode_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lblUserName.Text = "";
+            
             try
             {
-                DataTable dtNV = data.ReadData("Select Name, Status, UserName from tEmployee where EmployeeCode='" + cbEmployeeCode.SelectedValue + "'");
-                txtName.Text = dtNV.Rows[0]["Name"].ToString();
-                if (dtNV.Rows[0]["Status"].ToString() == "True")
+                if (txtEmployeeCode.Text != "")
                 {
-                    cboStatus.Text = "Đang Làm";
+                    DataTable dtNV = data.ReadData("Select EmployeeCode, Name, ID, Gender, DOB, Address, PhoneNumber, Status from tEmployee where EmployeeCode=N'" + txtEmployeeCode.Text + "'");
+                    txtName.Text = dtNV.Rows[0]["Name"].ToString();
+                    if (dtNV.Rows[0]["Status"].ToString() == "True")
+                    {
+                        cboStatus.Text = "Đang Làm";
+                    }
+                    else
+                    { cboStatus.Text = "Đã Nghỉ"; }
+                    dgvListEmployee.DataSource = dtNV;
                 }
-                else
-                { cboStatus.Text = "Đã Nghỉ"; }
-                lblUserName.Text = dtNV.Rows[0]["UserName"].ToString();
+                else if (txtName.Text != "" && txtEmployeeCode.Text == "")
+                {
+                    DataTable dtNV = data.ReadData("Select EmployeeCode, Name, ID, Gender, DOB, Address, PhoneNumber, Status from tEmployee where Name=N'" + txtName.Text + "'");
+                    txtEmployeeCode.Text = dtNV.Rows[0]["EmployeeCode"].ToString();
+                    if (dtNV.Rows[0]["Status"].ToString() == "True")
+                    {
+                        cboStatus.Text = "Đang Làm";
+                    }
+                    else
+                    { cboStatus.Text = "Đã Nghỉ"; }
+                    dgvListEmployee.DataSource = dtNV;
+                }
+
             }
             catch
             {
-
+                MessageBox.Show("Khong co NV ban can tim");
             }
-            
-            
+
+        }
+
+
+        private void cbEmployeeCode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
 
         private void EmployeeControl_Load(object sender, EventArgs e)
         {
             
             loadData();
-            dgvListEmployee.Columns[0].HeaderText = "Mã NV";
-            dgvListEmployee.Columns[1].HeaderText = "Tên NV";
+            
             ResetValue();
             btnAdd.Enabled = true;
             btnDelete.Enabled = false;
@@ -79,19 +82,38 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         {
             DataTable dtNV = data.ReadData("Select EmployeeCode, Name, ID, Gender, DOB, Address, PhoneNumber, Status from tEmployee");
             dgvListEmployee.DataSource = dtNV;
+            dgvListEmployee.Columns[0].HeaderText = "Mã NV";
+            dgvListEmployee.Columns[1].HeaderText = "Tên NV";
+            dgvListEmployee.Columns[2].HeaderText = "CCCD/CMND";
+            dgvListEmployee.Columns[3].HeaderText = "Giới Tính";
+            dgvListEmployee.Columns[4].HeaderText = "Ngày Sinh";
+            dgvListEmployee.Columns[5].HeaderText = "Địa Chỉ";
+            dgvListEmployee.Columns[6].HeaderText = "SĐT";
+            dgvListEmployee.Columns[7].HeaderText = "Trạng Thái";
         }
         void ResetValue()
         {
-            cbEmployeeCode.Text = "";
+            txtEmployeeCode.Text = "";
             txtName.Text = "";
+            txtEmployeeCode.Enabled = true;
+            txtName.Enabled = true;
         }
 
         private void dgvListEmployee_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            cbEmployeeCode.Text = dgvListEmployee.CurrentRow.Cells[0].Value.ToString();
+            txtEmployeeCode.Text = dgvListEmployee.CurrentRow.Cells[0].Value.ToString();
             txtName.Text = dgvListEmployee.CurrentRow.Cells[1].Value.ToString();
+            if (dgvListEmployee.CurrentRow.Cells[7].Value.ToString() == "True")
+            {
+                cboStatus.Text = "Đang Làm";
+            }
+            else
+            { cboStatus.Text = "Đã Nghỉ"; }
+           
             btnAdd.Enabled = false;
-            btnDelete.Enabled = true;   
+            btnDelete.Enabled = true;
+            txtEmployeeCode.Enabled = false;
+            txtName.Enabled = false;
         }
 
         private void btnReload_Click(object sender, EventArgs e)
@@ -100,7 +122,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             loadData();
             ResetValue();
             EmployeeControl_Load(sender, e);
-            cbEmployeeCode_SelectedIndexChanged(sender, e);
             btnAdd.Enabled = true;
             btnDelete.Enabled = false;
         }
@@ -111,8 +132,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 try
                 {
-                    data.UpdateData("delete tEmployee where EmployeeCode='" +cbEmployeeCode.Text+ "'");
-                    data.UpdateData("delete tLogin where UserName='"+lblUserName.Text+"'");
+                    data.UpdateData("delete tEmployee where EmployeeCode='" +txtEmployeeCode.Text+ "'");
+                    data.UpdateData("delete tLogin where UserName='"+txtName.Text+"'");
 
                     loadData();
                     ResetValue();
