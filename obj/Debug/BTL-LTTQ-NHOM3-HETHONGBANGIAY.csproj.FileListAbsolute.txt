@@ -84,3 +84,51 @@ C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-
 C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe
 C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.pdb
 C:\Users\pc\OneDrive\Máy tính\C #\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CartControl.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\bin\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe.config
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\bin\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\bin\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.pdb
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\bin\Debug\Guna.UI2.dll
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.Properties.Resources.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.frmLogin.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.createProduct.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.editProduct.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.listProduct.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CartControl.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProductOfCart.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager.frmManager.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.HomeControl.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.StoreControl.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.GenerateResource.cache
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.CopyComplete
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe
+C:\Users\Admin\OneDrive - University of transport and Communication\Máy tính\xong r xoas\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.pdb
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\bin\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe.config
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\bin\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\bin\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.pdb
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\bin\Debug\Guna.UI2.dll
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.Properties.Resources.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.frmLogin.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.createProduct.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.editProduct.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.listProduct.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CartControl.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProductOfCart.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager.frmManager.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.HomeControl.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.StoreControl.resources
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.GenerateResource.cache
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.csproj.CopyComplete
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.exe
+C:\Users\Admin\OneDrive - University of transport and Communication\Tài liệu\BTLC\obj\Debug\BTL-LTTQ-NHOM3-HETHONGBANGIAY.pdb

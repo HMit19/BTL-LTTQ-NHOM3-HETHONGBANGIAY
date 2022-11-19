@@ -29,10 +29,9 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemTopProduct));
             this.panel = new Guna.UI2.WinForms.Guna2Panel();
-            this.image = new System.Windows.Forms.PictureBox();
             this.name = new System.Windows.Forms.Label();
+            this.image = new System.Windows.Forms.PictureBox();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.SuspendLayout();
@@ -52,16 +51,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
             this.panel.Size = new System.Drawing.Size(115, 120);
             this.panel.TabIndex = 0;
             // 
-            // image
-            // 
-            this.image.Image = ((System.Drawing.Image)(resources.GetObject("image.Image")));
-            this.image.Location = new System.Drawing.Point(21, 9);
-            this.image.Name = "image";
-            this.image.Size = new System.Drawing.Size(74, 63);
-            this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.image.TabIndex = 0;
-            this.image.TabStop = false;
-            // 
             // name
             // 
             this.name.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -69,7 +58,17 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(91, 37);
             this.name.TabIndex = 1;
-            this.name.Text = "Đây là tên sản phẩm";
+            this.name.Text = "Adidas Run Falcon\r\n";
+            this.name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // image
+            // 
+            this.image.Location = new System.Drawing.Point(21, 9);
+            this.image.Name = "image";
+            this.image.Size = new System.Drawing.Size(74, 63);
+            this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.image.TabIndex = 0;
+            this.image.TabStop = false;
             // 
             // ItemTopProduct
             // 
