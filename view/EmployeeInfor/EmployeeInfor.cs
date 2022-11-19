@@ -259,6 +259,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
                 txtPassWord.Visible = true;
             }
         }
+
+        private void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Convert.ToInt16(e.KeyChar) < Convert.ToInt16('0') || Convert.ToInt16(e.KeyChar) > Convert.ToInt16('9'))
+                if (Convert.ToInt16(e.KeyChar) != 8)
+                {
+                    MessageBox.Show("Vui lòng nhập số");
+                    e.Handled = true;
+                }
+        }
     }
     }
 

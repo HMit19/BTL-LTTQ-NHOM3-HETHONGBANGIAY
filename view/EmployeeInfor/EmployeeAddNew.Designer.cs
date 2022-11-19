@@ -224,7 +224,7 @@
             this.cboGender.Margin = new System.Windows.Forms.Padding(4);
             this.cboGender.Name = "cboGender";
             this.cboGender.Size = new System.Drawing.Size(374, 28);
-            this.cboGender.TabIndex = 84;
+            this.cboGender.TabIndex = 78;
             // 
             // txtPassWord
             // 
@@ -233,7 +233,7 @@
             this.txtPassWord.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassWord.Name = "txtPassWord";
             this.txtPassWord.Size = new System.Drawing.Size(375, 26);
-            this.txtPassWord.TabIndex = 83;
+            this.txtPassWord.TabIndex = 84;
             // 
             // txtAccount
             // 
@@ -242,7 +242,7 @@
             this.txtAccount.Margin = new System.Windows.Forms.Padding(4);
             this.txtAccount.Name = "txtAccount";
             this.txtAccount.Size = new System.Drawing.Size(375, 26);
-            this.txtAccount.TabIndex = 82;
+            this.txtAccount.TabIndex = 83;
             // 
             // txtID
             // 
@@ -251,7 +251,8 @@
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(375, 26);
-            this.txtID.TabIndex = 79;
+            this.txtID.TabIndex = 82;
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNumber_KeyPress);
             // 
             // txtAddress
             // 
@@ -260,7 +261,7 @@
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(375, 26);
-            this.txtAddress.TabIndex = 78;
+            this.txtAddress.TabIndex = 81;
             // 
             // txtName
             // 
@@ -278,7 +279,8 @@
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(374, 26);
-            this.txtPhoneNumber.TabIndex = 75;
+            this.txtPhoneNumber.TabIndex = 80;
+            this.txtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNumber_KeyPress);
             // 
             // label11
             // 
@@ -322,7 +324,7 @@
             this.dtpDOB.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(374, 30);
-            this.dtpDOB.TabIndex = 66;
+            this.dtpDOB.TabIndex = 79;
             this.dtpDOB.Value = new System.DateTime(2022, 11, 8, 17, 17, 28, 113);
             // 
             // label3
