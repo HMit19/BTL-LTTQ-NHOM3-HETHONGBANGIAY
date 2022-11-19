@@ -209,7 +209,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
         //cell double click...
         private void dgvList_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (btnSave.Visible == false)
+            if (btnSave.Visible == false && dgvList.Rows.Count > 0)
             {
                 if (MessageBox.Show("Bạn có muốn trả lại sản phẩm này không?", "Messager",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -464,6 +464,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
             double total = 0;
             for (i = 0; i < dataEx.Rows.Count; i++)
             {
+                exSheet.get_Range("A" + (i + 11)+ ":H"+(i + 11)).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
                 exSheet.get_Range("A" + (i + 11).ToString() + ":H" + (i + 11).ToString()).Font.Bold = false;
                 exSheet.get_Range("A" + (i + 11).ToString()).Value = dataEx.Rows[i][0].ToString();
                 exSheet.get_Range("B" + (i + 11).ToString()).Value = dataEx.Rows[i][1].ToString();

@@ -343,6 +343,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view
             double total = 0;
             for (i = 0; i < dataEx.Rows.Count; i++)
             {
+                exSheet.get_Range("A" + (i + 12) + ":H" + (i + 12)).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
                 exSheet.get_Range("A" + (i + 12).ToString() + ":H" + (i + 11).ToString()).Font.Bold = false;
                 exSheet.get_Range("A" + (i + 12).ToString()).Value = dataEx.Rows[i][0].ToString();
                 exSheet.get_Range("B" + (i + 12).ToString()).Value = dataEx.Rows[i][1].ToString();

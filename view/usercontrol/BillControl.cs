@@ -235,6 +235,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 DataTable dataEx = dataBase.ReadData("select * from tImportBill " + DateSort());
                 for (int i = 0; i < dataEx.Rows.Count; i++)
                 {
+                    exSheet.get_Range("A" + (i + 7) + ":H" + (i + 7)).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
                     exSheet.get_Range("A" + (i + 7).ToString() + ":G" + (i + 7).ToString()).Font.Bold = false;
                     exSheet.get_Range("A" + (i + 7).ToString()).Value = dataEx.Rows[i][0].ToString();
                     exSheet.get_Range("B" + (i + 7).ToString()).Value = dataEx.Rows[i][1].ToString();

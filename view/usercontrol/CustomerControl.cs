@@ -81,15 +81,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             lblTotal.Text = total.ToString("#,###");
             dgvBill.DataSource = dataBase.ReadData("Select CodeBill as 'Số Hóa Đơn', DateSale as 'Ngày bán', PaymentMethods as 'Thanh toán', Discount as 'Điểm' from tBillOfSale where CustomerCode = N'" + customerCode + "'");
         }
-        //DataGridView of customer's list
-        private void dgvList_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string currentCell = dgvList.CurrentRow.Cells[0].Value.ToString();
-            if (currentCell == "")
-                PanelInfor("KH01");
-            else
-            PanelInfor(currentCell);
-        }
+
         //Function to get value of combobox
         string FilterOfCbb()
         {
@@ -109,6 +101,29 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                     filter = "order by Name desc";
             }
             return filter;
+        }
+        //Hide or display update textbox
+        void OnText(bool check = true)
+        {
+            lblName.Visible = !check;
+            lblPhone.Visible = !check;
+            lblAddress.Visible = !check;
+            lblGender.Visible = !check;
+            lblBirth.Visible = !check;
+            txtName.Visible = check;
+            txtPhone.Visible = check;
+            txtAddress.Visible = check;
+            cbbGender.Visible = check;
+            dtpBirth.Visible = check;
+        }
+        //DataGridView of customer's list
+        private void dgvList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string currentCell = dgvList.CurrentRow.Cells[0].Value.ToString();
+            if (currentCell == "")
+                PanelInfor("KH01");
+            else
+                PanelInfor(currentCell);
         }
         //Display ascend or descend...
         private void cbbFilter_SelectedIndexChanged(object sender, EventArgs e)
@@ -134,20 +149,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 dgvList.DataSource = dataBase.ReadData("select CustomerCode, Name from tCustomer where Name like N'%" + search + "%' " + FilterOfCbb());
             }
             
-        }
-        //Hide or display update textbox
-        void OnText(bool check = true)
-        {
-            lblName.Visible = !check;
-            lblPhone.Visible = !check;
-            lblAddress.Visible = !check;
-            lblGender.Visible = !check;
-            lblBirth.Visible = !check;
-            txtName.Visible = check;
-            txtPhone.Visible = check;
-            txtAddress.Visible = check;
-            cbbGender.Visible = check;
-            dtpBirth.Visible = check;
         }
 
         //Update information of customer
@@ -251,6 +252,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             DataTable dataEx = dataBase.ReadData("select CustomerCode, Name, Address, PhoneNumber, Point\r\nfrom tCustomer");
             for(int i = 0; i < dataEx.Rows.Count; i++)
             {
+                exSheet.get_Range("A" + (i + 7) + ":H" + (i + 7)).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
                 exSheet.get_Range("A" + (i + 7).ToString() + ":G" + (i + 7).ToString()).Font.Bold = false;
                 exSheet.get_Range("A" + (i + 7).ToString()).Value = dataEx.Rows[i][0].ToString();
                 exSheet.get_Range("B" + (i + 7).ToString()).Value = dataEx.Rows[i][1].ToString();
