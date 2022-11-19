@@ -203,11 +203,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnSellSunday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
             this.btnSellSunday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSellSunday.ForeColor = System.Drawing.Color.White;
-            this.btnSellSunday.Location = new System.Drawing.Point(480, 185);
+            this.btnSellSunday.Location = new System.Drawing.Point(480, 232);
             this.btnSellSunday.Name = "btnSellSunday";
-            this.btnSellSunday.Size = new System.Drawing.Size(25, 57);
+            this.btnSellSunday.Size = new System.Drawing.Size(25, 10);
             this.btnSellSunday.TabIndex = 6;
             this.btnSellSunday.Text = "guna2Button8";
+            this.btnSellSunday.Visible = false;
             // 
             // btnSellSaturday
             // 
@@ -218,9 +219,9 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnSellSaturday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
             this.btnSellSaturday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSellSaturday.ForeColor = System.Drawing.Color.White;
-            this.btnSellSaturday.Location = new System.Drawing.Point(411, 185);
+            this.btnSellSaturday.Location = new System.Drawing.Point(411, 232);
             this.btnSellSaturday.Name = "btnSellSaturday";
-            this.btnSellSaturday.Size = new System.Drawing.Size(25, 57);
+            this.btnSellSaturday.Size = new System.Drawing.Size(25, 10);
             this.btnSellSaturday.TabIndex = 5;
             this.btnSellSaturday.Text = "guna2Button5";
             // 
@@ -233,11 +234,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnSellFriday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
             this.btnSellFriday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSellFriday.ForeColor = System.Drawing.Color.White;
-            this.btnSellFriday.Location = new System.Drawing.Point(339, 185);
+            this.btnSellFriday.Location = new System.Drawing.Point(339, 232);
             this.btnSellFriday.Name = "btnSellFriday";
-            this.btnSellFriday.Size = new System.Drawing.Size(25, 57);
+            this.btnSellFriday.Size = new System.Drawing.Size(25, 10);
             this.btnSellFriday.TabIndex = 4;
             this.btnSellFriday.Text = "guna2Button6";
+            this.btnSellFriday.Visible = false;
             // 
             // btnThursday
             // 
@@ -248,11 +250,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnThursday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
             this.btnThursday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnThursday.ForeColor = System.Drawing.Color.White;
-            this.btnThursday.Location = new System.Drawing.Point(270, 185);
+            this.btnThursday.Location = new System.Drawing.Point(270, 232);
             this.btnThursday.Name = "btnThursday";
-            this.btnThursday.Size = new System.Drawing.Size(25, 57);
+            this.btnThursday.Size = new System.Drawing.Size(25, 10);
             this.btnThursday.TabIndex = 3;
             this.btnThursday.Text = "guna2Button3";
+            this.btnThursday.Visible = false;
             // 
             // btnSellWednesday
             // 
@@ -263,11 +266,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnSellWednesday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
             this.btnSellWednesday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSellWednesday.ForeColor = System.Drawing.Color.White;
-            this.btnSellWednesday.Location = new System.Drawing.Point(201, 185);
+            this.btnSellWednesday.Location = new System.Drawing.Point(201, 232);
             this.btnSellWednesday.Name = "btnSellWednesday";
-            this.btnSellWednesday.Size = new System.Drawing.Size(25, 57);
+            this.btnSellWednesday.Size = new System.Drawing.Size(25, 10);
             this.btnSellWednesday.TabIndex = 2;
             this.btnSellWednesday.Text = "guna2Button4";
+            this.btnSellWednesday.Visible = false;
             // 
             // btnSellTuesday
             // 
@@ -279,11 +283,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnSellTuesday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
             this.btnSellTuesday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSellTuesday.ForeColor = System.Drawing.Color.White;
-            this.btnSellTuesday.Location = new System.Drawing.Point(129, 165);
+            this.btnSellTuesday.Location = new System.Drawing.Point(129, 232);
             this.btnSellTuesday.Name = "btnSellTuesday";
-            this.btnSellTuesday.Size = new System.Drawing.Size(25, 77);
+            this.btnSellTuesday.Size = new System.Drawing.Size(25, 10);
             this.btnSellTuesday.TabIndex = 1;
             this.btnSellTuesday.Text = "guna2Button2";
+            this.btnSellTuesday.Visible = false;
             // 
             // btnSellMonday
             // 
@@ -294,11 +299,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnSellMonday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
             this.btnSellMonday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSellMonday.ForeColor = System.Drawing.Color.White;
-            this.btnSellMonday.Location = new System.Drawing.Point(60, 145);
+            this.btnSellMonday.Location = new System.Drawing.Point(60, 235);
             this.btnSellMonday.Name = "btnSellMonday";
-            this.btnSellMonday.Size = new System.Drawing.Size(25, 100);
+            this.btnSellMonday.Size = new System.Drawing.Size(25, 10);
             this.btnSellMonday.TabIndex = 0;
             this.btnSellMonday.Text = "guna2Button1";
+            this.btnSellMonday.Visible = false;
             // 
             // guna2Separator3
             // 
