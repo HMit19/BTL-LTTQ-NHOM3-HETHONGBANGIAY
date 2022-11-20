@@ -29,16 +29,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             {
                 if (txtProviderCode.Text != "")
                 {
-                    DataTable dtNCC = data.ReadData("Select * from tProvider where ProviderCode='" + txtProviderCode.Text + "'");
-                    txtName.Text = dtNCC.Rows[0]["Name"].ToString();
-                    txtAddress.Text = dtNCC.Rows[0]["Address"].ToString();
+                    DataTable dtNCC = data.ReadData("Select * from tProvider where ProviderCode like N'%" + txtProviderCode.Text + "%'");
                     dgvListProvider.DataSource = dtNCC;
                 }
                 else if (txtName.Text != "" && txtProviderCode.Text == "")
                 {
-                    DataTable dtNCC = data.ReadData("Select * from tProvider where Name='" + txtName.Text + "'");
-                    txtProviderCode.Text = dtNCC.Rows[0]["ProviderCode"].ToString();
-                    txtAddress.Text = dtNCC.Rows[0]["Address"].ToString();
+                    DataTable dtNCC = data.ReadData("Select * from tProvider where Name like N'%" + txtName.Text + "%'");
                     dgvListProvider.DataSource = dtNCC;
                 }
 

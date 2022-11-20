@@ -31,33 +31,15 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             {
                 if (txtEmployeeCode.Text != "")
                 {
-                    DataTable dtNV = data.ReadData("Select EmployeeCode, Name, ID, Gender, DOB, Address, PhoneNumber, Status from tEmployee where EmployeeCode= N'" + txtEmployeeCode.Text + "'");
-                    txtName.Text = dtNV.Rows[0]["Name"].ToString();
-                    if (dtNV.Rows[0]["Status"].ToString() == "True")
-                    {
-                        cboStatus.Text = "Đang Làm";
-                    }
-                    else
-                    { cboStatus.Text = "Đã Nghỉ"; }
+                    DataTable dtNV = data.ReadData("Select EmployeeCode, Name, ID, Gender, DOB, Address, PhoneNumber, Status from tEmployee where EmployeeCode like  N'%" + txtEmployeeCode.Text + "%'");
                     dgvListEmployee.DataSource = dtNV;
                 }
                 else if (txtName.Text != "" && txtEmployeeCode.Text == "")
                 {
-                    DataTable dtNV = data.ReadData("Select EmployeeCode, Name, ID, Gender, DOB, Address, PhoneNumber, Status from tEmployee where Name=N'" + txtName.Text + "'");
-                    txtEmployeeCode.Text = dtNV.Rows[0]["EmployeeCode"].ToString();
-                    if (dtNV.Rows[0]["Status"].ToString() == "True")
-                    {
-                        cboStatus.Text = "Đang Làm";
-                    }
-                    else
-                    { cboStatus.Text = "Đã Nghỉ"; }
+                    DataTable dtNV = data.ReadData("Select EmployeeCode, Name, ID, Gender, DOB, Address, PhoneNumber, Status from tEmployee where Name like N'%" + txtName.Text + "%'");
                     dgvListEmployee.DataSource = dtNV;
                 }
-                else
-                {
-                    DataTable dtNV = data.ReadData("Select EmployeeCode, Name, ID, Gender, DOB, Address, PhoneNumber, Status from tEmployee where EmployeeCode= like N'" + txtEmployeeCode.Text + "'");
-                    dgvListEmployee.DataSource = dtNV;
-                }
+                
 
             }
             catch
@@ -110,8 +92,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
            
             btnAdd.Enabled = false;
             btnDelete.Enabled = true;
-            txtEmployeeCode.Enabled = false;
-            txtName.Enabled = false;
         }
 
         private void btnReload_Click(object sender, EventArgs e)
