@@ -71,7 +71,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             {
                 btnSellMonday.BackColor = Color.FromArgb(232, 81, 16);
             }
-
+            btnSellMonday.Visible=true;
             btnSellMonday.Size = new Size(btnSellMonday.Width, btnSellMonday.Height + a);
             btnSellMonday.Location = new Point(btnSellMonday.Location.X, btnSellMonday.Location.Y - a);
         }
@@ -80,7 +80,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         private void getRevenueTuesday()
         {
             int sum = getRevenueToday();
-            int a = sum / 100000;
+            int a = sum / 55000;
             string mon,sun;
             int total,total2;
             DateTime d = DateTime.Now;
@@ -90,7 +90,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             string sql2= " select sum(a.Quantity* b.Price) from dbo.tDetailBillOfSale a join dbo.tDetailProduct b on a.DetailProductCode= b.DetailProductCode\r\njoin dbo.tBillOfSale c on a.CodeBill=c.CodeBill\r\nwhere c.DateSale= '" + sun + "' ";
             total2= int.Parse(data.RunSQL(sql2).ToString()); //sun
             total = int.Parse(data.RunSQL(sql).ToString());  //mon
-            int b = total / 100000;
+            int b = total / 55000;
             if (total2 > total)
             {
                 btnSellMonday.BackColor = Color.FromArgb(232, 141, 39);
