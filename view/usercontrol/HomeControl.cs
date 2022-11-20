@@ -535,8 +535,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 
                 btnThursday.BackColor = Color.FromArgb(232, 81, 16);
             }
-            btnThursday.Size = new Size(btnThursday.Width, btnThursday.Height + e);
-            btnThursday.Location = new Point(btnThursday.Location.X, btnThursday.Location.Y - e);
+            btnThursday.Size = new Size(btnThursday.Width, btnThursday.Height + f);
+            btnThursday.Location = new Point(btnThursday.Location.X, btnThursday.Location.Y - f);
             if (t6 > t5)
             {
                 btnSellFriday.BackColor = Color.FromArgb(232, 141, 39);
@@ -545,8 +545,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             {
                 btnSellFriday.BackColor = Color.FromArgb(232, 81, 16);
             }
-            btnSellFriday.Size = new Size(btnSellFriday.Width, btnSellFriday.Height + f);
-            btnSellFriday.Location = new Point(btnSellFriday.Location.X, btnSellFriday.Location.Y - f);
+            btnSellFriday.Size = new Size(btnSellFriday.Width, btnSellFriday.Height + i);
+            btnSellFriday.Location = new Point(btnSellFriday.Location.X, btnSellFriday.Location.Y - i);
             if (total > t6)
             {
                 btnSellSaturday.BackColor = Color.FromArgb(232, 141, 39);
@@ -555,8 +555,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             {
                 btnSellSaturday.BackColor = Color.FromArgb(232, 81, 16);
             }
-            btnSellSaturday.Size = new Size(btnSellSaturday.Width, btnSellSaturday.Height + i);
-            btnSellSaturday.Location = new Point(btnSellSaturday.Location.X, btnSellSaturday.Location.Y - i);
+            btnSellSaturday.Size = new Size(btnSellSaturday.Width, btnSellSaturday.Height + e);
+            btnSellSaturday.Location = new Point(btnSellSaturday.Location.X, btnSellSaturday.Location.Y - e);
             if (total < sum)
             {
                 btnSellSunday.BackColor = Color.FromArgb(232, 81, 16);
