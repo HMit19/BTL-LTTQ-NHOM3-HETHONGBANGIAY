@@ -85,15 +85,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.label3 = new System.Windows.Forms.Label();
             this.fpnlTopProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.btnListProduct = new System.Windows.Forms.Label();
-            this.itemTopProduct1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
-            this.itemTopProduct2 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
-            this.itemTopProduct3 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
-            this.itemTopProduct4 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
-            this.itemTopProduct5 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
-            this.itemTopProduct6 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
-            this.itemTopProduct7 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
-            this.itemTopProduct8 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
-            this.itemTopProduct9 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemTopProduct();
             this.guna2Panel1.SuspendLayout();
             this.guna2GroupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -105,7 +96,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             this.guna2Panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
-            this.fpnlTopProduct.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNameForm
@@ -213,11 +203,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnSellSunday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
             this.btnSellSunday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSellSunday.ForeColor = System.Drawing.Color.White;
-            this.btnSellSunday.Location = new System.Drawing.Point(480, 185);
+            this.btnSellSunday.Location = new System.Drawing.Point(480, 232);
             this.btnSellSunday.Name = "btnSellSunday";
-            this.btnSellSunday.Size = new System.Drawing.Size(25, 57);
+            this.btnSellSunday.Size = new System.Drawing.Size(25, 10);
             this.btnSellSunday.TabIndex = 6;
             this.btnSellSunday.Text = "guna2Button8";
+            this.btnSellSunday.Visible = false;
             // 
             // btnSellSaturday
             // 
@@ -228,9 +219,9 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnSellSaturday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
             this.btnSellSaturday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSellSaturday.ForeColor = System.Drawing.Color.White;
-            this.btnSellSaturday.Location = new System.Drawing.Point(411, 185);
+            this.btnSellSaturday.Location = new System.Drawing.Point(411, 232);
             this.btnSellSaturday.Name = "btnSellSaturday";
-            this.btnSellSaturday.Size = new System.Drawing.Size(25, 57);
+            this.btnSellSaturday.Size = new System.Drawing.Size(25, 10);
             this.btnSellSaturday.TabIndex = 5;
             this.btnSellSaturday.Text = "guna2Button5";
             // 
@@ -243,11 +234,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnSellFriday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
             this.btnSellFriday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSellFriday.ForeColor = System.Drawing.Color.White;
-            this.btnSellFriday.Location = new System.Drawing.Point(339, 185);
+            this.btnSellFriday.Location = new System.Drawing.Point(339, 232);
             this.btnSellFriday.Name = "btnSellFriday";
-            this.btnSellFriday.Size = new System.Drawing.Size(25, 57);
+            this.btnSellFriday.Size = new System.Drawing.Size(25, 10);
             this.btnSellFriday.TabIndex = 4;
             this.btnSellFriday.Text = "guna2Button6";
+            this.btnSellFriday.Visible = false;
             // 
             // btnThursday
             // 
@@ -258,11 +250,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnThursday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
             this.btnThursday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnThursday.ForeColor = System.Drawing.Color.White;
-            this.btnThursday.Location = new System.Drawing.Point(270, 185);
+            this.btnThursday.Location = new System.Drawing.Point(270, 232);
             this.btnThursday.Name = "btnThursday";
-            this.btnThursday.Size = new System.Drawing.Size(25, 57);
+            this.btnThursday.Size = new System.Drawing.Size(25, 10);
             this.btnThursday.TabIndex = 3;
             this.btnThursday.Text = "guna2Button3";
+            this.btnThursday.Visible = false;
             // 
             // btnSellWednesday
             // 
@@ -273,11 +266,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnSellWednesday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
             this.btnSellWednesday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSellWednesday.ForeColor = System.Drawing.Color.White;
-            this.btnSellWednesday.Location = new System.Drawing.Point(201, 185);
+            this.btnSellWednesday.Location = new System.Drawing.Point(201, 232);
             this.btnSellWednesday.Name = "btnSellWednesday";
-            this.btnSellWednesday.Size = new System.Drawing.Size(25, 57);
+            this.btnSellWednesday.Size = new System.Drawing.Size(25, 10);
             this.btnSellWednesday.TabIndex = 2;
             this.btnSellWednesday.Text = "guna2Button4";
+            this.btnSellWednesday.Visible = false;
             // 
             // btnSellTuesday
             // 
@@ -289,11 +283,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnSellTuesday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(16)))));
             this.btnSellTuesday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSellTuesday.ForeColor = System.Drawing.Color.White;
-            this.btnSellTuesday.Location = new System.Drawing.Point(129, 165);
+            this.btnSellTuesday.Location = new System.Drawing.Point(129, 232);
             this.btnSellTuesday.Name = "btnSellTuesday";
-            this.btnSellTuesday.Size = new System.Drawing.Size(25, 77);
+            this.btnSellTuesday.Size = new System.Drawing.Size(25, 10);
             this.btnSellTuesday.TabIndex = 1;
             this.btnSellTuesday.Text = "guna2Button2";
+            this.btnSellTuesday.Visible = false;
             // 
             // btnSellMonday
             // 
@@ -304,11 +299,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnSellMonday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(141)))), ((int)(((byte)(39)))));
             this.btnSellMonday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSellMonday.ForeColor = System.Drawing.Color.White;
-            this.btnSellMonday.Location = new System.Drawing.Point(60, 185);
+            this.btnSellMonday.Location = new System.Drawing.Point(60, 235);
             this.btnSellMonday.Name = "btnSellMonday";
-            this.btnSellMonday.Size = new System.Drawing.Size(25, 57);
+            this.btnSellMonday.Size = new System.Drawing.Size(25, 10);
             this.btnSellMonday.TabIndex = 0;
             this.btnSellMonday.Text = "guna2Button1";
+            this.btnSellMonday.Visible = false;
             // 
             // guna2Separator3
             // 
@@ -728,18 +724,9 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             // 
             // fpnlTopProduct
             // 
-            this.fpnlTopProduct.Controls.Add(this.itemTopProduct1);
-            this.fpnlTopProduct.Controls.Add(this.itemTopProduct2);
-            this.fpnlTopProduct.Controls.Add(this.itemTopProduct3);
-            this.fpnlTopProduct.Controls.Add(this.itemTopProduct4);
-            this.fpnlTopProduct.Controls.Add(this.itemTopProduct5);
-            this.fpnlTopProduct.Controls.Add(this.itemTopProduct6);
-            this.fpnlTopProduct.Controls.Add(this.itemTopProduct7);
-            this.fpnlTopProduct.Controls.Add(this.itemTopProduct8);
-            this.fpnlTopProduct.Controls.Add(this.itemTopProduct9);
             this.fpnlTopProduct.Location = new System.Drawing.Point(869, 263);
             this.fpnlTopProduct.Name = "fpnlTopProduct";
-            this.fpnlTopProduct.Size = new System.Drawing.Size(407, 418);
+            this.fpnlTopProduct.Size = new System.Drawing.Size(407, 291);
             this.fpnlTopProduct.TabIndex = 30;
             // 
             // btnListProduct
@@ -752,105 +739,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnListProduct.Size = new System.Drawing.Size(67, 17);
             this.btnListProduct.TabIndex = 31;
             this.btnListProduct.Text = "Tất cả >>";
-            // 
-            // itemTopProduct1
-            // 
-            this.itemTopProduct1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.itemTopProduct1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTopProduct1.ForeColor = System.Drawing.Color.Black;
-            this.itemTopProduct1.Location = new System.Drawing.Point(10, 10);
-            this.itemTopProduct1.Margin = new System.Windows.Forms.Padding(10);
-            this.itemTopProduct1.Name = "itemTopProduct1";
-            this.itemTopProduct1.Size = new System.Drawing.Size(115, 120);
-            this.itemTopProduct1.TabIndex = 0;
-            // 
-            // itemTopProduct2
-            // 
-            this.itemTopProduct2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.itemTopProduct2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTopProduct2.ForeColor = System.Drawing.Color.Black;
-            this.itemTopProduct2.Location = new System.Drawing.Point(145, 10);
-            this.itemTopProduct2.Margin = new System.Windows.Forms.Padding(10);
-            this.itemTopProduct2.Name = "itemTopProduct2";
-            this.itemTopProduct2.Size = new System.Drawing.Size(115, 120);
-            this.itemTopProduct2.TabIndex = 1;
-            // 
-            // itemTopProduct3
-            // 
-            this.itemTopProduct3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.itemTopProduct3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTopProduct3.ForeColor = System.Drawing.Color.Black;
-            this.itemTopProduct3.Location = new System.Drawing.Point(280, 10);
-            this.itemTopProduct3.Margin = new System.Windows.Forms.Padding(10);
-            this.itemTopProduct3.Name = "itemTopProduct3";
-            this.itemTopProduct3.Size = new System.Drawing.Size(115, 120);
-            this.itemTopProduct3.TabIndex = 2;
-            // 
-            // itemTopProduct4
-            // 
-            this.itemTopProduct4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.itemTopProduct4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTopProduct4.ForeColor = System.Drawing.Color.Black;
-            this.itemTopProduct4.Location = new System.Drawing.Point(10, 150);
-            this.itemTopProduct4.Margin = new System.Windows.Forms.Padding(10);
-            this.itemTopProduct4.Name = "itemTopProduct4";
-            this.itemTopProduct4.Size = new System.Drawing.Size(115, 120);
-            this.itemTopProduct4.TabIndex = 3;
-            // 
-            // itemTopProduct5
-            // 
-            this.itemTopProduct5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.itemTopProduct5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTopProduct5.ForeColor = System.Drawing.Color.Black;
-            this.itemTopProduct5.Location = new System.Drawing.Point(145, 150);
-            this.itemTopProduct5.Margin = new System.Windows.Forms.Padding(10);
-            this.itemTopProduct5.Name = "itemTopProduct5";
-            this.itemTopProduct5.Size = new System.Drawing.Size(115, 120);
-            this.itemTopProduct5.TabIndex = 4;
-            // 
-            // itemTopProduct6
-            // 
-            this.itemTopProduct6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.itemTopProduct6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTopProduct6.ForeColor = System.Drawing.Color.Black;
-            this.itemTopProduct6.Location = new System.Drawing.Point(280, 150);
-            this.itemTopProduct6.Margin = new System.Windows.Forms.Padding(10);
-            this.itemTopProduct6.Name = "itemTopProduct6";
-            this.itemTopProduct6.Size = new System.Drawing.Size(115, 120);
-            this.itemTopProduct6.TabIndex = 5;
-            // 
-            // itemTopProduct7
-            // 
-            this.itemTopProduct7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.itemTopProduct7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTopProduct7.ForeColor = System.Drawing.Color.Black;
-            this.itemTopProduct7.Location = new System.Drawing.Point(10, 290);
-            this.itemTopProduct7.Margin = new System.Windows.Forms.Padding(10);
-            this.itemTopProduct7.Name = "itemTopProduct7";
-            this.itemTopProduct7.Size = new System.Drawing.Size(115, 120);
-            this.itemTopProduct7.TabIndex = 6;
-            // 
-            // itemTopProduct8
-            // 
-            this.itemTopProduct8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.itemTopProduct8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTopProduct8.ForeColor = System.Drawing.Color.Black;
-            this.itemTopProduct8.Location = new System.Drawing.Point(145, 290);
-            this.itemTopProduct8.Margin = new System.Windows.Forms.Padding(10);
-            this.itemTopProduct8.Name = "itemTopProduct8";
-            this.itemTopProduct8.Size = new System.Drawing.Size(115, 120);
-            this.itemTopProduct8.TabIndex = 7;
-            // 
-            // itemTopProduct9
-            // 
-            this.itemTopProduct9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.itemTopProduct9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.itemTopProduct9.ForeColor = System.Drawing.Color.Black;
-            this.itemTopProduct9.Location = new System.Drawing.Point(280, 290);
-            this.itemTopProduct9.Margin = new System.Windows.Forms.Padding(10);
-            this.itemTopProduct9.Name = "itemTopProduct9";
-            this.itemTopProduct9.Size = new System.Drawing.Size(115, 120);
-            this.itemTopProduct9.TabIndex = 8;
             // 
             // HomeControl
             // 
@@ -883,6 +771,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Name = "HomeControl";
             this.Size = new System.Drawing.Size(1360, 730);
+            this.Load += new System.EventHandler(this.HomeControl_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2GroupBox4.ResumeLayout(false);
             this.guna2GroupBox4.PerformLayout();
@@ -900,7 +789,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
-            this.fpnlTopProduct.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -958,15 +846,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.FlowLayoutPanel fpnlTopProduct;
-        private item.ItemTopProduct itemTopProduct1;
-        private item.ItemTopProduct itemTopProduct2;
-        private item.ItemTopProduct itemTopProduct3;
-        private item.ItemTopProduct itemTopProduct4;
-        private item.ItemTopProduct itemTopProduct5;
-        private item.ItemTopProduct itemTopProduct6;
-        private item.ItemTopProduct itemTopProduct7;
-        private item.ItemTopProduct itemTopProduct8;
-        private item.ItemTopProduct itemTopProduct9;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator4;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;

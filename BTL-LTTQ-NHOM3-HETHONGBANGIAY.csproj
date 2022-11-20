@@ -56,10 +56,13 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessData.cs" />
     <Compile Include="controller\CartController.cs" />
+    <Compile Include="controller\HomeController.cs" />
     <Compile Include="controller\LoginController.cs" />
     <Compile Include="controller\StoreController.cs" />
     <Compile Include="DAO\cart\CartDAO.cs" />
+    <Compile Include="DAO\category\CategoryDAO.cs" />
     <Compile Include="DAO\connect\ConnectSQL.cs" />
     <Compile Include="DAO\customer\CustomerDAO.cs" />
     <Compile Include="DAO\DatabaseHandle.cs" />
@@ -104,29 +107,35 @@
     <Compile Include="view\test\Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\usercontrol\admin\product\createProduct.cs">
+    <Compile Include="view\usercontrol\admin\product\CreateProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="view\usercontrol\admin\product\createProduct.Designer.cs">
-      <DependentUpon>createProduct.cs</DependentUpon>
+    <Compile Include="view\usercontrol\admin\product\CreateProduct.designer.cs">
+      <DependentUpon>CreateProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\usercontrol\admin\product\editProduct.cs">
+    <Compile Include="view\usercontrol\admin\product\EditProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="view\usercontrol\admin\product\editProduct.Designer.cs">
-      <DependentUpon>editProduct.cs</DependentUpon>
+    <Compile Include="view\usercontrol\admin\product\EditProduct.designer.cs">
+      <DependentUpon>EditProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\usercontrol\admin\product\listProduct.cs">
+    <Compile Include="view\usercontrol\admin\product\ListProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="view\usercontrol\admin\product\listProduct.Designer.cs">
-      <DependentUpon>listProduct.cs</DependentUpon>
+    <Compile Include="view\usercontrol\admin\product\ListProduct.designer.cs">
+      <DependentUpon>ListProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="view\usercontrol\CartControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="view\usercontrol\CartControl.Designer.cs">
       <DependentUpon>CartControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\usercontrol\HomeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\usercontrol\HomeControl.designer.cs">
+      <DependentUpon>HomeControl.cs</DependentUpon>
     </Compile>
     <Compile Include="view\usercontrol\item\ItemColor.cs">
       <SubType>UserControl</SubType>
@@ -152,23 +161,17 @@
     <Compile Include="view\usercontrol\item\ItemSize.Designer.cs">
       <DependentUpon>ItemSize.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\usercontrol\item\ItemTopProduct.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\usercontrol\item\ItemTopProduct.Designer.cs">
-      <DependentUpon>ItemTopProduct.cs</DependentUpon>
-    </Compile>
     <Compile Include="view\manager\frmManager.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\manager\frmManager.Designer.cs">
       <DependentUpon>frmManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\usercontrol\HomeControl.cs">
+    <Compile Include="view\usercontrol\item\ItemTopProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="view\usercontrol\HomeControl.Designer.cs">
-      <DependentUpon>HomeControl.cs</DependentUpon>
+    <Compile Include="view\usercontrol\item\ItemTopProduct.designer.cs">
+      <DependentUpon>ItemTopProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="view\usercontrol\StoreControl.cs">
       <SubType>UserControl</SubType>
@@ -191,17 +194,20 @@
     <EmbeddedResource Include="view\test\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\usercontrol\admin\product\createProduct.resx">
-      <DependentUpon>createProduct.cs</DependentUpon>
+    <EmbeddedResource Include="view\usercontrol\admin\product\CreateProduct.resx">
+      <DependentUpon>CreateProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\usercontrol\admin\product\editProduct.resx">
-      <DependentUpon>editProduct.cs</DependentUpon>
+    <EmbeddedResource Include="view\usercontrol\admin\product\EditProduct.resx">
+      <DependentUpon>EditProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\usercontrol\admin\product\listProduct.resx">
-      <DependentUpon>listProduct.cs</DependentUpon>
+    <EmbeddedResource Include="view\usercontrol\admin\product\ListProduct.resx">
+      <DependentUpon>ListProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\CartControl.resx">
       <DependentUpon>CartControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\usercontrol\HomeControl.resx">
+      <DependentUpon>HomeControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\item\ItemColor.resx">
       <DependentUpon>ItemColor.cs</DependentUpon>
@@ -215,14 +221,11 @@
     <EmbeddedResource Include="view\usercontrol\item\ItemSize.resx">
       <DependentUpon>ItemSize.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\usercontrol\item\ItemTopProduct.resx">
-      <DependentUpon>ItemTopProduct.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="view\manager\frmManager.resx">
       <DependentUpon>frmManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\usercontrol\HomeControl.resx">
-      <DependentUpon>HomeControl.cs</DependentUpon>
+    <EmbeddedResource Include="view\usercontrol\item\ItemTopProduct.resx">
+      <DependentUpon>ItemTopProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\StoreControl.resx">
       <DependentUpon>StoreControl.cs</DependentUpon>

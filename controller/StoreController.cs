@@ -207,7 +207,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
                     item.setEnable(true);
                 }
                 if (colorCurrent == "")
-                { 
+                {
                     foreach (ItemColor item in storeControl.Controls["pnlOptionDetail"].Controls["pnlOptionColor"].Controls)
                     {
                         item.setBorder();
@@ -358,7 +358,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
                     break;
             }
         }
-
         private void searchProduct()
         {
             string search = storeControl.getSearch();
@@ -376,12 +375,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
         {
             long quantityProduct = productDAO.getListProducts().Count;
             List<string> categoryName = productDAO.getNameCategory();
-
             storeControl.Controls["pnlOptionHeader"].Controls["lblQuantityProduct"].Text = quantityProduct.ToString();
             storeControl.loadCategory(categoryName);
         }
         private void loadListProduct(List<Product> products = null)
         {
+            storeControl.Controls["pnlContainProduct"].Visible = false;
             if (products == null) products = productDAO.getListProducts();
             storeControl.Controls["pnlContainProduct"].Controls.Clear();
             foreach (Product product in products)
@@ -406,7 +405,9 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
                 List<string> sizes = productDAO.getListSizeOfProduct(product.Id);
                 sizes.Sort();
                 storeControl.Controls["pnlContainProduct"].Controls.Add(new ItemProduct(idProduct, name, image, price, quantity, idCategory, colors, sizes));
+
             }
+            storeControl.Controls["pnlContainProduct"].Visible = true;
             EventSelectItemProduct();
         }
     }

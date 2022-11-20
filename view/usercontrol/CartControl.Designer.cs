@@ -1,4 +1,6 @@
-﻿namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
+﻿using System;
+
+namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 {
     partial class CartControl
     {
@@ -44,12 +46,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.txtMoneyReturn = new Guna.UI2.WinForms.Guna2TextBox();
-            this.rdoBanking = new System.Windows.Forms.Label();
-            this.rdoCreditCard = new System.Windows.Forms.Label();
-            this.rdoCash = new System.Windows.Forms.Label();
-            this.guna2CustomRadioButton3 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.guna2CustomRadioButton2 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.guna2CustomRadioButton1 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.lblBanking = new System.Windows.Forms.Label();
+            this.lblCreditCard = new System.Windows.Forms.Label();
+            this.lblCash = new System.Windows.Forms.Label();
+            this.rdoCreditCard = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.rdoBanking = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.rdoCash = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.txtCustomerPayUp = new Guna.UI2.WinForms.Guna2TextBox();
@@ -71,6 +73,7 @@
             this.btnNoteOrder = new FontAwesome.Sharp.IconButton();
             this.pnlInformationPay = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlCustomer = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblIdCustomer = new System.Windows.Forms.Label();
             this.dtBirth = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label21 = new System.Windows.Forms.Label();
             this.ckbNu = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -87,6 +90,8 @@
             this.txtDiscountBirth = new System.Windows.Forms.Label();
             this.btnInformation = new Guna.UI2.WinForms.Guna2Button();
             this.btnPay = new Guna.UI2.WinForms.Guna2Button();
+            this.methodPay = new System.Windows.Forms.Label();
+            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.pnlFooter.SuspendLayout();
@@ -215,9 +220,9 @@
             this.lblDatePay.Location = new System.Drawing.Point(337, 9);
             this.lblDatePay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDatePay.Name = "lblDatePay";
-            this.lblDatePay.Size = new System.Drawing.Size(83, 19);
+            this.lblDatePay.Size = new System.Drawing.Size(68, 19);
             this.lblDatePay.TabIndex = 76;
-            this.lblDatePay.Text = "15/01/2022";
+            this.lblDatePay.Text = "Ngày bán";
             // 
             // lblNameEmployee
             // 
@@ -273,6 +278,7 @@
             this.btnPayUp.Size = new System.Drawing.Size(329, 37);
             this.btnPayUp.TabIndex = 72;
             this.btnPayUp.Text = "Thanh Toán";
+            this.btnPayUp.Click += new System.EventHandler(this.btnPayUp_Click);
             // 
             // label2
             // 
@@ -324,100 +330,103 @@
             this.txtMoneyReturn.TabIndex = 69;
             this.txtMoneyReturn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // rdoBanking
+            // lblBanking
             // 
-            this.rdoBanking.AutoSize = true;
-            this.rdoBanking.BackColor = System.Drawing.Color.White;
-            this.rdoBanking.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoBanking.ForeColor = System.Drawing.Color.Black;
-            this.rdoBanking.Location = new System.Drawing.Point(176, 363);
-            this.rdoBanking.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.rdoBanking.Name = "rdoBanking";
-            this.rdoBanking.Size = new System.Drawing.Size(98, 19);
-            this.rdoBanking.TabIndex = 68;
-            this.rdoBanking.Text = "Chuyển khoản";
+            this.lblBanking.AutoSize = true;
+            this.lblBanking.BackColor = System.Drawing.Color.White;
+            this.lblBanking.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBanking.ForeColor = System.Drawing.Color.Black;
+            this.lblBanking.Location = new System.Drawing.Point(176, 363);
+            this.lblBanking.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBanking.Name = "lblBanking";
+            this.lblBanking.Size = new System.Drawing.Size(98, 19);
+            this.lblBanking.TabIndex = 68;
+            this.lblBanking.Text = "Chuyển khoản";
+            // 
+            // lblCreditCard
+            // 
+            this.lblCreditCard.AutoSize = true;
+            this.lblCreditCard.BackColor = System.Drawing.Color.White;
+            this.lblCreditCard.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreditCard.ForeColor = System.Drawing.Color.Black;
+            this.lblCreditCard.Location = new System.Drawing.Point(306, 363);
+            this.lblCreditCard.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCreditCard.Name = "lblCreditCard";
+            this.lblCreditCard.Size = new System.Drawing.Size(87, 19);
+            this.lblCreditCard.TabIndex = 66;
+            this.lblCreditCard.Text = "Thẻ tín dụng";
+            // 
+            // lblCash
+            // 
+            this.lblCash.AutoSize = true;
+            this.lblCash.BackColor = System.Drawing.Color.White;
+            this.lblCash.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCash.ForeColor = System.Drawing.Color.Black;
+            this.lblCash.Location = new System.Drawing.Point(78, 363);
+            this.lblCash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCash.Name = "lblCash";
+            this.lblCash.Size = new System.Drawing.Size(62, 19);
+            this.lblCash.TabIndex = 67;
+            this.lblCash.Text = "Tiền mặt";
             // 
             // rdoCreditCard
             // 
-            this.rdoCreditCard.AutoSize = true;
-            this.rdoCreditCard.BackColor = System.Drawing.Color.White;
-            this.rdoCreditCard.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoCreditCard.ForeColor = System.Drawing.Color.Black;
-            this.rdoCreditCard.Location = new System.Drawing.Point(306, 363);
-            this.rdoCreditCard.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.rdoCreditCard.BackColor = System.Drawing.Color.Transparent;
+            this.rdoCreditCard.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoCreditCard.CheckedState.BorderThickness = 1;
+            this.rdoCreditCard.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoCreditCard.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdoCreditCard.Location = new System.Drawing.Point(287, 365);
+            this.rdoCreditCard.Margin = new System.Windows.Forms.Padding(2);
             this.rdoCreditCard.Name = "rdoCreditCard";
-            this.rdoCreditCard.Size = new System.Drawing.Size(87, 19);
-            this.rdoCreditCard.TabIndex = 66;
-            this.rdoCreditCard.Text = "Thẻ tín dụng";
+            this.rdoCreditCard.Size = new System.Drawing.Size(15, 16);
+            this.rdoCreditCard.TabIndex = 65;
+            this.rdoCreditCard.Text = "guna2CustomRadioButton3";
+            this.rdoCreditCard.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdoCreditCard.UncheckedState.BorderThickness = 2;
+            this.rdoCreditCard.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdoCreditCard.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdoCreditCard.UseTransparentBackground = true;
+            this.rdoCreditCard.CheckedChanged += new System.EventHandler(this.rdoCreditCard_CheckedChanged);
+            // 
+            // rdoBanking
+            // 
+            this.rdoBanking.BackColor = System.Drawing.Color.Transparent;
+            this.rdoBanking.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoBanking.CheckedState.BorderThickness = 1;
+            this.rdoBanking.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoBanking.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdoBanking.Location = new System.Drawing.Point(156, 365);
+            this.rdoBanking.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoBanking.Name = "rdoBanking";
+            this.rdoBanking.Size = new System.Drawing.Size(15, 16);
+            this.rdoBanking.TabIndex = 64;
+            this.rdoBanking.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdoBanking.UncheckedState.BorderThickness = 2;
+            this.rdoBanking.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdoBanking.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdoBanking.UseTransparentBackground = true;
+            this.rdoBanking.CheckedChanged += new System.EventHandler(this.rdoBanking_CheckedChanged);
             // 
             // rdoCash
             // 
-            this.rdoCash.AutoSize = true;
-            this.rdoCash.BackColor = System.Drawing.Color.White;
-            this.rdoCash.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoCash.ForeColor = System.Drawing.Color.Black;
-            this.rdoCash.Location = new System.Drawing.Point(78, 363);
-            this.rdoCash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.rdoCash.BackColor = System.Drawing.Color.Transparent;
+            this.rdoCash.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoCash.CheckedState.BorderThickness = 1;
+            this.rdoCash.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoCash.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdoCash.Location = new System.Drawing.Point(58, 365);
+            this.rdoCash.Margin = new System.Windows.Forms.Padding(2);
             this.rdoCash.Name = "rdoCash";
-            this.rdoCash.Size = new System.Drawing.Size(62, 19);
-            this.rdoCash.TabIndex = 67;
-            this.rdoCash.Text = "Tiền mặt";
-            // 
-            // guna2CustomRadioButton3
-            // 
-            this.guna2CustomRadioButton3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomRadioButton3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CustomRadioButton3.CheckedState.BorderThickness = 1;
-            this.guna2CustomRadioButton3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CustomRadioButton3.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2CustomRadioButton3.Location = new System.Drawing.Point(287, 365);
-            this.guna2CustomRadioButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CustomRadioButton3.Name = "guna2CustomRadioButton3";
-            this.guna2CustomRadioButton3.Size = new System.Drawing.Size(15, 16);
-            this.guna2CustomRadioButton3.TabIndex = 65;
-            this.guna2CustomRadioButton3.Text = "guna2CustomRadioButton3";
-            this.guna2CustomRadioButton3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CustomRadioButton3.UncheckedState.BorderThickness = 2;
-            this.guna2CustomRadioButton3.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CustomRadioButton3.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.guna2CustomRadioButton3.UseTransparentBackground = true;
-            // 
-            // guna2CustomRadioButton2
-            // 
-            this.guna2CustomRadioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomRadioButton2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CustomRadioButton2.CheckedState.BorderThickness = 1;
-            this.guna2CustomRadioButton2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CustomRadioButton2.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2CustomRadioButton2.Location = new System.Drawing.Point(156, 365);
-            this.guna2CustomRadioButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CustomRadioButton2.Name = "guna2CustomRadioButton2";
-            this.guna2CustomRadioButton2.Size = new System.Drawing.Size(15, 16);
-            this.guna2CustomRadioButton2.TabIndex = 64;
-            this.guna2CustomRadioButton2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CustomRadioButton2.UncheckedState.BorderThickness = 2;
-            this.guna2CustomRadioButton2.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CustomRadioButton2.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.guna2CustomRadioButton2.UseTransparentBackground = true;
-            // 
-            // guna2CustomRadioButton1
-            // 
-            this.guna2CustomRadioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomRadioButton1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CustomRadioButton1.CheckedState.BorderThickness = 1;
-            this.guna2CustomRadioButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CustomRadioButton1.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2CustomRadioButton1.Location = new System.Drawing.Point(58, 365);
-            this.guna2CustomRadioButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CustomRadioButton1.Name = "guna2CustomRadioButton1";
-            this.guna2CustomRadioButton1.Size = new System.Drawing.Size(15, 16);
-            this.guna2CustomRadioButton1.TabIndex = 63;
-            this.guna2CustomRadioButton1.Text = "guna2CustomRadioButton1";
-            this.guna2CustomRadioButton1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CustomRadioButton1.UncheckedState.BorderThickness = 2;
-            this.guna2CustomRadioButton1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CustomRadioButton1.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.guna2CustomRadioButton1.UseTransparentBackground = true;
+            this.rdoCash.Size = new System.Drawing.Size(15, 16);
+            this.rdoCash.TabIndex = 63;
+            this.rdoCash.Text = "guna2CustomRadioButton1";
+            this.rdoCash.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdoCash.UncheckedState.BorderThickness = 2;
+            this.rdoCash.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdoCash.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdoCash.UseTransparentBackground = true;
+            this.rdoCash.CheckedChanged += new System.EventHandler(this.rdoCash_CheckedChanged);
             // 
             // label20
             // 
@@ -463,6 +472,9 @@
             this.txtCustomerPayUp.Size = new System.Drawing.Size(131, 30);
             this.txtCustomerPayUp.TabIndex = 60;
             this.txtCustomerPayUp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCustomerPayUp.TextChanged += new System.EventHandler(this.txtCustomerPayUp_TextChanged);
+            this.txtCustomerPayUp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCustomerPayUp_KeyPress);
+            this.txtCustomerPayUp.Leave += new System.EventHandler(this.txtCustomerPayUp_Leave);
             // 
             // txtPoint
             // 
@@ -490,6 +502,8 @@
             this.txtPoint.Size = new System.Drawing.Size(131, 30);
             this.txtPoint.TabIndex = 59;
             this.txtPoint.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPoint.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPoint_KeyPress);
+            this.txtPoint.Leave += new System.EventHandler(this.txtPoint_Leave);
             // 
             // label18
             // 
@@ -527,7 +541,7 @@
             this.lblMoneyOrder.Name = "lblMoneyOrder";
             this.lblMoneyOrder.Size = new System.Drawing.Size(135, 19);
             this.lblMoneyOrder.TabIndex = 56;
-            this.lblMoneyOrder.Text = "100,000";
+            this.lblMoneyOrder.Text = "Số tiền cần trả";
             this.lblMoneyOrder.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblSumTotalInOrder
@@ -540,7 +554,7 @@
             this.lblSumTotalInOrder.Name = "lblSumTotalInOrder";
             this.lblSumTotalInOrder.Size = new System.Drawing.Size(146, 19);
             this.lblSumTotalInOrder.TabIndex = 55;
-            this.lblSumTotalInOrder.Text = "100,000";
+            this.lblSumTotalInOrder.Text = "Tổng tiền";
             this.lblSumTotalInOrder.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label15
@@ -578,9 +592,9 @@
             this.lblNameCustomer.Location = new System.Drawing.Point(122, 42);
             this.lblNameCustomer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNameCustomer.Name = "lblNameCustomer";
-            this.lblNameCustomer.Size = new System.Drawing.Size(144, 19);
+            this.lblNameCustomer.Size = new System.Drawing.Size(97, 19);
             this.lblNameCustomer.TabIndex = 48;
-            this.lblNameCustomer.Text = "Nguyễn Thị Ngọc Anh";
+            this.lblNameCustomer.Text = "Tên khác hàng";
             // 
             // label30
             // 
@@ -651,11 +665,11 @@
             this.lblSumTotal.BackColor = System.Drawing.Color.White;
             this.lblSumTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSumTotal.ForeColor = System.Drawing.Color.Red;
-            this.lblSumTotal.Location = new System.Drawing.Point(547, 32);
+            this.lblSumTotal.Location = new System.Drawing.Point(518, 32);
             this.lblSumTotal.Name = "lblSumTotal";
-            this.lblSumTotal.Size = new System.Drawing.Size(73, 30);
+            this.lblSumTotal.Size = new System.Drawing.Size(102, 30);
             this.lblSumTotal.TabIndex = 59;
-            this.lblSumTotal.Text = "100,000";
+            this.lblSumTotal.Text = "Tổng tiền";
             this.lblSumTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label37
@@ -704,6 +718,7 @@
             // pnlCustomer
             // 
             this.pnlCustomer.BackColor = System.Drawing.Color.White;
+            this.pnlCustomer.Controls.Add(this.lblIdCustomer);
             this.pnlCustomer.Controls.Add(this.dtBirth);
             this.pnlCustomer.Controls.Add(this.label21);
             this.pnlCustomer.Controls.Add(this.ckbNu);
@@ -721,6 +736,18 @@
             this.pnlCustomer.Size = new System.Drawing.Size(436, 507);
             this.pnlCustomer.TabIndex = 2;
             // 
+            // lblIdCustomer
+            // 
+            this.lblIdCustomer.AutoSize = true;
+            this.lblIdCustomer.BackColor = System.Drawing.Color.White;
+            this.lblIdCustomer.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblIdCustomer.ForeColor = System.Drawing.Color.Black;
+            this.lblIdCustomer.Location = new System.Drawing.Point(101, 435);
+            this.lblIdCustomer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIdCustomer.Name = "lblIdCustomer";
+            this.lblIdCustomer.Size = new System.Drawing.Size(0, 21);
+            this.lblIdCustomer.TabIndex = 22;
+            // 
             // dtBirth
             // 
             this.dtBirth.Checked = true;
@@ -734,7 +761,7 @@
             this.dtBirth.Size = new System.Drawing.Size(275, 35);
             this.dtBirth.TabIndex = 21;
             this.dtBirth.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.dtBirth.Value = new System.DateTime(2022, 10, 30, 23, 10, 0, 0);
+            this.dtBirth.Value = new System.DateTime(2022, 11, 18, 22, 50, 52, 492);
             // 
             // label21
             // 
@@ -857,10 +884,11 @@
             this.txtPhoneCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhoneCustomer.Name = "txtPhoneCustomer";
             this.txtPhoneCustomer.PasswordChar = '\0';
-            this.txtPhoneCustomer.PlaceholderText = "Số điện thoại  . . .";
+            this.txtPhoneCustomer.PlaceholderText = "Số điện thoại  (09xx xxx xxx)";
             this.txtPhoneCustomer.SelectedText = "";
             this.txtPhoneCustomer.Size = new System.Drawing.Size(275, 35);
             this.txtPhoneCustomer.TabIndex = 15;
+            this.txtPhoneCustomer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneCustomer_KeyPress);
             // 
             // txtNameCustomer
             // 
@@ -878,10 +906,11 @@
             this.txtNameCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.txtNameCustomer.Name = "txtNameCustomer";
             this.txtNameCustomer.PasswordChar = '\0';
-            this.txtNameCustomer.PlaceholderText = "Tên khách hàng . . .";
+            this.txtNameCustomer.PlaceholderText = "Tên khách hàng (Nguyen Van A)";
             this.txtNameCustomer.SelectedText = "";
             this.txtNameCustomer.Size = new System.Drawing.Size(275, 35);
-            this.txtNameCustomer.TabIndex = 14;
+            this.txtNameCustomer.TabIndex = 16;
+            this.txtNameCustomer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNameCustomer_KeyPress);
             // 
             // label9
             // 
@@ -934,14 +963,14 @@
             this.pnlPay.Controls.Add(this.txtPoint);
             this.pnlPay.Controls.Add(this.txtMoneyReturn);
             this.pnlPay.Controls.Add(this.txtCustomerPayUp);
-            this.pnlPay.Controls.Add(this.rdoBanking);
+            this.pnlPay.Controls.Add(this.lblBanking);
             this.pnlPay.Controls.Add(this.label19);
-            this.pnlPay.Controls.Add(this.rdoCreditCard);
+            this.pnlPay.Controls.Add(this.lblCreditCard);
             this.pnlPay.Controls.Add(this.label20);
+            this.pnlPay.Controls.Add(this.lblCash);
             this.pnlPay.Controls.Add(this.rdoCash);
-            this.pnlPay.Controls.Add(this.guna2CustomRadioButton1);
-            this.pnlPay.Controls.Add(this.guna2CustomRadioButton3);
-            this.pnlPay.Controls.Add(this.guna2CustomRadioButton2);
+            this.pnlPay.Controls.Add(this.rdoCreditCard);
+            this.pnlPay.Controls.Add(this.rdoBanking);
             this.pnlPay.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlPay.FillColor = System.Drawing.Color.White;
             this.pnlPay.Location = new System.Drawing.Point(0, 11);
@@ -969,9 +998,9 @@
             this.txtDiscountBirth.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txtDiscountBirth.Location = new System.Drawing.Point(78, 137);
             this.txtDiscountBirth.Name = "txtDiscountBirth";
-            this.txtDiscountBirth.Size = new System.Drawing.Size(98, 19);
+            this.txtDiscountBirth.Size = new System.Drawing.Size(173, 19);
             this.txtDiscountBirth.TabIndex = 80;
-            this.txtDiscountBirth.Text = "(5% Sinh nhật)";
+            this.txtDiscountBirth.Text = "(5% Sinh nhật khách hàng)";
             this.txtDiscountBirth.Visible = false;
             // 
             // btnInformation
@@ -1011,11 +1040,34 @@
             this.btnPay.Text = "Thanh toán đơn hàng";
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
+            // methodPay
+            // 
+            this.methodPay.AutoSize = true;
+            this.methodPay.Location = new System.Drawing.Point(1110, 656);
+            this.methodPay.Name = "methodPay";
+            this.methodPay.Size = new System.Drawing.Size(0, 13);
+            this.methodPay.TabIndex = 6;
+            // 
+            // guna2ContextMenuStrip1
+            // 
+            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
+            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
+            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // CartControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.Controls.Add(this.methodPay);
             this.Controls.Add(this.btnPay);
             this.Controls.Add(this.btnInformation);
             this.Controls.Add(this.pnlFooter);
@@ -1034,6 +1086,7 @@
             this.pnlPay.ResumeLayout(false);
             this.pnlPay.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1049,12 +1102,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label24;
         private Guna.UI2.WinForms.Guna2TextBox txtMoneyReturn;
-        private System.Windows.Forms.Label rdoBanking;
-        private System.Windows.Forms.Label rdoCreditCard;
-        private System.Windows.Forms.Label rdoCash;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton guna2CustomRadioButton3;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton guna2CustomRadioButton2;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton guna2CustomRadioButton1;
+        private System.Windows.Forms.Label lblBanking;
+        private System.Windows.Forms.Label lblCreditCard;
+        private System.Windows.Forms.Label lblCash;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton rdoCreditCard;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton rdoBanking;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton rdoCash;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private Guna.UI2.WinForms.Guna2TextBox txtCustomerPayUp;
@@ -1098,5 +1151,8 @@
         private Guna.UI2.WinForms.Guna2Panel pnlPay;
         private System.Windows.Forms.Label txtDiscountBirth;
         private System.Windows.Forms.Label lblDetailDiscount;
+        private System.Windows.Forms.Label methodPay;
+        private System.Windows.Forms.Label lblIdCustomer;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
     }
 }

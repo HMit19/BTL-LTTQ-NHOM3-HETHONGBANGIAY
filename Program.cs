@@ -1,4 +1,5 @@
 ﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller;
+using BTL_LTTQ_NHOM3_HETHONGBANGIAY.model;
 using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager;
 using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.test;
 using System;
@@ -19,10 +20,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //frmLogin loginView = new frmLogin();
-            //new LoginController(loginView);
+            frmLogin loginView = new frmLogin();
+            new LoginController(loginView);
             //Application.Run(new Form1());
-            Application.Run(new frmManager());
+            //Application.Run(new frmManager());
         }
     }
 }

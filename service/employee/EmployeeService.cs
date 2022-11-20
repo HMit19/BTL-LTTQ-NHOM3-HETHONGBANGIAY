@@ -45,6 +45,35 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.employee
             return employee;
         }
 
+        public Employee findByUsername(string username)
+        {
+            Employee employee = null;
+            try
+            {
+                DataTable dataTable = null;
+                string sql = "select * from tEmployee where UserName = '" + username + "'";
+                dataTable = databaseHandle.dataReader(sql);
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    string id = row[0].ToString();
+                    string name = row[1].ToString();
+                    string cIC = row[2].ToString();
+                    string gender = row[3].ToString();
+                    DateTime birth = Convert.ToDateTime(row[4]);
+                    string address = row[5].ToString();
+                    string phone = row[6].ToString();
+                    bool status = Convert.ToBoolean(row[8]);
+                    employee = new Employee(id, name, cIC, gender, birth, address, phone, username, status);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error get Employee by Username");
+                databaseHandle.CloseConnect();
+            }
+            return employee;
+        }
+
         public List<Employee> findAll()
         {
             List<Employee> listEmployee = null;

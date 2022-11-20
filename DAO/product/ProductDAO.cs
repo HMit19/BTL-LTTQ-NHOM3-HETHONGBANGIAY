@@ -99,7 +99,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.product
                 sizes.Add(detailProduct.Size.ToString());
             }
             return new List<string>(sizes);
-            return null;
         }
 
         public List<Product> getListProducts()

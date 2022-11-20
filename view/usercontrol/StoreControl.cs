@@ -22,7 +22,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         public event UserEvent selectCategoryProduct;
         public event UserEvent addProductToCart;
         public event UserEvent showCart;
-        public event UserEvent removeAllinCart;
         public StoreControl()
         {
             InitializeComponent();
@@ -40,7 +39,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            searchProduct?.Invoke();
+            if (txtSearch.Text != "") searchProduct?.Invoke();
         }
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {

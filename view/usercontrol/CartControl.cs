@@ -1,6 +1,7 @@
 ﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.model;
 using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager;
 using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,9 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
     {
         public event UserEvent removeAllinCart;
         public event UserEventParam findCustomer;
+        public event UserEventParam inputPoint;
+        public event UserEventParam returnMoney;
+        public event UserEvent payUp;
         public CartControl()
         {
             InitializeComponent();
@@ -32,8 +36,9 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         {
             findCustomer?.Invoke(this.txtSearch.Text);
         }
-        public void setInformation(string name, string phone, bool man, DateTime birth, string address, string point)
+        public void setInformation(string id, string name, string phone, bool man, DateTime birth, string address, string point)
         {
+            this.lblIdCustomer.Text = id;
             this.txtNameCustomer.Text = name;
             this.txtPhoneCustomer.Text = phone;
             this.ckbNam.Checked = man;
@@ -42,12 +47,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.txtAddress.Text = address;
             this.lblScoreOfCustomer.Text = point;
         }
-        public void setGenderCustomer(bool man = true)
-        {
-            this.ckbNam.Checked = man;
-            this.ckbNu.Checked = !man;
-        }
-
         private void btnInformation_Click(object sender, EventArgs e)
         {
             this.pnlCustomer.BringToFront();
@@ -59,13 +58,141 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 
         private void btnPay_Click(object sender, EventArgs e)
         {
+            if (!checkInformationCustomer())
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin khách hàng!", "Lưu ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             this.pnlPay.BringToFront();
-            this.lblNameCustomer.Text = txtNameCustomer.Text; 
+            this.lblNameCustomer.Text = txtNameCustomer.Text;
             this.btnPay.FillColor = Color.Gainsboro;
             this.btnInformation.FillColor = Color.White;
             this.btnPay.CustomBorderThickness = new Padding(0, 0, 0, 2);
             this.btnInformation.CustomBorderThickness = new Padding(0, 0, 0, 0);
             this.lblDatePay.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }
+        private void rdoCash_CheckedChanged(object sender, EventArgs e)
+        {
+            this.methodPay.Text = "Tiền mặt";
+        }
+
+        private void rdoBanking_CheckedChanged(object sender, EventArgs e)
+        {
+            this.methodPay.Text = "Chuyển khoản";
+        }
+
+        private void rdoCreditCard_CheckedChanged(object sender, EventArgs e)
+        {
+            this.methodPay.Text = "Thẻ tín dụng";
+        }
+
+        private void btnPayUp_Click(object sender, EventArgs e)
+        {
+            payUp?.Invoke();
+        }
+
+        private void txtPoint_Leave(object sender, EventArgs e)
+        {
+            inputPoint?.Invoke(txtPoint.Text);
+        }
+
+        private void txtCustomerPayUp_Leave(object sender, EventArgs e)
+        {
+            returnMoney?.Invoke(txtCustomerPayUp.Text);
+        }
+        public void resetPoint()
+        {
+            this.txtPoint.Text = "";
+        }
+        public void resetMoney()
+        {
+            this.txtCustomerPayUp.Text = "";
+        }
+        public string getMoney()
+        {
+            return this.txtCustomerPayUp.Text;
+        }
+        public int getPoint()
+        {
+            string point = txtPoint.Text;
+            if (point != "") return Convert.ToInt32(point);
+            return 0;
+        }
+
+        public void setMoneyReturn(long money)
+        {
+            this.txtMoneyReturn.Text = money.ToString("#,###");
+        }
+        private bool checkInformationCustomer()
+        {
+            DateTime date = DateTime.Now;
+            if (txtNameCustomer.Text == "")
+            {
+                txtNameCustomer.Focus();
+                return false;
+            }
+            if (txtPhoneCustomer.Text == "")
+            {
+                txtPhoneCustomer.Focus();
+                return false;
+            }
+            if (ckbNu.Checked == false && ckbNam.Checked == false)
+            {
+                return false;
+            }
+            if (txtAddress.Text == "")
+            {
+                txtAddress.Focus();
+                return false;
+            }
+            return true;
+        }
+        private void txtNameCustomer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPhoneCustomer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại 0 - 9!", "Nhập số điện thoại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+            }
+            if (txtPhoneCustomer.Text.Length == 0 && e.KeyChar != '0')
+            {
+                MessageBox.Show("Ký tự đầu phải là ký tự 0!", "Nhập số điện thoại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+            }
+        }
+
+        private void txtCustomerPayUp_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCustomerPayUp.Text == "")
+            {
+                txtMoneyReturn.Text = "";
+            }
+        }
+
+        private void txtPoint_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                MessageBox.Show("Vui lòng nhập điểm là ký tự 0 - 9!", "Nhập điểm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+            }
+        }
+
+        private void txtCustomerPayUp_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                MessageBox.Show("Số tiền chỉ chứa ký tự 0 - 9!", "Nhập số tiền", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+            }
         }
     }
 }

@@ -42,24 +42,28 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.btnCustomer = new System.Windows.Forms.Button();
             this.btnInfomation = new System.Windows.Forms.Button();
             this.pnlSiderBar = new System.Windows.Forms.Panel();
+            this.pnlSidbarOption = new System.Windows.Forms.FlowLayoutPanel();
+            this.btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.nameEmployee = new System.Windows.Forms.Label();
             this.nameRole = new System.Windows.Forms.Label();
             this.btnSetting = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnTurnOff = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlHeader = new Guna.UI2.WinForms.Guna2Panel();
+            this.idEmployee = new System.Windows.Forms.Label();
             this.pnlContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.homeControl = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.HomeControl();
             this.cartControl = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CartControl();
-            this.listProduct = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.listProduct();
+            this.listProduct = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.ListProduct();
             this.storeControl = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.StoreControl();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureStore)).BeginInit();
             this.pnlSiderBar.SuspendLayout();
+            this.pnlSidbarOption.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.guna2Panel1.SuspendLayout();
+            this.pnlHeader.SuspendLayout();
             this.pnlContainer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,10 +105,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.btnHome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(1, 126);
+            this.btnHome.Location = new System.Drawing.Point(3, 3);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(204, 54);
+            this.btnHome.Size = new System.Drawing.Size(200, 54);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "      Trang chủ";
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -118,10 +122,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.btnSell.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSell.Image = ((System.Drawing.Image)(resources.GetObject("btnSell.Image")));
             this.btnSell.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSell.Location = new System.Drawing.Point(1, 177);
+            this.btnSell.Location = new System.Drawing.Point(3, 63);
             this.btnSell.Name = "btnSell";
             this.btnSell.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnSell.Size = new System.Drawing.Size(204, 54);
+            this.btnSell.Size = new System.Drawing.Size(200, 54);
             this.btnSell.TabIndex = 2;
             this.btnSell.Text = "      Bán hàng";
             this.btnSell.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -135,10 +139,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.btnProduct.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
             this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduct.Location = new System.Drawing.Point(1, 228);
+            this.btnProduct.Location = new System.Drawing.Point(3, 123);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnProduct.Size = new System.Drawing.Size(204, 54);
+            this.btnProduct.Size = new System.Drawing.Size(200, 54);
             this.btnProduct.TabIndex = 3;
             this.btnProduct.Text = "      Sản phẩm";
             this.btnProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -152,10 +156,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.btnBill.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBill.Image = ((System.Drawing.Image)(resources.GetObject("btnBill.Image")));
             this.btnBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBill.Location = new System.Drawing.Point(1, 279);
+            this.btnBill.Location = new System.Drawing.Point(3, 183);
             this.btnBill.Name = "btnBill";
             this.btnBill.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnBill.Size = new System.Drawing.Size(204, 54);
+            this.btnBill.Size = new System.Drawing.Size(200, 54);
             this.btnBill.TabIndex = 4;
             this.btnBill.Text = "      Hoá đơn";
             this.btnBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -168,10 +172,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.btnEmployee.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.Image")));
             this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployee.Location = new System.Drawing.Point(1, 329);
+            this.btnEmployee.Location = new System.Drawing.Point(3, 243);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnEmployee.Size = new System.Drawing.Size(204, 54);
+            this.btnEmployee.Size = new System.Drawing.Size(200, 54);
             this.btnEmployee.TabIndex = 5;
             this.btnEmployee.Text = "      Nhân viên";
             this.btnEmployee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -184,10 +188,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.btnCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
             this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(1, 379);
+            this.btnCustomer.Location = new System.Drawing.Point(3, 303);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnCustomer.Size = new System.Drawing.Size(204, 54);
+            this.btnCustomer.Size = new System.Drawing.Size(200, 54);
             this.btnCustomer.TabIndex = 6;
             this.btnCustomer.Text = "      Khách hàng";
             this.btnCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -209,19 +213,45 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             // pnlSiderBar
             // 
             this.pnlSiderBar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnlSiderBar.Controls.Add(this.pnlSidbarOption);
             this.pnlSiderBar.Controls.Add(this.panel2);
             this.pnlSiderBar.Controls.Add(this.btnInfomation);
-            this.pnlSiderBar.Controls.Add(this.btnCustomer);
-            this.pnlSiderBar.Controls.Add(this.btnEmployee);
-            this.pnlSiderBar.Controls.Add(this.btnBill);
-            this.pnlSiderBar.Controls.Add(this.btnProduct);
-            this.pnlSiderBar.Controls.Add(this.btnSell);
-            this.pnlSiderBar.Controls.Add(this.btnHome);
             this.pnlSiderBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSiderBar.Location = new System.Drawing.Point(0, 0);
             this.pnlSiderBar.Name = "pnlSiderBar";
             this.pnlSiderBar.Size = new System.Drawing.Size(206, 825);
             this.pnlSiderBar.TabIndex = 0;
+            // 
+            // pnlSidbarOption
+            // 
+            this.pnlSidbarOption.BackColor = System.Drawing.Color.White;
+            this.pnlSidbarOption.Controls.Add(this.btnHome);
+            this.pnlSidbarOption.Controls.Add(this.btnSell);
+            this.pnlSidbarOption.Controls.Add(this.btnProduct);
+            this.pnlSidbarOption.Controls.Add(this.btnBill);
+            this.pnlSidbarOption.Controls.Add(this.btnEmployee);
+            this.pnlSidbarOption.Controls.Add(this.btnCustomer);
+            this.pnlSidbarOption.Controls.Add(this.btn);
+            this.pnlSidbarOption.Location = new System.Drawing.Point(0, 126);
+            this.pnlSidbarOption.Name = "pnlSidbarOption";
+            this.pnlSidbarOption.Size = new System.Drawing.Size(206, 449);
+            this.pnlSidbarOption.TabIndex = 9;
+            // 
+            // btn
+            // 
+            this.btn.FlatAppearance.BorderSize = 0;
+            this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn.Image = ((System.Drawing.Image)(resources.GetObject("btn.Image")));
+            this.btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn.Location = new System.Drawing.Point(3, 363);
+            this.btn.Name = "btn";
+            this.btn.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btn.Size = new System.Drawing.Size(200, 54);
+            this.btn.TabIndex = 8;
+            this.btn.Text = "      Nhà cung cấp";
+            this.btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -274,21 +304,21 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.label3.Size = new System.Drawing.Size(10, 74);
             this.label3.TabIndex = 19;
             // 
-            // iconButton1
+            // btnTurnOff
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            this.iconButton1.IconColor = System.Drawing.Color.Crimson;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton1.IconSize = 31;
-            this.iconButton1.Location = new System.Drawing.Point(1315, 22);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(35, 33);
-            this.iconButton1.TabIndex = 20;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.btnTurnOff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.btnTurnOff.FlatAppearance.BorderSize = 0;
+            this.btnTurnOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTurnOff.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.btnTurnOff.IconColor = System.Drawing.Color.Crimson;
+            this.btnTurnOff.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnTurnOff.IconSize = 31;
+            this.btnTurnOff.Location = new System.Drawing.Point(1315, 22);
+            this.btnTurnOff.Name = "btnTurnOff";
+            this.btnTurnOff.Size = new System.Drawing.Size(35, 33);
+            this.btnTurnOff.TabIndex = 20;
+            this.btnTurnOff.UseVisualStyleBackColor = false;
+            this.btnTurnOff.Click += new System.EventHandler(this.btnTurnOff_Click);
             // 
             // iconButton2
             // 
@@ -305,21 +335,32 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.iconButton2.TabIndex = 21;
             this.iconButton2.UseVisualStyleBackColor = false;
             // 
-            // guna2Panel1
+            // pnlHeader
             // 
-            this.guna2Panel1.Controls.Add(this.iconButton2);
-            this.guna2Panel1.Controls.Add(this.iconButton1);
-            this.guna2Panel1.Controls.Add(this.label3);
-            this.guna2Panel1.Controls.Add(this.btnSetting);
-            this.guna2Panel1.Controls.Add(this.nameRole);
-            this.guna2Panel1.Controls.Add(this.nameEmployee);
-            this.guna2Panel1.Controls.Add(this.pictureBox1);
-            this.guna2Panel1.CustomBorderColor = System.Drawing.Color.LightGray;
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(206, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1360, 70);
-            this.guna2Panel1.TabIndex = 12;
+            this.pnlHeader.Controls.Add(this.iconButton2);
+            this.pnlHeader.Controls.Add(this.btnTurnOff);
+            this.pnlHeader.Controls.Add(this.label3);
+            this.pnlHeader.Controls.Add(this.btnSetting);
+            this.pnlHeader.Controls.Add(this.nameRole);
+            this.pnlHeader.Controls.Add(this.nameEmployee);
+            this.pnlHeader.Controls.Add(this.pictureBox1);
+            this.pnlHeader.Controls.Add(this.idEmployee);
+            this.pnlHeader.CustomBorderColor = System.Drawing.Color.LightGray;
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(206, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1360, 70);
+            this.pnlHeader.TabIndex = 12;
+            // 
+            // idEmployee
+            // 
+            this.idEmployee.AutoSize = true;
+            this.idEmployee.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idEmployee.Location = new System.Drawing.Point(135, 49);
+            this.idEmployee.Name = "idEmployee";
+            this.idEmployee.Size = new System.Drawing.Size(0, 17);
+            this.idEmployee.TabIndex = 22;
+            this.idEmployee.Visible = false;
             // 
             // pnlContainer
             // 
@@ -374,9 +415,9 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1566, 825);
-            this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.pnlSiderBar);
+            this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.pnlContainer);
+            this.Controls.Add(this.pnlSiderBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -385,9 +426,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureStore)).EndInit();
             this.pnlSiderBar.ResumeLayout(false);
+            this.pnlSidbarOption.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
             this.pnlContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -410,13 +452,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
         protected internal System.Windows.Forms.Label nameRole;
         private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.Label label3;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnTurnOff;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel pnlHeader;
         private Guna.UI2.WinForms.Guna2Panel pnlContainer;
         private usercontrol.HomeControl homeControl;
         private usercontrol.CartControl cartControl;
         private StoreControl storeControl;
-        private listProduct listProduct;
+        private ListProduct listProduct;
+        protected internal System.Windows.Forms.Label idEmployee;
+        private System.Windows.Forms.FlowLayoutPanel pnlSidbarOption;
+        private System.Windows.Forms.Button btn;
     }
 }

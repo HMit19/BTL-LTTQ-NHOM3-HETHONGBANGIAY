@@ -48,7 +48,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            deleteItemInCart?.Invoke(this);
+            if (MessageBox.Show("Chắc chắc xóa sản phẩm khỏi giỏ hàng?", "Xóa sản phẩm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                deleteItemInCart?.Invoke(this);
         }
         public string getTotalPrice() { return this.total.Text; }
         public string getIdBillDetailSell()
@@ -72,10 +73,11 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
         {
             if (this.quantity.Text == "1")
                 deleteItemInCart?.Invoke(this);
-            else {
+            else
+            {
                 int unit = Convert.ToInt32(this.quantity.Text);
                 this.quantity.Text = (--unit).ToString();
-                changeQuantity?.Invoke(this); 
+                changeQuantity?.Invoke(this);
             }
         }
 

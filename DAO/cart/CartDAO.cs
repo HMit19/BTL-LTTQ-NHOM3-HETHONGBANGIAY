@@ -1,4 +1,6 @@
-﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.model;
+﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.bill;
+using BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.item;
+using BTL_LTTQ_NHOM3_HETHONGBANGIAY.model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +13,13 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.cart
     class CartDAO
     {
         public static List<DetailBillSell> detailBillSells = null;
+        private IBillSellService billSellService = null;
+        private IBillDetailService billDetailService = null;
         public CartDAO()
         {
             detailBillSells = new List<DetailBillSell>();
+            billSellService = new BillSellService();
+            billDetailService = new BillDetailService();
         }
         public void addProductToCart(string idDetailProduct, int quantity)
         {
@@ -47,9 +53,25 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.cart
                 }
             }
         }
+        public void setListDetailBill(List<DetailBillSell> listDetailBillSell)
+        {
+            detailBillSells = listDetailBillSell;
+        }
+        public void saveDetailBill(string idBill)
+        {
+            foreach(DetailBillSell detailBillSell in detailBillSells)
+            {
+                detailBillSell.IdBill = idBill;
+                billDetailService.save(detailBillSell);     
+            }
+        }
         public void removeAllInCart()
         {
             detailBillSells.Clear();
+        }
+        public bool saveBill(BillSell billSell)
+        {
+            return billSellService.save(billSell);
         }
     }
 }

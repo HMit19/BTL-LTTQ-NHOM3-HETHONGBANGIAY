@@ -31,6 +31,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemProduct));
             this.pnlContain = new Guna.UI2.WinForms.Guna2Panel();
+            this.image = new Guna.UI2.WinForms.Guna2PictureBox();
             this.quantity = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
             this.price = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
             this.idCategory = new System.Windows.Forms.Label();
             this.idProduct = new System.Windows.Forms.Label();
             this.imageCurrent = new System.Windows.Forms.Label();
-            this.image = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlContain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +70,23 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
             this.pnlContain.MouseLeave += new System.EventHandler(this.pnlContain_MouseLeave);
             this.pnlContain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlContain_MouseMove);
             // 
+            // image
+            // 
+            this.image.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.image.FillColor = System.Drawing.Color.Transparent;
+            this.image.Image = ((System.Drawing.Image)(resources.GetObject("image.Image")));
+            this.image.ImageRotate = 0F;
+            this.image.Location = new System.Drawing.Point(27, 7);
+            this.image.Margin = new System.Windows.Forms.Padding(4);
+            this.image.Name = "image";
+            this.image.Size = new System.Drawing.Size(141, 110);
+            this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.image.TabIndex = 0;
+            this.image.TabStop = false;
+            this.image.Click += new System.EventHandler(this.pnlContain_Click);
+            this.image.MouseLeave += new System.EventHandler(this.pnlContain_MouseLeave);
+            this.image.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlContain_MouseMove);
+            // 
             // quantity
             // 
             this.quantity.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -80,7 +97,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
             this.quantity.Name = "quantity";
             this.quantity.Size = new System.Drawing.Size(29, 20);
             this.quantity.TabIndex = 10;
-            this.quantity.Text = "10";
+            this.quantity.Text = "SL";
             this.quantity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.quantity.Click += new System.EventHandler(this.pnlContain_Click);
             this.quantity.MouseLeave += new System.EventHandler(this.pnlContain_MouseLeave);
@@ -96,7 +113,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(159, 19);
             this.name.TabIndex = 8;
-            this.name.Text = "Mã giày Nike loại 1";
+            this.name.Text = "Tên sản phẩm";
             this.name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.name.Click += new System.EventHandler(this.pnlContain_Click);
             this.name.MouseLeave += new System.EventHandler(this.pnlContain_MouseLeave);
@@ -112,7 +129,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
             this.price.Name = "price";
             this.price.Size = new System.Drawing.Size(144, 20);
             this.price.TabIndex = 2;
-            this.price.Text = "100,000";
+            this.price.Text = "Giá sản phẩm";
             this.price.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.price.Click += new System.EventHandler(this.pnlContain_Click);
             this.price.MouseLeave += new System.EventHandler(this.pnlContain_MouseLeave);
@@ -161,23 +178,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
             this.imageCurrent.TabIndex = 13;
             this.imageCurrent.Text = "label1";
             this.imageCurrent.Visible = false;
-            // 
-            // image
-            // 
-            this.image.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.image.FillColor = System.Drawing.Color.Transparent;
-            this.image.Image = ((System.Drawing.Image)(resources.GetObject("image.Image")));
-            this.image.ImageRotate = 0F;
-            this.image.Location = new System.Drawing.Point(27, 4);
-            this.image.Margin = new System.Windows.Forms.Padding(4);
-            this.image.Name = "image";
-            this.image.Size = new System.Drawing.Size(141, 115);
-            this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.image.TabIndex = 0;
-            this.image.TabStop = false;
-            this.image.Click += new System.EventHandler(this.pnlContain_Click);
-            this.image.MouseLeave += new System.EventHandler(this.pnlContain_MouseLeave);
-            this.image.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlContain_MouseMove);
             // 
             // ItemProduct
             // 

@@ -1,4 +1,6 @@
 ﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller;
+using BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.employee;
+using BTL_LTTQ_NHOM3_HETHONGBANGIAY.model;
 using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol;
 using System;
 using System.Collections.Generic;
@@ -15,9 +17,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
     public partial class frmManager : Form
     {
         private StoreController storeController = null;
-        public frmManager()
+        private Employee employee = null;
+        public frmManager(Employee employee)
         {
+            this.employee = employee;
             InitializeComponent();
+            this.idEmployee.Text = employee.Id;
         }
         private void btnSell_Click(object sender, EventArgs e)
         {
@@ -37,20 +42,20 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             bringToFontUsercontrol(listProduct);
         }
 
-        public static void bringToFontUsercontrol(UserControl namePanel)
+        private void bringToFontUsercontrol(UserControl namePanel)
         {
             namePanel.BringToFront();
+        }
+
+        public Employee getEmployee()
+        {
+            return employee;
         }
         public void showCart()
         {
             bringToFontUsercontrol(cartControl);
         }
-
-        public string getNameEmployee()
-        {
-            return nameEmployee.Text;
-        }
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void btnTurnOff_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

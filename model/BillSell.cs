@@ -14,15 +14,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.model
         private string idEmployee;
         private string idCustomer;
         private int discount;
-        private List<DetailBillSell> detailBillSells;
-
         public string Id { get => id; set => id = value; }
         public DateTime Date { get => date; set => date = value; }
         public string PayMethod { get => payMethod; set => payMethod = value; }
         public string IdEmployee { get => idEmployee; set => idEmployee = value; }
         public string IdCustomer { get => idCustomer; set => idCustomer = value; }
         public int Discount { get => discount; set => discount = value; }
-        internal List<DetailBillSell> DetailBillSells { get => detailBillSells; set => detailBillSells = value; }
 
         public BillSell(string id, DateTime date, string payMethod, string idEmployee, string idCustomer, int discount)
         {

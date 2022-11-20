@@ -115,10 +115,10 @@
             // lblTitleLogin
             // 
             this.lblTitleLogin.AutoSize = true;
-            this.lblTitleLogin.Font = new System.Drawing.Font("Cooper Black", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleLogin.Location = new System.Drawing.Point(272, 64);
+            this.lblTitleLogin.Font = new System.Drawing.Font("Century", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleLogin.Location = new System.Drawing.Point(259, 66);
             this.lblTitleLogin.Name = "lblTitleLogin";
-            this.lblTitleLogin.Size = new System.Drawing.Size(169, 34);
+            this.lblTitleLogin.Size = new System.Drawing.Size(174, 34);
             this.lblTitleLogin.TabIndex = 4;
             this.lblTitleLogin.Text = "Đăng nhập";
             // 

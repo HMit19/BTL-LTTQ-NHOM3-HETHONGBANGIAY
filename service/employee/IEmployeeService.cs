@@ -11,6 +11,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.employee
     {
         List<Employee> findAll();
         Employee find(string id);
+        Employee findByUsername(string username);
         bool update(string id, Employee employee);
         bool remove(string id);
         bool save(Employee employee);

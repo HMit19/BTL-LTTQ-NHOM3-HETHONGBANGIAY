@@ -54,7 +54,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY
             txtAccount.Focus();
             txtAccount.Text = "";
             txtPassword.Text = "";
-
         }
 
     }

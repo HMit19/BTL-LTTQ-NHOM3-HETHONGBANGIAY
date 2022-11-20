@@ -1,6 +1,6 @@
 ﻿namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
 {
-    partial class createProduct
+    partial class CreateProduct
     {
         /// <summary> 
         /// Required designer variable.
@@ -33,9 +33,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnConfirmNewProduct = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnReset = new FontAwesome.Sharp.IconButton();
+            this.ptbProduct = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbSize = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnReset = new FontAwesome.Sharp.IconButton();
+            this.txtImportPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbColor = new Guna.UI2.WinForms.Guna2ComboBox();
             this.imgProduct = new FontAwesome.Sharp.IconButton();
             this.txtIdProduct = new Guna.UI2.WinForms.Guna2TextBox();
@@ -48,9 +51,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbCategory = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.grbNewCategory = new System.Windows.Forms.GroupBox();
+            this.txtCategoryCode = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtBrand = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtOrigin = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbProduct)).BeginInit();
+            this.grbNewCategory.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -97,17 +110,21 @@
             this.btnConfirmNewProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnConfirmNewProduct.Font = new System.Drawing.Font("Century Schoolbook", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmNewProduct.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmNewProduct.Location = new System.Drawing.Point(594, 509);
+            this.btnConfirmNewProduct.Location = new System.Drawing.Point(495, 613);
             this.btnConfirmNewProduct.Name = "btnConfirmNewProduct";
             this.btnConfirmNewProduct.Size = new System.Drawing.Size(232, 41);
-            this.btnConfirmNewProduct.TabIndex = 11;
+            this.btnConfirmNewProduct.TabIndex = 9;
             this.btnConfirmNewProduct.Text = "Lưu";
+            this.btnConfirmNewProduct.Click += new System.EventHandler(this.btnConfirmNewProduct_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.guna2ComboBox1);
-            this.groupBox1.Controls.Add(this.btnReset);
+            this.groupBox1.Controls.Add(this.ptbProduct);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtPrice);
+            this.groupBox1.Controls.Add(this.cbSize);
+            this.groupBox1.Controls.Add(this.btnReset);
+            this.groupBox1.Controls.Add(this.txtImportPrice);
             this.groupBox1.Controls.Add(this.cbColor);
             this.groupBox1.Controls.Add(this.imgProduct);
             this.groupBox1.Controls.Add(this.txtIdProduct);
@@ -121,27 +138,74 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cbCategory);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(365, 114);
+            this.groupBox1.Location = new System.Drawing.Point(273, 106);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(630, 380);
+            this.groupBox1.Size = new System.Drawing.Size(630, 489);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sản phẩm";
             // 
-            // guna2ComboBox1
+            // ptbProduct
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(251, 280);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(254, 36);
-            this.guna2ComboBox1.TabIndex = 20;
+            this.ptbProduct.ImageRotate = 0F;
+            this.ptbProduct.Location = new System.Drawing.Point(303, 148);
+            this.ptbProduct.Name = "ptbProduct";
+            this.ptbProduct.Size = new System.Drawing.Size(202, 104);
+            this.ptbProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbProduct.TabIndex = 23;
+            this.ptbProduct.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(126, 443);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(68, 20);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Giá bán";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrice.DefaultText = "";
+            this.txtPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPrice.Location = new System.Drawing.Point(251, 443);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.PasswordChar = '\0';
+            this.txtPrice.PlaceholderText = "Giá sản phẩm";
+            this.txtPrice.SelectedText = "";
+            this.txtPrice.Size = new System.Drawing.Size(254, 34);
+            this.txtPrice.TabIndex = 8;
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtImportPrice_KeyPress);
+            // 
+            // cbSize
+            // 
+            this.cbSize.BackColor = System.Drawing.Color.Transparent;
+            this.cbSize.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSize.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSize.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSize.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbSize.ItemHeight = 30;
+            this.cbSize.Items.AddRange(new object[] {
+            "38",
+            "39",
+            "40",
+            "41",
+            "42"});
+            this.cbSize.Location = new System.Drawing.Point(251, 344);
+            this.cbSize.Name = "cbSize";
+            this.cbSize.Size = new System.Drawing.Size(254, 36);
+            this.cbSize.TabIndex = 6;
+            this.cbSize.SelectedIndexChanged += new System.EventHandler(this.cbColor_SelectedIndexChanged);
             // 
             // btnReset
             // 
@@ -157,25 +221,27 @@
             this.btnReset.Size = new System.Drawing.Size(36, 34);
             this.btnReset.TabIndex = 19;
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // txtPrice
+            // txtImportPrice
             // 
-            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPrice.DefaultText = "";
-            this.txtPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrice.Location = new System.Drawing.Point(251, 326);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.PasswordChar = '\0';
-            this.txtPrice.PlaceholderText = "Giá sản phẩm";
-            this.txtPrice.SelectedText = "";
-            this.txtPrice.Size = new System.Drawing.Size(254, 34);
-            this.txtPrice.TabIndex = 18;
+            this.txtImportPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtImportPrice.DefaultText = "";
+            this.txtImportPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtImportPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtImportPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtImportPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtImportPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtImportPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtImportPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtImportPrice.Location = new System.Drawing.Point(251, 386);
+            this.txtImportPrice.Name = "txtImportPrice";
+            this.txtImportPrice.PasswordChar = '\0';
+            this.txtImportPrice.PlaceholderText = "Giá sản phẩm";
+            this.txtImportPrice.SelectedText = "";
+            this.txtImportPrice.Size = new System.Drawing.Size(254, 34);
+            this.txtImportPrice.TabIndex = 7;
+            this.txtImportPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtImportPrice_KeyPress);
             // 
             // cbColor
             // 
@@ -187,10 +253,18 @@
             this.cbColor.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbColor.ItemHeight = 30;
-            this.cbColor.Location = new System.Drawing.Point(251, 238);
+            this.cbColor.Items.AddRange(new object[] {
+            "Đen",
+            "Trắng",
+            "Xanh lục",
+            "Xanh dương",
+            "Chàm",
+            "Xám"});
+            this.cbColor.Location = new System.Drawing.Point(251, 300);
             this.cbColor.Name = "cbColor";
             this.cbColor.Size = new System.Drawing.Size(254, 36);
-            this.cbColor.TabIndex = 15;
+            this.cbColor.TabIndex = 5;
+            this.cbColor.SelectedIndexChanged += new System.EventHandler(this.cbColor_SelectedIndexChanged);
             // 
             // imgProduct
             // 
@@ -200,11 +274,12 @@
             this.imgProduct.IconColor = System.Drawing.Color.Black;
             this.imgProduct.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.imgProduct.IconSize = 30;
-            this.imgProduct.Location = new System.Drawing.Point(251, 148);
+            this.imgProduct.Location = new System.Drawing.Point(251, 181);
             this.imgProduct.Name = "imgProduct";
             this.imgProduct.Size = new System.Drawing.Size(46, 34);
-            this.imgProduct.TabIndex = 13;
+            this.imgProduct.TabIndex = 3;
             this.imgProduct.UseVisualStyleBackColor = true;
+            this.imgProduct.Click += new System.EventHandler(this.imgProduct_Click);
             // 
             // txtIdProduct
             // 
@@ -223,7 +298,8 @@
             this.txtIdProduct.PlaceholderText = "Mã sản phẩm";
             this.txtIdProduct.SelectedText = "";
             this.txtIdProduct.Size = new System.Drawing.Size(254, 34);
-            this.txtIdProduct.TabIndex = 10;
+            this.txtIdProduct.TabIndex = 1;
+            this.txtIdProduct.TextChanged += new System.EventHandler(this.txtIdProduct_TextChanged);
             // 
             // txtNameProduct
             // 
@@ -242,23 +318,23 @@
             this.txtNameProduct.PlaceholderText = "Tên sản phẩm";
             this.txtNameProduct.SelectedText = "";
             this.txtNameProduct.Size = new System.Drawing.Size(254, 34);
-            this.txtNameProduct.TabIndex = 9;
+            this.txtNameProduct.TabIndex = 2;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(126, 338);
+            this.label8.Location = new System.Drawing.Point(126, 400);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 20);
+            this.label8.Size = new System.Drawing.Size(75, 20);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Giá";
+            this.label8.Text = "Giá nhập";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(126, 293);
+            this.label7.Location = new System.Drawing.Point(126, 347);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 20);
             this.label7.TabIndex = 6;
@@ -268,7 +344,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(126, 248);
+            this.label6.Location = new System.Drawing.Point(126, 300);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 20);
             this.label6.TabIndex = 5;
@@ -278,7 +354,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(126, 203);
+            this.label4.Location = new System.Drawing.Point(126, 262);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 20);
             this.label4.TabIndex = 4;
@@ -288,7 +364,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(126, 158);
+            this.label5.Location = new System.Drawing.Point(133, 181);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 20);
             this.label5.TabIndex = 3;
@@ -324,25 +400,143 @@
             this.cbCategory.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbCategory.ItemHeight = 30;
-            this.cbCategory.Location = new System.Drawing.Point(251, 193);
+            this.cbCategory.Items.AddRange(new object[] {
+            "ATQ",
+            "NTQ",
+            "BVN",
+            "Thêm mới"});
+            this.cbCategory.Location = new System.Drawing.Point(251, 258);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(254, 36);
-            this.cbCategory.TabIndex = 14;
+            this.cbCategory.TabIndex = 4;
+            this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
-            // createProduct
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // grbNewCategory
+            // 
+            this.grbNewCategory.Controls.Add(this.label12);
+            this.grbNewCategory.Controls.Add(this.label11);
+            this.grbNewCategory.Controls.Add(this.label10);
+            this.grbNewCategory.Controls.Add(this.txtOrigin);
+            this.grbNewCategory.Controls.Add(this.txtBrand);
+            this.grbNewCategory.Controls.Add(this.txtCategoryCode);
+            this.grbNewCategory.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.grbNewCategory.Location = new System.Drawing.Point(960, 417);
+            this.grbNewCategory.Name = "grbNewCategory";
+            this.grbNewCategory.Size = new System.Drawing.Size(309, 178);
+            this.grbNewCategory.TabIndex = 11;
+            this.grbNewCategory.TabStop = false;
+            this.grbNewCategory.Text = "Thêm mới danh mục sản phẩm";
+            this.grbNewCategory.Visible = false;
+            // 
+            // txtCategoryCode
+            // 
+            this.txtCategoryCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCategoryCode.DefaultText = "";
+            this.txtCategoryCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCategoryCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCategoryCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCategoryCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCategoryCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCategoryCode.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCategoryCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCategoryCode.Location = new System.Drawing.Point(151, 33);
+            this.txtCategoryCode.Name = "txtCategoryCode";
+            this.txtCategoryCode.PasswordChar = '\0';
+            this.txtCategoryCode.PlaceholderText = "";
+            this.txtCategoryCode.SelectedText = "";
+            this.txtCategoryCode.Size = new System.Drawing.Size(152, 36);
+            this.txtCategoryCode.TabIndex = 0;
+            // 
+            // txtBrand
+            // 
+            this.txtBrand.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBrand.DefaultText = "";
+            this.txtBrand.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBrand.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBrand.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBrand.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBrand.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBrand.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBrand.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBrand.Location = new System.Drawing.Point(151, 89);
+            this.txtBrand.Name = "txtBrand";
+            this.txtBrand.PasswordChar = '\0';
+            this.txtBrand.PlaceholderText = "";
+            this.txtBrand.SelectedText = "";
+            this.txtBrand.Size = new System.Drawing.Size(152, 36);
+            this.txtBrand.TabIndex = 1;
+            // 
+            // txtOrigin
+            // 
+            this.txtOrigin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtOrigin.DefaultText = "";
+            this.txtOrigin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtOrigin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtOrigin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtOrigin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtOrigin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtOrigin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtOrigin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtOrigin.Location = new System.Drawing.Point(151, 136);
+            this.txtOrigin.Name = "txtOrigin";
+            this.txtOrigin.PasswordChar = '\0';
+            this.txtOrigin.PlaceholderText = "";
+            this.txtOrigin.SelectedText = "";
+            this.txtOrigin.Size = new System.Drawing.Size(152, 36);
+            this.txtOrigin.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(6, 36);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(111, 20);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Mã danh mục";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(6, 89);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(48, 20);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Hãng";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(6, 136);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 20);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Xuất xứ";
+            // 
+            // CreateProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.Controls.Add(this.grbNewCategory);
             this.Controls.Add(this.btnConfirmNewProduct);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.guna2GradientPanel1);
-            this.Name = "createProduct";
+            this.Name = "CreateProduct";
             this.Size = new System.Drawing.Size(1360, 732);
             this.guna2GradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbProduct)).EndInit();
+            this.grbNewCategory.ResumeLayout(false);
+            this.grbNewCategory.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -354,9 +548,9 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnConfirmNewProduct;
         private System.Windows.Forms.GroupBox groupBox1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbSize;
         private FontAwesome.Sharp.IconButton btnReset;
-        private Guna.UI2.WinForms.Guna2TextBox txtPrice;
+        private Guna.UI2.WinForms.Guna2TextBox txtImportPrice;
         private Guna.UI2.WinForms.Guna2ComboBox cbColor;
         private FontAwesome.Sharp.IconButton imgProduct;
         private Guna.UI2.WinForms.Guna2TextBox txtIdProduct;
@@ -369,5 +563,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox cbCategory;
+        private System.Windows.Forms.Label label9;
+        private Guna.UI2.WinForms.Guna2TextBox txtPrice;
+        private Guna.UI2.WinForms.Guna2PictureBox ptbProduct;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.GroupBox grbNewCategory;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private Guna.UI2.WinForms.Guna2TextBox txtOrigin;
+        private Guna.UI2.WinForms.Guna2TextBox txtBrand;
+        private Guna.UI2.WinForms.Guna2TextBox txtCategoryCode;
     }
 }

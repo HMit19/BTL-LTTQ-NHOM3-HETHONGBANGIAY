@@ -48,7 +48,7 @@
             this.size.Name = "size";
             this.size.Size = new System.Drawing.Size(57, 32);
             this.size.TabIndex = 2;
-            this.size.Text = "40";
+            this.size.Text = "Size";
             this.size.Click += new System.EventHandler(this.size_Click);
             // 
             // ItemSize

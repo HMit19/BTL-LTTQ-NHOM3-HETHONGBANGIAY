@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -39,6 +40,85 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
         {
             cartControl.removeAllinCart += removeAllProductOfCart;
             cartControl.findCustomer += findAndLoadCustomer;
+            cartControl.inputPoint += inputPointForCustomer;
+            cartControl.returnMoney += returnMoney;
+            cartControl.payUp += checkPayUp;
+        }
+
+        public void checkPayUp()
+        {
+            if (cartControl.getMoney() == "")
+            {
+                cartControl.Controls["pnlInformationPay"].Controls["pnlPay"].Controls["txtCustomerPayUp"].Focus();
+                MessageBox.Show("Nhập số tiền khách thanh toán", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            if (cartControl.Controls["methodPay"].Text == "")
+            {
+                MessageBox.Show("Chọn phương thức thanh toán!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            if (MessageBox.Show("Xác nhận thanh toán!", "Thông báo", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                List<DetailBillSell> detailBillSells = new List<DetailBillSell>();
+                foreach (ItemProductOfCart itemProductOfCart in cartControl.Controls["pnlContainer"].Controls)
+                {
+                    string idProductDetail = itemProductOfCart.getIdBillDetailSell();
+                    int quantity = Convert.ToInt32(itemProductOfCart.getQuantity());
+                    detailBillSells.Add(new DetailBillSell(idProductDetail, quantity));
+                }
+                DateTime date = DateTime.Now;
+                string methodPay = cartControl.Controls["methodPay"].Text;
+                string idEmployee = main.getEmployee().Id;
+                string idCustomer = cartControl.Controls["pnlInformationPay"].Controls["pnlCustomer"].Controls["lblIdCustomer"].Text;
+                int discount = cartControl.getPoint();
+                string idBill = GetMD5(date.ToString() + idCustomer + idEmployee);
+                idBill = idBill.Substring(0, 15);
+                BillSell billSell = new BillSell(idBill, date, methodPay, idEmployee, idCustomer, discount);
+                if (cartDAO.saveBill(billSell))
+                    MessageBox.Show("Thanh toán thành công");
+                cartDAO.setListDetailBill(detailBillSells);
+                cartDAO.saveDetailBill(idBill);
+            }
+        }
+
+        private void returnMoney(object o)
+        {
+            if (o.ToString() == "") return;
+            long totalPay = Convert.ToInt64(cartControl.Controls["pnlInformationPay"].Controls["pnlPay"].Controls["lblMoneyOrder"].Text.Replace(",", ""));
+            long moneyInput = Convert.ToInt32(o);
+            if (moneyInput < totalPay || moneyInput < 0)
+            {
+                MessageBox.Show("Số tiền chưa đủ để thanh toán", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Error);
+                cartControl.resetMoney();
+                cartControl.Controls["pnlInformationPay"].Controls["pnlPay"].Controls["txtCustomerPayUp"].Focus();
+                return;
+            }
+            cartControl.setMoneyReturn(moneyInput - totalPay);
+        }
+
+        private void inputPointForCustomer(object o)
+        {
+            if (o.ToString() == "") return;
+            int pointInput = Convert.ToInt32(o);
+            int pointCustomer = Convert.ToInt32(cartControl.Controls["pnlInformationPay"].Controls["pnlPay"].Controls["lblScoreOfCustomer"].Text);
+            if ((pointInput > 0 && pointInput > pointCustomer) || pointInput < 0)
+            {
+                MessageBox.Show("Điểm nhập không hợp lệ!");
+                cartControl.resetPoint();
+                cartControl.Controls["pnlInformationPay"].Controls["pnlPay"].Controls["txtPoint"].Focus();
+                return;
+            }
+            int discount = pointInput * 1000;
+            if (discount != 0)
+            {
+                cartControl.Controls["pnlInformationPay"].Controls["pnlPay"].Controls["lblDetailDiscount"].Text = "- " + discount.ToString("#,###");
+                string discountText = cartControl.Controls["pnlInformationPay"].Controls["pnlPay"].Controls["lblSumTotalInOrder"].Text.Replace("- ", "");
+                long sumTotal = Convert.ToInt64(discountText.Replace(",", ""));
+                sumTotal -= discount;
+                cartControl.Controls["pnlInformationPay"].Controls["pnlPay"].Controls["lblMoneyOrder"].Text = sumTotal.ToString("#,###");
+            }
         }
         private void findAndLoadCustomer(object o)
         {
@@ -50,13 +130,14 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
             }
             else
             {
-                cartControl.setInformation(customer.Name, customer.Phone, customer.Gender.Equals("Nam"),
+                cartControl.setInformation(customer.Id, customer.Name, customer.Phone, customer.Gender.Equals("Nam"),
                     customer.Birth, customer.Address, customer.Point.ToString());
             }
         }
         private void loadCart()
         {
-            nameEmployee = main.getNameEmployee();
+
+            nameEmployee = main.getEmployee().Name;
             date = DateTime.Now.ToString("dd/mm/yyyy");
             cartControl.Controls["pnlContainer"].Controls.Clear();
             List<DetailBillSell> detailBillSells = cartDAO.getListDetailBillSells();
@@ -78,7 +159,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
             }
             loadPayment();
         }
-        public void changeQuantity(object o)
+        private void changeQuantity(object o)
         {
             ItemProductOfCart item = (ItemProductOfCart)o;
             string idItem = item.getIdItem();
@@ -93,7 +174,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
                 }
             }
         }
-        public void loadPayment()
+        private void loadPayment()
         {
             double price = 0;
             foreach (ItemProductOfCart item in cartControl.Controls["pnlContainer"].Controls)
@@ -115,6 +196,18 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
         {
             cartDAO.removeAllInCart();
             loadCart();
+        }
+        public static string GetMD5(string str)
+        {
+            MD5 md5 = new MD5CryptoServiceProvider();
+            byte[] fromData = Encoding.UTF8.GetBytes(str);
+            byte[] targetData = md5.ComputeHash(fromData);
+            string byte2String = null;
+            for (int i = 0; i < targetData.Length; i++)
+            {
+                byte2String += targetData[i].ToString("x2");
+            }
+            return byte2String;
         }
     }
 }
