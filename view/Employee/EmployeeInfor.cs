@@ -25,9 +25,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
             DataTable dtNV = data.ReadData("Select * from tEmployee");
             DataTable dtHDN = data.ReadData("Select * from tImportBill");
             DataTable dtHDB = data.ReadData("Select * from tBillOfSale");
-
-            // functions.FillComboBox(cboGender, dtNV, "Gender", "Gender");
-            //functions.FillComboBox(cboStatus, dtNV, "Status", "Status");
             functions.FillComboBox(cboEmployeeCode, dtNV, "EmployeeCode", "EmployeeCode");
         }
         public static string GetHash(string str)

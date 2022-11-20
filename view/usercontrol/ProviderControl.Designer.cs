@@ -83,7 +83,7 @@
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Size = new System.Drawing.Size(1360, 232);
             this.guna2GroupBox1.TabIndex = 0;
@@ -95,7 +95,7 @@
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox2.Location = new System.Drawing.Point(0, 228);
-            this.guna2GroupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GroupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.Size = new System.Drawing.Size(235, 158);
             this.guna2GroupBox2.TabIndex = 17;
@@ -134,7 +134,7 @@
             this.btnReload.IconSize = 30;
             this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReload.Location = new System.Drawing.Point(1207, 101);
-            this.btnReload.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReload.Margin = new System.Windows.Forms.Padding(2);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(120, 40);
             this.btnReload.TabIndex = 16;
@@ -154,7 +154,7 @@
             this.btnRemove.IconSize = 30;
             this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemove.Location = new System.Drawing.Point(1038, 181);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(120, 40);
             this.btnRemove.TabIndex = 14;
@@ -174,7 +174,7 @@
             this.btnRepair.IconSize = 30;
             this.btnRepair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRepair.Location = new System.Drawing.Point(1038, 135);
-            this.btnRepair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRepair.Margin = new System.Windows.Forms.Padding(2);
             this.btnRepair.Name = "btnRepair";
             this.btnRepair.Size = new System.Drawing.Size(120, 40);
             this.btnRepair.TabIndex = 13;
@@ -194,7 +194,7 @@
             this.btnAddNew.IconSize = 30;
             this.btnAddNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddNew.Location = new System.Drawing.Point(1038, 92);
-            this.btnAddNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddNew.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(120, 40);
             this.btnAddNew.TabIndex = 12;
@@ -214,7 +214,7 @@
             this.btnFind.IconSize = 30;
             this.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFind.Location = new System.Drawing.Point(1038, 46);
-            this.btnFind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(2);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(120, 40);
             this.btnFind.TabIndex = 11;
@@ -233,13 +233,13 @@
             this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(50, 150);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddress.Location = new System.Drawing.Point(48, 150);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PasswordChar = '\0';
             this.txtAddress.PlaceholderText = "";
             this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(822, 74);
+            this.txtAddress.Size = new System.Drawing.Size(824, 74);
             this.txtAddress.TabIndex = 6;
             // 
             // txtName
@@ -255,7 +255,7 @@
             this.txtName.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.Location = new System.Drawing.Point(597, 83);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "Nhập tên nhà cung cấp . . . ";
@@ -276,14 +276,13 @@
             this.txtProviderCode.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtProviderCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProviderCode.Location = new System.Drawing.Point(48, 83);
-            this.txtProviderCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProviderCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtProviderCode.Name = "txtProviderCode";
             this.txtProviderCode.PasswordChar = '\0';
             this.txtProviderCode.PlaceholderText = "Nhập mã nhà cung cấp . . . ";
             this.txtProviderCode.SelectedText = "";
             this.txtProviderCode.Size = new System.Drawing.Size(275, 30);
             this.txtProviderCode.TabIndex = 4;
-            this.txtProviderCode.TextChanged += new System.EventHandler(this.txtProviderCode_TextChanged);
             // 
             // label2
             // 
@@ -334,13 +333,12 @@
             this.grbList.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
             this.grbList.ForeColor = System.Drawing.Color.White;
             this.grbList.Location = new System.Drawing.Point(0, 231);
-            this.grbList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbList.Margin = new System.Windows.Forms.Padding(2);
             this.grbList.Name = "grbList";
             this.grbList.Size = new System.Drawing.Size(1360, 499);
             this.grbList.TabIndex = 1;
             this.grbList.Text = "Danh Sách Nhà Cung Cấp";
             this.grbList.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.grbList.Click += new System.EventHandler(this.dgvListProvider_Click);
             // 
             // dgvListProvider
             // 
@@ -353,6 +351,7 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvListProvider.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvListProvider.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
@@ -365,7 +364,7 @@
             this.dgvListProvider.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(188)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -422,7 +421,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.grbList);
             this.Controls.Add(this.guna2GroupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ProviderControl";
             this.Size = new System.Drawing.Size(1360, 730);
             this.Load += new System.EventHandler(this.ProviderControl_Load);

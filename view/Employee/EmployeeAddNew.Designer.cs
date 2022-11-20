@@ -95,7 +95,6 @@
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(533, 2);
             this.guna2HtmlLabel4.TabIndex = 62;
             this.guna2HtmlLabel4.Text = null;
-            this.guna2HtmlLabel4.Click += new System.EventHandler(this.guna2HtmlLabel4_Click);
             // 
             // label1
             // 

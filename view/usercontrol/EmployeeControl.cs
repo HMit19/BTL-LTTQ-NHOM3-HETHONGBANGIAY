@@ -31,7 +31,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             {
                 if (txtEmployeeCode.Text != "")
                 {
-                    DataTable dtNV = data.ReadData("Select EmployeeCode, Name, ID, Gender, DOB, Address, PhoneNumber, Status from tEmployee where EmployeeCode=N'" + txtEmployeeCode.Text + "'");
+                    DataTable dtNV = data.ReadData("Select EmployeeCode, Name, ID, Gender, DOB, Address, PhoneNumber, Status from tEmployee where EmployeeCode= N'" + txtEmployeeCode.Text + "'");
                     txtName.Text = dtNV.Rows[0]["Name"].ToString();
                     if (dtNV.Rows[0]["Status"].ToString() == "True")
                     {
@@ -53,26 +53,24 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                     { cboStatus.Text = "Đã Nghỉ"; }
                     dgvListEmployee.DataSource = dtNV;
                 }
+                else
+                {
+                    DataTable dtNV = data.ReadData("Select EmployeeCode, Name, ID, Gender, DOB, Address, PhoneNumber, Status from tEmployee where EmployeeCode= like N'" + txtEmployeeCode.Text + "'");
+                    dgvListEmployee.DataSource = dtNV;
+                }
 
             }
             catch
             {
-                MessageBox.Show("Khong co NV ban can tim");
+                MessageBox.Show("Khong co NV ban can tim!");
             }
 
         }
 
 
-        private void cbEmployeeCode_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         private void EmployeeControl_Load(object sender, EventArgs e)
         {
-            
             loadData();
-            
             ResetValue();
             btnAdd.Enabled = true;
             btnDelete.Enabled = false;

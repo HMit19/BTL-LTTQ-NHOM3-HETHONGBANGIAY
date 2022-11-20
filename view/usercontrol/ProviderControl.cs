@@ -71,15 +71,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
 
         }
 
-        private void dgvListProvider_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtProviderCode_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnReload_Click(object sender, EventArgs e)
         {

@@ -47,10 +47,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
             DataTable dtLG = data.ReadData("Select * from tLogin");
         }
 
-        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -92,22 +88,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
                 return;
             }
             else errChiTiet.Clear();
-            /*if (txtEmployeeCode.Text.Trim() == "")
-            {
-                errChiTiet.SetError(txtEmployeeCode, "Bạn không được để trống Ma NV!");
-                return;
-            }
-            else
-            {
-               string sqlselect = "Select * from tEmployee where EmployeeCode = '" + txtEmployeeCode.Text + "'";
-               DataTable dtNV = data.ReadData(sqlselect);
-                if (dtNV.Rows.Count > 0)
-                {
-                    errChiTiet.SetError(txtEmployeeCode, "Mã NV trùng trong cơ sở dữ liệu");
-                    return;
-                }
-                errChiTiet.Clear();
-            }*/
+           
             dtdob = Convert.ToDateTime(dtpDOB.Value.ToLongDateString());
             try
             {
