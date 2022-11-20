@@ -76,6 +76,12 @@
     <Compile Include="view\ImportBillForm.Designer.cs">
       <DependentUpon>ImportBillForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\IntroduceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\IntroduceForm.Designer.cs">
+      <DependentUpon>IntroduceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\SaleBillForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\ImportBillForm.resx">
       <DependentUpon>ImportBillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\IntroduceForm.resx">
+      <DependentUpon>IntroduceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\SaleBillForm.resx">
       <DependentUpon>SaleBillForm.cs</DependentUpon>
