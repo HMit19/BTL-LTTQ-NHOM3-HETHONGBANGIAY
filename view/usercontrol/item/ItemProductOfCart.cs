@@ -45,7 +45,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
                 this.image.Image = Image.FromFile(path + imageDefault);
             }
         }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Chắc chắc xóa sản phẩm khỏi giỏ hàng?", "Xóa sản phẩm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)

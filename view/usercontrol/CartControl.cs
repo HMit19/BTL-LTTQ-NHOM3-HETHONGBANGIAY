@@ -22,6 +22,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         public event UserEventParam inputPoint;
         public event UserEventParam returnMoney;
         public event UserEvent payUp;
+        public event UserEventParam genarateIdCustomer;
         public CartControl()
         {
             InitializeComponent();
@@ -78,17 +79,17 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         }
         private void rdoCash_CheckedChanged(object sender, EventArgs e)
         {
-            this.methodPay.Text = "Tiền mặt";
+            this.methodPay.Text = "Cash";
         }
 
         private void rdoBanking_CheckedChanged(object sender, EventArgs e)
         {
-            this.methodPay.Text = "Chuyển khoản";
+            this.methodPay.Text = "Banking";
         }
 
         private void rdoCreditCard_CheckedChanged(object sender, EventArgs e)
         {
-            this.methodPay.Text = "Thẻ tín dụng";
+            this.methodPay.Text = "Credit Cash";
         }
 
         private void btnPayUp_Click(object sender, EventArgs e)
@@ -104,6 +105,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         private void txtCustomerPayUp_Leave(object sender, EventArgs e)
         {
             returnMoney?.Invoke(txtCustomerPayUp.Text);
+            if (txtCustomerPayUp.Text != "")
+                txtCustomerPayUp.Text = Convert.ToInt32(txtCustomerPayUp.Text.Replace(",", "")).ToString("#,###");
         }
         public void resetPoint()
         {
@@ -200,6 +203,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         }
         private void cbMonth_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int current = Convert.ToInt32(cbDay.Text);
             int month = Convert.ToInt32(this.cbMonth.Text);
             int year = Convert.ToInt32(this.cbYear.Text);
             int days = DateTime.DaysInMonth(year, month);
@@ -211,6 +215,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                     {
                         this.cbDay.Items.Add(i);
                     }
+                    if (current > 28) cbDay.Text = "28";
+                    else cbDay.Text = current.ToString();
                     break;
                 case 29:
                     this.cbDay.Items.Clear();
@@ -218,6 +224,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                     {
                         this.cbDay.Items.Add(i);
                     }
+                    if (current > 29) cbDay.Text = "29";
+                    else cbDay.Text = current.ToString();
                     break;
                 case 30:
                     this.cbDay.Items.Clear();
@@ -225,6 +233,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                     {
                         this.cbDay.Items.Add(i);
                     }
+                    if (current > 30) cbDay.Text = "30";
+                    else cbDay.Text = current.ToString();
                     break;
                 case 31:
                     this.cbDay.Items.Clear();
@@ -232,17 +242,58 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                     {
                         this.cbDay.Items.Add(i);
                     }
+                    cbDay.Text = current.ToString();
                     break;
             }
         }
-        public DateTime getDate()
+        private void txtPhoneCustomer_Leave(object sender, EventArgs e)
         {
-            return new DateTime(Convert.ToInt32(this.cbYear.Text), Convert.ToInt32(this.cbMonth.Text), Convert.ToInt32(this.cbDay.Text));
+            if (txtPhoneCustomer.Text.Length == 10)
+            {
+                genarateIdCustomer?.Invoke(txtPhoneCustomer.Text);
+            }
+            else
+            {
+                txtPhoneCustomer.Text = "";
+                txtPhoneCustomer.Focus();
+                MessageBox.Show("Vui lòng nhập số điện thoại gồm 10 ký tự!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-        public bool getGender()
+        public Customer getInformationCustomer()
         {
-            if (ckbNam.Checked) return true;
-            return false;
+            string id = lblIdCustomer.Text;
+            string name = txtNameCustomer.Text;
+            string gender = ckbNam.Checked ? "Nam" : "Nữ";
+            DateTime birth = new DateTime(Convert.ToInt32(this.cbYear.Text), Convert.ToInt32(this.cbMonth.Text), Convert.ToInt32(this.cbDay.Text));
+            string phone = txtPhoneCustomer.Text;
+            string address = txtAddress.Text;
+            long point = 0;
+            return new Customer(id, name, gender, birth, address, phone, point);
+        }
+
+        public void resetAllInformation()
+        {
+            lblIdCustomer.Text = "";
+            txtNameCustomer.Text = "";
+            txtPhoneCustomer.Text = "";
+            txtAddress.Text = "";
+            txtPoint.Text = "";
+            txtCustomerPayUp.Text = "";
+            txtMoneyReturn.Text = "";
+            ckbNam.Checked = false;
+            ckbNu.Checked = false;
+            cbDay.Text = "1";
+            cbMonth.Text = "1";
+            cbYear.Text = "2022";
+            rdoCash.Checked = false;
+            rdoBanking.Checked = false;
+            rdoCreditCard.Checked = false;
+            lblNameCustomer.Text = "";
+            lblScoreOfCustomer.Text = "0";
+            txtDiscountBirth.Visible = false;
+            lblDetailDiscount.Text = "- 0,000";
+            lblIdCustomer.Text = "";
+            methodPay.Text = "";
         }
     }
 }

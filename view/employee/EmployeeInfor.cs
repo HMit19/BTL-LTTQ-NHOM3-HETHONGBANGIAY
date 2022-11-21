@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.model;
+using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,16 +21,15 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
     {
         Classes.CommonFunctions functions = new Classes.CommonFunctions();
         Classes.ConnectData data = new Classes.ConnectData();
-        public EmployeeInfor()
+
+        public EmployeeInfor(string s)
         {
             InitializeComponent();
             DataTable dtNV = data.ReadData("Select * from tEmployee");
             DataTable dtHDN = data.ReadData("Select * from tImportBill");
             DataTable dtHDB = data.ReadData("Select * from tBillOfSale");
-
-            // functions.FillComboBox(cboGender, dtNV, "Gender", "Gender");
-            //functions.FillComboBox(cboStatus, dtNV, "Status", "Status");
             functions.FillComboBox(cboEmployeeCode, dtNV, "EmployeeCode", "EmployeeCode");
+            cboEmployeeCode.SelectedValue = s;
         }
         public static string GetHash(string str)
         {
@@ -44,7 +45,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
         }
         private void EmployeeInfor_Load(object sender, EventArgs e)
         {
-            loadData();
+            cboEmployeeCode_SelectedIndexChanged(sender, e);
         }
         void loadData()
         {
@@ -80,22 +81,22 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
                 { cboStatus.Text = "Đã Nghỉ"; }
                 dtpDOB.Text = dtNV.Rows[0]["DOB"].ToString();
 
-                
+
                 if (dtNV.Rows[0]["UserName"].ToString() != "")
                 {
                     txtUserName.Text = dtNV.Rows[0]["UserName"].ToString();
                     lblUserName.Visible = true;
                     txtUserName.Visible = true;
-                    
+
                     txtUserName.Enabled = false;
-                    
+
                 }
                 else
                 {
                     lblUserName.Visible = false;
                     txtUserName.Visible = false;
                 }
-                
+
 
                 loadData();
 
@@ -112,11 +113,11 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
                 this.Close();
         }
 
-        
+
 
         private void btnReload_Click(object sender, EventArgs e)
         {
-            
+
             loadData();
             cboEmployeeCode_SelectedIndexChanged(sender, new EventArgs());
             cboEmployeeCode.Enabled = true;
@@ -187,7 +188,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
                     data.UpdateData("update tEmployee set Name=N'" + txtName.Text + "',ID='" + txtID.Text +
                 "',Gender=N'" + cboGender.Text + "',DOB='" + String.Format("{0000:MM/dd/yyyy}", dtdob) + "',Address=N'" +
                 txtAddress.Text + "',PhoneNumber='" + txtPhoneNumber.Text + "',Status='" + Boolean.Parse(lblAccount.Text) + "' where EmployeeCode=N'" + cboEmployeeCode.Text + "'");
-                    MessageBox.Show("Da luu thanh cong");
+                    MessageBox.Show("Lưu Thành công");
                 }
             }
             else
@@ -207,7 +208,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
                         txtPassWord.Focus();
                         return;
                     }
-                    else if(txtUserName.Enabled == true)
+                    else if (txtUserName.Enabled == true)
                     {
                         string passHash = GetHash(txtPassWord.Text.ToString());
                         passHash = passHash.Substring(0, 15);
@@ -220,8 +221,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
                     {
                         string passHash = GetHash(txtPassWord.Text.ToString());
                         passHash = passHash.Substring(0, 15);
-                        data.UpdateData("update tLogin set PassWord='" + passHash + "' where UserName='"+txtUserName.Text+"'");
-                        
+                        data.UpdateData("update tLogin set PassWord='" + passHash + "' where UserName='" + txtUserName.Text + "'");
+
                     }
                     MessageBox.Show("Da luu thanh cong");
                 }
@@ -230,8 +231,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
 
                 }
             }
-                
-                loadData();
+
+            loadData();
             cboEmployeeCode_SelectedIndexChanged(sender, new EventArgs());
         }
 
@@ -246,14 +247,14 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
             cboStatus.Enabled = false;
             dtpDOB.Enabled = false;
             txtPassWord.Text = "";
-            if(txtUserName.Visible == true)
+            if (txtUserName.Visible == true)
             {
-                
+
                 lblPassWord.Visible = true;
                 txtPassWord.Visible = true;
 
             }
-            else 
+            else
             {
                 txtUserName.Text = "";
                 txtUserName.Enabled = true;
@@ -274,5 +275,4 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
                 }
         }
     }
-    }
-
+}

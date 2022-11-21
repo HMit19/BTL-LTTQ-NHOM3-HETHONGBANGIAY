@@ -143,7 +143,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.employee
             bool excute = false;
             try
             {
-                string sql = "update tEmployee set Name = '" + employee.Name + "', ID = '" + employee.CIC + "', Gender = '" + "', DOB = '" + employee.Birth + "', Address = '"
+                string sql = "update tEmployee set Name = N'" + employee.Name + "', ID = '" + employee.CIC + "', Gender = '" + "', DOB = '" + employee.Birth + "', Address = '"
                     + employee.Address + "', PhoneNumber = '" + employee.Phone + "', Username = '" + employee.Username + "', Status = '" + employee.Status
                     + "' where EmployeeCode = '" + id + "'";
                 excute = databaseHandle.dataChange(sql);

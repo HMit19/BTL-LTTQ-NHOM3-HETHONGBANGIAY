@@ -26,7 +26,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.Content
         public string totaSum()
         {
             string sql = " select sum(a.Quantity* b.Price) from dbo.tDetailBillOfSale a join dbo.tDetailProduct b on a.DetailProductCode= b.DetailProductCode ";
-            string result = data.RunSQL(sql) + " (VND) ";
+            string result = Convert.ToInt32(data.RunSQL(sql)).ToString("#,###") + " (VND) ";
             return result;
         }
         public string totalCustomer()
@@ -57,7 +57,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.Content
             }
             else
             {
-                res = sum + " (VND) ";
+                res = Convert.ToInt32(sum).ToString("#,###") + " (VND) ";
                 return res;
             }
         }

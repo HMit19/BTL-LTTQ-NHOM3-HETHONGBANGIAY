@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.model
 {
-    class Customer
+    public class Customer
     {
         private string id;
         private string name;

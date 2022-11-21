@@ -24,5 +24,9 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.customer
         {
             customerService.save(customer);
         }
+        public void update(string id, Customer customer)
+        {
+            customerService.update(id, customer);
+        }
     }
 }

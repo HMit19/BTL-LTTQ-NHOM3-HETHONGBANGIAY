@@ -21,7 +21,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
             //OpenFileDialog odlg = new OpenFileDialog();
             //odlg.InitialDirectory = "C:\\Users\\maiva\\OneDrive\\Máy tính\\file\\BTL-LTTQ-NHOM3-HETHONGBANGIAY\\bin\\Debug" + "\\Images";
             image.Image= Image.FromFile("C:\\Users\\maiva\\OneDrive\\Máy tính\\C#\\BTL-LTTQ-NHOM3-HETHONGBANGIAY\\bin\\Debug" + "\\images\\" +"\\"+pic);
-            
         }
     }
 }

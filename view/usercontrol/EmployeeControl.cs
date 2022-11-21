@@ -1,4 +1,5 @@
-﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager;
+﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor;
+using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,8 +50,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         {
             loadData();
             ResetValue();
-            btnAdd.Enabled = true;
             btnDelete.Enabled = false;
+            btnInfor.Enabled = false;
 
         }
         void loadData()
@@ -85,8 +86,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             else
             { cboStatus.Text = "Đã Nghỉ"; }
 
-            btnAdd.Enabled = false;
             btnDelete.Enabled = true;
+            btnInfor.Enabled = true;
+
+
         }
 
         private void btnReload_Click(object sender, EventArgs e)
@@ -95,8 +98,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             loadData();
             ResetValue();
             EmployeeControl_Load(sender, e);
-            btnAdd.Enabled = true;
             btnDelete.Enabled = false;
+            btnInfor.Enabled = false;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -124,7 +127,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         }
         private void btnInfor_Click(object sender, EventArgs e)
         {
-            EmployeeInfor.EmployeeInfor eif = new EmployeeInfor.EmployeeInfor();
+            string s = this.txtEmployeeCode.Text;
+            EmployeeInfor.EmployeeInfor eif = new EmployeeInfor.EmployeeInfor(s);
             eif.ShowDialog();
         }
 
@@ -152,12 +156,11 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             header.Value = "DANH SÁCH NHÂN VIÊN";
             exSheet.get_Range("B4:I4").HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
 
-
             exSheet.get_Range("B6:I6").Font.Bold = true;
             exSheet.get_Range("B6:I6").HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
             exSheet.get_Range("B6").ColumnWidth = 17;
             exSheet.get_Range("C6").ColumnWidth = 20;
-            exSheet.get_Range("D6").ColumnWidth = 7;
+            exSheet.get_Range("D6").ColumnWidth = 10;
             exSheet.get_Range("E6:H6").ColumnWidth = 15;
             exSheet.get_Range("I6").ColumnWidth = 10;
             exSheet.get_Range("B6").Value = "Mã Nhân Viên";

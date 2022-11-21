@@ -139,8 +139,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.detailProduct
             try
             {
                 string sql = "update tDetailProduct set ProductCode = '" + detailProduct.IdProduct + "', Size = " + detailProduct.Size
-                    + ", Color = '" + detailProduct.Color + "', importPrice = " + detailProduct.PriceIn + ", Price = " + detailProduct.PriceOut + ", Quantity = " + detailProduct.Quantity
-                    + ", Status = " + " where DetailProductCode = '" + id + "'";
+                    + ", Color = N'" + detailProduct.Color + "', importPrice = " + detailProduct.PriceIn + ", Price = " + detailProduct.PriceOut + ", Quantity = " + detailProduct.Quantity
+                    + " where DetailProductCode = '" + id + "'";
                 excute = databaseHandle.dataChange(sql);
             }
             catch (Exception)

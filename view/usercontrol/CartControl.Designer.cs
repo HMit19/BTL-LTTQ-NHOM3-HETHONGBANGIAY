@@ -76,6 +76,9 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.lblDetailDiscount = new System.Windows.Forms.Label();
             this.txtDiscountBirth = new System.Windows.Forms.Label();
             this.pnlCustomer = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbDay = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbYear = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbMonth = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblIdCustomer = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.ckbNu = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -91,9 +94,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnPay = new Guna.UI2.WinForms.Guna2Button();
             this.methodPay = new System.Windows.Forms.Label();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
-            this.cbMonth = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbYear = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbDay = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.pnlFooter.SuspendLayout();
@@ -278,7 +278,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnPayUp.Margin = new System.Windows.Forms.Padding(2);
             this.btnPayUp.Name = "btnPayUp";
             this.btnPayUp.Size = new System.Drawing.Size(329, 37);
-            this.btnPayUp.TabIndex = 64;
+            this.btnPayUp.TabIndex = 23;
             this.btnPayUp.Text = "Thanh Toán";
             this.btnPayUp.Click += new System.EventHandler(this.btnPayUp_Click);
             // 
@@ -329,7 +329,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.txtMoneyReturn.ReadOnly = true;
             this.txtMoneyReturn.SelectedText = "";
             this.txtMoneyReturn.Size = new System.Drawing.Size(131, 30);
-            this.txtMoneyReturn.TabIndex = 69;
+            this.txtMoneyReturn.TabIndex = 19;
             this.txtMoneyReturn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblBanking
@@ -382,7 +382,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.rdoCreditCard.Margin = new System.Windows.Forms.Padding(2);
             this.rdoCreditCard.Name = "rdoCreditCard";
             this.rdoCreditCard.Size = new System.Drawing.Size(15, 16);
-            this.rdoCreditCard.TabIndex = 65;
+            this.rdoCreditCard.TabIndex = 22;
             this.rdoCreditCard.Text = "guna2CustomRadioButton3";
             this.rdoCreditCard.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdoCreditCard.UncheckedState.BorderThickness = 2;
@@ -402,7 +402,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.rdoBanking.Margin = new System.Windows.Forms.Padding(2);
             this.rdoBanking.Name = "rdoBanking";
             this.rdoBanking.Size = new System.Drawing.Size(15, 16);
-            this.rdoBanking.TabIndex = 64;
+            this.rdoBanking.TabIndex = 21;
             this.rdoBanking.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdoBanking.UncheckedState.BorderThickness = 2;
             this.rdoBanking.UncheckedState.FillColor = System.Drawing.Color.Transparent;
@@ -421,7 +421,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.rdoCash.Margin = new System.Windows.Forms.Padding(2);
             this.rdoCash.Name = "rdoCash";
             this.rdoCash.Size = new System.Drawing.Size(15, 16);
-            this.rdoCash.TabIndex = 63;
+            this.rdoCash.TabIndex = 20;
             this.rdoCash.Text = "guna2CustomRadioButton1";
             this.rdoCash.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdoCash.UncheckedState.BorderThickness = 2;
@@ -472,7 +472,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.txtCustomerPayUp.PlaceholderText = "Khách trả";
             this.txtCustomerPayUp.SelectedText = "";
             this.txtCustomerPayUp.Size = new System.Drawing.Size(131, 30);
-            this.txtCustomerPayUp.TabIndex = 60;
+            this.txtCustomerPayUp.TabIndex = 18;
             this.txtCustomerPayUp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCustomerPayUp.TextChanged += new System.EventHandler(this.txtCustomerPayUp_TextChanged);
             this.txtCustomerPayUp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCustomerPayUp_KeyPress);
@@ -502,7 +502,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.txtPoint.PlaceholderText = "Nhập điểm";
             this.txtPoint.SelectedText = "";
             this.txtPoint.Size = new System.Drawing.Size(131, 30);
-            this.txtPoint.TabIndex = 59;
+            this.txtPoint.TabIndex = 17;
             this.txtPoint.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPoint.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPoint_KeyPress);
             this.txtPoint.Leave += new System.EventHandler(this.txtPoint_Leave);
@@ -649,7 +649,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnClearCart.Location = new System.Drawing.Point(643, 33);
             this.btnClearCart.Name = "btnClearCart";
             this.btnClearCart.Size = new System.Drawing.Size(85, 29);
-            this.btnClearCart.TabIndex = 23;
+            this.btnClearCart.TabIndex = 16;
             this.btnClearCart.Text = "Xoá tất cả";
             this.btnClearCart.Click += new System.EventHandler(this.btnClearCart_Click);
             // 
@@ -779,7 +779,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.txtDiscountBirth.Name = "txtDiscountBirth";
             this.txtDiscountBirth.Size = new System.Drawing.Size(173, 19);
             this.txtDiscountBirth.TabIndex = 80;
-            this.txtDiscountBirth.Text = "(5% Sinh nhật khách hàng)";
+            this.txtDiscountBirth.Text = "(2% Sinh nhật khách hàng)";
             this.txtDiscountBirth.Visible = false;
             // 
             // pnlCustomer
@@ -805,265 +805,19 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.pnlCustomer.Size = new System.Drawing.Size(436, 507);
             this.pnlCustomer.TabIndex = 2;
             // 
-            // lblIdCustomer
+            // cbDay
             // 
-            this.lblIdCustomer.AutoSize = true;
-            this.lblIdCustomer.BackColor = System.Drawing.Color.White;
-            this.lblIdCustomer.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblIdCustomer.ForeColor = System.Drawing.Color.Black;
-            this.lblIdCustomer.Location = new System.Drawing.Point(101, 435);
-            this.lblIdCustomer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblIdCustomer.Name = "lblIdCustomer";
-            this.lblIdCustomer.Size = new System.Drawing.Size(0, 21);
-            this.lblIdCustomer.TabIndex = 22;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.White;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(21, 191);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(80, 21);
-            this.label21.TabIndex = 19;
-            this.label21.Text = "Ngày sinh";
-            // 
-            // ckbNu
-            // 
-            this.ckbNu.AutoSize = true;
-            this.ckbNu.BackColor = System.Drawing.Color.White;
-            this.ckbNu.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ckbNu.CheckedState.BorderThickness = 0;
-            this.ckbNu.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ckbNu.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.ckbNu.CheckedState.InnerOffset = -4;
-            this.ckbNu.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.ckbNu.Location = new System.Drawing.Point(278, 137);
-            this.ckbNu.Name = "ckbNu";
-            this.ckbNu.Size = new System.Drawing.Size(45, 23);
-            this.ckbNu.TabIndex = 18;
-            this.ckbNu.Text = "Nữ";
-            this.ckbNu.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.ckbNu.UncheckedState.BorderThickness = 2;
-            this.ckbNu.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.ckbNu.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.ckbNu.UseVisualStyleBackColor = false;
-            // 
-            // ckbNam
-            // 
-            this.ckbNam.AutoSize = true;
-            this.ckbNam.BackColor = System.Drawing.Color.White;
-            this.ckbNam.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ckbNam.CheckedState.BorderThickness = 0;
-            this.ckbNam.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ckbNam.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.ckbNam.CheckedState.InnerOffset = -4;
-            this.ckbNam.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.ckbNam.Location = new System.Drawing.Point(140, 137);
-            this.ckbNam.Name = "ckbNam";
-            this.ckbNam.Size = new System.Drawing.Size(56, 23);
-            this.ckbNam.TabIndex = 17;
-            this.ckbNam.Text = "Nam";
-            this.ckbNam.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.ckbNam.UncheckedState.BorderThickness = 2;
-            this.ckbNam.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.ckbNam.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.ckbNam.UseVisualStyleBackColor = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(21, 133);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 21);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "Giới tính";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.BackColor = System.Drawing.Color.White;
-            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAddress.DefaultText = "";
-            this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(140, 257);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAddress.Multiline = true;
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.PasswordChar = '\0';
-            this.txtAddress.PlaceholderText = "Địa chỉ khách hàng . . .";
-            this.txtAddress.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtAddress.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(275, 138);
-            this.txtAddress.TabIndex = 22;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(21, 257);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 21);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Địa chỉ";
-            // 
-            // txtPhoneCustomer
-            // 
-            this.txtPhoneCustomer.BackColor = System.Drawing.Color.White;
-            this.txtPhoneCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhoneCustomer.DefaultText = "";
-            this.txtPhoneCustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPhoneCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPhoneCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhoneCustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhoneCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.txtPhoneCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneCustomer.Location = new System.Drawing.Point(140, 74);
-            this.txtPhoneCustomer.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPhoneCustomer.Name = "txtPhoneCustomer";
-            this.txtPhoneCustomer.PasswordChar = '\0';
-            this.txtPhoneCustomer.PlaceholderText = "Số điện thoại  (09xx xxx xxx)";
-            this.txtPhoneCustomer.SelectedText = "";
-            this.txtPhoneCustomer.Size = new System.Drawing.Size(275, 35);
-            this.txtPhoneCustomer.TabIndex = 16;
-            this.txtPhoneCustomer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneCustomer_KeyPress);
-            // 
-            // txtNameCustomer
-            // 
-            this.txtNameCustomer.BackColor = System.Drawing.Color.White;
-            this.txtNameCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNameCustomer.DefaultText = "";
-            this.txtNameCustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNameCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNameCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNameCustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNameCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNameCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.txtNameCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNameCustomer.Location = new System.Drawing.Point(140, 19);
-            this.txtNameCustomer.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNameCustomer.Name = "txtNameCustomer";
-            this.txtNameCustomer.PasswordChar = '\0';
-            this.txtNameCustomer.PlaceholderText = "Tên khách hàng (Nguyen Van A)";
-            this.txtNameCustomer.SelectedText = "";
-            this.txtNameCustomer.Size = new System.Drawing.Size(275, 35);
-            this.txtNameCustomer.TabIndex = 15;
-            this.txtNameCustomer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNameCustomer_KeyPress);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(21, 24);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(117, 21);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Tên khách hàng";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(21, 79);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(101, 21);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "Số điện thoại";
-            // 
-            // btnInformation
-            // 
-            this.btnInformation.CustomBorderColor = System.Drawing.Color.Silver;
-            this.btnInformation.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.btnInformation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnInformation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnInformation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnInformation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnInformation.FillColor = System.Drawing.Color.Gainsboro;
-            this.btnInformation.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInformation.ForeColor = System.Drawing.Color.Black;
-            this.btnInformation.Location = new System.Drawing.Point(891, 70);
-            this.btnInformation.Name = "btnInformation";
-            this.btnInformation.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnInformation.Size = new System.Drawing.Size(218, 40);
-            this.btnInformation.TabIndex = 0;
-            this.btnInformation.Text = "Thông tin khách hàng";
-            this.btnInformation.Click += new System.EventHandler(this.btnInformation_Click);
-            // 
-            // btnPay
-            // 
-            this.btnPay.CustomBorderColor = System.Drawing.Color.Silver;
-            this.btnPay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPay.FillColor = System.Drawing.Color.White;
-            this.btnPay.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPay.ForeColor = System.Drawing.Color.Black;
-            this.btnPay.Location = new System.Drawing.Point(1109, 70);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnPay.Size = new System.Drawing.Size(220, 40);
-            this.btnPay.TabIndex = 1;
-            this.btnPay.Text = "Thanh toán đơn hàng";
-            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
-            // 
-            // methodPay
-            // 
-            this.methodPay.AutoSize = true;
-            this.methodPay.Location = new System.Drawing.Point(1110, 656);
-            this.methodPay.Name = "methodPay";
-            this.methodPay.Size = new System.Drawing.Size(0, 13);
-            this.methodPay.TabIndex = 6;
-            // 
-            // guna2ContextMenuStrip1
-            // 
-            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
-            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
-            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
-            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
-            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
-            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // cbMonth
-            // 
-            this.cbMonth.BackColor = System.Drawing.Color.Transparent;
-            this.cbMonth.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbMonth.DropDownHeight = 230;
-            this.cbMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMonth.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbMonth.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbMonth.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMonth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbMonth.IntegralHeight = false;
-            this.cbMonth.ItemHeight = 30;
-            this.cbMonth.Items.AddRange(new object[] {
+            this.cbDay.BackColor = System.Drawing.Color.Transparent;
+            this.cbDay.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbDay.DropDownHeight = 230;
+            this.cbDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDay.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbDay.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbDay.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbDay.IntegralHeight = false;
+            this.cbDay.ItemHeight = 30;
+            this.cbDay.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -1075,13 +829,30 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             "9",
             "10",
             "11",
-            "12"});
-            this.cbMonth.Location = new System.Drawing.Point(229, 191);
-            this.cbMonth.Name = "cbMonth";
-            this.cbMonth.Size = new System.Drawing.Size(78, 36);
-            this.cbMonth.StartIndex = 0;
-            this.cbMonth.TabIndex = 26;
-            this.cbMonth.SelectedIndexChanged += new System.EventHandler(this.cbMonth_SelectedIndexChanged);
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30"});
+            this.cbDay.Location = new System.Drawing.Point(140, 191);
+            this.cbDay.Name = "cbDay";
+            this.cbDay.Size = new System.Drawing.Size(78, 36);
+            this.cbDay.StartIndex = 0;
+            this.cbDay.TabIndex = 12;
             // 
             // cbYear
             // 
@@ -1143,21 +914,21 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.cbYear.Name = "cbYear";
             this.cbYear.Size = new System.Drawing.Size(90, 36);
             this.cbYear.StartIndex = 0;
-            this.cbYear.TabIndex = 27;
+            this.cbYear.TabIndex = 14;
             // 
-            // cbDay
+            // cbMonth
             // 
-            this.cbDay.BackColor = System.Drawing.Color.Transparent;
-            this.cbDay.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbDay.DropDownHeight = 230;
-            this.cbDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbDay.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbDay.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbDay.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbDay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbDay.IntegralHeight = false;
-            this.cbDay.ItemHeight = 30;
-            this.cbDay.Items.AddRange(new object[] {
+            this.cbMonth.BackColor = System.Drawing.Color.Transparent;
+            this.cbMonth.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbMonth.DropDownHeight = 230;
+            this.cbMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMonth.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMonth.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMonth.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMonth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbMonth.IntegralHeight = false;
+            this.cbMonth.ItemHeight = 30;
+            this.cbMonth.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -1169,30 +940,262 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             "9",
             "10",
             "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30"});
-            this.cbDay.Location = new System.Drawing.Point(140, 191);
-            this.cbDay.Name = "cbDay";
-            this.cbDay.Size = new System.Drawing.Size(78, 36);
-            this.cbDay.StartIndex = 0;
-            this.cbDay.TabIndex = 28;
+            "12"});
+            this.cbMonth.Location = new System.Drawing.Point(229, 191);
+            this.cbMonth.Name = "cbMonth";
+            this.cbMonth.Size = new System.Drawing.Size(78, 36);
+            this.cbMonth.StartIndex = 0;
+            this.cbMonth.TabIndex = 13;
+            this.cbMonth.SelectedIndexChanged += new System.EventHandler(this.cbMonth_SelectedIndexChanged);
+            // 
+            // lblIdCustomer
+            // 
+            this.lblIdCustomer.AutoSize = true;
+            this.lblIdCustomer.BackColor = System.Drawing.Color.White;
+            this.lblIdCustomer.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblIdCustomer.ForeColor = System.Drawing.Color.Black;
+            this.lblIdCustomer.Location = new System.Drawing.Point(101, 435);
+            this.lblIdCustomer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIdCustomer.Name = "lblIdCustomer";
+            this.lblIdCustomer.Size = new System.Drawing.Size(0, 21);
+            this.lblIdCustomer.TabIndex = 22;
+            this.lblIdCustomer.Visible = false;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.White;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(21, 191);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(80, 21);
+            this.label21.TabIndex = 19;
+            this.label21.Text = "Ngày sinh";
+            // 
+            // ckbNu
+            // 
+            this.ckbNu.AutoSize = true;
+            this.ckbNu.BackColor = System.Drawing.Color.White;
+            this.ckbNu.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ckbNu.CheckedState.BorderThickness = 0;
+            this.ckbNu.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ckbNu.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.ckbNu.CheckedState.InnerOffset = -4;
+            this.ckbNu.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.ckbNu.Location = new System.Drawing.Point(278, 137);
+            this.ckbNu.Name = "ckbNu";
+            this.ckbNu.Size = new System.Drawing.Size(45, 23);
+            this.ckbNu.TabIndex = 11;
+            this.ckbNu.Text = "Nữ";
+            this.ckbNu.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.ckbNu.UncheckedState.BorderThickness = 2;
+            this.ckbNu.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.ckbNu.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.ckbNu.UseVisualStyleBackColor = false;
+            // 
+            // ckbNam
+            // 
+            this.ckbNam.AutoSize = true;
+            this.ckbNam.BackColor = System.Drawing.Color.White;
+            this.ckbNam.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ckbNam.CheckedState.BorderThickness = 0;
+            this.ckbNam.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ckbNam.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.ckbNam.CheckedState.InnerOffset = -4;
+            this.ckbNam.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.ckbNam.Location = new System.Drawing.Point(140, 137);
+            this.ckbNam.Name = "ckbNam";
+            this.ckbNam.Size = new System.Drawing.Size(56, 23);
+            this.ckbNam.TabIndex = 10;
+            this.ckbNam.Text = "Nam";
+            this.ckbNam.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.ckbNam.UncheckedState.BorderThickness = 2;
+            this.ckbNam.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.ckbNam.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.ckbNam.UseVisualStyleBackColor = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(21, 133);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(70, 21);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "Giới tính";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.BackColor = System.Drawing.Color.White;
+            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddress.DefaultText = "";
+            this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress.Location = new System.Drawing.Point(140, 257);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.PasswordChar = '\0';
+            this.txtAddress.PlaceholderText = "Địa chỉ khách hàng . . .";
+            this.txtAddress.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtAddress.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.txtAddress.SelectedText = "";
+            this.txtAddress.Size = new System.Drawing.Size(275, 138);
+            this.txtAddress.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(21, 257);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 21);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Địa chỉ";
+            // 
+            // txtPhoneCustomer
+            // 
+            this.txtPhoneCustomer.BackColor = System.Drawing.Color.White;
+            this.txtPhoneCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhoneCustomer.DefaultText = "";
+            this.txtPhoneCustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPhoneCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPhoneCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneCustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.txtPhoneCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneCustomer.Location = new System.Drawing.Point(140, 74);
+            this.txtPhoneCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhoneCustomer.Name = "txtPhoneCustomer";
+            this.txtPhoneCustomer.PasswordChar = '\0';
+            this.txtPhoneCustomer.PlaceholderText = "Số điện thoại  (09xx xxx xxx)";
+            this.txtPhoneCustomer.SelectedText = "";
+            this.txtPhoneCustomer.Size = new System.Drawing.Size(275, 35);
+            this.txtPhoneCustomer.TabIndex = 9;
+            this.txtPhoneCustomer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneCustomer_KeyPress);
+            this.txtPhoneCustomer.Leave += new System.EventHandler(this.txtPhoneCustomer_Leave);
+            // 
+            // txtNameCustomer
+            // 
+            this.txtNameCustomer.BackColor = System.Drawing.Color.White;
+            this.txtNameCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNameCustomer.DefaultText = "";
+            this.txtNameCustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNameCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNameCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNameCustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNameCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNameCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.txtNameCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNameCustomer.Location = new System.Drawing.Point(140, 19);
+            this.txtNameCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNameCustomer.Name = "txtNameCustomer";
+            this.txtNameCustomer.PasswordChar = '\0';
+            this.txtNameCustomer.PlaceholderText = "Tên khách hàng (Nguyen Van A)";
+            this.txtNameCustomer.SelectedText = "";
+            this.txtNameCustomer.Size = new System.Drawing.Size(275, 35);
+            this.txtNameCustomer.TabIndex = 8;
+            this.txtNameCustomer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNameCustomer_KeyPress);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(21, 24);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(117, 21);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Tên khách hàng";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(21, 79);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(101, 21);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "Số điện thoại";
+            // 
+            // btnInformation
+            // 
+            this.btnInformation.CustomBorderColor = System.Drawing.Color.Silver;
+            this.btnInformation.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.btnInformation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnInformation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnInformation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnInformation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnInformation.FillColor = System.Drawing.Color.Gainsboro;
+            this.btnInformation.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInformation.ForeColor = System.Drawing.Color.Black;
+            this.btnInformation.Location = new System.Drawing.Point(891, 70);
+            this.btnInformation.Name = "btnInformation";
+            this.btnInformation.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnInformation.Size = new System.Drawing.Size(218, 40);
+            this.btnInformation.TabIndex = 6;
+            this.btnInformation.Text = "Thông tin khách hàng";
+            this.btnInformation.Click += new System.EventHandler(this.btnInformation_Click);
+            // 
+            // btnPay
+            // 
+            this.btnPay.CustomBorderColor = System.Drawing.Color.Silver;
+            this.btnPay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPay.FillColor = System.Drawing.Color.White;
+            this.btnPay.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.ForeColor = System.Drawing.Color.Black;
+            this.btnPay.Location = new System.Drawing.Point(1109, 70);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnPay.Size = new System.Drawing.Size(220, 40);
+            this.btnPay.TabIndex = 7;
+            this.btnPay.Text = "Thanh toán đơn hàng";
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
+            // methodPay
+            // 
+            this.methodPay.AutoSize = true;
+            this.methodPay.Location = new System.Drawing.Point(1110, 656);
+            this.methodPay.Name = "methodPay";
+            this.methodPay.Size = new System.Drawing.Size(0, 13);
+            this.methodPay.TabIndex = 6;
+            this.methodPay.Visible = false;
+            // 
+            // guna2ContextMenuStrip1
+            // 
+            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
+            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
+            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // CartControl
             // 

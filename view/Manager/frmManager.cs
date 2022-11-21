@@ -53,6 +53,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             {
                 storeController = new StoreController(this, storeControl, cartControl);
             }
+            showStore();
+        }
+        public void showStore()
+        {
+            bringToFontUsercontrol(storeControl);
+        }
+
+        public void reLoad()
+        {
+            storeController.reLoad();
             bringToFontUsercontrol(storeControl);
         }
 

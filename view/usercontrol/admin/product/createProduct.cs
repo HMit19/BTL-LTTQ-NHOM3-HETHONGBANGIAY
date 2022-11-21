@@ -21,7 +21,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
             InitializeComponent();
         }
         AccessData accessData = new AccessData();
-        string pathImage;
+        string pathImage = "";
         public string colorProduct(string color)
         {
             string cProduct = null;
@@ -101,6 +101,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
             {
                 MessageBox.Show("Size không được để trống");
             }
+            if (pathImage == "")
+                pathImage = "default.jpg";
             string DetailProductCode = txtIdProduct.Text + colorProduct(cbColor.Text) + cbSize.Text;
             DataTable dtCheckExistProduct = accessData.DataReader("Select * from tProduct where ProductCode = '" + txtIdProduct.Text + "'");
             DataTable dtCheckDetailProduct = accessData.DataReader("Select * from tDetailProduct where DetailProductCode = '" + DetailProductCode + "'");
@@ -212,7 +214,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
                 {
                     txtNameProduct.Text = dtProduct.Rows[0]["NameProduct"].ToString();
                     cbCategory.Text = dtProduct.Rows[0]["CategoryCode"].ToString();
-                    ptbProduct.Image = Image.FromFile(Application.StartupPath + "\\image\\" + dtProduct.Rows[0]["Image"].ToString());
+                    ptbProduct.Image = Image.FromFile(Application.StartupPath + "\\images\\" + dtProduct.Rows[0]["Image"].ToString());
                     txtNameProduct.Enabled = false;
                     imgProduct.Enabled = false;
                     cbCategory.Enabled = false;

@@ -43,9 +43,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblQuantityProduct = new System.Windows.Forms.Label();
             this.pnlHeader = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnCart = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.btnCart = new FontAwesome.Sharp.IconButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlContainProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlOptionDetail = new System.Windows.Forms.FlowLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
@@ -62,6 +63,8 @@
             this.selectColor = new System.Windows.Forms.Label();
             this.selectSize = new System.Windows.Forms.Label();
             this.selectUnit = new System.Windows.Forms.Label();
+            this.colorCurrent = new System.Windows.Forms.Label();
+            this.quantityExist = new System.Windows.Forms.Label();
             this.itemColor4 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemColor();
             this.itemColor5 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemColor();
             this.itemColor6 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemColor();
@@ -71,7 +74,7 @@
             this.itemSize4 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemSize();
             this.itemSize5 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemSize();
             this.itemSize6 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemSize();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.pnlCurrent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageCurrent)).BeginInit();
             this.pnlOptionHeader.SuspendLayout();
@@ -85,6 +88,9 @@
             // 
             // pnlCurrent
             // 
+            this.pnlCurrent.Controls.Add(this.quantityExist);
+            this.pnlCurrent.Controls.Add(this.label9);
+            this.pnlCurrent.Controls.Add(this.colorCurrent);
             this.pnlCurrent.Controls.Add(this.priceCurrent);
             this.pnlCurrent.Controls.Add(this.imageCurrent);
             this.pnlCurrent.Controls.Add(this.nameCurrent);
@@ -98,7 +104,7 @@
             // 
             this.priceCurrent.AutoSize = true;
             this.priceCurrent.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceCurrent.Location = new System.Drawing.Point(161, 71);
+            this.priceCurrent.Location = new System.Drawing.Point(161, 67);
             this.priceCurrent.Name = "priceCurrent";
             this.priceCurrent.Size = new System.Drawing.Size(187, 21);
             this.priceCurrent.TabIndex = 22;
@@ -148,7 +154,7 @@
             this.cbCategory.Location = new System.Drawing.Point(725, 13);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(178, 31);
-            this.cbCategory.TabIndex = 0;
+            this.cbCategory.TabIndex = 1;
             this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
             // pnlOptionHeader
@@ -182,7 +188,7 @@
             this.btnSearch.Location = new System.Drawing.Point(1188, 13);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(95, 39);
-            this.btnSearch.TabIndex = 23;
+            this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Tìm Kiếm";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -207,7 +213,7 @@
             this.cbSortProduct.Name = "cbSortProduct";
             this.cbSortProduct.Size = new System.Drawing.Size(182, 31);
             this.cbSortProduct.StartIndex = 0;
-            this.cbSortProduct.TabIndex = 6;
+            this.cbSortProduct.TabIndex = 0;
             this.cbSortProduct.SelectedIndexChanged += new System.EventHandler(this.cbSortProduct_SelectedIndexChanged);
             // 
             // txtSearch
@@ -230,7 +236,7 @@
             this.txtSearch.PlaceholderText = "Tìm kiếm . .  .";
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(200, 38);
-            this.txtSearch.TabIndex = 21;
+            this.txtSearch.TabIndex = 2;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label4
@@ -277,6 +283,22 @@
             this.pnlHeader.Size = new System.Drawing.Size(1360, 55);
             this.pnlHeader.TabIndex = 4;
             // 
+            // btnCart
+            // 
+            this.btnCart.FlatAppearance.BorderSize = 0;
+            this.btnCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCart.IconChar = FontAwesome.Sharp.IconChar.CartArrowDown;
+            this.btnCart.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCart.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCart.IconSize = 40;
+            this.btnCart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCart.Location = new System.Drawing.Point(1046, 8);
+            this.btnCart.Name = "btnCart";
+            this.btnCart.Size = new System.Drawing.Size(44, 41);
+            this.btnCart.TabIndex = 5;
+            this.btnCart.UseVisualStyleBackColor = true;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F);
@@ -300,21 +322,15 @@
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
             // 
-            // btnCart
+            // label2
             // 
-            this.btnCart.FlatAppearance.BorderSize = 0;
-            this.btnCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCart.IconChar = FontAwesome.Sharp.IconChar.CartArrowDown;
-            this.btnCart.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCart.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCart.IconSize = 40;
-            this.btnCart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCart.Location = new System.Drawing.Point(1046, 8);
-            this.btnCart.Name = "btnCart";
-            this.btnCart.Size = new System.Drawing.Size(44, 41);
-            this.btnCart.TabIndex = 19;
-            this.btnCart.UseVisualStyleBackColor = true;
-            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.label2.Location = new System.Drawing.Point(948, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 22);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Giỏ hàng   ";
             // 
             // pnlContainProduct
             // 
@@ -424,6 +440,8 @@
             this.unit.Size = new System.Drawing.Size(44, 29);
             this.unit.TabIndex = 21;
             this.unit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.unit.TextChanged += new System.EventHandler(this.unit_TextChanged);
+            this.unit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.unit_KeyPress);
             // 
             // lblAvaiable
             // 
@@ -446,7 +464,7 @@
             this.btnAddToCart.Location = new System.Drawing.Point(58, 53);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(166, 37);
-            this.btnAddToCart.TabIndex = 19;
+            this.btnAddToCart.TabIndex = 4;
             this.btnAddToCart.Text = "Thêm vào giỏ hàng";
             this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
@@ -493,6 +511,7 @@
             this.selectColor.Name = "selectColor";
             this.selectColor.Size = new System.Drawing.Size(0, 13);
             this.selectColor.TabIndex = 1;
+            this.selectColor.Visible = false;
             // 
             // selectSize
             // 
@@ -501,6 +520,7 @@
             this.selectSize.Name = "selectSize";
             this.selectSize.Size = new System.Drawing.Size(0, 13);
             this.selectSize.TabIndex = 10;
+            this.selectSize.Visible = false;
             // 
             // selectUnit
             // 
@@ -509,6 +529,26 @@
             this.selectUnit.Name = "selectUnit";
             this.selectUnit.Size = new System.Drawing.Size(0, 13);
             this.selectUnit.TabIndex = 11;
+            this.selectUnit.Visible = false;
+            // 
+            // colorCurrent
+            // 
+            this.colorCurrent.AutoSize = true;
+            this.colorCurrent.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colorCurrent.Location = new System.Drawing.Point(161, 98);
+            this.colorCurrent.Name = "colorCurrent";
+            this.colorCurrent.Size = new System.Drawing.Size(0, 19);
+            this.colorCurrent.TabIndex = 23;
+            // 
+            // quantityExist
+            // 
+            this.quantityExist.AutoSize = true;
+            this.quantityExist.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantityExist.Location = new System.Drawing.Point(213, 117);
+            this.quantityExist.Name = "quantityExist";
+            this.quantityExist.Size = new System.Drawing.Size(0, 19);
+            this.quantityExist.TabIndex = 25;
+            this.quantityExist.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // itemColor4
             // 
@@ -582,15 +622,15 @@
             this.itemSize6.Size = new System.Drawing.Size(57, 32);
             this.itemSize6.TabIndex = 5;
             // 
-            // label2
+            // label9
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.label2.Location = new System.Drawing.Point(948, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 22);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Giỏ hàng   ";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(161, 117);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 19);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "Còn lại:";
             // 
             // StoreControl
             // 
@@ -671,5 +711,8 @@
         private Guna.UI2.WinForms.Guna2Button btnDecrease;
         private System.Windows.Forms.FlowLayoutPanel pnlOptionDetail;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label colorCurrent;
+        private System.Windows.Forms.Label quantityExist;
+        private System.Windows.Forms.Label label9;
     }
 }

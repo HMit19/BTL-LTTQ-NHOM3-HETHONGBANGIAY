@@ -16,8 +16,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
         public event UserEventParam selectProduct;
         private List<string> colors;
         private List<string> sizes;
-
-
         public ItemProduct()
         {
             InitializeComponent();
@@ -65,15 +63,18 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
         }
         public string getIdProduct() { return this.idProduct.Text; }
         public string getNameProduct() { return name.Text; }
-        public string getPriceProduct() { return price.Text; }
+        public string getPriceProduct()
+        {
+            return this.price.Text;
+        }
         public string getQuantityProduct() { return quantity.Text; }
         public string getIdCategory() { return idCategory.Text; }
-        
+
         public string getImageProduct()
         {
             return this.imageCurrent.Text;
         }
-        
+
         public void setImage(string image)
         {
             string path = Application.StartupPath + "\\images\\";

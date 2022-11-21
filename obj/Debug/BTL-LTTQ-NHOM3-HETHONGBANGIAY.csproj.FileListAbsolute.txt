@@ -97,3 +97,4 @@ C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BT
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor.EmployeeInfor.resources
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.ProviderControl.resources
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.IntroduceForm.resources
+C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.message.MessagePayUp.resources

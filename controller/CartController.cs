@@ -43,6 +43,19 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
             cartControl.inputPoint += inputPointForCustomer;
             cartControl.returnMoney += returnMoney;
             cartControl.payUp += checkPayUp;
+            cartControl.genarateIdCustomer += genarateIdCustomer;
+        }
+
+        public void genarateIdCustomer(object o)
+        {
+            string phone = o.ToString();
+            Customer customer = customerDAO.getCustomerByPhone(phone);
+            if (customer != null)
+            {
+                cartControl.setInformation(customer.Id, customer.Name, customer.Phone, customer.Gender.Equals("Nam"),
+                    customer.Birth, customer.Address, customer.Point.ToString());
+            }
+            cartControl.Controls["pnlInformationPay"].Controls["pnlCustomer"].Controls["lblIdCustomer"].Text = "KH" + GetMD5(phone).Substring(0, 12).ToUpper();
         }
 
         public void checkPayUp()
@@ -68,6 +81,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
                     int quantity = Convert.ToInt32(itemProductOfCart.getQuantity());
                     detailBillSells.Add(new DetailBillSell(idProductDetail, quantity));
                 }
+                if (detailBillSells.Count == 0)
+                {
+                    MessageBox.Show("Không thể thanh toán khi giỏ hàng trống!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
                 DateTime date = DateTime.Now;
                 string methodPay = cartControl.Controls["methodPay"].Text;
                 string idEmployee = main.getEmployee().Id;
@@ -76,34 +93,43 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
                 string idBill = GetMD5(date.ToString() + idCustomer + idEmployee);
                 idBill = "HDB" + idBill.Substring(0, 12).ToUpper();
                 BillSell billSell = new BillSell(idBill, date, methodPay, idEmployee, idCustomer, discount);
+                Customer customer = cartControl.getInformationCustomer();
+                Customer customerCurrent = customerDAO.getCustomerByPhone(customer.Phone);
+                if (customerCurrent == null)
+                {
+                    customer.Point = 0;
+                    customerDAO.save(customer);
+                    customerCurrent = customer;
+                }
+                double price = 0;
+                foreach (ItemProductOfCart item in cartControl.Controls["pnlContainer"].Controls)
+                {
+                    price += Convert.ToDouble(item.getTotalPrice());
+                }
+                long point = Convert.ToInt64(price / 100000);
+                customer.Point = point + (customerCurrent.Point - discount);
+                customerDAO.update(customer.Id, customer);
                 if (cartDAO.saveBill(billSell))
-                    MessageBox.Show("Thanh toán thành công");
+                    MessageBox.Show("Thanh toán thành công", "Thông báo", MessageBoxButton.OK);
                 cartDAO.setListDetailBill(detailBillSells);
                 cartDAO.saveDetailBill(idBill);
-                string phone = cartControl.Controls["pnlInformationPay"].Controls["pnlCustomer"].Controls["txtPhoneCustomer"].Text;
-                Customer customer = customerDAO.getCustomerByPhone(phone);
-                //if (customer == null)
-                //{
-                //    string name = cartControl.Controls["pnlInformationPay"].Controls["pnlCustomer"].Controls["txtNameCustomer"].Text;
-                //    string gender = cartControl.getGender() ? "Nam" : "Nữ";
-                //    string address = cartControl.Controls["pnlInformationPay"].Controls["pnlCustomer"].Controls["txtAddress"].Text;
-                //    long point = (int)(Convert.ToInt32(cartControl.Controls["pnlFooter"].Controls["lblSumTotal"].Text) * 0.05);
-                //    DateTime birth = cartControl.getDate();
-                //    customer = new Customer(idCustomer, name, gender, birth, phone, address, point);
-                //    customerDAO.save(customer);
-                //}
-                //else
-                //{
-                //    //customerDAO.updatePointCustomer(customer.Id, point);
-                //}
+                productDAO.updateDetailProduct(detailBillSells);
+                clearAfterPay();
             }
+        }
+
+        private void clearAfterPay()
+        {
+            main.reLoad();
+            removeAllProductOfCart();
+            cartControl.resetAllInformation();
         }
 
         private void returnMoney(object o)
         {
             if (o.ToString() == "") return;
             long totalPay = Convert.ToInt64(cartControl.Controls["pnlInformationPay"].Controls["pnlPay"].Controls["lblMoneyOrder"].Text.Replace(",", ""));
-            long moneyInput = Convert.ToInt32(o);
+            long moneyInput = Convert.ToInt64(o.ToString().Replace(",", ""));
             if (moneyInput < totalPay || moneyInput < 0)
             {
                 MessageBox.Show("Số tiền chưa đủ để thanh toán", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -173,7 +199,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
                 item.changeQuantity += changeQuantity;
                 cartControl.Controls["pnlContainer"].Controls.Add(item);
             }
-            cartControl.Controls["pnlInformationPay"].Controls["pnlCustomer"].Controls["lblIdCustomer"].Text = "KH" + GetMD5(DateTime.Now.ToString()).Substring(0, 12).ToUpper();
             loadPayment();
         }
         private void changeQuantity(object o)
@@ -208,11 +233,13 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
             ItemProductOfCart item = (ItemProductOfCart)o;
             cartDAO.removeItemOfCart(item.getIdBillDetailSell());
             loadCart();
+            if (cartDAO.getListDetailBillSells().Count == 0) main.showStore();
         }
         private void removeAllProductOfCart()
         {
             cartDAO.removeAllInCart();
             loadCart();
+            main.showStore();
         }
         public static string GetMD5(string str)
         {

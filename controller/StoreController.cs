@@ -6,8 +6,10 @@ using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol;
 using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Animation;
 
 namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
 {
@@ -52,7 +54,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
         {
             if (cartDAO.getListDetailBillSells().Count == 0)
             {
-                MessageBox.Show("Giỏ hàng trống");
+                MessageBox.Show("Giỏ hàng trống", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
             else
@@ -107,6 +109,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
         {
             storeControl.Controls["pnlCurrent"].Controls["nameCurrent"].Text = itemProduct.getNameProduct();
             storeControl.Controls["pnlCurrent"].Controls["priceCurrent"].Text = itemProduct.getPriceProduct();
+            storeControl.Controls["pnlCurrent"].Controls["quantityExist"].Text = itemProduct.getQuantityProduct();
             storeControl.setImageCurrent(itemProduct.getImageProduct());
             storeControl.Controls["pnlCurrent"].Visible = true;
         }
@@ -161,6 +164,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
             string sizeCurrent = storeControl.Controls["selectSize"].Text;
             if (colorCurrent == colorChoose)
             {
+
+                storeControl.Controls["pnlCurrent"].Controls["quantityExist"].Text = itemProduct.getQuantityProduct();
                 storeControl.Controls["selectColor"].Text = "";
                 foreach (ItemColor item in storeControl.Controls["pnlOptionDetail"].Controls["pnlOptionColor"].Controls)
                 {
@@ -192,6 +197,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
                 setBorder();
                 loadSize();
             }
+            checkPriceProductCurrent();
         }
         private void chooseSize(object size)
         {
@@ -200,6 +206,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
             string colorCurrent = storeControl.Controls["selectColor"].Text;
             if (sizeCurrent.Equals(sizeChoose))
             {
+                storeControl.Controls["pnlCurrent"].Controls["quantityExist"].Text = itemProduct.getQuantityProduct();
                 storeControl.Controls["selectSize"].Text = "";
                 foreach (ItemSize item in storeControl.Controls["pnlOptionDetail"].Controls["pnlOptionSize"].Controls)
                 {
@@ -231,6 +238,27 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
                 setBorder();
                 loadColor();
             }
+            checkPriceProductCurrent();
+        }
+
+        private void checkPriceProductCurrent()
+        {
+            string colorCurrent = storeControl.Controls["selectColor"].Text;
+            string sizeCurrent = storeControl.Controls["selectSize"].Text;
+            List<DetailProduct> detailProducts = productDAO.getDetailProduct(itemProduct.getIdProduct(), colorCurrent, sizeCurrent);
+            double maxPrice = productDAO.getMaxPrice(detailProducts);
+            double minPrice = productDAO.getMinPrice(detailProducts);
+            long quatity = productDAO.getQuantityProduct(detailProducts);
+            if (maxPrice != minPrice)
+            {
+                storeControl.Controls["pnlCurrent"].Controls["priceCurrent"].Text = minPrice.ToString("#,###") + " - " + maxPrice.ToString("#,###");
+
+            }
+            else
+            {
+                storeControl.Controls["pnlCurrent"].Controls["priceCurrent"].Text = minPrice.ToString("#,###");
+            }
+            storeControl.Controls["pnlCurrent"].Controls["quantityExist"].Text = quatity.ToString();
         }
 
         private void setBorder()
@@ -315,7 +343,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
             setBorderChooseSize(listColorExistSize);
         }
 
-
         private void showProductOfCategory()
         {
             string name = storeControl.Controls["pnlOptionHeader"].Controls["cbCategory"].Text;
@@ -331,6 +358,11 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
             }
         }
 
+        public void reLoad()
+        {
+            productDAO.reLoadListProduct();
+            sortProduct();
+        }
         private void showListProduct()
         {
             productDAO.setListProducts(productDAO.getListProductsDefault());
@@ -405,7 +437,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
                 List<string> sizes = productDAO.getListSizeOfProduct(product.Id);
                 sizes.Sort();
                 storeControl.Controls["pnlContainProduct"].Controls.Add(new ItemProduct(idProduct, name, image, price, quantity, idCategory, colors, sizes));
-
             }
             storeControl.Controls["pnlContainProduct"].Visible = true;
             EventSelectItemProduct();

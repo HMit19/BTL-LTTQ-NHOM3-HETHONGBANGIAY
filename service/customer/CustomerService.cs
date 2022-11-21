@@ -135,8 +135,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.customer
             bool excute = false;
             try
             {
-                string sql = "update tCustomer set Name = '" + customer.Name + "', Gender = '" + customer.Gender
-                    + "', Address = '" + customer.Address + "', Phone = '" + customer.Phone + "', Point = " + customer.Point + " where CustomerCode = '" + id + "'";
+                string sql = "update tCustomer set Name = N'" + customer.Name + "', Gender = N'" + customer.Gender
+                    + "', Address = N'" + customer.Address + "', PhoneNumber = '" + customer.Phone + "', Point = " + customer.Point + ", BirthDay = '" + customer.Birth + "' where CustomerCode = '" + id + "'";
                 excute = databaseHandle.dataChange(sql);
             }
             catch (Exception)

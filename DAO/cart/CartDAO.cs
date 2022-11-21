@@ -62,8 +62,9 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.cart
             foreach(DetailBillSell detailBillSell in detailBillSells)
             {
                 detailBillSell.IdBill = idBill;
-                billDetailService.save(detailBillSell);     
+                billDetailService.save(detailBillSell);   
             }
+            //detailBillSells.Clear();
         }
         public void removeAllInCart()
         {

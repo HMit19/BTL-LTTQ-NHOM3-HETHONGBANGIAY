@@ -165,7 +165,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.bill
             bool excute = false;
             try
             {
-                string sql = "update tBillOfSale set DateSale = '" + billSell.Date + "', PaymentMethods = '" + billSell.PayMethod + "', EmployeeCode = '" + billSell.IdEmployee +
+                string sql = "update tBillOfSale set DateSale = '" + billSell.Date + "', PaymentMethods = N'" + billSell.PayMethod + "', EmployeeCode = '" + billSell.IdEmployee +
                     "', CustomerCode = '" + billSell.IdCustomer + "', Discount = " + billSell.Discount + " where CodeBill = '" + idBill + "'";
                 excute = databaseHandle.dataChange(sql);
             }

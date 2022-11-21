@@ -25,9 +25,14 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.product
             productService = new ProductService();
             categoryService = new CategoryService();
             detailProductService = new DetailProductService();
+            categories = categoryService.findAll();
+            reLoadListProduct();
+        }
+
+        public void reLoadListProduct()
+        {
             products = productService.findAll();
             productsDefault = products;
-            categories = categoryService.findAll();
             loadDetailProduct();
         }
 
@@ -60,6 +65,37 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.product
             return null;
         }
 
+        public List<DetailProduct> getDetailProduct(string idProduct, string color, string size)
+        {
+            List<DetailProduct> detailProducts = new List<DetailProduct>();
+            Product product = getProductById(idProduct);
+            foreach (DetailProduct detailProduct in product.DetailProduct)
+            {
+                if (color != "" && size != "")
+                {
+                    if (detailProduct.Color.Equals(color) && detailProduct.Size.ToString().Equals(size))
+                    {
+                        detailProducts.Add(detailProduct);
+                    }
+                }
+                else if (color == "" && size != "")
+                {
+                    if (detailProduct.Size.ToString().Equals(size))
+                    {
+                        detailProducts.Add(detailProduct);
+                    }
+                }
+                else if (color != "" && size == "")
+                {
+                    if (detailProduct.Color.Equals(color))
+                    {
+                        detailProducts.Add(detailProduct);
+                    }
+                }
+            }
+            return detailProducts;
+        }
+
         public List<string> getSizeExistInColor(string idProduct, string color)
         {
             HashSet<string> sizes = new HashSet<string>();
@@ -90,7 +126,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.product
             return new List<string>(colors);
         }
 
-
         public List<string> getListSizeOfProduct(string idProduct)
         {
             HashSet<string> sizes = new HashSet<string>();
@@ -116,7 +151,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.product
             }
             return null;
         }
-
         public DetailProduct getDetailProductById(string id)
         {
             foreach (Product product in productsDefault)
@@ -136,7 +170,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.product
         {
             this.products = products;
         }
-
         public void productOfCategory(string nameCategory)
         {
             string codeCategory = "";
@@ -229,6 +262,15 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.product
             {
                 List<DetailProduct> details = detailProductService.findAllByProduct(product.Id);
                 product.DetailProduct = details;
+            }
+        }
+        public void updateDetailProduct(List<DetailBillSell> detailBillSells)
+        {
+            foreach (DetailBillSell detailBillSell in detailBillSells)
+            {
+                DetailProduct detailProduct = getDetailProductById(detailBillSell.IdProductDetail);
+                detailProduct.Quantity -= detailBillSell.Quantity;
+                detailProductService.update(detailProduct.IdProductDetail, detailProduct);
             }
         }
     }
