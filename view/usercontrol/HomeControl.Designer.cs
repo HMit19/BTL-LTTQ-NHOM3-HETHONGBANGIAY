@@ -739,6 +739,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.btnListProduct.Size = new System.Drawing.Size(67, 17);
             this.btnListProduct.TabIndex = 31;
             this.btnListProduct.Text = "Tất cả >>";
+            this.btnListProduct.Click += new System.EventHandler(this.btnListProduct_Click);
             // 
             // HomeControl
             // 

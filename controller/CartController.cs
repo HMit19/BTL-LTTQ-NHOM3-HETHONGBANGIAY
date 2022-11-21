@@ -74,12 +74,28 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
                 string idCustomer = cartControl.Controls["pnlInformationPay"].Controls["pnlCustomer"].Controls["lblIdCustomer"].Text;
                 int discount = cartControl.getPoint();
                 string idBill = GetMD5(date.ToString() + idCustomer + idEmployee);
-                idBill = idBill.Substring(0, 15);
+                idBill = "HDB" + idBill.Substring(0, 12).ToUpper();
                 BillSell billSell = new BillSell(idBill, date, methodPay, idEmployee, idCustomer, discount);
                 if (cartDAO.saveBill(billSell))
                     MessageBox.Show("Thanh toán thành công");
                 cartDAO.setListDetailBill(detailBillSells);
                 cartDAO.saveDetailBill(idBill);
+                string phone = cartControl.Controls["pnlInformationPay"].Controls["pnlCustomer"].Controls["txtPhoneCustomer"].Text;
+                Customer customer = customerDAO.getCustomerByPhone(phone);
+                //if (customer == null)
+                //{
+                //    string name = cartControl.Controls["pnlInformationPay"].Controls["pnlCustomer"].Controls["txtNameCustomer"].Text;
+                //    string gender = cartControl.getGender() ? "Nam" : "Nữ";
+                //    string address = cartControl.Controls["pnlInformationPay"].Controls["pnlCustomer"].Controls["txtAddress"].Text;
+                //    long point = (int)(Convert.ToInt32(cartControl.Controls["pnlFooter"].Controls["lblSumTotal"].Text) * 0.05);
+                //    DateTime birth = cartControl.getDate();
+                //    customer = new Customer(idCustomer, name, gender, birth, phone, address, point);
+                //    customerDAO.save(customer);
+                //}
+                //else
+                //{
+                //    //customerDAO.updatePointCustomer(customer.Id, point);
+                //}
             }
         }
 
@@ -157,6 +173,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
                 item.changeQuantity += changeQuantity;
                 cartControl.Controls["pnlContainer"].Controls.Add(item);
             }
+            cartControl.Controls["pnlInformationPay"].Controls["pnlCustomer"].Controls["lblIdCustomer"].Text = "KH" + GetMD5(DateTime.Now.ToString()).Substring(0, 12).ToUpper();
             loadPayment();
         }
         private void changeQuantity(object o)

@@ -20,7 +20,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         {
             InitializeComponent();
             DataTable dtNCC = data.ReadData("Select * from tProvider");
-
         }
 
         private void btnFind_Click(object sender, EventArgs e)
@@ -37,21 +36,19 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                     DataTable dtNCC = data.ReadData("Select * from tProvider where Name like N'%" + txtName.Text + "%'");
                     dgvListProvider.DataSource = dtNCC;
                 }
-
             }
             catch
             {
-                MessageBox.Show("Khong co NCC ban can tim");
+                MessageBox.Show("Không tìm thấy nhà cung cấp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-
-
-
         }
         void loadData()
         {
             DataTable dtNCC = data.ReadData("Select * from tProvider");
             dgvListProvider.DataSource = dtNCC;
+            dgvListProvider.Columns[0].HeaderText = "Mã nhà cung cấp";
+            dgvListProvider.Columns[1].HeaderText = "Tên nhà cung cấp";
+            dgvListProvider.Columns[2].HeaderText = "Địa Chỉ";
         }
         void ResetValue()
         {
@@ -64,9 +61,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             loadData();
             ResetValue();
             btnRepair.Enabled = false;
-
         }
-
 
         private void btnReload_Click(object sender, EventArgs e)
         {
@@ -91,7 +86,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             {
                 data.UpdateData("update tProvider set Name=N'" + txtName.Text + "', Address=N'" + txtAddress.Text + "' where ProviderCode='" + txtProviderCode.Text + "' ");
                 loadData();
-                MessageBox.Show("cập nhập thanh cong");
+                MessageBox.Show("Cập nhập thành công","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -107,7 +102,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 }
                 catch
                 {
-                    MessageBox.Show("Khong the xoa dc");
+                    MessageBox.Show("Không thể xóa", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
         }
 
@@ -139,14 +134,14 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 DataTable dtNCC = data.ReadData(sqlselect);
                 if (dtNCC.Rows.Count > 0)
                 {
-                    errChiTiet.SetError(txtProviderCode, "Mã NV trùng trong cơ sở dữ liệu");
+                    errChiTiet.SetError(txtProviderCode, "Mã nhân viên trùng đã tồn tại!");
                     return;
                 }
                 errChiTiet.Clear();
             }
-            string sql = "INSERT INTO tProvider (ProviderCode, Name, Address) VALUES ('" + txtProviderCode.Text + "','" + txtName.Text + "','"+txtAddress.Text+"')";
+            string sql = "INSERT INTO tProvider (ProviderCode, Name, Address) VALUES ('" + txtProviderCode.Text + "','" + txtName.Text + "','" + txtAddress.Text + "')";
             data.UpdateData(sql);
-            MessageBox.Show("Thêm mới thành công");
+            MessageBox.Show("Thêm mới thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             loadData();
             ResetValue();
         }
@@ -173,19 +168,17 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             header.Font.Bold = true;
             header.Font.Color = System.Drawing.Color.Red;
             header.Value = "DANH SÁCH NHÀ CUNG CẤP";
+            
             exSheet.get_Range("B4:D4").HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
-
-
             exSheet.get_Range("B6:D6").Font.Bold = true;
             exSheet.get_Range("B6:D6").HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
             exSheet.get_Range("B6").ColumnWidth = 17;
             exSheet.get_Range("C6").ColumnWidth = 30;
             exSheet.get_Range("D6").ColumnWidth = 15;
-            
             exSheet.get_Range("B6").Value = "Mã Nhà Cung Cấp";
             exSheet.get_Range("C6").Value = "Tên Nhà Cung Cấp";
             exSheet.get_Range("D6").Value = "Địa Chỉ ";
-            
+
 
             DataTable dataEx = data.ReadData("select * from  tProvider ");
             for (int i = 0; i < dataEx.Rows.Count; i++)
@@ -194,11 +187,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 exSheet.get_Range("B" + (i + 7).ToString()).Value = dataEx.Rows[i][0].ToString();
                 exSheet.get_Range("C" + (i + 7).ToString()).Value = dataEx.Rows[i][1].ToString();
                 exSheet.get_Range("D" + (i + 7).ToString()).Value = dataEx.Rows[i][2].ToString();
-                
+
             }
             exSheet.Name = "Danh Sách Nhà Cung Cấp";
             exBook.Activate();
-
             dlgSave.Filter = "Excel Document(*.xlsx)|*.xlsx |All files(*.*)|*.*";
             dlgSave.FilterIndex = 1;
             dlgSave.AddExtension = true;
@@ -207,7 +199,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             {
                 exBook.SaveAs(dlgSave.FileName.ToString());
                 dlgSave.Reset();
-                MessageBox.Show("Xuất dữ liệu ra Excel thành công!");
+                MessageBox.Show("Xuất dữ liệu ra Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             exApp.Quit();
         }

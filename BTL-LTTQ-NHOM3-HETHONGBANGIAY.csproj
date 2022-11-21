@@ -68,6 +68,7 @@
     <Compile Include="controller\StoreController.cs" />
     <Compile Include="DAO\cart\CartDAO.cs" />
     <Compile Include="DAO\category\CategoryDAO.cs" />
+    <Compile Include="DAO\connect\AccessData.cs" />
     <Compile Include="DAO\connect\ConnectData.cs" />
     <Compile Include="DAO\connect\ConnectSQL.cs" />
     <Compile Include="DAO\customer\CustomerDAO.cs" />
@@ -137,6 +138,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\test\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\test\Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\usercontrol\EmployeeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -148,12 +155,6 @@
     </Compile>
     <Compile Include="view\usercontrol\ProviderControl.designer.cs">
       <DependentUpon>ProviderControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\test\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\test\Form1.designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="view\usercontrol\admin\product\CreateProduct.cs">
       <SubType>UserControl</SubType>
@@ -266,14 +267,14 @@
     <EmbeddedResource Include="view\login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\test\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\EmployeeControl.resx">
       <DependentUpon>EmployeeControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\ProviderControl.resx">
       <DependentUpon>ProviderControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\test\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\usercontrol\admin\product\CreateProduct.resx">
       <DependentUpon>CreateProduct.cs</DependentUpon>
@@ -343,9 +344,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="view\images\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Content\all.css" />
     <Content Include="Content\all.min.css" />

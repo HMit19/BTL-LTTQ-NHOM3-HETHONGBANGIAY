@@ -20,5 +20,9 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.customer
         {
             return customerService.findByPhone(phone);
         }
+        public void save(Customer customer)
+        {
+            customerService.save(customer);
+        }
     }
 }

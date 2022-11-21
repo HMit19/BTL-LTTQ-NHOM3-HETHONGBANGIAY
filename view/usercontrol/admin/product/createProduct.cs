@@ -22,7 +22,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
         }
         AccessData accessData = new AccessData();
         string pathImage;
-        public string colorProduct (string color)
+        public string colorProduct(string color)
         {
             string cProduct = null;
             if (color == "Đen")
@@ -37,7 +37,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
                 cProduct = "C";
             else if (color == "Xám")
                 cProduct = "X";
-            return cProduct;             
+            return cProduct;
         }
         public void reset()
         {
@@ -54,8 +54,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
         public void resetCategory()
         {
             cbCategory.Items.Clear();
-            DataTable dtCategory = accessData.DataReader("Select CategoryCode from tCategory"); 
-            for (int i=0;i<dtCategory.Rows.Count;i++)
+            DataTable dtCategory = accessData.DataReader("Select CategoryCode from tCategory");
+            for (int i = 0; i < dtCategory.Rows.Count; i++)
             {
                 cbCategory.Items.Add(dtCategory.Rows[i]["CategoryCode"].ToString());
             }
@@ -85,7 +85,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
             {
                 MessageBox.Show("Giá bán không được để trống");
                 txtPrice.Focus();
-                return; 
+                return;
             }
             if (cbCategory.Text == "")
             {
@@ -95,7 +95,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
             if (cbColor.Text == "")
             {
                 MessageBox.Show("Màu không được để trống");
-                return; 
+                return;
             }
             if (cbSize.Text == "")
             {
@@ -139,7 +139,25 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
             {
                 if (cbCategory.Text == "Thêm mới")
                 {
-                    DataTable dtCategory = accessData.DataReader("Select * from tCategory where CategoryCode = '"+txtCategoryCode.Text+"'");
+                    if (txtCategoryCode.Text == "")
+                    {
+                        MessageBox.Show("Mã danh mục không được để trống");
+                        txtCategoryCode.Focus();
+                        return;
+                    }
+                    if (txtBrand.Text == "")
+                    {
+                        MessageBox.Show("Tên hãng không được để trống");
+                        txtBrand.Focus();
+                        return;
+                    }
+                    if (txtOrigin.Text == "")
+                    {
+                        MessageBox.Show("Xuất xứ không được để trống");
+                        txtOrigin.Focus();
+                        return;
+                    }
+                    DataTable dtCategory = accessData.DataReader("Select * from tCategory where CategoryCode = '" + txtCategoryCode.Text + "'");
                     if (dtCategory.Rows.Count == 0)
                     {
                         accessData.DataChange("Insert into tCategory values('" + txtCategoryCode.Text + "','" + txtBrand.Text + "',N'" + txtOrigin.Text + "')");
@@ -158,7 +176,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
                     accessData.DataChange("Insert into tProduct values ('" + txtIdProduct.Text + "','" + txtNameProduct.Text + "','" + pathImage + "','" + cbCategory.Text + "','1')");
                     accessData.DataChange("Insert into tDetailProduct values ('" + DetailProductCode + "','" + txtIdProduct.Text + "','" + cbSize.Text + "',N'" + cbColor.Text + "','" + txtImportPrice.Text + "','" + txtPrice.Text + "','0')");
                     MessageBox.Show("Thêm sản phẩm " + txtNameProduct.Text + " có màu " + cbColor.Text + " và size " + cbSize.Text + " thành công");
-                }               
+                }
             }
             reset();
         }
@@ -178,7 +196,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
 
         private void txtImportPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && Convert.ToInt16(e.KeyChar)!=8)
+            if (!char.IsDigit(e.KeyChar) && Convert.ToInt16(e.KeyChar) != 8)
             {
                 MessageBox.Show("Bạn phải nhập số nguyên");
                 e.Handled = true;
@@ -221,7 +239,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
         }
         private void cbColor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable dtPrice = accessData.DataReader("Select ImportPrice,Price from tDetailProduct where DetailProductCode = '"+txtIdProduct.Text + colorProduct(cbColor.Text)+ cbSize.Text+"' ");
+            DataTable dtPrice = accessData.DataReader("Select ImportPrice,Price from tDetailProduct where DetailProductCode = '" + txtIdProduct.Text + colorProduct(cbColor.Text) + cbSize.Text + "' ");
             if (dtPrice.Rows.Count != 0)
             {
                 txtImportPrice.Text = dtPrice.Rows[0]["ImportPrice"].ToString();

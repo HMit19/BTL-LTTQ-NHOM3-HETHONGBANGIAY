@@ -44,13 +44,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.grpList = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.dgvListEmployee = new Guna.UI2.WinForms.Guna2DataGridView();
             this.pnlButton = new System.Windows.Forms.Panel();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.btnReload = new FontAwesome.Sharp.IconButton();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.btnInfor = new FontAwesome.Sharp.IconButton();
             this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.dgvListEmployee = new Guna.UI2.WinForms.Guna2DataGridView();
             this.cboStatus = new System.Windows.Forms.ComboBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.dlgSave = new System.Windows.Forms.SaveFileDialog();
@@ -58,8 +58,8 @@
             this.pnlTitle.SuspendLayout();
             this.grpSearch.SuspendLayout();
             this.grpList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployee)).BeginInit();
             this.pnlButton.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTitle
@@ -250,6 +250,118 @@
             this.grpList.Text = "Danh sách Nhân Viên";
             this.grpList.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // pnlButton
+            // 
+            this.pnlButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.pnlButton.Controls.Add(this.btnAdd);
+            this.pnlButton.Controls.Add(this.btnReload);
+            this.pnlButton.Controls.Add(this.btnDelete);
+            this.pnlButton.Controls.Add(this.btnInfor);
+            this.pnlButton.Location = new System.Drawing.Point(0, 394);
+            this.pnlButton.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlButton.Name = "pnlButton";
+            this.pnlButton.Size = new System.Drawing.Size(1360, 93);
+            this.pnlButton.TabIndex = 4;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnAdd.IconColor = System.Drawing.Color.Black;
+            this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAdd.IconSize = 30;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(432, 15);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(120, 40);
+            this.btnAdd.TabIndex = 8;
+            this.btnAdd.Text = "Thêm mới";
+            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnReload
+            // 
+            this.btnReload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnReload.FlatAppearance.BorderSize = 0;
+            this.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReload.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnReload.ForeColor = System.Drawing.Color.White;
+            this.btnReload.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateBack;
+            this.btnReload.IconColor = System.Drawing.Color.Black;
+            this.btnReload.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReload.IconSize = 30;
+            this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReload.Location = new System.Drawing.Point(1183, 15);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(120, 40);
+            this.btnReload.TabIndex = 7;
+            this.btnReload.Text = "Làm mới";
+            this.btnReload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReload.UseVisualStyleBackColor = false;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.btnDelete.IconColor = System.Drawing.Color.Black;
+            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDelete.IconSize = 30;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(832, 15);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(120, 40);
+            this.btnDelete.TabIndex = 6;
+            this.btnDelete.Text = "   Xóa";
+            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnInfor
+            // 
+            this.btnInfor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnInfor.FlatAppearance.BorderSize = 0;
+            this.btnInfor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfor.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnInfor.ForeColor = System.Drawing.Color.White;
+            this.btnInfor.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
+            this.btnInfor.IconColor = System.Drawing.Color.Black;
+            this.btnInfor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnInfor.IconSize = 30;
+            this.btnInfor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInfor.Location = new System.Drawing.Point(62, 15);
+            this.btnInfor.Name = "btnInfor";
+            this.btnInfor.Size = new System.Drawing.Size(120, 40);
+            this.btnInfor.TabIndex = 4;
+            this.btnInfor.Text = "Chi tiết";
+            this.btnInfor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInfor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInfor.UseVisualStyleBackColor = false;
+            this.btnInfor.Click += new System.EventHandler(this.btnInfor_Click);
+            // 
+            // guna2CircleProgressBar1
+            // 
+            this.guna2CircleProgressBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.guna2CircleProgressBar1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2CircleProgressBar1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(875, 139);
+            this.guna2CircleProgressBar1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CircleProgressBar1.Minimum = 0;
+            this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
+            this.guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(6, 6);
+            this.guna2CircleProgressBar1.TabIndex = 1;
+            this.guna2CircleProgressBar1.Text = "guna2CircleProgressBar1";
+            // 
             // dgvListEmployee
             // 
             this.dgvListEmployee.AllowUserToAddRows = false;
@@ -321,118 +433,6 @@
             this.dgvListEmployee.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvListEmployee.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListEmployee_CellClick);
             // 
-            // pnlButton
-            // 
-            this.pnlButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.pnlButton.Controls.Add(this.btnAdd);
-            this.pnlButton.Controls.Add(this.btnReload);
-            this.pnlButton.Controls.Add(this.btnDelete);
-            this.pnlButton.Controls.Add(this.btnInfor);
-            this.pnlButton.Location = new System.Drawing.Point(0, 394);
-            this.pnlButton.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlButton.Name = "pnlButton";
-            this.pnlButton.Size = new System.Drawing.Size(1360, 93);
-            this.pnlButton.TabIndex = 4;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnAdd.IconColor = System.Drawing.Color.Black;
-            this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAdd.IconSize = 30;
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(432, 15);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(120, 40);
-            this.btnAdd.TabIndex = 8;
-            this.btnAdd.Text = "Thêm mới";
-            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnReload
-            // 
-            this.btnReload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnReload.FlatAppearance.BorderSize = 0;
-            this.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReload.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnReload.ForeColor = System.Drawing.Color.White;
-            this.btnReload.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateBack;
-            this.btnReload.IconColor = System.Drawing.Color.Black;
-            this.btnReload.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnReload.IconSize = 30;
-            this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReload.Location = new System.Drawing.Point(1183, 15);
-            this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(120, 40);
-            this.btnReload.TabIndex = 7;
-            this.btnReload.Text = "Làm Mới";
-            this.btnReload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReload.UseVisualStyleBackColor = false;
-            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.btnDelete.IconColor = System.Drawing.Color.Black;
-            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDelete.IconSize = 30;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(832, 15);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(120, 40);
-            this.btnDelete.TabIndex = 6;
-            this.btnDelete.Text = "   Xóa";
-            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnInfor
-            // 
-            this.btnInfor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnInfor.FlatAppearance.BorderSize = 0;
-            this.btnInfor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfor.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnInfor.ForeColor = System.Drawing.Color.White;
-            this.btnInfor.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
-            this.btnInfor.IconColor = System.Drawing.Color.Black;
-            this.btnInfor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnInfor.IconSize = 30;
-            this.btnInfor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInfor.Location = new System.Drawing.Point(62, 15);
-            this.btnInfor.Name = "btnInfor";
-            this.btnInfor.Size = new System.Drawing.Size(120, 40);
-            this.btnInfor.TabIndex = 4;
-            this.btnInfor.Text = "Chi tiết";
-            this.btnInfor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnInfor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInfor.UseVisualStyleBackColor = false;
-            this.btnInfor.Click += new System.EventHandler(this.btnInfor_Click);
-            // 
-            // guna2CircleProgressBar1
-            // 
-            this.guna2CircleProgressBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2CircleProgressBar1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2CircleProgressBar1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(875, 139);
-            this.guna2CircleProgressBar1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CircleProgressBar1.Minimum = 0;
-            this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
-            this.guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(6, 6);
-            this.guna2CircleProgressBar1.TabIndex = 1;
-            this.guna2CircleProgressBar1.Text = "guna2CircleProgressBar1";
-            // 
             // cboStatus
             // 
             this.cboStatus.Enabled = false;
@@ -458,8 +458,8 @@
             this.grpSearch.ResumeLayout(false);
             this.grpSearch.PerformLayout();
             this.grpList.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployee)).EndInit();
             this.pnlButton.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployee)).EndInit();
             this.ResumeLayout(false);
 
         }

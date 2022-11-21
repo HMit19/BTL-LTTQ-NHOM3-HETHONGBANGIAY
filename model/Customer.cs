@@ -24,18 +24,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.model
         public string Address { get => address; set => address = value; }
         public DateTime Birth { get => birth; set => birth = value; }
 
-        public Customer() { }
-
-        public Customer(string id, string name, string gender, string address, string phone, long point)
-        {
-            this.Id = id;
-            this.Name = name;
-            this.Phone = phone;
-            this.Gender = gender;
-            this.Point = point;
-            this.Address = address;
-        }
-
         public Customer(string id, string name, string gender, DateTime birth, string address, string phone, long point)
         {
             this.id = id;

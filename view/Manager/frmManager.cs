@@ -79,6 +79,11 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
         {
             bringToFontUsercontrol(cartControl);
         }
+        public void showListProduct()
+        {
+            bringToFontUsercontrol(listProduct);
+            listProduct.updateListProduct();
+        }
         private void btnTurnOff_Click(object sender, EventArgs e)
         {
             Application.Exit();

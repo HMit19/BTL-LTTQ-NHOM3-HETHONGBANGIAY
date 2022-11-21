@@ -284,7 +284,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         private void btnCreate_Click(object sender, EventArgs e)
         {
             string newCode = getMD5(DateTime.Now.ToString());
-            ImportBillForm infor = new ImportBillForm(newCode.Substring(0, 15), "CREATE");
+            ImportBillForm infor = new ImportBillForm(newCode.Substring(0, 10), "CREATE");
             infor.Show();
         }
 

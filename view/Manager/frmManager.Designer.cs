@@ -119,6 +119,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            homeControl.showAllProduct += showListProduct;
             // 
             // btnSell
             // 

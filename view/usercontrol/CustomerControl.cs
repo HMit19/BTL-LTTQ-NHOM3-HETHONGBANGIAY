@@ -55,7 +55,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         {
             if (btnCancel.Visible == true)
                 return;
-            DataTable data = dataBase.readData("select * from tCustomer where CustomerCode = N'"+ customerCode + "'");
+            DataTable data = dataBase.readData("select * from tCustomer where CustomerCode = N'" + customerCode + "'");
             lblCode.Text = data.Rows[0][0].ToString();
             lblName.Text = data.Rows[0][1].ToString();
             lblPhone.Text = data.Rows[0][4].ToString();
@@ -79,7 +79,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         //Function to get value of combobox
         string filterOfCbb()
         {
-            string filter ="";
+            string filter = "";
             if (cbbType.SelectedIndex == 0)
             {
                 if (cbbFilter.SelectedIndex == 0)
@@ -137,16 +137,21 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             if (txtSearch.Text == "Tìm kiếm hóa đơn theo...")
             {
                 search = "";
+                dgvList.DataSource = dataBase.readData("select CustomerCode, Name from tCustomer");
+            }
+            if (txtSearch.Text == "")
+            {
+                dgvList.DataSource = dataBase.readData("select CustomerCode, Name from tCustomer");
             }
             if (cbbType.SelectedIndex == 0)
             {
-                dgvList.DataSource = dataBase.readData("select CustomerCode, Name from tCustomer where CustomerCode like N'%" + search+"%' " + filterOfCbb());
+                dgvList.DataSource = dataBase.readData("select CustomerCode, Name from tCustomer where CustomerCode like N'%" + search + "%' " + filterOfCbb());
             }
             else
             {
                 dgvList.DataSource = dataBase.readData("select CustomerCode, Name from tCustomer where Name like N'%" + search + "%' " + filterOfCbb());
             }
-            
+
         }
 
         //Update information of customer
@@ -184,9 +189,9 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 }
                 string gender = ", Gender = N'" + cbbGender.Text + "' ";
                 lblGender.Text = cbbGender.Text;
-                string birthday = ", BirthDay = N'"+ dtpBirth.Value.ToString()+"' ";
+                string birthday = ", BirthDay = N'" + dtpBirth.Value.ToString() + "' ";
                 lblBirth.Text = dtpBirth.Value.ToString("dd/MM/yyyy");
-                dataBase.updateData("update tCustomer set CustomerCode = N'"+ lblCode.Text + "' "+name + phone + address + gender + birthday +" where CustomerCode = N'"+ lblCode.Text +"'");
+                dataBase.updateData("update tCustomer set CustomerCode = N'" + lblCode.Text + "' " + name + phone + address + gender + birthday + " where CustomerCode = N'" + lblCode.Text + "'");
                 dgvList.DataSource = dataBase.readData("select CustomerCode, Name from tCustomer");
                 onText(false);
                 panelInfor(code);
@@ -251,7 +256,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             exSheet.get_Range("E6").Value = "Điểm";
 
             DataTable dataEx = dataBase.readData("select CustomerCode, Name, Address, PhoneNumber, Point\r\nfrom tCustomer");
-            for(int i = 0; i < dataEx.Rows.Count; i++)
+            for (int i = 0; i < dataEx.Rows.Count; i++)
             {
                 exSheet.get_Range("A" + (i + 7) + ":H" + (i + 7)).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
                 exSheet.get_Range("A" + (i + 7).ToString() + ":G" + (i + 7).ToString()).Font.Bold = false;
@@ -273,7 +278,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 exBook.SaveAs(dlgSave.FileName.ToString());
                 MessageBox.Show("Xuất dữ liệu ra Excel thành công!");
             }
-                
+
             exApp.Quit();
         }
     }

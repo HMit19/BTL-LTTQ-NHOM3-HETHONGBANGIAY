@@ -43,7 +43,12 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             this.txtPhoneCustomer.Text = phone;
             this.ckbNam.Checked = man;
             this.ckbNu.Checked = !man;
-            this.dtBirth.Value = birth;
+            string day = birth.Day.ToString();
+            string month = birth.Month.ToString();
+            string year = birth.Year.ToString();
+            this.cbDay.Text = day;
+            this.cbMonth.Text = month;
+            this.cbYear.Text = year;
             this.txtAddress.Text = address;
             this.lblScoreOfCustomer.Text = point;
         }
@@ -125,7 +130,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         }
         private bool checkInformationCustomer()
         {
-            DateTime date = DateTime.Now;
             if (txtNameCustomer.Text == "")
             {
                 txtNameCustomer.Focus();
@@ -193,6 +197,52 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 MessageBox.Show("Số tiền chỉ chứa ký tự 0 - 9!", "Nhập số tiền", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 e.Handled = true;
             }
+        }
+        private void cbMonth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int month = Convert.ToInt32(this.cbMonth.Text);
+            int year = Convert.ToInt32(this.cbYear.Text);
+            int days = DateTime.DaysInMonth(year, month);
+            switch (days)
+            {
+                case 28:
+                    this.cbDay.Items.Clear();
+                    for (int i = 1; i <= 28; i++)
+                    {
+                        this.cbDay.Items.Add(i);
+                    }
+                    break;
+                case 29:
+                    this.cbDay.Items.Clear();
+                    for (int i = 1; i <= 29; i++)
+                    {
+                        this.cbDay.Items.Add(i);
+                    }
+                    break;
+                case 30:
+                    this.cbDay.Items.Clear();
+                    for (int i = 1; i <= 30; i++)
+                    {
+                        this.cbDay.Items.Add(i);
+                    }
+                    break;
+                case 31:
+                    this.cbDay.Items.Clear();
+                    for (int i = 1; i <= 31; i++)
+                    {
+                        this.cbDay.Items.Add(i);
+                    }
+                    break;
+            }
+        }
+        public DateTime getDate()
+        {
+            return new DateTime(Convert.ToInt32(this.cbYear.Text), Convert.ToInt32(this.cbMonth.Text), Convert.ToInt32(this.cbDay.Text));
+        }
+        public bool getGender()
+        {
+            if (ckbNam.Checked) return true;
+            return false;
         }
     }
 }

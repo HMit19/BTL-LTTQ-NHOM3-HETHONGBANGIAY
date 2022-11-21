@@ -188,7 +188,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(126, 423);
+            this.label8.Location = new System.Drawing.Point(126, 408);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 20);
             this.label8.TabIndex = 7;
@@ -225,7 +225,7 @@
             this.txtIdProduct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdProduct.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtIdProduct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdProduct.Location = new System.Drawing.Point(251, 58);
+            this.txtIdProduct.Location = new System.Drawing.Point(251, 60);
             this.txtIdProduct.Name = "txtIdProduct";
             this.txtIdProduct.PasswordChar = '\0';
             this.txtIdProduct.PlaceholderText = "Mã sản phẩm";
@@ -275,7 +275,7 @@
             this.txtImportPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtImportPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtImportPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtImportPrice.Location = new System.Drawing.Point(251, 409);
+            this.txtImportPrice.Location = new System.Drawing.Point(251, 399);
             this.txtImportPrice.Name = "txtImportPrice";
             this.txtImportPrice.PasswordChar = '\0';
             this.txtImportPrice.PlaceholderText = "Giá sản phẩm";
@@ -326,7 +326,7 @@
             this.txtPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrice.Location = new System.Drawing.Point(251, 463);
+            this.txtPrice.Location = new System.Drawing.Point(251, 439);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PasswordChar = '\0';
             this.txtPrice.PlaceholderText = "Giá sản phẩm";
@@ -339,7 +339,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(126, 463);
+            this.label9.Location = new System.Drawing.Point(126, 445);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(68, 20);
             this.label9.TabIndex = 22;
