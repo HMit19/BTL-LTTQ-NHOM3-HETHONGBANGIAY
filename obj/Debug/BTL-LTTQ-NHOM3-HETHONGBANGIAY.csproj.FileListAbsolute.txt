@@ -85,7 +85,6 @@ C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BT
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.editProduct.resources
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product.listProduct.resources
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.CartControl.resources
-C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.test.Form1.resources
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemColor.resources
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemSize.resources
 C:\Users\maiva\OneDrive\Máy tính\C#\BTL-LTTQ-NHOM3-HETHONGBANGIAY\obj\Debug\BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.ImportBillForm.resources

@@ -1,7 +1,6 @@
 ﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller;
 using BTL_LTTQ_NHOM3_HETHONGBANGIAY.model;
 using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager;
-using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.test;
 using System;
 using System.Collections.Generic;
 using System.Linq;
