@@ -38,7 +38,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.category
             catch (Exception)
             {
                 MessageBox.Show("Error get Category by Id");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return category;
         }
@@ -60,7 +60,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.category
             catch (Exception)
             {
                 MessageBox.Show("Error get Category by Id");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return category;
         }
@@ -85,7 +85,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.category
             catch (Exception)
             {
                 MessageBox.Show("Error get list Category");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return listCategory;
         }
@@ -101,7 +101,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.category
             catch (Exception)
             {
                 MessageBox.Show("Error remove Category by Id");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }
@@ -117,7 +117,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.category
             catch (Exception)
             {
                 MessageBox.Show("Error insert Category");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }
@@ -133,7 +133,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.category
             catch (Exception)
             {
                 MessageBox.Show("Error update Category by Id");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }

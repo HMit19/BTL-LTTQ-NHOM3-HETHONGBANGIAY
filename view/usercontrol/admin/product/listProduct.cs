@@ -40,9 +40,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
         public void showProduct()
         {
             dtgListProduct.DataSource = accessData.DataReader("Select tProduct.ProductCode,NameProduct,isnull(sum(Quantity),0) as Quantity,CategoryCode,Image from tProduct join tDetailProduct on tProduct.ProductCode = tDetailProduct.ProductCode where Status = 1 group by tProduct.ProductCode,NameProduct,CategoryCode,Image");
+            string url = "C:\\Users\\maiva\\OneDrive\\Máy tính\\C#\\BTL-LTTQ-NHOM3-HETHONGBANGIAY\\bin\\Debug\\images\\";
             for (int i = 0; i < dtgListProduct.Rows.Count; i++)
             {
-                Image image = Image.FromFile("C:\\Users\\maiva\\OneDrive\\Máy tính\\C#\\BTL-LTTQ-NHOM3-HETHONGBANGIAY\\bin\\Debug" + "\\image\\" + dtgListProduct.Rows[i].Cells["cPImage"].Value.ToString());
+                Image image = Image.FromFile(url + dtgListProduct.Rows[i].Cells["cPImage"].Value.ToString());
                 dtgListProduct.Rows[i].Cells[0].Value = image;
             }
             dtgDetailProduct.DataSource = null;
@@ -64,7 +65,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
                 rdo.Checked = false;
             }
             dtgListProduct.ClearSelection();
-            cbCategory.SelectedItem = 0;
+            cbCategory.StartIndex = 0;
             btnEdit.Enabled = false;
             btnDelete.Enabled = false;
         }
@@ -100,7 +101,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
                 dtgListProduct.DataSource = accessData.DataReader("Select tProduct.ProductCode,NameProduct,isnull(sum(Quantity),0) as Quantity,CategoryCode,Image from tProduct join tDetailProduct on tProduct.ProductCode = tDetailProduct.ProductCode where " + category + " Status = 1 and " + price + " group by tProduct.ProductCode,NameProduct,CategoryCode,Image " + sort + "");
             for (int i = 0; i < dtgListProduct.Rows.Count; i++)
             {
-                Image image = Image.FromFile(Application.StartupPath + "\\image\\" + dtgListProduct.Rows[i].Cells["cPImage"].Value.ToString());
+                Image image = Image.FromFile(Application.StartupPath + "\\images\\" + dtgListProduct.Rows[i].Cells["cPImage"].Value.ToString());
                 dtgListProduct.Rows[i].Cells[0].Value = image;
             }
         }
@@ -116,7 +117,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
                 dtgListProduct.DataSource = accessData.DataReader("Select tProduct.ProductCode,NameProduct,isnull(sum(Quantity),0) as Quantity,CategoryCode,Image from tProduct join tDetailProduct on tProduct.ProductCode = tDetailProduct.ProductCode where Status = 1 and " + price + " and CategoryCode = '" + cbCategory.Text + "' group by tProduct.ProductCode,NameProduct,CategoryCode,Image " + sort + "");
             for (int i = 0; i < dtgListProduct.Rows.Count; i++)
             {
-                Image image = Image.FromFile(Application.StartupPath + "\\image\\" + dtgListProduct.Rows[i].Cells["cPImage"].Value.ToString());
+                Image image = Image.FromFile(Application.StartupPath + "\\images\\" + dtgListProduct.Rows[i].Cells["cPImage"].Value.ToString());
                 dtgListProduct.Rows[i].Cells[0].Value = image;
             }
         }
@@ -132,7 +133,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
                 dtgListProduct.DataSource = accessData.DataReader("Select tProduct.ProductCode,NameProduct,isnull(sum(Quantity),0) as Quantity,CategoryCode,Image from tProduct join tDetailProduct on tProduct.ProductCode = tDetailProduct.ProductCode where Status = 1 and " + price + " and CategoryCode = '" + category + "' group by tProduct.ProductCode,NameProduct,CategoryCode,Image " + sort + "");
             for (int i = 0; i < dtgListProduct.Rows.Count; i++)
             {
-                Image image = Image.FromFile(Application.StartupPath + "\\image\\" + dtgListProduct.Rows[i].Cells["cPImage"].Value.ToString());
+                Image image = Image.FromFile(Application.StartupPath + "\\images\\" + dtgListProduct.Rows[i].Cells["cPImage"].Value.ToString());
                 dtgListProduct.Rows[i].Cells[0].Value = image;
             }
         }
@@ -141,7 +142,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
             dtgListProduct.DataSource = accessData.DataReader("Select tProduct.ProductCode,NameProduct,isnull(sum(Quantity),0) as Quantity,CategoryCode,Image from tProduct join tDetailProduct on tProduct.ProductCode = tDetailProduct.ProductCode where NameProduct like '%" + txtSearch.Text + "%' and Status = 1 group by tProduct.ProductCode,NameProduct,CategoryCode,Image");
             for (int i = 0; i < dtgListProduct.Rows.Count; i++)
             {
-                Image image = Image.FromFile(Application.StartupPath + "\\image\\" + dtgListProduct.Rows[i].Cells["cPImage"].Value.ToString());
+                Image image = Image.FromFile(Application.StartupPath + "\\images\\" + dtgListProduct.Rows[i].Cells["cPImage"].Value.ToString());
                 dtgListProduct.Rows[i].Cells[0].Value = image;
             }
             lblQuantityProduct.Text = dtgListProduct.Rows.Count.ToString();
@@ -162,7 +163,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
             StaticData.NameProduct = dtgListProduct.CurrentRow.Cells[2].Value.ToString();
             StaticData.Category = dtgListProduct.CurrentRow.Cells[4].Value.ToString();
             DataTable dtPathImage = accessData.DataReader("Select Image from tProduct where ProductCode = '" + dtgListProduct.CurrentRow.Cells[1].Value.ToString() + "'");
-            StaticData.PathImage = Application.StartupPath + "\\image\\" + dtPathImage.Rows[0]["Image"].ToString();
+            StaticData.PathImage = Application.StartupPath + "\\images\\" + dtPathImage.Rows[0]["Image"].ToString();
             bool check = false;
             btnEdit.Enabled = true;
             btnDelete.Enabled = true;

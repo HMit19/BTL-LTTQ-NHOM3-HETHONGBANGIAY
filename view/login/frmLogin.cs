@@ -1,4 +1,5 @@
 ﻿using BTL_LTTQ_NHOM3_HETHONGBANGIAY.Model;
+using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view;
 using BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.manager;
 using System;
 using System.Collections.Generic;
@@ -56,5 +57,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY
             txtPassword.Text = "";
         }
 
+        private void btnInformationGroup_Click(object sender, EventArgs e)
+        {
+            IntroduceForm introduce = new IntroduceForm();
+            introduce.ShowDialog();
+        }
     }
 }

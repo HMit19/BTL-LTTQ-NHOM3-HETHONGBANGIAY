@@ -17,16 +17,16 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO
         public DatabaseHandle()
         {
             connect = ConnectSQL.getConnect();
-            OpenConnect();
+            openConnect();
         }
 
-        public void OpenConnect()
+        public void openConnect()
         {
             if (connect.State != ConnectionState.Open)
                 connect.Open();
         }
 
-        public void CloseConnect()
+        public void closeConnect()
         {
             if (connect.State != ConnectionState.Closed)
             {
@@ -39,14 +39,14 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO
             DataTable tblData = new DataTable();
             try
             {
-                OpenConnect();
+                openConnect();
                 SqlDataAdapter sqlData = new SqlDataAdapter(sql, connect);
                 sqlData.Fill(tblData);
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
-                CloseConnect();
+                closeConnect();
             }
             return tblData;
         }
@@ -55,7 +55,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO
             int row = 0;
             try
             {
-                OpenConnect();
+                openConnect();
                 SqlCommand sqlcomma = new SqlCommand();
                 sqlcomma.Connection = connect;
                 sqlcomma.CommandText = sql;
@@ -64,7 +64,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
-                CloseConnect();
+                closeConnect();
             }
             return row > 0;
         }

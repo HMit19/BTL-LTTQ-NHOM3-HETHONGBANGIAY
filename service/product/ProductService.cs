@@ -36,7 +36,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.product
             catch (Exception)
             {
                 MessageBox.Show("Error get Product by Id");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return product;
         }
@@ -56,13 +56,14 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.product
                     string name = row[1].ToString();
                     string image = row[2].ToString();
                     string idCategory = row[3].ToString();
-                    listProduct.Add(new Product(id, name, image, idCategory));
+                    bool status = (bool)row[4];
+                    listProduct.Add(new Product(id, name, image, idCategory, status));
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("Error list Product");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return listProduct;
         }
@@ -81,13 +82,14 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.product
                     string productCode = row[0].ToString();
                     string name = row[1].ToString();
                     string image = row[2].ToString();
-                    listProduct.Add(new Product(productCode, name, image, idCategory));
+                    bool status = (bool)row[4];
+                    listProduct.Add(new Product(productCode, name, image, idCategory, status));
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("Error list Product by Category");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return listProduct;
         }
@@ -103,7 +105,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.product
             catch (Exception)
             {
                 MessageBox.Show("Error remove Product by Id");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }
@@ -119,7 +121,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.product
             catch (Exception)
             {
                 MessageBox.Show("Error insert Product");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }
@@ -136,7 +138,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.product
             catch (Exception)
             {
                 MessageBox.Show("Error update Product by Id");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }

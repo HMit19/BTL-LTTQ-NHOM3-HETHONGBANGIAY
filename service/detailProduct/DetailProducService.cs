@@ -32,14 +32,13 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.detailProduct
                     long priceIn = Convert.ToInt64(row[4]);
                     long priceOut = Convert.ToInt64(row[5]);
                     int quantity = Convert.ToInt32(row[6]);
-                    bool status = Convert.ToInt32(row[7]) > 0;
-                    product = new DetailProduct(id, productCode, size, color, priceIn, priceOut, quantity, status);
+                    product = new DetailProduct(id, productCode, size, color, priceIn, priceOut, quantity);
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("Error get DetailProduct by Id");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return product;
         }
@@ -62,14 +61,13 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.detailProduct
                     long priceIn = Convert.ToInt64(row[4]);
                     long priceOut = Convert.ToInt64(row[5]);
                     int quantity = Convert.ToInt32(row[6]);
-                    bool status = Convert.ToInt32(row[7]) > 0;
-                    listProduct.Add(new DetailProduct(detailProductCode, productCode, size, color, priceIn, priceOut, quantity, status));
+                    listProduct.Add(new DetailProduct(detailProductCode, productCode, size, color, priceIn, priceOut, quantity));
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("Error list DetailProduct");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return listProduct;
         }
@@ -91,14 +89,13 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.detailProduct
                     long priceIn = Convert.ToInt64(row[4]);
                     long priceOut = Convert.ToInt64(row[5]);
                     int quantity = Convert.ToInt32(row[6]);
-                    bool status = Convert.ToInt32(row[7]) > 0;
-                    listProduct.Add(new DetailProduct(detailProductCode, idProduct, size, color, priceIn, priceOut, quantity, status));
+                    listProduct.Add(new DetailProduct(detailProductCode, idProduct, size, color, priceIn, priceOut, quantity));
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("Error list DetailProduct by Id Product");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return listProduct;
         }
@@ -114,7 +111,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.detailProduct
             catch (Exception)
             {
                 MessageBox.Show("Error remove DetailProduct by Id");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }
@@ -125,13 +122,13 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.detailProduct
             try
             {
                 string sql = "insert into tDetailProduct values ('" + detailProduct.IdProductDetail + "', '" + detailProduct.IdProduct + "', "
-                    + detailProduct.Size + ", '" + detailProduct.Color + "', " + detailProduct.PriceIn + ", " + detailProduct.PriceOut + ", " + detailProduct.Quantity + ", " + detailProduct.Status + ")";
+                    + detailProduct.Size + ", '" + detailProduct.Color + "', " + detailProduct.PriceIn + ", " + detailProduct.PriceOut + ", " + detailProduct.Quantity + ")";
                 excute = databaseHandle.dataChange(sql);
             }
             catch (Exception)
             {
                 MessageBox.Show("Error insert DetailProduct");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }
@@ -143,13 +140,13 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.detailProduct
             {
                 string sql = "update tDetailProduct set ProductCode = '" + detailProduct.IdProduct + "', Size = " + detailProduct.Size
                     + ", Color = '" + detailProduct.Color + "', importPrice = " + detailProduct.PriceIn + ", Price = " + detailProduct.PriceOut + ", Quantity = " + detailProduct.Quantity
-                    + ", Status = " + detailProduct.Status + " where DetailProductCode = '" + id + "'";
+                    + ", Status = " + " where DetailProductCode = '" + id + "'";
                 excute = databaseHandle.dataChange(sql);
             }
             catch (Exception)
             {
                 MessageBox.Show("Error update DetailProduct by Id");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }

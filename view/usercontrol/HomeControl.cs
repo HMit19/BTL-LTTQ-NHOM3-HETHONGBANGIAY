@@ -46,7 +46,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         }
         private void addUserControl()
         {
-            
+
             string sql = " select distinct top 5 a.Quantity* b.Price as DoanhThu, c.NameProduct,b.Size,b.Color,c.Image from dbo.tDetailBillOfSale a join dbo.tDetailProduct b on a.DetailProductCode= b.DetailProductCode\r\njoin dbo.tProduct c on b.ProductCode =c.ProductCode ";
             DataTable dt = new DataTable("BestSelled");
             openConnect();
@@ -72,19 +72,20 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             DateTime d = DateTime.Now;
             string d1 = Convert.ToString(d.DayOfWeek);
             string day = d.ToString("yyyy-MM-dd");
-            string sql = " select sum(a.Quantity* b.Price) from dbo.tDetailBillOfSale a join dbo.tDetailProduct b on a.DetailProductCode= b.DetailProductCode\r\njoin dbo.tBillOfSale c on a.CodeBill=c.CodeBill\r\nwhere c.DateSale= '" + day + "' ";
+            string sql = "select sum(a.Quantity* b.Price) from dbo.tDetailBillOfSale a join dbo.tDetailProduct b on a.DetailProductCode= b.DetailProductCode\r\njoin dbo.tBillOfSale c on a.CodeBill=c.CodeBill\r\nwhere c.DateSale= '" + day + "'";
             openConnect();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sqlConnect;
             cmd.CommandText = sql;
             object result = cmd.ExecuteScalar();
             closeConnect();
-            int sum = int.Parse(result.ToString());
-            return sum;
+            //int sum = int.Parse(result.ToString());
+            //return sum;
+            return 1;
         }
         private void getRevenueMonday()
         {
-            int sum =  getRevenueToday();
+            int sum = getRevenueToday();
             int a = sum / 500000;
             string sun;
             int total;
@@ -112,7 +113,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         }
         private void getRevenueTuesday()
         {
-            int sum =  getRevenueToday();
+            int sum = getRevenueToday();
             int a = sum / 500000;
             string mon;
             int total;
@@ -140,7 +141,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         }
         private void getRevenueWedneday()
         {
-            int sum =  getRevenueToday();
+            int sum = getRevenueToday();
             int a = sum / 500000;
             string tue;
             int total;
@@ -169,7 +170,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         }
         private void getRevenueThursday()
         {
-            int sum =  getRevenueToday();
+            int sum = getRevenueToday();
             int a = sum / 500000;
             string wed;
             int total;
@@ -200,7 +201,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         private void getRevenueFriday()
         {
 
-            int sum =  getRevenueToday();
+            int sum = getRevenueToday();
             int a = sum / 500000;
             string thu;
             int total;
@@ -231,7 +232,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         }
         private void getRevenueSaturday()
         {
-            int sum =  getRevenueToday();
+            int sum = getRevenueToday();
             int a = sum / 500000;
             string fri;
             int total;
@@ -263,7 +264,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         }
         private void getRevenueSunday()
         {
-            int sum =  getRevenueToday();
+            int sum = getRevenueToday();
             int a = sum / 500000;
             string sat;
             int total;
@@ -341,7 +342,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
                 getRevenueFriday();
                 getRevenueSaturday();
             }
-            else if(d1 == "Sunday")
+            else if (d1 == "Sunday")
             {
                 getRevenueMonday();
                 getRevenueTuesday();
@@ -360,12 +361,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             lblQuantityProductSelled.Text = control.sellQuantity();
             lblSumTotal.Text = control.totaSum();
             lblQuantityCustomer.Text = control.totalCustomer();
-            lblQuantityOrderOfDay.Text=control.dailyTotalCustomer();
+            lblQuantityOrderOfDay.Text = control.dailyTotalCustomer();
             lblRevenueOfDay.Text = control.dailyTotalIncome();
             addUserControl();
             getRevenueAllDay();
         }
-
- 
     }
 }

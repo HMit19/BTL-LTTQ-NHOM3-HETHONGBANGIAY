@@ -665,7 +665,7 @@
   <data name="btnCustomer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAAe1JREFUSEvN1btqFVEUh/FRSQxikSLx2igWpkkjsRLFxktlJwiCN9RAIna+QQQ7
+        vAAADrwBlbxySQAAAe1JREFUSEvN1btqFVEUh/FRSQxikSLx2igWpkkjsRLFxktlJwiCN9RAIna+QQQ7
         RQvBNxARLU2bKBYqikXKvIGgIF7QRL8vOXtYWTPREQP6hx/nZO291syZM5NT/W/pxzFcwlH0YU2zH/P4
         Efi39TXJdrxDPEBh3fXO8eMfwD6ss9DLdbQdoJhCiX32O6dxOT2bOZTGJ9gIM404NHOvcb/vS915O1Dn
         HmKjJmAeIa9Frhv35zXn1plB3nAb5jLyWuTdZtyf15xbp+26n4Tx2j5DXtdTlGvv/rzu3DqbcB8L+IIb
@@ -695,10 +695,10 @@
   <metadata name="pnlSiderBar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnProvider.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAAuhJREFUSEutVrtOakEUPVr4QEAl2JhIaDBGTTSxNXQmalSejX4BHVFLPgBbCzsL
+        vAAADrwBlbxySQAAAuhJREFUSEutVrtOakEUPVr4QEAl2JhIaDBGTTSxNXQmalSejX4BHVFLPgBbCzsL
         H6igFtY+A7GjsSAEMDEEBBMaE4xQbrP2ydx7HuNNbqBYnrPXXnvWmXFmD0q73Sbg/v6epqenyel00ujo
         KA0PD5PNZiOr1UoWi4UGBwdpYGCA+vv7GXgHwCM/NDTE+pGREZqZmaF0Os3jAmzy/f1NExMTpChK1+Dx
         eKjVaqkmeIGrTNgpstksG7HJ9va2VNQpYrHYXxNMTSbqFPPz86rJy8uLVNAN9Pb20uvrKyl7e3tSQbew
@@ -769,7 +769,7 @@
   <metadata name="btnTurnOff.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="iconButton2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="btnLogout.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="pnlHeader.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

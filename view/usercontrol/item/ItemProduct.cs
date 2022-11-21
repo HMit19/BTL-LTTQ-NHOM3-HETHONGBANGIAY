@@ -76,7 +76,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item
         
         public void setImage(string image)
         {
-            string path = Application.StartupPath + "\\image\\";
+            string path = Application.StartupPath + "\\images\\";
             string imageDefault = "default.jpg";
             try
             {

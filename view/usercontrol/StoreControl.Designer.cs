@@ -43,7 +43,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblQuantityProduct = new System.Windows.Forms.Label();
             this.pnlHeader = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.btnCart = new FontAwesome.Sharp.IconButton();
@@ -72,13 +71,12 @@
             this.itemSize4 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemSize();
             this.itemSize5 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemSize();
             this.itemSize6 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemSize();
-            this.itemProduct1 = new BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.item.ItemProduct();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlCurrent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageCurrent)).BeginInit();
             this.pnlOptionHeader.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            this.pnlContainProduct.SuspendLayout();
             this.pnlOptionDetail.SuspendLayout();
             this.pnlOptionColor.SuspendLayout();
             this.pnlOptionSize.SuspendLayout();
@@ -267,10 +265,10 @@
             // 
             // pnlHeader
             // 
-            this.pnlHeader.Controls.Add(this.label2);
+            this.pnlHeader.Controls.Add(this.btnCart);
             this.pnlHeader.Controls.Add(this.label1);
             this.pnlHeader.Controls.Add(this.iconPictureBox1);
-            this.pnlHeader.Controls.Add(this.btnCart);
+            this.pnlHeader.Controls.Add(this.label2);
             this.pnlHeader.CustomBorderColor = System.Drawing.Color.Silver;
             this.pnlHeader.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -278,16 +276,6 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1360, 55);
             this.pnlHeader.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.label2.Location = new System.Drawing.Point(942, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 22);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Giỏ hàng";
             // 
             // label1
             // 
@@ -321,7 +309,7 @@
             this.btnCart.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCart.IconSize = 40;
             this.btnCart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCart.Location = new System.Drawing.Point(1033, 8);
+            this.btnCart.Location = new System.Drawing.Point(1046, 8);
             this.btnCart.Name = "btnCart";
             this.btnCart.Size = new System.Drawing.Size(44, 41);
             this.btnCart.TabIndex = 19;
@@ -331,7 +319,6 @@
             // pnlContainProduct
             // 
             this.pnlContainProduct.AutoScroll = true;
-            this.pnlContainProduct.Controls.Add(this.itemProduct1);
             this.pnlContainProduct.Location = new System.Drawing.Point(68, 154);
             this.pnlContainProduct.Name = "pnlContainProduct";
             this.pnlContainProduct.Size = new System.Drawing.Size(849, 549);
@@ -595,17 +582,15 @@
             this.itemSize6.Size = new System.Drawing.Size(57, 32);
             this.itemSize6.TabIndex = 5;
             // 
-            // itemProduct1
+            // label2
             // 
-            this.itemProduct1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.itemProduct1.ColorItem = null;
-            this.itemProduct1.Font = new System.Drawing.Font("Segoe UI Black", 10.8F, System.Drawing.FontStyle.Bold);
-            this.itemProduct1.Location = new System.Drawing.Point(6, 6);
-            this.itemProduct1.Margin = new System.Windows.Forms.Padding(6);
-            this.itemProduct1.Name = "itemProduct1";
-            this.itemProduct1.Size = new System.Drawing.Size(196, 169);
-            this.itemProduct1.SizeItem = null;
-            this.itemProduct1.TabIndex = 0;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.label2.Location = new System.Drawing.Point(948, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 22);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Giỏ hàng   ";
             // 
             // StoreControl
             // 
@@ -631,7 +616,6 @@
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            this.pnlContainProduct.ResumeLayout(false);
             this.pnlOptionDetail.ResumeLayout(false);
             this.pnlOptionColor.ResumeLayout(false);
             this.pnlOptionSize.ResumeLayout(false);
@@ -659,7 +643,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.FlowLayoutPanel pnlContainProduct;
         private FontAwesome.Sharp.IconButton btnSearch;
-        private item.ItemProduct itemProduct1;
         private System.Windows.Forms.Label selectColor;
         private System.Windows.Forms.Label selectSize;
         private System.Windows.Forms.Label selectUnit;
