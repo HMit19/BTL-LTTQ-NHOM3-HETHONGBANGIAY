@@ -119,9 +119,5 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.Content
                 return res;
             }
         }
-
-
-
-
     }
 }

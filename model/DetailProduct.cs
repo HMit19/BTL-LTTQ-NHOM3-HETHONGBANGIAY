@@ -15,7 +15,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.model
         private double priceOut;
         private double priceIn;
         private int quantity;
-        private bool status;
 
         public string IdProductDetail { get => idProductDetail; set => idProductDetail = value; }
         public string IdProduct { get => idProduct; set => idProduct = value; }
@@ -23,11 +22,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.model
         public string Color { get => color; set => color = value; }
         public double PriceOut { get => priceOut; set => priceOut = value; }
         public double PriceIn { get => priceIn; set => priceIn = value; }
-        public bool Status { get => status; set => status = value; }
         public int Quantity { get => quantity; set => quantity = value; }
 
         public DetailProduct() { }
-        public DetailProduct(string idProductDetail, string idProduct, int size, string color, double priceIn, double priceOut, int quantity, bool status)
+        public DetailProduct(string idProductDetail, string idProduct, int size, string color, double priceIn, double priceOut, int quantity)
         {
             this.IdProductDetail = idProductDetail;
             this.IdProduct = idProduct;
@@ -36,7 +34,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.model
             this.PriceOut = priceOut;
             this.PriceIn = priceIn;
             this.Quantity = quantity;
-            this.Status = status;
         }
     }
 }

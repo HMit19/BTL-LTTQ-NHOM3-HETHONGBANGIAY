@@ -12,6 +12,6 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO
     {
         DataTable dataReader(string sql);
         bool dataChange(string sql);
-        void CloseConnect();
+        void closeConnect();
     }
 }

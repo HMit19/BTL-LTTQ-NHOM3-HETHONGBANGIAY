@@ -144,6 +144,7 @@
             this.btnInformationGroup.Size = new System.Drawing.Size(57, 17);
             this.btnInformationGroup.TabIndex = 4;
             this.btnInformationGroup.Text = "nhóm 3";
+            this.btnInformationGroup.Click += new System.EventHandler(this.btnInformationGroup_Click);
             // 
             // btnMinimize
             // 

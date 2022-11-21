@@ -38,9 +38,10 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
                 if (account.Username.Equals(item.Username) && account.Password.Equals(item.Password))
                 {
                     Employee employee = employeeService.findByUsername(item.Username);
-                    frmManager main = new frmManager(employee);
+                    frmManager main = new frmManager(employee, item.Role, loginView);
                     loginView.Visible = false;
                     main.ShowDialog();
+                    loginView.clearInformation();
                     return;
                 }
             }

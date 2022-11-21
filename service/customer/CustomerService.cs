@@ -38,7 +38,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.customer
             catch (Exception)
             {
                 MessageBox.Show("Error get Customer by Id");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return customer;
         }
@@ -64,7 +64,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.customer
             catch (Exception)
             {
                 MessageBox.Show("Error get Customer by Phone");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return customer;
         }
@@ -93,7 +93,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.customer
             catch (Exception)
             {
                 MessageBox.Show("Error list Customer");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return listCustomer;
         }
@@ -109,7 +109,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.customer
             catch (Exception)
             {
                 MessageBox.Show("Error remove Customer by Id");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }
@@ -125,7 +125,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.customer
             catch (Exception)
             {
                 MessageBox.Show("Error insert Customer");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }
@@ -142,7 +142,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.customer
             catch (Exception)
             {
                 MessageBox.Show("Error update Customer by Id");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }

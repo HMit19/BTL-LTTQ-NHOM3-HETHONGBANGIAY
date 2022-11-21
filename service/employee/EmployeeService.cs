@@ -40,7 +40,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.employee
             catch (Exception)
             {
                 MessageBox.Show("Error get Employee by Id");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return employee;
         }
@@ -69,7 +69,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.employee
             catch (Exception)
             {
                 MessageBox.Show("Error get Employee by Username");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return employee;
         }
@@ -100,7 +100,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.employee
             catch (Exception)
             {
                 MessageBox.Show("Error get List Employee");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return listEmployee;
         }
@@ -116,7 +116,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.employee
             catch (Exception)
             {
                 MessageBox.Show("Error remove Employee by Id");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }
@@ -133,7 +133,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.employee
             catch (Exception)
             {
                 MessageBox.Show("Error insert Employee");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }
@@ -151,7 +151,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.employee
             catch (Exception)
             {
                 MessageBox.Show("Error update Employee");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }

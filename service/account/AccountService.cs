@@ -31,14 +31,13 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service
                 {
                     string password = row[1].ToString();
                     int role = Convert.ToInt32(row[2]);
-                    int status = Convert.ToInt32(row[3]);
-                    account = new Account(username, password, role, status);
+                    account = new Account(username, password, role);
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("Error get Account by Username");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return account;
         }
@@ -57,14 +56,13 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service
                     string username = row[0].ToString();
                     string password = row[1].ToString();
                     int role = Convert.ToInt32(row[2]);
-                    int status = Convert.ToInt32(row[3]);
-                    listAccount.Add(new Account(username, password, role, status));
+                    listAccount.Add(new Account(username, password, role));
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("Error get list Account");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return listAccount;
         }
@@ -80,7 +78,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service
             catch (Exception)
             {
                 MessageBox.Show("Error remove Account by Username");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }
@@ -90,13 +88,13 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service
             bool excute = false;
             try
             {
-                string sql = "insert into tLogin values ('" + account.Username + "', '" + account.Password + "'," + account.Role + "," + account.Status + ")";
+                string sql = "insert into tLogin values ('" + account.Username + "', '" + account.Password + "'," + account.Role + ")";
                 excute = databaseHandle.dataChange(sql);
             }
             catch (Exception)
             {
                 MessageBox.Show("Error insert Account");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }
@@ -106,13 +104,13 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service
             bool excute = false;
             try
             {
-                string sql = "update tLogin set password = '" + account.Password + "', role = " + account.Role + ", status = " + account.Status + " where username = '" + account.Username + "'";
+                string sql = "update tLogin set password = '" + account.Password + "', role = " + account.Role + ", status = " + " where username = '" + account.Username + "'";
                 excute = databaseHandle.dataChange(sql);
             }
             catch (Exception)
             {
                 MessageBox.Show("Error update Account by Username");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }

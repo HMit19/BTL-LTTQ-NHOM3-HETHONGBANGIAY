@@ -41,7 +41,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.item
             catch (Exception)
             {
                 MessageBox.Show("Error get Detail Bill Sell by Id");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return listDetailBillSell;
         }
@@ -65,7 +65,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.item
             catch (Exception)
             {
                 MessageBox.Show("Error get Detail Bill Sell by IdBill");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return listDetailBillSell;
         }
@@ -81,7 +81,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.item
             catch (Exception)
             {
                 MessageBox.Show("Error remove Detail Bill Sell by IdBill");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }
@@ -97,7 +97,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.item
             catch (Exception)
             {
                 MessageBox.Show("Error save Detail Bill Sell");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }
@@ -113,7 +113,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.item
             catch (Exception)
             {
                 MessageBox.Show("Error update Detail Bill Sell");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }

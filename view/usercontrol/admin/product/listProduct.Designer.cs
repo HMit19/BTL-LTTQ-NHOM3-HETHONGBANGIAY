@@ -46,7 +46,6 @@
             this.cbSort = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnFilter = new FontAwesome.Sharp.IconButton();
             this.lblQuantityProduct = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.dtgDetailProduct = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -131,7 +130,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.label1.Location = new System.Drawing.Point(85, 10);
+            this.label1.Location = new System.Drawing.Point(85, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(388, 23);
             this.label1.TabIndex = 1;
@@ -159,7 +158,6 @@
             this.guna2Panel2.Controls.Add(this.cbSort);
             this.guna2Panel2.Controls.Add(this.label4);
             this.guna2Panel2.Controls.Add(this.label3);
-            this.guna2Panel2.Controls.Add(this.btnFilter);
             this.guna2Panel2.Controls.Add(this.lblQuantityProduct);
             this.guna2Panel2.CustomBorderColor = System.Drawing.Color.Silver;
             this.guna2Panel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -258,23 +256,6 @@
             this.label3.Size = new System.Drawing.Size(140, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Sản Phẩm";
-            // 
-            // btnFilter
-            // 
-            this.btnFilter.FlatAppearance.BorderSize = 0;
-            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFilter.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilter.IconChar = FontAwesome.Sharp.IconChar.Filter;
-            this.btnFilter.IconColor = System.Drawing.Color.Black;
-            this.btnFilter.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFilter.IconSize = 25;
-            this.btnFilter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFilter.Location = new System.Drawing.Point(878, 19);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(113, 25);
-            this.btnFilter.TabIndex = 2;
-            this.btnFilter.Text = "Bộ lọc";
-            this.btnFilter.UseVisualStyleBackColor = true;
             // 
             // lblQuantityProduct
             // 
@@ -499,7 +480,6 @@
             this.cbCategory.Location = new System.Drawing.Point(24, 36);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(178, 31);
-            this.cbCategory.StartIndex = 0;
             this.cbCategory.TabIndex = 0;
             this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
@@ -526,7 +506,7 @@
             this.cQuantity,
             this.cCategory,
             this.cPImage});
-            this.dtgListProduct.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.dtgListProduct.Cursor = System.Windows.Forms.Cursors.Arrow;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -632,9 +612,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.Controls.Add(this.guna2Panel3);
-            this.Controls.Add(this.dtgListProduct);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.dtgListProduct);
             this.Name = "ListProduct";
             this.Size = new System.Drawing.Size(1360, 732);
             this.Load += new System.EventHandler(this.listProduct_Load);
@@ -656,7 +636,6 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private FontAwesome.Sharp.IconButton btnFilter;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;

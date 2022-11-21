@@ -53,12 +53,12 @@
             this.cbCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.grbNewCategory = new System.Windows.Forms.GroupBox();
-            this.txtCategoryCode = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtBrand = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtOrigin = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtOrigin = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtBrand = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCategoryCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -75,7 +75,7 @@
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1360, 68);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1360, 55);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
             // iconPictureBox1
@@ -110,7 +110,7 @@
             this.btnConfirmNewProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnConfirmNewProduct.Font = new System.Drawing.Font("Century Schoolbook", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmNewProduct.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmNewProduct.Location = new System.Drawing.Point(495, 613);
+            this.btnConfirmNewProduct.Location = new System.Drawing.Point(553, 624);
             this.btnConfirmNewProduct.Name = "btnConfirmNewProduct";
             this.btnConfirmNewProduct.Size = new System.Drawing.Size(232, 41);
             this.btnConfirmNewProduct.TabIndex = 9;
@@ -138,7 +138,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cbCategory);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(273, 106);
+            this.groupBox1.Location = new System.Drawing.Point(340, 119);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(630, 489);
             this.groupBox1.TabIndex = 10;
@@ -424,7 +424,7 @@
             this.grbNewCategory.Controls.Add(this.txtBrand);
             this.grbNewCategory.Controls.Add(this.txtCategoryCode);
             this.grbNewCategory.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.grbNewCategory.Location = new System.Drawing.Point(960, 417);
+            this.grbNewCategory.Location = new System.Drawing.Point(1001, 119);
             this.grbNewCategory.Name = "grbNewCategory";
             this.grbNewCategory.Size = new System.Drawing.Size(309, 178);
             this.grbNewCategory.TabIndex = 11;
@@ -432,43 +432,35 @@
             this.grbNewCategory.Text = "Thêm mới danh mục sản phẩm";
             this.grbNewCategory.Visible = false;
             // 
-            // txtCategoryCode
+            // label12
             // 
-            this.txtCategoryCode.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCategoryCode.DefaultText = "";
-            this.txtCategoryCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCategoryCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCategoryCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCategoryCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCategoryCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCategoryCode.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCategoryCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCategoryCode.Location = new System.Drawing.Point(151, 33);
-            this.txtCategoryCode.Name = "txtCategoryCode";
-            this.txtCategoryCode.PasswordChar = '\0';
-            this.txtCategoryCode.PlaceholderText = "";
-            this.txtCategoryCode.SelectedText = "";
-            this.txtCategoryCode.Size = new System.Drawing.Size(152, 36);
-            this.txtCategoryCode.TabIndex = 0;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(6, 136);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 20);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Xuất xứ";
             // 
-            // txtBrand
+            // label11
             // 
-            this.txtBrand.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBrand.DefaultText = "";
-            this.txtBrand.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBrand.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBrand.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBrand.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBrand.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBrand.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtBrand.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBrand.Location = new System.Drawing.Point(151, 89);
-            this.txtBrand.Name = "txtBrand";
-            this.txtBrand.PasswordChar = '\0';
-            this.txtBrand.PlaceholderText = "";
-            this.txtBrand.SelectedText = "";
-            this.txtBrand.Size = new System.Drawing.Size(152, 36);
-            this.txtBrand.TabIndex = 1;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(6, 89);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(48, 20);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Hãng";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(6, 36);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(111, 20);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Mã danh mục";
             // 
             // txtOrigin
             // 
@@ -489,35 +481,43 @@
             this.txtOrigin.Size = new System.Drawing.Size(152, 36);
             this.txtOrigin.TabIndex = 2;
             // 
-            // label10
+            // txtBrand
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 36);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(111, 20);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Mã danh mục";
+            this.txtBrand.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBrand.DefaultText = "";
+            this.txtBrand.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBrand.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBrand.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBrand.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBrand.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBrand.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBrand.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBrand.Location = new System.Drawing.Point(151, 89);
+            this.txtBrand.Name = "txtBrand";
+            this.txtBrand.PasswordChar = '\0';
+            this.txtBrand.PlaceholderText = "";
+            this.txtBrand.SelectedText = "";
+            this.txtBrand.Size = new System.Drawing.Size(152, 36);
+            this.txtBrand.TabIndex = 1;
             // 
-            // label11
+            // txtCategoryCode
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 89);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 20);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Hãng";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 136);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 20);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Xuất xứ";
+            this.txtCategoryCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCategoryCode.DefaultText = "";
+            this.txtCategoryCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCategoryCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCategoryCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCategoryCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCategoryCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCategoryCode.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCategoryCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCategoryCode.Location = new System.Drawing.Point(151, 33);
+            this.txtCategoryCode.Name = "txtCategoryCode";
+            this.txtCategoryCode.PasswordChar = '\0';
+            this.txtCategoryCode.PlaceholderText = "";
+            this.txtCategoryCode.SelectedText = "";
+            this.txtCategoryCode.Size = new System.Drawing.Size(152, 36);
+            this.txtCategoryCode.TabIndex = 0;
             // 
             // CreateProduct
             // 

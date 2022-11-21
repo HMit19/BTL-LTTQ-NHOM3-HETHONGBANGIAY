@@ -41,7 +41,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.bill
             catch (Exception)
             {
                 MessageBox.Show("Error get Bill selled by Id");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return billSell;
         }
@@ -69,7 +69,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.bill
             catch (Exception)
             {
                 MessageBox.Show("Error get list Bill selled");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return listBillSell;
         }
@@ -96,7 +96,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.bill
             catch (Exception)
             {
                 MessageBox.Show("Error get list Bill selled");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return listBillSell;
         }
@@ -123,7 +123,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.bill
             catch (Exception)
             {
                 MessageBox.Show("Error get list Bill selled");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return listBillSell;
         }
@@ -139,7 +139,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.bill
             catch (Exception)
             {
                 MessageBox.Show("Error remove Bill Selled");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }
@@ -155,7 +155,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.bill
             catch (Exception)
             {
                 MessageBox.Show("Error insert Bill after selled");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }
@@ -172,7 +172,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.service.bill
             catch (Exception)
             {
                 MessageBox.Show("Error update Bill");
-                databaseHandle.CloseConnect();
+                databaseHandle.closeConnect();
             }
             return excute;
         }
