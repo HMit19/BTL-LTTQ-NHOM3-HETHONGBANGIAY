@@ -10,7 +10,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.Classes
 {
     internal class ConnectData
     {
-        string strConnect = "Data Source=DESKTOP-80GA5O2\\SQLEXPRESS;" +
+        string strConnect = "Data Source=DESKTOP-9TG0LON;" +
                 "Initial Catalog=QLCHBanGiay;Integrated Security=True";
         SqlConnection sqlConn = null;
         // opening connect method

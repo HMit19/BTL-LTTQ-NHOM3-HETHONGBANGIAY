@@ -49,8 +49,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         {
             loadData();
             ResetValue();
-            btnAdd.Enabled = true;
             btnDelete.Enabled = false;
+            btnInfor.Enabled = false;
 
         }
         void loadData()
@@ -85,18 +85,17 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
             else
             { cboStatus.Text = "Đã Nghỉ"; }
 
-            btnAdd.Enabled = false;
             btnDelete.Enabled = true;
+            btnInfor.Enabled = true;
         }
 
         private void btnReload_Click(object sender, EventArgs e)
         {
-
             loadData();
             ResetValue();
             EmployeeControl_Load(sender, e);
-            btnAdd.Enabled = true;
             btnDelete.Enabled = false;
+            btnInfor.Enabled = false;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -124,7 +123,8 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol
         }
         private void btnInfor_Click(object sender, EventArgs e)
         {
-            EmployeeInfor.EmployeeInfor eif = new EmployeeInfor.EmployeeInfor();
+            string s = this.txtEmployeeCode.Text;
+            EmployeeInfor.EmployeeInfor eif = new EmployeeInfor.EmployeeInfor(s);
             eif.ShowDialog();
         }
 

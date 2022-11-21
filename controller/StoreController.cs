@@ -332,7 +332,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.controller
         }
 
         private void showListProduct()
-        {
+        {          
             productDAO.setListProducts(productDAO.getListProductsDefault());
             sortProduct();
         }

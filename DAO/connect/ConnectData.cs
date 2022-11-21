@@ -6,7 +6,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.connect
 {
     internal class ConnectData
     {
-        string strConnect = "Data Source=DESKTOP-80GA5O2\\SQLEXPRESS;" + // <---Change sever name in here
+        string strConnect = "Data Source=DESKTOP-9TG0LON;" + // <---Change sever name in here
             "Initial Catalog=QLCHBanGiay;" +
             "Integrated Security=SSPI;";
         SqlConnection sqlConn = null;

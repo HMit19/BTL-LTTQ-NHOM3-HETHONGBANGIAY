@@ -10,7 +10,7 @@ namespace TH4
 {
     internal class AccessData
     {
-        string strConnect = @"Data Source=DESKTOP-80GA5O2\SQLEXPRESS;Initial Catalog=QLCHBanGiay;Integrated Security=True";
+        string strConnect = @"Data Source=DESKTOP-9TG0LON;Initial Catalog=QLCHBanGiay;Integrated Security=True";
         SqlConnection sqlConnect = null; 
         void openConnect ()
         {

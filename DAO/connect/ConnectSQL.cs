@@ -9,7 +9,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.connectDB
 {
     internal class ConnectSQL
     {
-        private static string server = @"DESKTOP-80GA5O2\SQLEXPRESS";
+        private static string server = @"DESKTOP-9TG0LON";
         private static string database = "QLCHBanGiay";
         public static SqlConnection getConnect()
         {

@@ -40,7 +40,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.usercontrol.admin.product
         public void showProduct()
         {
             dtgListProduct.DataSource = accessData.DataReader("Select tProduct.ProductCode,NameProduct,isnull(sum(Quantity),0) as Quantity,CategoryCode,Image from tProduct join tDetailProduct on tProduct.ProductCode = tDetailProduct.ProductCode where Status = 1 group by tProduct.ProductCode,NameProduct,CategoryCode,Image");
-            string url = "C:\\Users\\maiva\\OneDrive\\Máy tính\\C#\\BTL-LTTQ-NHOM3-HETHONGBANGIAY\\bin\\Debug\\images\\";
+            string url = "E:\\C#\\BTL-LTTQ-NHOM3-HETHONGBANGIAY\\bin\\Debug\\images\\";
             for (int i = 0; i < dtgListProduct.Rows.Count; i++)
             {
                 Image image = Image.FromFile(url + dtgListProduct.Rows[i].Cells["cPImage"].Value.ToString());

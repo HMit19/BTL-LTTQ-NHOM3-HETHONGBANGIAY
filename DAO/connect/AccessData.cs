@@ -11,7 +11,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.DAO.connect
     public class AccessData
     {
         string strConnect =
-          "Data Source=DESKTOP-80GA5O2\\SQLEXPRESS;" +
+          "Data Source=DESKTOP-9TG0LON;" +
           "Initial Catalog=QLCHBanGiay;" +
           "Integrated Security=SSPI;";
         SqlConnection sqlConnect = null;

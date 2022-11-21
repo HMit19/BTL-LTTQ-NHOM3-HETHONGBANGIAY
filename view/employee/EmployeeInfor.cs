@@ -19,16 +19,14 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
     {
         Classes.CommonFunctions functions = new Classes.CommonFunctions();
         Classes.ConnectData data = new Classes.ConnectData();
-        public EmployeeInfor()
+        public EmployeeInfor(string s)
         {
             InitializeComponent();
             DataTable dtNV = data.ReadData("Select * from tEmployee");
             DataTable dtHDN = data.ReadData("Select * from tImportBill");
             DataTable dtHDB = data.ReadData("Select * from tBillOfSale");
-
-            // functions.FillComboBox(cboGender, dtNV, "Gender", "Gender");
-            //functions.FillComboBox(cboStatus, dtNV, "Status", "Status");
             functions.FillComboBox(cboEmployeeCode, dtNV, "EmployeeCode", "EmployeeCode");
+            cboEmployeeCode.SelectedValue = s;
         }
         public static string GetHash(string str)
         {
@@ -44,7 +42,7 @@ namespace BTL_LTTQ_NHOM3_HETHONGBANGIAY.view.EmployeeInfor
         }
         private void EmployeeInfor_Load(object sender, EventArgs e)
         {
-            loadData();
+            cboEmployeeCode_SelectedIndexChanged(sender, e);
         }
         void loadData()
         {
